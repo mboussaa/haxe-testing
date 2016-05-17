@@ -1,0 +1,6 @@
+-cp .
+-lib nanotest
+-main Test
+-php target/php
+-D EXIT_ON_FINISH
+-cmd php target/php/index.php

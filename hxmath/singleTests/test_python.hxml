@@ -1,0 +1,6 @@
+-cp .
+-main Test
+-lib nanotest
+-python target/python/test.py
+-D EXIT_ON_FINISH
+-cmd python3 target/python/test.py

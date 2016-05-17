@@ -1,0 +1,3 @@
+HXCPP_DEBUGGER=1
+hxcpp_api_level=330
+hxcpp=/hxcpp/

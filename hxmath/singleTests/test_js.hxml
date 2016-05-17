@@ -1,0 +1,9 @@
+-cp .
+-main Test
+-lib nanotest
+-lib hxnodejs
+-js target/js/test.js
+-debug
+-dce no
+-D EXIT_ON_FINISH
+-cmd /usr/bin/X11/node target/js/test.js

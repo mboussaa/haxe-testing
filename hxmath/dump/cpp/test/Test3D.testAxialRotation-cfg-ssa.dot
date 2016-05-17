@@ -1,0 +1,324 @@
+digraph graphname {
+	node [shape=plaintext];
+n4531[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4531) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4530[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4530) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var quarterRot = 90.0</td></tr>
+	<tr><td port="e1" align="left">var _hx_tmp = Math.PI / 180</td></tr>
+	<tr><td port="e2" align="left">var angleRadians = _hx_tmp * quarterRot</td></tr>
+	<tr><td port="e3" align="left">var s = Math.sin(angleRadians)</td></tr>
+	<tr><td port="e4" align="left">var c = Math.cos(angleRadians)</td></tr>
+	<tr><td port="e5" align="left">var this</td></tr>
+	<tr><td port="e6" align="left">this = new hxmath.math.Matrix3x3Default(1,0,0,0,c,- s,0,s,c)</td></tr>
+	<tr><td port="e7" align="left">var a = cast this</td></tr>
+	<tr><td port="e8" align="left">var this</td></tr>
+	<tr><td port="e9" align="left">this = new hxmath.math.Vector3Default(0.0,1.0,0.0)</td></tr>
+	<tr><td port="e10" align="left">var v = cast this</td></tr>
+	<tr><td port="e11" align="left">var _hx_tmp = a.m00 * v.x</td></tr>
+	<tr><td port="e12" align="left">var _hx_tmp = a.m10 * v.y</td></tr>
+	<tr><td port="e13" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e14" align="left">var _hx_tmp = a.m20 * v.z</td></tr>
+	<tr><td port="e15" align="left">var x = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e16" align="left">var _hx_tmp = a.m01 * v.x</td></tr>
+	<tr><td port="e17" align="left">var _hx_tmp = a.m11 * v.y</td></tr>
+	<tr><td port="e18" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e19" align="left">var _hx_tmp = a.m21 * v.z</td></tr>
+	<tr><td port="e20" align="left">var y = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e21" align="left">var _hx_tmp = a.m02 * v.x</td></tr>
+	<tr><td port="e22" align="left">var _hx_tmp = a.m12 * v.y</td></tr>
+	<tr><td port="e23" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e24" align="left">var _hx_tmp = a.m22 * v.z</td></tr>
+	<tr><td port="e25" align="left">var z = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e26" align="left">var this</td></tr>
+	<tr><td port="e27" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e28" align="left">var a = cast this</td></tr>
+	<tr><td port="e29" align="left">var this</td></tr>
+	<tr><td port="e30" align="left">this = new hxmath.math.Vector3Default(0.0,0.0,1.0)</td></tr>
+	<tr><td port="e31" align="left">var b = cast this</td></tr>
+	<tr><td port="e32" align="left">var self = cast a</td></tr>
+	<tr><td port="e33" align="left">var x = self.x</td></tr>
+	<tr><td port="e34" align="left">var y = self.y</td></tr>
+	<tr><td port="e35" align="left">var z = self.z</td></tr>
+	<tr><td port="e36" align="left">var this</td></tr>
+	<tr><td port="e37" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e38" align="left">var this = cast this</td></tr>
+	<tr><td port="e39" align="left">var self = cast this</td></tr>
+	<tr><td port="e40" align="left">self.x -= b.x</td></tr>
+	<tr><td port="e41" align="left">self.y -= b.y</td></tr>
+	<tr><td port="e42" align="left">self.z -= b.z</td></tr>
+	<tr><td port="e43" align="left">var this = self</td></tr>
+	<tr><td port="e44" align="left">var self = cast this</td></tr>
+	<tr><td port="e45" align="left">var _hx_tmp = self.x * self.x</td></tr>
+	<tr><td port="e46" align="left">var _hx_tmp = self.y * self.y</td></tr>
+	<tr><td port="e47" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e48" align="left">var _hx_tmp = self.z * self.z</td></tr>
+	<tr><td port="e49" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e50" align="left">var _hx_tmp = Math.sqrt(_hx_tmp)</td></tr>
+	<tr><td port="e51" align="left">this.assertApproxEquals(_hx_tmp,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 53,className : \"test.Test3D\",methodName : \"testAxialRotation\"})</td></tr>
+	<tr><td port="e52" align="left">var _hx_tmp = Math.PI / 180</td></tr>
+	<tr><td port="e53" align="left">var angleRadians = _hx_tmp * quarterRot</td></tr>
+	<tr><td port="e54" align="left">var s = Math.sin(angleRadians)</td></tr>
+	<tr><td port="e55" align="left">var c = Math.cos(angleRadians)</td></tr>
+	<tr><td port="e56" align="left">var this</td></tr>
+	<tr><td port="e57" align="left">this = new hxmath.math.Matrix3x3Default(1,0,0,0,c,- s,0,s,c)</td></tr>
+	<tr><td port="e58" align="left">var a = cast this</td></tr>
+	<tr><td port="e59" align="left">var this</td></tr>
+	<tr><td port="e60" align="left">this = new hxmath.math.Vector3Default(0.0,0.0,1.0)</td></tr>
+	<tr><td port="e61" align="left">var v = cast this</td></tr>
+	<tr><td port="e62" align="left">var _hx_tmp = a.m00 * v.x</td></tr>
+	<tr><td port="e63" align="left">var _hx_tmp = a.m10 * v.y</td></tr>
+	<tr><td port="e64" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e65" align="left">var _hx_tmp = a.m20 * v.z</td></tr>
+	<tr><td port="e66" align="left">var x = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e67" align="left">var _hx_tmp = a.m01 * v.x</td></tr>
+	<tr><td port="e68" align="left">var _hx_tmp = a.m11 * v.y</td></tr>
+	<tr><td port="e69" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e70" align="left">var _hx_tmp = a.m21 * v.z</td></tr>
+	<tr><td port="e71" align="left">var y = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e72" align="left">var _hx_tmp = a.m02 * v.x</td></tr>
+	<tr><td port="e73" align="left">var _hx_tmp = a.m12 * v.y</td></tr>
+	<tr><td port="e74" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e75" align="left">var _hx_tmp = a.m22 * v.z</td></tr>
+	<tr><td port="e76" align="left">var z = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e77" align="left">var this</td></tr>
+	<tr><td port="e78" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e79" align="left">var a = cast this</td></tr>
+	<tr><td port="e80" align="left">var this</td></tr>
+	<tr><td port="e81" align="left">this = new hxmath.math.Vector3Default(0.0,1.0,0.0)</td></tr>
+	<tr><td port="e82" align="left">var b = cast this</td></tr>
+	<tr><td port="e83" align="left">var self = cast a</td></tr>
+	<tr><td port="e84" align="left">var x = self.x</td></tr>
+	<tr><td port="e85" align="left">var y = self.y</td></tr>
+	<tr><td port="e86" align="left">var z = self.z</td></tr>
+	<tr><td port="e87" align="left">var this</td></tr>
+	<tr><td port="e88" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e89" align="left">var this = cast this</td></tr>
+	<tr><td port="e90" align="left">var self = cast this</td></tr>
+	<tr><td port="e91" align="left">self.x += b.x</td></tr>
+	<tr><td port="e92" align="left">self.y += b.y</td></tr>
+	<tr><td port="e93" align="left">self.z += b.z</td></tr>
+	<tr><td port="e94" align="left">var this = self</td></tr>
+	<tr><td port="e95" align="left">var self = cast this</td></tr>
+	<tr><td port="e96" align="left">var _hx_tmp = self.x * self.x</td></tr>
+	<tr><td port="e97" align="left">var _hx_tmp = self.y * self.y</td></tr>
+	<tr><td port="e98" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e99" align="left">var _hx_tmp = self.z * self.z</td></tr>
+	<tr><td port="e100" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e101" align="left">var _hx_tmp = Math.sqrt(_hx_tmp)</td></tr>
+	<tr><td port="e102" align="left">this.assertApproxEquals(_hx_tmp,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 54,className : \"test.Test3D\",methodName : \"testAxialRotation\"})</td></tr>
+	<tr><td port="e103" align="left">var _hx_tmp = Math.PI / 180</td></tr>
+	<tr><td port="e104" align="left">var angleRadians = _hx_tmp * quarterRot</td></tr>
+	<tr><td port="e105" align="left">var s = Math.sin(angleRadians)</td></tr>
+	<tr><td port="e106" align="left">var c = Math.cos(angleRadians)</td></tr>
+	<tr><td port="e107" align="left">var this</td></tr>
+	<tr><td port="e108" align="left">this = new hxmath.math.Matrix3x3Default(c,0,s,0,1,0,- s,0,c)</td></tr>
+	<tr><td port="e109" align="left">var a = cast this</td></tr>
+	<tr><td port="e110" align="left">var this</td></tr>
+	<tr><td port="e111" align="left">this = new hxmath.math.Vector3Default(0.0,0.0,1.0)</td></tr>
+	<tr><td port="e112" align="left">var v = cast this</td></tr>
+	<tr><td port="e113" align="left">var _hx_tmp = a.m00 * v.x</td></tr>
+	<tr><td port="e114" align="left">var _hx_tmp = a.m10 * v.y</td></tr>
+	<tr><td port="e115" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e116" align="left">var _hx_tmp = a.m20 * v.z</td></tr>
+	<tr><td port="e117" align="left">var x = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e118" align="left">var _hx_tmp = a.m01 * v.x</td></tr>
+	<tr><td port="e119" align="left">var _hx_tmp = a.m11 * v.y</td></tr>
+	<tr><td port="e120" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e121" align="left">var _hx_tmp = a.m21 * v.z</td></tr>
+	<tr><td port="e122" align="left">var y = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e123" align="left">var _hx_tmp = a.m02 * v.x</td></tr>
+	<tr><td port="e124" align="left">var _hx_tmp = a.m12 * v.y</td></tr>
+	<tr><td port="e125" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e126" align="left">var _hx_tmp = a.m22 * v.z</td></tr>
+	<tr><td port="e127" align="left">var z = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e128" align="left">var this</td></tr>
+	<tr><td port="e129" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e130" align="left">var a = cast this</td></tr>
+	<tr><td port="e131" align="left">var this</td></tr>
+	<tr><td port="e132" align="left">this = new hxmath.math.Vector3Default(1.0,0.0,0.0)</td></tr>
+	<tr><td port="e133" align="left">var b = cast this</td></tr>
+	<tr><td port="e134" align="left">var self = cast a</td></tr>
+	<tr><td port="e135" align="left">var x = self.x</td></tr>
+	<tr><td port="e136" align="left">var y = self.y</td></tr>
+	<tr><td port="e137" align="left">var z = self.z</td></tr>
+	<tr><td port="e138" align="left">var this</td></tr>
+	<tr><td port="e139" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e140" align="left">var this = cast this</td></tr>
+	<tr><td port="e141" align="left">var self = cast this</td></tr>
+	<tr><td port="e142" align="left">self.x -= b.x</td></tr>
+	<tr><td port="e143" align="left">self.y -= b.y</td></tr>
+	<tr><td port="e144" align="left">self.z -= b.z</td></tr>
+	<tr><td port="e145" align="left">var this = self</td></tr>
+	<tr><td port="e146" align="left">var self = cast this</td></tr>
+	<tr><td port="e147" align="left">var _hx_tmp = self.x * self.x</td></tr>
+	<tr><td port="e148" align="left">var _hx_tmp = self.y * self.y</td></tr>
+	<tr><td port="e149" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e150" align="left">var _hx_tmp = self.z * self.z</td></tr>
+	<tr><td port="e151" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e152" align="left">var _hx_tmp = Math.sqrt(_hx_tmp)</td></tr>
+	<tr><td port="e153" align="left">this.assertApproxEquals(_hx_tmp,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 59,className : \"test.Test3D\",methodName : \"testAxialRotation\"})</td></tr>
+	<tr><td port="e154" align="left">var _hx_tmp = Math.PI / 180</td></tr>
+	<tr><td port="e155" align="left">var angleRadians = _hx_tmp * quarterRot</td></tr>
+	<tr><td port="e156" align="left">var s = Math.sin(angleRadians)</td></tr>
+	<tr><td port="e157" align="left">var c = Math.cos(angleRadians)</td></tr>
+	<tr><td port="e158" align="left">var this</td></tr>
+	<tr><td port="e159" align="left">this = new hxmath.math.Matrix3x3Default(c,0,s,0,1,0,- s,0,c)</td></tr>
+	<tr><td port="e160" align="left">var a = cast this</td></tr>
+	<tr><td port="e161" align="left">var this</td></tr>
+	<tr><td port="e162" align="left">this = new hxmath.math.Vector3Default(1.0,0.0,0.0)</td></tr>
+	<tr><td port="e163" align="left">var v = cast this</td></tr>
+	<tr><td port="e164" align="left">var _hx_tmp = a.m00 * v.x</td></tr>
+	<tr><td port="e165" align="left">var _hx_tmp = a.m10 * v.y</td></tr>
+	<tr><td port="e166" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e167" align="left">var _hx_tmp = a.m20 * v.z</td></tr>
+	<tr><td port="e168" align="left">var x = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e169" align="left">var _hx_tmp = a.m01 * v.x</td></tr>
+	<tr><td port="e170" align="left">var _hx_tmp = a.m11 * v.y</td></tr>
+	<tr><td port="e171" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e172" align="left">var _hx_tmp = a.m21 * v.z</td></tr>
+	<tr><td port="e173" align="left">var y = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e174" align="left">var _hx_tmp = a.m02 * v.x</td></tr>
+	<tr><td port="e175" align="left">var _hx_tmp = a.m12 * v.y</td></tr>
+	<tr><td port="e176" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e177" align="left">var _hx_tmp = a.m22 * v.z</td></tr>
+	<tr><td port="e178" align="left">var z = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e179" align="left">var this</td></tr>
+	<tr><td port="e180" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e181" align="left">var a = cast this</td></tr>
+	<tr><td port="e182" align="left">var this</td></tr>
+	<tr><td port="e183" align="left">this = new hxmath.math.Vector3Default(0.0,0.0,1.0)</td></tr>
+	<tr><td port="e184" align="left">var b = cast this</td></tr>
+	<tr><td port="e185" align="left">var self = cast a</td></tr>
+	<tr><td port="e186" align="left">var x = self.x</td></tr>
+	<tr><td port="e187" align="left">var y = self.y</td></tr>
+	<tr><td port="e188" align="left">var z = self.z</td></tr>
+	<tr><td port="e189" align="left">var this</td></tr>
+	<tr><td port="e190" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e191" align="left">var this = cast this</td></tr>
+	<tr><td port="e192" align="left">var self = cast this</td></tr>
+	<tr><td port="e193" align="left">self.x += b.x</td></tr>
+	<tr><td port="e194" align="left">self.y += b.y</td></tr>
+	<tr><td port="e195" align="left">self.z += b.z</td></tr>
+	<tr><td port="e196" align="left">var this = self</td></tr>
+	<tr><td port="e197" align="left">var self = cast this</td></tr>
+	<tr><td port="e198" align="left">var _hx_tmp = self.x * self.x</td></tr>
+	<tr><td port="e199" align="left">var _hx_tmp = self.y * self.y</td></tr>
+	<tr><td port="e200" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e201" align="left">var _hx_tmp = self.z * self.z</td></tr>
+	<tr><td port="e202" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e203" align="left">var _hx_tmp = Math.sqrt(_hx_tmp)</td></tr>
+	<tr><td port="e204" align="left">this.assertApproxEquals(_hx_tmp,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 60,className : \"test.Test3D\",methodName : \"testAxialRotation\"})</td></tr>
+	<tr><td port="e205" align="left">var _hx_tmp = Math.PI / 180</td></tr>
+	<tr><td port="e206" align="left">var angleRadians = _hx_tmp * quarterRot</td></tr>
+	<tr><td port="e207" align="left">var s = Math.sin(angleRadians)</td></tr>
+	<tr><td port="e208" align="left">var c = Math.cos(angleRadians)</td></tr>
+	<tr><td port="e209" align="left">var this</td></tr>
+	<tr><td port="e210" align="left">this = new hxmath.math.Matrix3x3Default(c,- s,0,s,c,0,0,0,1)</td></tr>
+	<tr><td port="e211" align="left">var a = cast this</td></tr>
+	<tr><td port="e212" align="left">var this</td></tr>
+	<tr><td port="e213" align="left">this = new hxmath.math.Vector3Default(1.0,0.0,0.0)</td></tr>
+	<tr><td port="e214" align="left">var v = cast this</td></tr>
+	<tr><td port="e215" align="left">var _hx_tmp = a.m00 * v.x</td></tr>
+	<tr><td port="e216" align="left">var _hx_tmp = a.m10 * v.y</td></tr>
+	<tr><td port="e217" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e218" align="left">var _hx_tmp = a.m20 * v.z</td></tr>
+	<tr><td port="e219" align="left">var x = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e220" align="left">var _hx_tmp = a.m01 * v.x</td></tr>
+	<tr><td port="e221" align="left">var _hx_tmp = a.m11 * v.y</td></tr>
+	<tr><td port="e222" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e223" align="left">var _hx_tmp = a.m21 * v.z</td></tr>
+	<tr><td port="e224" align="left">var y = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e225" align="left">var _hx_tmp = a.m02 * v.x</td></tr>
+	<tr><td port="e226" align="left">var _hx_tmp = a.m12 * v.y</td></tr>
+	<tr><td port="e227" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e228" align="left">var _hx_tmp = a.m22 * v.z</td></tr>
+	<tr><td port="e229" align="left">var z = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e230" align="left">var this</td></tr>
+	<tr><td port="e231" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e232" align="left">var a = cast this</td></tr>
+	<tr><td port="e233" align="left">var this</td></tr>
+	<tr><td port="e234" align="left">this = new hxmath.math.Vector3Default(0.0,1.0,0.0)</td></tr>
+	<tr><td port="e235" align="left">var b = cast this</td></tr>
+	<tr><td port="e236" align="left">var self = cast a</td></tr>
+	<tr><td port="e237" align="left">var x = self.x</td></tr>
+	<tr><td port="e238" align="left">var y = self.y</td></tr>
+	<tr><td port="e239" align="left">var z = self.z</td></tr>
+	<tr><td port="e240" align="left">var this</td></tr>
+	<tr><td port="e241" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e242" align="left">var this = cast this</td></tr>
+	<tr><td port="e243" align="left">var self = cast this</td></tr>
+	<tr><td port="e244" align="left">self.x -= b.x</td></tr>
+	<tr><td port="e245" align="left">self.y -= b.y</td></tr>
+	<tr><td port="e246" align="left">self.z -= b.z</td></tr>
+	<tr><td port="e247" align="left">var this = self</td></tr>
+	<tr><td port="e248" align="left">var self = cast this</td></tr>
+	<tr><td port="e249" align="left">var _hx_tmp = self.x * self.x</td></tr>
+	<tr><td port="e250" align="left">var _hx_tmp = self.y * self.y</td></tr>
+	<tr><td port="e251" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e252" align="left">var _hx_tmp = self.z * self.z</td></tr>
+	<tr><td port="e253" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e254" align="left">var _hx_tmp = Math.sqrt(_hx_tmp)</td></tr>
+	<tr><td port="e255" align="left">this.assertApproxEquals(_hx_tmp,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 65,className : \"test.Test3D\",methodName : \"testAxialRotation\"})</td></tr>
+	<tr><td port="e256" align="left">var _hx_tmp = Math.PI / 180</td></tr>
+	<tr><td port="e257" align="left">var angleRadians = _hx_tmp * quarterRot</td></tr>
+	<tr><td port="e258" align="left">var s = Math.sin(angleRadians)</td></tr>
+	<tr><td port="e259" align="left">var c = Math.cos(angleRadians)</td></tr>
+	<tr><td port="e260" align="left">var this</td></tr>
+	<tr><td port="e261" align="left">this = new hxmath.math.Matrix3x3Default(c,- s,0,s,c,0,0,0,1)</td></tr>
+	<tr><td port="e262" align="left">var a = cast this</td></tr>
+	<tr><td port="e263" align="left">var this</td></tr>
+	<tr><td port="e264" align="left">this = new hxmath.math.Vector3Default(0.0,1.0,0.0)</td></tr>
+	<tr><td port="e265" align="left">var v = cast this</td></tr>
+	<tr><td port="e266" align="left">var _hx_tmp = a.m00 * v.x</td></tr>
+	<tr><td port="e267" align="left">var _hx_tmp = a.m10 * v.y</td></tr>
+	<tr><td port="e268" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e269" align="left">var _hx_tmp = a.m20 * v.z</td></tr>
+	<tr><td port="e270" align="left">var x = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e271" align="left">var _hx_tmp = a.m01 * v.x</td></tr>
+	<tr><td port="e272" align="left">var _hx_tmp = a.m11 * v.y</td></tr>
+	<tr><td port="e273" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e274" align="left">var _hx_tmp = a.m21 * v.z</td></tr>
+	<tr><td port="e275" align="left">var y = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e276" align="left">var _hx_tmp = a.m02 * v.x</td></tr>
+	<tr><td port="e277" align="left">var _hx_tmp = a.m12 * v.y</td></tr>
+	<tr><td port="e278" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e279" align="left">var _hx_tmp = a.m22 * v.z</td></tr>
+	<tr><td port="e280" align="left">var z = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e281" align="left">var this</td></tr>
+	<tr><td port="e282" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e283" align="left">var a = cast this</td></tr>
+	<tr><td port="e284" align="left">var this</td></tr>
+	<tr><td port="e285" align="left">this = new hxmath.math.Vector3Default(1.0,0.0,0.0)</td></tr>
+	<tr><td port="e286" align="left">var b = cast this</td></tr>
+	<tr><td port="e287" align="left">var self = cast a</td></tr>
+	<tr><td port="e288" align="left">var x = self.x</td></tr>
+	<tr><td port="e289" align="left">var y = self.y</td></tr>
+	<tr><td port="e290" align="left">var z = self.z</td></tr>
+	<tr><td port="e291" align="left">var this</td></tr>
+	<tr><td port="e292" align="left">this = new hxmath.math.Vector3Default(x,y,z)</td></tr>
+	<tr><td port="e293" align="left">var this = cast this</td></tr>
+	<tr><td port="e294" align="left">var self = cast this</td></tr>
+	<tr><td port="e295" align="left">self.x += b.x</td></tr>
+	<tr><td port="e296" align="left">self.y += b.y</td></tr>
+	<tr><td port="e297" align="left">self.z += b.z</td></tr>
+	<tr><td port="e298" align="left">var this = self</td></tr>
+	<tr><td port="e299" align="left">var self = cast this</td></tr>
+	<tr><td port="e300" align="left">var _hx_tmp = self.x * self.x</td></tr>
+	<tr><td port="e301" align="left">var _hx_tmp = self.y * self.y</td></tr>
+	<tr><td port="e302" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e303" align="left">var _hx_tmp = self.z * self.z</td></tr>
+	<tr><td port="e304" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e305" align="left">var _hx_tmp = Math.sqrt(_hx_tmp)</td></tr>
+	<tr><td port="e306" align="left">this.assertApproxEquals(_hx_tmp,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 66,className : \"test.Test3D\",methodName : \"testAxialRotation\"})</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(1) BKRoot</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1:out -> n4530:in[label="CFGFunction"];
+n4530:out -> n4531:in[label="CFGGoto"];
+}

@@ -1,0 +1,305 @@
+<xml>
+<set name="HXCPP_API_LEVEL" value="330" />
+<files id="haxe">
+<compilerflag value="-Iinclude"/>
+  <file name="src/test/TestStress.cpp" >
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+   <depend name="include/test/TestStress.h"/>
+  </file>
+  <file name="src/test/Test3D.cpp" >
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/frames/_Frame3/Frame3_Impl_.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+   <depend name="include/test/Test3D.h"/>
+  </file>
+  <file name="src/test/TS3.cpp" >
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/nanotest/NanoTestRunner.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+   <depend name="include/test/TS3.h"/>
+   <depend name="include/test/Test3D.h"/>
+  </file>
+  <file name="src/test/MathTestCase.cpp" >
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/frames/_Frame2/Frame2_Impl_.h"/>
+   <depend name="include/hxmath/frames/_Frame3/Frame3_Impl_.h"/>
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/test/Distribution.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+  </file>
+  <file name="src/test/Distribution.cpp" >
+   <depend name="include/test/Distribution.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestStatus.cpp" >
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestRunner.cpp" >
+   <depend name="include/EReg.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/nanotest/NanoTestRunner.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestCase.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestAssertResult.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/hxmath/math/_Vector4/Vector4_Impl_.cpp" >
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_Vector4/Vector4_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Vector4Default.cpp" >
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Vector3/Vector3_Impl_.cpp" >
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Vector3/Vector3_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Vector3Default.cpp" >
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Vector2/Vector2_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector2/Vector2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Vector2Default.cpp" >
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_ShortVector2/ShortVector2_Impl_.cpp" >
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/_Quaternion/Quaternion_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Quaternion/Quaternion_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/QuaternionDefault.cpp" >
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix4x4Default.cpp" >
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix3x3Default.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix3x2Default.cpp" >
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix2x2Default.cpp" >
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/MathUtil.cpp" >
+   <depend name="include/hxmath/math/MathUtil.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_IntVector2/IntVector2_Impl_.cpp" >
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/IntVector2Default.cpp" >
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/Frame3Default.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/hxmath/frames/Frame3Default.h"/>
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/IFrame3.cpp" >
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/_Frame3/Frame3_Impl_.cpp" >
+   <depend name="include/hxmath/frames/Frame3Default.h"/>
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/frames/_Frame3/Frame3_Impl_.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/Frame2Default.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/hxmath/frames/Frame2Default.h"/>
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/IFrame2.cpp" >
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/_Frame2/Frame2_Impl_.cpp" >
+   <depend name="include/hxmath/frames/Frame2Default.h"/>
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/frames/_Frame2/Frame2_Impl_.h"/>
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/haxe/unit/TestStatus.cpp" >
+   <depend name="include/haxe/unit/TestStatus.h"/>
+  </file>
+  <file name="src/haxe/unit/TestRunner.cpp" >
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+  </file>
+  <file name="src/haxe/unit/TestCase.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/unit/TestCase.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/haxe/unit/TestStatus.h"/>
+  </file>
+  <file name="src/haxe/Log.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/haxe/CallStack.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+  </file>
+  <file name="src/haxe/StackItem.cpp" >
+   <depend name="include/haxe/StackItem.h"/>
+  </file>
+  <file name="src/cpp/Lib.cpp" >
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/Type.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+  </file>
+  <file name="src/StringTools.cpp" >
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/Std.cpp" >
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Reflect.cpp" >
+   <depend name="include/Reflect.h"/>
+  </file>
+  <file name="src/EReg.cpp" >
+   <depend name="include/EReg.h"/>
+  </file>
+  <file name="src/__boot__.cpp" >
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/hxmath/math/_Vector4/Vector4_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector3/Vector3_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector2/Vector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Quaternion/Quaternion_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.h"/>
+   <depend name="include/hxmath/math/MathUtil.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/__files__.cpp" >
+  </file>
+  <file name="src/__resources__.cpp" >
+  </file>
+</files>
+<files id="__lib__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__lib__.cpp" >
+   <depend name="include/test/TS3.h"/>
+  </file>
+</files>
+<files id="__main__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__main__.cpp" >
+   <depend name="include/test/TS3.h"/>
+  </file>
+</files>
+<files id="__resources__">
+</files>
+<files id="__externs__">
+</files>
+<set name="HAXE_OUTPUT" value="TS3" />
+<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+<include name="${HXCPP}/src/hx/libs/regexp/Build.xml"/>
+</xml>

@@ -1,0 +1,85 @@
+digraph graphname {
+n4274 [shape=box,label="(4274)"];
+n4273 [shape=box,label="(4273)"];
+n4272 [shape=box,label="(4272)"];
+n4271 [shape=box,label="(4271)"];
+n4270 [shape=box,label="(4270)\nthis.assertApproxEquals(totalLength,0.0,null,{fileName : \"Test3D.hx\",lineNumber : 98,className : \"test.Test3D\",methodName : \"testQuaternionToMatrix\"})"];
+n4269 [shape=box,label="(4269)"];
+n4268 [shape=box,label="(4268)\nvar b = cast tmp\nnull\nvar x = a.x\nvar y = a.y\nvar z = a.z\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\nnull\nvar self = cast this\nself.x -= b.x\nself.y -= b.y\nself.z -= b.z\nvar this = self\nvar self = cast this\nvar tmp = self.x * self.x\nvar tmp = self.y * self.y\nvar tmp = tmp + tmp\nvar tmp = self.z * self.z\nvar tmp = tmp + tmp\nvar tmp = Math.sqrt(tmp)\ntotalLength = totalLength + tmp"];
+n4267 [shape=box,label="(4267)\nthrow \"Invalid column\""];
+n4266 [shape=box,label="(4266)\nvar x = self.m20\nvar y = self.m21\nvar z = self.m22\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\ntmp = cast this"];
+n4265 [shape=box,label="(4265)\nvar x = self.m10\nvar y = self.m11\nvar z = self.m12\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\ntmp = cast this"];
+n4264 [shape=box,label="(4264)\nvar x = self.m00\nvar y = self.m01\nvar z = self.m02\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\ntmp = cast this"];
+n4263 [shape=box,label="(4263)\nvar a = cast tmp\nvar self = cast pair.m\nvar tmp\nnull\n@:cond-branch c"];
+n4263 -> n4264[style="dashed",color="gray",label="case 0"];
+n4263 -> n4265[style="dashed",color="gray",label="case 1"];
+n4263 -> n4266[style="dashed",color="gray",label="case 2"];
+n4263 -> n4267[style="dashed",color="gray",label="default"];
+n4263 -> n4268[style="dashed",color="gray",label="next"];
+n4262 [shape=box,label="(4262)\nthrow \"Invalid column\""];
+n4261 [shape=box,label="(4261)\nvar x = self.m20\nvar y = self.m21\nvar z = self.m22\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\ntmp = cast this"];
+n4260 [shape=box,label="(4260)\nvar x = self.m10\nvar y = self.m11\nvar z = self.m12\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\ntmp = cast this"];
+n4259 [shape=box,label="(4259)\nvar x = self.m00\nvar y = self.m01\nvar z = self.m02\nvar this\nthis = new hxmath.math.Vector3Default(x,y,z)\ntmp = cast this"];
+n4258 [shape=box,label="(4258)\n`2 = `2 + 1\nvar c = `2 - 1\nvar pair = createMatrixPair(unitAngle,axis)\nvar self = cast pair.n\nvar tmp\nnull\n@:cond-branch c"];
+n4258 -> n4259[style="dashed",color="gray",label="case 0"];
+n4258 -> n4260[style="dashed",color="gray",label="case 1"];
+n4258 -> n4261[style="dashed",color="gray",label="case 2"];
+n4258 -> n4262[style="dashed",color="gray",label="default"];
+n4258 -> n4263[style="dashed",color="gray",label="next"];
+n4257 [shape=box,label="(4257)\nbreak"];
+n4256 [shape=box,label="(4256)\nvar tmp = ! ((`2 < 3))\n@:cond-branch tmp"];
+n4256 -> n4257[style="dashed",color="gray",label="then"];
+n4256 -> n4258[style="dashed",color="gray",label="next"];
+n4255 [shape=box,label="<loop-head>
+(4255)"];
+n4254 [shape=box,label="(4254)\nwhile ((true)) @:block 4256"];
+n4254 -> n4255[style="dashed",color="gray",label="loop-head"];
+n4254 -> n4256[style="dashed",color="gray",label="loop-body"];
+n4254 -> n4269[style="dashed",color="gray",label="next"];
+n4253 [shape=box,label="(4253)\nvar `2 = 0"];
+n4253 -> n4254[style="dashed",color="gray",label="merge"];
+n4252 [shape=box,label="(4252)\n`1 = `1 + 1\nnull\nunitAngle = unitAngle + 0.01\nvar totalLength = 0.0"];
+n4252 -> n4253[style="dashed",color="gray",label="sub"];
+n4252 -> n4270[style="dashed",color="gray",label="next"];
+n4251 [shape=box,label="(4251)\nbreak"];
+n4250 [shape=box,label="(4250)\nvar tmp = ! ((`1 < 10))\n@:cond-branch tmp"];
+n4250 -> n4251[style="dashed",color="gray",label="then"];
+n4250 -> n4252[style="dashed",color="gray",label="next"];
+n4249 [shape=box,label="<loop-head>
+(4249)"];
+n4248 [shape=box,label="(4248)\nwhile ((true)) @:block 4250"];
+n4248 -> n4249[style="dashed",color="gray",label="loop-head"];
+n4248 -> n4250[style="dashed",color="gray",label="loop-body"];
+n4248 -> n4271[style="dashed",color="gray",label="next"];
+n4247 [shape=box,label="(4247)\nvar `1 = 0"];
+n4247 -> n4248[style="dashed",color="gray",label="merge"];
+n4246 [shape=box,label="(4246)\n` = ` + 1\nvar axis = ` - 1\nvar unitAngle = 0.0"];
+n4246 -> n4247[style="dashed",color="gray",label="sub"];
+n4246 -> n4272[style="dashed",color="gray",label="next"];
+n4245 [shape=box,label="(4245)\nbreak"];
+n4244 [shape=box,label="(4244)\nvar tmp = ! ((` < 3))\n@:cond-branch tmp"];
+n4244 -> n4245[style="dashed",color="gray",label="then"];
+n4244 -> n4246[style="dashed",color="gray",label="next"];
+n4243 [shape=box,label="<loop-head>
+(4243)"];
+n4242 [shape=box,label="(4242)\nwhile ((true)) @:block 4244"];
+n4242 -> n4243[style="dashed",color="gray",label="loop-head"];
+n4242 -> n4244[style="dashed",color="gray",label="loop-body"];
+n4242 -> n4273[style="dashed",color="gray",label="next"];
+n4241 [shape=box,label="(4241)\nvar ` = 0"];
+n4241 -> n4242[style="dashed",color="gray",label="merge"];
+n4240 [shape=box,label="(4240)\nvar createMatrixPair = \"fun\"(4238)"];
+n4240 -> n4241[style="dashed",color="gray",label="sub"];
+n4240 -> n4274[style="dashed",color="gray",label="next"];
+n4239 [shape=box,label="<function-end>
+(4239)"];
+n4238 [shape=box,label="<function-begin>
+(4238)\nvar this\nthis = new hxmath.math.Vector3Default(1.0,0.0,0.0)\nvar tmp = cast this\nvar this\nthis = new hxmath.math.Vector3Default(0.0,1.0,0.0)\nvar tmp = cast this\nvar this\nthis = new hxmath.math.Vector3Default(0.0,0.0,1.0)\nvar tmp = cast this\nvar axes = [tmp,tmp,tmp]\nvar const = [hxmath.math._Matrix3x3.Matrix3x3_Impl_.rotationX,hxmath.math._Matrix3x3.Matrix3x3_Impl_.rotationY,hxmath.math._Matrix3x3.Matrix3x3_Impl_.rotationZ]\nvar angle = unitAngle * 360.0\nvar axis = axes[axis]\nvar tmp = Math.PI / 180\nvar angleRadians = tmp * angle\nvar tmp = angleRadians / 2.0\nvar cosHalfAngle = Math.cos(tmp)\nvar tmp = angleRadians / 2.0\nvar sinHalfAngle = Math.sin(tmp)\nvar x = sinHalfAngle * axis.x\nvar y = sinHalfAngle * axis.y\nvar z = sinHalfAngle * axis.z\nvar this\nthis = new hxmath.math.QuaternionDefault(cosHalfAngle,x,y,z)\nvar q = cast this\nnull\nvar s = q.s\nvar x = q.x\nvar y = q.y\nvar z = q.z\nvar this\nvar tmp = y * y\nvar tmp = z * z\nvar tmp = tmp + tmp\nvar tmp = 2 * tmp\nvar tmp = 1 - tmp\nvar tmp = x * y\nvar tmp = s * z\nvar tmp = tmp - tmp\nvar tmp = 2 * tmp\nvar tmp = s * y\nvar tmp = x * z\nvar tmp = tmp + tmp\nvar tmp = 2 * tmp\nvar tmp = x * y\nvar tmp = s * z\nvar tmp = tmp + tmp\nvar tmp = 2 * tmp\nvar tmp = x * x\nvar tmp = z * z\nvar tmp = tmp + tmp\nvar tmp = 2 * tmp\nvar tmp = 1 - tmp\nvar tmp = y * z\nvar tmp = s * x\nvar tmp = tmp - tmp\nvar tmp = 2 * tmp\nvar tmp = x * z\nvar tmp = s * y\nvar tmp = tmp - tmp\nvar tmp = 2 * tmp\nvar tmp = y * z\nvar tmp = s * x\nvar tmp = tmp + tmp\nvar tmp = 2 * tmp\nvar tmp = x * x\nvar tmp = y * y\nvar tmp = tmp + tmp\nvar tmp = 2 * tmp\nvar tmp = 1 - tmp\nthis = new hxmath.math.Matrix3x3Default(tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp,tmp)\nvar m = cast this\nnull\nvar tmp = const[axis]\nvar m = tmp(angle)\nreturn {m : m,n : m}"];
+n4237 [shape=box,label="<function-end>
+(4237)"];
+n4236 [shape=box,label="<function-begin>
+(4236)"];
+n4236 -> n4240[style="dashed",color="gray",label="merge"];
+n1 [shape=box,label="<root>
+(1)"];
+}

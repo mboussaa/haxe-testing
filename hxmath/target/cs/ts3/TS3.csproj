@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace></RootNamespace>
+    <AssemblyName>TS3</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+	
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+  
+  </ItemGroup>
+  <ItemGroup>
+	
+    <Compile Include="src\hxmath\frames\IFrame3.cs"/>
+	
+    <Compile Include="src\haxe\unit\TestStatus.cs"/>
+	
+    <Compile Include="src\cs\Boot.cs"/>
+	
+    <Compile Include="src\Std.cs"/>
+	
+    <Compile Include="src\hxmath\math\MathUtil.cs"/>
+	
+    <Compile Include="src\hxmath\math\Vector3.cs"/>
+	
+    <Compile Include="src\haxe\lang\Null.cs"/>
+	
+    <Compile Include="src\hxmath\math\ShortVector2.cs"/>
+	
+    <Compile Include="src\haxe\Log.cs"/>
+	
+    <Compile Include="src\hxmath\frames\IFrame2.cs"/>
+	
+    <Compile Include="src\Array.cs"/>
+	
+    <Compile Include="src\cs\internal\Function.cs"/>
+	
+    <Compile Include="src\hxmath\frames\Frame3Default.cs"/>
+	
+    <Compile Include="src\hxmath\math\Matrix3x3.cs"/>
+	
+    <Compile Include="src\hxmath\math\Matrix2x2.cs"/>
+	
+    <Compile Include="src\Type.cs"/>
+	
+    <Compile Include="src\nanotest\NanoTestStatus.cs"/>
+	
+    <Compile Include="src\hxmath\math\IntVector2.cs"/>
+	
+    <Compile Include="src\nanotest\NanoTestAssertResult.cs"/>
+	
+    <Compile Include="src\hxmath\math\Vector2.cs"/>
+	
+    <Compile Include="src\test\MathTestCase.cs"/>
+	
+    <Compile Include="src\haxe\unit\TestRunner.cs"/>
+	
+    <Compile Include="src\Reflect.cs"/>
+	
+    <Compile Include="src\test\Distribution.cs"/>
+	
+    <Compile Include="src\nanotest\NanoTestCase.cs"/>
+	
+    <Compile Include="src\cs\internal\Iterator.cs"/>
+	
+    <Compile Include="src\cs\internal\StringExt.cs"/>
+	
+    <Compile Include="src\cs\internal\Runtime.cs"/>
+	
+    <Compile Include="src\cs\Lib.cs"/>
+	
+    <Compile Include="src\nanotest\NanoTestRunner.cs"/>
+	
+    <Compile Include="src\hxmath\frames\Frame2Default.cs"/>
+	
+    <Compile Include="src\EReg.cs"/>
+	
+    <Compile Include="src\test\TestStress.cs"/>
+	
+    <Compile Include="src\hxmath\math\Quaternion.cs"/>
+	
+    <Compile Include="src\hxmath\frames\Frame2.cs"/>
+	
+    <Compile Include="src\cs\internal\HxObject.cs"/>
+	
+    <Compile Include="src\cs\internal\Exceptions.cs"/>
+	
+    <Compile Include="src\Math.cs"/>
+	
+    <Compile Include="src\haxe\lang\FieldLookup.cs"/>
+	
+    <Compile Include="src\hxmath\math\Vector4.cs"/>
+	
+    <Compile Include="src\hxmath\math\Matrix3x2.cs"/>
+	
+    <Compile Include="src\haxe\unit\TestCase.cs"/>
+	
+    <Compile Include="src\test\Test3D.cs"/>
+	
+    <Compile Include="src\test\TS3.cs"/>
+	
+    <Compile Include="src\hxmath\frames\Frame3.cs"/>
+	
+    <Compile Include="src\hxmath\math\Matrix4x4.cs"/>
+	
+    <Compile Include="src\haxe\CallStack.cs"/>
+	
+  </ItemGroup>
+  
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

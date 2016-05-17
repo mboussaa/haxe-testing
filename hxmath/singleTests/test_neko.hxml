@@ -1,0 +1,5 @@
+-cp .
+-main Test
+-lib nanotest
+-neko target/neko/test.n
+-cmd neko target/neko/test.n

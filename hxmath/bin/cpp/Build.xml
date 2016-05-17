@@ -1,0 +1,566 @@
+<xml>
+<set name="HXCPP_API_LEVEL" value="330" />
+<files id="haxe">
+<compilerflag value="-Iinclude"/>
+  <file name="src/test/TestStructures.cpp" >
+   <depend name="include/Lambda.h"/>
+   <depend name="include/List.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.h"/>
+   <depend name="include/hxmath/math/_Quaternion/Quaternion_Impl_.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector2/Vector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector3/Vector3_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector4/Vector4_Impl_.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+   <depend name="include/test/TestStructures.h"/>
+  </file>
+  <file name="src/test/TestStress.cpp" >
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+   <depend name="include/test/TestStress.h"/>
+  </file>
+  <file name="src/test/TestAll.cpp" >
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/nanotest/NanoTestRunner.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+   <depend name="include/test/TestAll.h"/>
+   <depend name="include/test/TestStructures.h"/>
+  </file>
+  <file name="src/test/MathTestCase.cpp" >
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/frames/_Frame2/Frame2_Impl_.h"/>
+   <depend name="include/hxmath/frames/_Frame3/Frame3_Impl_.h"/>
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/test/Distribution.h"/>
+   <depend name="include/test/MathTestCase.h"/>
+  </file>
+  <file name="src/test/Distribution.cpp" >
+   <depend name="include/test/Distribution.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestStatus.cpp" >
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestRunner.cpp" >
+   <depend name="include/EReg.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/nanotest/NanoTestRunner.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestCase.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/nanotest/NanoTestAssertResult.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/nanotest/NanoTestAssertResult.h"/>
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+  </file>
+  <file name="src/hxmath/math/_Vector4/Vector4_Impl_.cpp" >
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_Vector4/Vector4_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Vector4Default.cpp" >
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Vector3/Vector3_Impl_.cpp" >
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Vector3/Vector3_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Vector3Default.cpp" >
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Vector2/Vector2_Impl_.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector2/Vector2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Vector2Default.cpp" >
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_ShortVector2/ShortVector2_Impl_.cpp" >
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/_Quaternion/Quaternion_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Quaternion/Quaternion_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/QuaternionDefault.cpp" >
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/Vector4Default.h"/>
+   <depend name="include/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix4x4Default.cpp" >
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix3x3Default.cpp" >
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+   <depend name="include/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix3x2Default.cpp" >
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.cpp" >
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/Matrix2x2Default.cpp" >
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/MathUtil.cpp" >
+   <depend name="include/hxmath/math/MathUtil.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/math/_IntVector2/IntVector2_Impl_.cpp" >
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+  </file>
+  <file name="src/hxmath/math/IntVector2Default.cpp" >
+   <depend name="include/hxmath/math/IntVector2Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/Frame3Default.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/hxmath/frames/Frame3Default.h"/>
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/IFrame3.cpp" >
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/_Frame3/Frame3_Impl_.cpp" >
+   <depend name="include/hxmath/frames/Frame3Default.h"/>
+   <depend name="include/hxmath/frames/IFrame3.h"/>
+   <depend name="include/hxmath/frames/_Frame3/Frame3_Impl_.h"/>
+   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
+   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
+   <depend name="include/hxmath/math/QuaternionDefault.h"/>
+   <depend name="include/hxmath/math/Vector3Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/Frame2Default.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/hxmath/frames/Frame2Default.h"/>
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/IFrame2.cpp" >
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/hxmath/frames/_Frame2/Frame2_Impl_.cpp" >
+   <depend name="include/hxmath/frames/Frame2Default.h"/>
+   <depend name="include/hxmath/frames/IFrame2.h"/>
+   <depend name="include/hxmath/frames/_Frame2/Frame2_Impl_.h"/>
+   <depend name="include/hxmath/math/Matrix2x2Default.h"/>
+   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
+   <depend name="include/hxmath/math/Vector2Default.h"/>
+  </file>
+  <file name="src/haxe/unit/TestStatus.cpp" >
+   <depend name="include/haxe/unit/TestStatus.h"/>
+  </file>
+  <file name="src/haxe/unit/TestRunner.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/haxe/unit/TestCase.h"/>
+   <depend name="include/haxe/unit/TestResult.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/haxe/unit/TestStatus.h"/>
+  </file>
+  <file name="src/haxe/unit/TestResult.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/haxe/unit/TestResult.h"/>
+   <depend name="include/haxe/unit/TestStatus.h"/>
+  </file>
+  <file name="src/haxe/unit/TestCase.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/unit/TestCase.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/haxe/unit/TestStatus.h"/>
+  </file>
+  <file name="src/haxe/rtti/Meta.cpp" >
+   <depend name="include/haxe/rtti/Meta.h"/>
+  </file>
+  <file name="src/haxe/macro/TypedExprDef.cpp" >
+   <depend name="include/haxe/macro/Binop.h"/>
+   <depend name="include/haxe/macro/FieldAccess.h"/>
+   <depend name="include/haxe/macro/ModuleType.h"/>
+   <depend name="include/haxe/macro/TConstant.h"/>
+   <depend name="include/haxe/macro/Type.h"/>
+   <depend name="include/haxe/macro/TypedExprDef.h"/>
+   <depend name="include/haxe/macro/Unop.h"/>
+  </file>
+  <file name="src/haxe/macro/FieldAccess.cpp" >
+   <depend name="include/haxe/macro/FieldAccess.h"/>
+   <depend name="include/haxe/macro/Type.h"/>
+  </file>
+  <file name="src/haxe/macro/ModuleType.cpp" >
+   <depend name="include/haxe/macro/ModuleType.h"/>
+  </file>
+  <file name="src/haxe/macro/TConstant.cpp" >
+   <depend name="include/haxe/macro/TConstant.h"/>
+  </file>
+  <file name="src/haxe/macro/MethodKind.cpp" >
+   <depend name="include/haxe/macro/MethodKind.h"/>
+  </file>
+  <file name="src/haxe/macro/VarAccess.cpp" >
+   <depend name="include/haxe/macro/VarAccess.h"/>
+  </file>
+  <file name="src/haxe/macro/FieldKind.cpp" >
+   <depend name="include/haxe/macro/FieldKind.h"/>
+   <depend name="include/haxe/macro/MethodKind.h"/>
+   <depend name="include/haxe/macro/VarAccess.h"/>
+  </file>
+  <file name="src/haxe/macro/ClassKind.cpp" >
+   <depend name="include/haxe/macro/ClassKind.h"/>
+   <depend name="include/haxe/macro/Type.h"/>
+  </file>
+  <file name="src/haxe/macro/AnonStatus.cpp" >
+   <depend name="include/haxe/macro/AnonStatus.h"/>
+  </file>
+  <file name="src/haxe/macro/Type.cpp" >
+   <depend name="include/haxe/macro/Type.h"/>
+  </file>
+  <file name="src/haxe/macro/ImportMode.cpp" >
+   <depend name="include/haxe/macro/ImportMode.h"/>
+  </file>
+  <file name="src/haxe/macro/Error.cpp" >
+   <depend name="include/haxe/macro/Error.h"/>
+  </file>
+  <file name="src/haxe/macro/TypeDefKind.cpp" >
+   <depend name="include/haxe/macro/ComplexType.h"/>
+   <depend name="include/haxe/macro/TypeDefKind.h"/>
+  </file>
+  <file name="src/haxe/macro/FieldType.cpp" >
+   <depend name="include/haxe/macro/ComplexType.h"/>
+   <depend name="include/haxe/macro/FieldType.h"/>
+  </file>
+  <file name="src/haxe/macro/Access.cpp" >
+   <depend name="include/haxe/macro/Access.h"/>
+  </file>
+  <file name="src/haxe/macro/TypeParam.cpp" >
+   <depend name="include/haxe/macro/ComplexType.h"/>
+   <depend name="include/haxe/macro/TypeParam.h"/>
+  </file>
+  <file name="src/haxe/macro/ComplexType.cpp" >
+   <depend name="include/haxe/macro/ComplexType.h"/>
+  </file>
+  <file name="src/haxe/macro/ExprDef.cpp" >
+   <depend name="include/haxe/macro/Binop.h"/>
+   <depend name="include/haxe/macro/ComplexType.h"/>
+   <depend name="include/haxe/macro/Constant.h"/>
+   <depend name="include/haxe/macro/ExprDef.h"/>
+   <depend name="include/haxe/macro/Unop.h"/>
+  </file>
+  <file name="src/haxe/macro/Unop.cpp" >
+   <depend name="include/haxe/macro/Unop.h"/>
+  </file>
+  <file name="src/haxe/macro/Binop.cpp" >
+   <depend name="include/haxe/macro/Binop.h"/>
+  </file>
+  <file name="src/haxe/macro/Constant.cpp" >
+   <depend name="include/haxe/macro/Constant.h"/>
+  </file>
+  <file name="src/haxe/macro/Context.cpp" >
+   <depend name="include/haxe/macro/Context.h"/>
+  </file>
+  <file name="src/haxe/io/Error.cpp" >
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/io/Bytes.cpp" >
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+  </file>
+  <file name="src/haxe/ds/WeakMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/WeakMap.h"/>
+  </file>
+  <file name="src/haxe/ds/_Vector/Vector_Impl_.cpp" >
+   <depend name="include/haxe/ds/_Vector/Vector_Impl_.h"/>
+  </file>
+  <file name="src/haxe/ds/StringMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+  </file>
+  <file name="src/haxe/ds/ObjectMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+  </file>
+  <file name="src/haxe/ds/IntMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+  </file>
+  <file name="src/haxe/ds/_HashMap/HashMapData.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/_HashMap/HashMapData.h"/>
+  </file>
+  <file name="src/haxe/ds/_HashMap/HashMap_Impl_.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/_HashMap/HashMapData.h"/>
+   <depend name="include/haxe/ds/_HashMap/HashMap_Impl_.h"/>
+  </file>
+  <file name="src/haxe/ds/EnumValueMap.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/BalancedTree.h"/>
+   <depend name="include/haxe/ds/EnumValueMap.h"/>
+  </file>
+  <file name="src/haxe/ds/TreeNode.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/ds/TreeNode.h"/>
+  </file>
+  <file name="src/haxe/ds/BalancedTree.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/haxe/ds/BalancedTree.h"/>
+   <depend name="include/haxe/ds/TreeNode.h"/>
+  </file>
+  <file name="src/haxe/Log.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/haxe/Int64Helper.cpp" >
+   <depend name="include/StringTools.h"/>
+   <depend name="include/haxe/Int64Helper.h"/>
+  </file>
+  <file name="src/haxe/_Int64/Int64_Impl_.cpp" >
+   <depend name="include/haxe/Int64Helper.h"/>
+   <depend name="include/haxe/_Int64/Int64_Impl_.h"/>
+  </file>
+  <file name="src/haxe/_Int32/Int32_Impl_.cpp" >
+   <depend name="include/haxe/_Int32/Int32_Impl_.h"/>
+  </file>
+  <file name="src/haxe/IMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+  </file>
+  <file name="src/haxe/CallStack.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+  </file>
+  <file name="src/haxe/StackItem.cpp" >
+   <depend name="include/haxe/StackItem.h"/>
+  </file>
+  <file name="src/cpp/Lib.cpp" >
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/Type.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/ValueType.cpp" >
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/Test.cpp" >
+   <depend name="include/Test.h"/>
+   <depend name="include/test/TestAll.h"/>
+  </file>
+  <file name="src/StringTools.cpp" >
+   <depend name="include/EReg.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/StringBuf.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Std.cpp" >
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Reflect.cpp" >
+   <depend name="include/Reflect.h"/>
+  </file>
+  <file name="src/_Map/Map_Impl_.cpp" >
+   <depend name="include/_Map/Map_Impl_.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/BalancedTree.h"/>
+   <depend name="include/haxe/ds/EnumValueMap.h"/>
+   <depend name="include/haxe/ds/IntMap.h"/>
+   <depend name="include/haxe/ds/ObjectMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+  </file>
+  <file name="src/_List/ListIterator.cpp" >
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/_List/ListNode.cpp" >
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/List.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/Lambda.cpp" >
+   <depend name="include/Lambda.h"/>
+   <depend name="include/List.h"/>
+  </file>
+  <file name="src/IntIterator.cpp" >
+   <depend name="include/IntIterator.h"/>
+  </file>
+  <file name="src/EReg.cpp" >
+   <depend name="include/EReg.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/__boot__.cpp" >
+   <depend name="include/nanotest/NanoTestStatus.h"/>
+   <depend name="include/haxe/macro/TypedExprDef.h"/>
+   <depend name="include/haxe/macro/FieldAccess.h"/>
+   <depend name="include/haxe/macro/ModuleType.h"/>
+   <depend name="include/haxe/macro/TConstant.h"/>
+   <depend name="include/haxe/macro/MethodKind.h"/>
+   <depend name="include/haxe/macro/VarAccess.h"/>
+   <depend name="include/haxe/macro/FieldKind.h"/>
+   <depend name="include/haxe/macro/ClassKind.h"/>
+   <depend name="include/haxe/macro/AnonStatus.h"/>
+   <depend name="include/haxe/macro/Type.h"/>
+   <depend name="include/haxe/macro/ImportMode.h"/>
+   <depend name="include/haxe/macro/TypeDefKind.h"/>
+   <depend name="include/haxe/macro/FieldType.h"/>
+   <depend name="include/haxe/macro/Access.h"/>
+   <depend name="include/haxe/macro/TypeParam.h"/>
+   <depend name="include/haxe/macro/ComplexType.h"/>
+   <depend name="include/haxe/macro/ExprDef.h"/>
+   <depend name="include/haxe/macro/Unop.h"/>
+   <depend name="include/haxe/macro/Binop.h"/>
+   <depend name="include/haxe/macro/Constant.h"/>
+   <depend name="include/haxe/io/Error.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/ValueType.h"/>
+   <depend name="include/nanotest/NanoTestCase.h"/>
+   <depend name="include/hxmath/math/_Vector4/Vector4_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector3/Vector3_Impl_.h"/>
+   <depend name="include/hxmath/math/_Vector2/Vector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_ShortVector2/ShortVector2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Quaternion/Quaternion_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix4x4/Matrix4x4_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix3x3/Matrix3x3_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix3x2/Matrix3x2_Impl_.h"/>
+   <depend name="include/hxmath/math/_Matrix2x2/Matrix2x2_Impl_.h"/>
+   <depend name="include/hxmath/math/MathUtil.h"/>
+   <depend name="include/hxmath/math/_IntVector2/IntVector2_Impl_.h"/>
+   <depend name="include/haxe/unit/TestRunner.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/__files__.cpp" >
+  </file>
+  <file name="src/__resources__.cpp" >
+  </file>
+</files>
+<files id="__lib__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__lib__.cpp" >
+   <depend name="include/Test.h"/>
+  </file>
+</files>
+<files id="__main__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__main__.cpp" >
+   <depend name="include/Test.h"/>
+  </file>
+</files>
+<files id="__resources__">
+</files>
+<files id="__externs__">
+</files>
+<set name="HAXE_OUTPUT" value="Test" />
+<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+<include name="${HXCPP}/src/hx/libs/regexp/Build.xml"/>
+</xml>

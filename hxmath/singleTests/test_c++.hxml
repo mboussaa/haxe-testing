@@ -1,0 +1,6 @@
+-cp .
+-main Test
+-lib nanotest
+-cpp target/cpp/
+-D EXIT_ON_FINISH
+-cmd target/cpp/Test

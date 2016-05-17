@@ -1,0 +1,9 @@
+-cp .
+-main Test
+-lib nanotest
+-java target/java
+-debug
+-D HXJAVA_DEBUGGER
+-dce no
+-D EXIT_ON_FINISH
+-cmd java -jar target/java/Test-Debug.jar

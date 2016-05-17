@@ -1,0 +1,7 @@
+-cp .
+-main Test
+-lib nanotest
+-as3 target/as3
+-debug
+-dce no
+-D EXIT_ON_FINISH

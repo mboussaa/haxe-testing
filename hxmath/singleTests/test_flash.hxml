@@ -1,0 +1,4 @@
+-cp .
+-lib nanotest
+-main Test
+-swf target/flash/test.swf

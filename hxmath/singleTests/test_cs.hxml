@@ -1,0 +1,7 @@
+-cp .
+-lib nanotest
+-main Test
+-cs target/cs
+-D EXIT_ON_FINISH
+-cmd mono target/cs/bin/Test.exe
+
