@@ -1,0 +1,188 @@
+digraph graphname {
+	node [shape=plaintext];
+n4570[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4570) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var time2End = this.a</td></tr>
+	<tr><td port="e1" align="left">this.assertEquals(sum1,sum2,{fileName : \"TestStress.hx\",lineNumber : 43,className : \"test.TestStress\",methodName : \"testDotProduct\"})</td></tr>
+	<tr><td port="e2" align="left">var time1 = time1End - time1Start</td></tr>
+	<tr><td port="e3" align="left">var time2 = time2End - time2Start</td></tr>
+	<tr><td port="e4" align="left">var tmp = \"abstracts = \" + time1</td></tr>
+	<tr><td port="e5" align="left">haxe.Log.trace(tmp,{fileName : \"TestStress.hx\",lineNumber : 48,className : \"test.TestStress\",methodName : \"testDotProduct\"})</td></tr>
+	<tr><td port="e6" align="left">var tmp = \"direct = \" + time2</td></tr>
+	<tr><td port="e7" align="left">haxe.Log.trace(tmp,{fileName : \"TestStress.hx\",lineNumber : 49,className : \"test.TestStress\",methodName : \"testDotProduct\"})</td></tr>
+	<tr><td port="e8" align="left">var tmp = time1 / time2</td></tr>
+	<tr><td port="e9" align="left">var tmp = \"abstracts / direct = \" + tmp</td></tr>
+	<tr><td port="e10" align="left">haxe.Log.trace(tmp,{fileName : \"TestStress.hx\",lineNumber : 50,className : \"test.TestStress\",methodName : \"testDotProduct\"})</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4569[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4569) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4568[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4568) BKNormal</td></tr>
+	<tr><td port="e0" align="left">`1 = `1 + 1</td></tr>
+	<tr><td port="e1" align="left">var i = `1 - 1</td></tr>
+	<tr><td port="e2" align="left">var tmp = i * 1.2</td></tr>
+	<tr><td port="e3" align="left">var tmp = i * 4.3</td></tr>
+	<tr><td port="e4" align="left">var a = new hxmath.math.Vector2Default(tmp,tmp)</td></tr>
+	<tr><td port="e5" align="left">var tmp = i * 1.1</td></tr>
+	<tr><td port="e6" align="left">var tmp = i * 0.8</td></tr>
+	<tr><td port="e7" align="left">var b = new hxmath.math.Vector2Default(tmp,tmp)</td></tr>
+	<tr><td port="e8" align="left">var tmp = a.x * b.x</td></tr>
+	<tr><td port="e9" align="left">var tmp = a.y * b.y</td></tr>
+	<tr><td port="e10" align="left">var tmp = tmp + tmp</td></tr>
+	<tr><td port="e11" align="left">sum2 = sum2 + tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4567[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4567) BKConditional</td></tr>
+	<tr><td port="e0" align="left">break</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4566[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4566) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var tmp = ! ((`1 &lt; `))</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4565[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4565) BKLoopHead</td></tr>
+	<tr><td port="ep0" align="left">sum2 = \"phi\"(sum2,sum2)</td></tr>
+	<tr><td port="ep1" align="left">`1 = \"phi\"(`1,`1)</td></tr>
+	<tr><td port="ep2" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep3" align="left">i = \"phi\"(i,i)</td></tr>
+	<tr><td port="ep4" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep5" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep6" align="left">a = \"phi\"(a,a)</td></tr>
+	<tr><td port="ep7" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep8" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep9" align="left">b = \"phi\"(b,b)</td></tr>
+	<tr><td port="ep10" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep11" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep12" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4564[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4564) BKNormal</td></tr>
+	<tr><td port="e0" align="left">while ((true)) @:block 4566</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4563[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4563) BKSub</td></tr>
+	<tr><td port="e0" align="left">var `1 = 0</td></tr>
+	<tr><td port="e1" align="left">var ` = iters</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4562[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4562) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var time1End = this.a</td></tr>
+	<tr><td port="e1" align="left">var time2Start = this.a</td></tr>
+	<tr><td port="e2" align="left">var sum2 = 0.0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4561[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4561) BKNormal</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4560[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4560) BKNormal</td></tr>
+	<tr><td port="e0" align="left">`1 = `1 + 1</td></tr>
+	<tr><td port="e1" align="left">var i = `1 - 1</td></tr>
+	<tr><td port="e2" align="left">var this</td></tr>
+	<tr><td port="e3" align="left">var tmp = i * 1.2</td></tr>
+	<tr><td port="e4" align="left">var tmp = i * 4.3</td></tr>
+	<tr><td port="e5" align="left">this = new hxmath.math.Vector2Default(tmp,tmp)</td></tr>
+	<tr><td port="e6" align="left">var a = cast this</td></tr>
+	<tr><td port="e7" align="left">var this</td></tr>
+	<tr><td port="e8" align="left">var tmp = i * 1.1</td></tr>
+	<tr><td port="e9" align="left">var tmp = i * 0.8</td></tr>
+	<tr><td port="e10" align="left">this = new hxmath.math.Vector2Default(tmp,tmp)</td></tr>
+	<tr><td port="e11" align="left">var b = cast this</td></tr>
+	<tr><td port="e12" align="left">var tmp = a.x * b.x</td></tr>
+	<tr><td port="e13" align="left">var tmp = a.y * b.y</td></tr>
+	<tr><td port="e14" align="left">var tmp = tmp + tmp</td></tr>
+	<tr><td port="e15" align="left">sum1 = sum1 + tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4559[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4559) BKConditional</td></tr>
+	<tr><td port="e0" align="left">break</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4558[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4558) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var tmp = ! ((`1 &lt; `))</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4557[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4557) BKLoopHead</td></tr>
+	<tr><td port="ep0" align="left">sum1 = \"phi\"(sum1,sum1)</td></tr>
+	<tr><td port="ep1" align="left">`1 = \"phi\"(`1,`1)</td></tr>
+	<tr><td port="ep2" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep3" align="left">i = \"phi\"(i,i)</td></tr>
+	<tr><td port="ep4" align="left">this = \"phi\"(this,this)</td></tr>
+	<tr><td port="ep5" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep6" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep7" align="left">a = \"phi\"(a,a)</td></tr>
+	<tr><td port="ep8" align="left">this = \"phi\"(this,this)</td></tr>
+	<tr><td port="ep9" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep10" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep11" align="left">b = \"phi\"(b,b)</td></tr>
+	<tr><td port="ep12" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep13" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="ep14" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4556[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4556) BKNormal</td></tr>
+	<tr><td port="e0" align="left">while ((true)) @:block 4558</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4555[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4555) BKSub</td></tr>
+	<tr><td port="e0" align="left">var `1 = 0</td></tr>
+	<tr><td port="e1" align="left">var ` = iters</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4554[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4554) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4553[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4553) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">haxe.Log.trace(\"--Vector2 dot product--\",{fileName : \"TestStress.hx\",lineNumber : 12,className : \"test.TestStress\",methodName : \"testDotProduct\"})</td></tr>
+	<tr><td port="e1" align="left">var iters = 100000</td></tr>
+	<tr><td port="e2" align="left">var time1Start = this.a</td></tr>
+	<tr><td port="e3" align="left">var sum1 = 0.0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(1) BKRoot</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1:out -> n4553:in[label="CFGFunction"];
+n4553:out -> n4555:in[label="CFGGoto"];
+n4555:out -> n4556:in[label="CFGGoto"];
+n4556:out -> n4557:in[label="CFGGoto"];
+n4557:out -> n4558:in[label="CFGGoto"];
+n4558:out -> n4560:in[label="CFGCondElse"];
+n4558:out -> n4559:in[label="CFGCondBranch true"];
+n4559:out -> n4561:in[label="CFGGoto"];
+n4561:out -> n4562:in[label="CFGGoto"];
+n4562:out -> n4563:in[label="CFGGoto"];
+n4563:out -> n4564:in[label="CFGGoto"];
+n4564:out -> n4565:in[label="CFGGoto"];
+n4565:out -> n4566:in[label="CFGGoto"];
+n4566:out -> n4568:in[label="CFGCondElse"];
+n4566:out -> n4567:in[label="CFGCondBranch true"];
+n4567:out -> n4569:in[label="CFGGoto"];
+n4569:out -> n4570:in[label="CFGGoto"];
+n4570:out -> n4554:in[label="CFGGoto"];
+n4568:out -> n4565:in[label="CFGGoto"];
+n4560:out -> n4557:in[label="CFGGoto"];
+n4553:e1 -> n4555:e1[color=lightblue,constraint=false];
+n4553:e3 -> n4557:ep0[color=lightblue,constraint=false];
+n4555:e0 -> n4557:ep1[color=lightblue,constraint=false];
+}

@@ -18,7 +18,7 @@ done
 fi
 
 #--c++
-if [ $1 = "c++" ]
+if [ $1 = "cpp" ]
 then
 for (( i=1; i<="$4"; i++ ))
 do

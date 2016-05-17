@@ -1,0 +1,46 @@
+digraph graphname {
+n4570 [shape=box,label="(4570)\nScopes: 0\nvar time2End = this.a\nthis.assertEquals(sum1,sum2,{fileName : \"TestStress.hx\",lineNumber : 43,className : \"test.TestStress\",methodName : \"testDotProduct\"})\nvar time1 = time1End - time1Start\nvar time2 = time2End - time2Start\nvar tmp = \"abstracts = \" + time1\nhaxe.Log.trace(tmp,{fileName : \"TestStress.hx\",lineNumber : 48,className : \"test.TestStress\",methodName : \"testDotProduct\"})\nvar tmp = \"direct = \" + time2\nhaxe.Log.trace(tmp,{fileName : \"TestStress.hx\",lineNumber : 49,className : \"test.TestStress\",methodName : \"testDotProduct\"})\nvar tmp = time1 / time2\nvar tmp = \"abstracts / direct = \" + tmp\nhaxe.Log.trace(tmp,{fileName : \"TestStress.hx\",lineNumber : 50,className : \"test.TestStress\",methodName : \"testDotProduct\"})"];
+n4569 [shape=box,label="(4569)\nScopes: 4, 0"];
+n4568 [shape=box,label="(4568)\nLoops: 1\nScopes: 5, 4, 0\n`1 = `1 + 1\nvar i = `1 - 1\nvar tmp = i * 1.2\nvar tmp = i * 4.3\nvar a = new hxmath.math.Vector2Default(tmp,tmp)\nvar tmp = i * 1.1\nvar tmp = i * 0.8\nvar b = new hxmath.math.Vector2Default(tmp,tmp)\nvar tmp = a.x * b.x\nvar tmp = a.y * b.y\nvar tmp = tmp + tmp\nsum2 = sum2 + tmp"];
+n4567 [shape=box,label="(4567)\nLoops: 1\nScopes: 6, 5, 4, 0\nbreak"];
+n4566 [shape=box,label="(4566)\nLoops: 1\nScopes: 5, 4, 0\nvar tmp = ! ((`1 < `))\n@:cond-branch tmp"];
+n4565 [shape=box,label="<loop-head>
+(4565)\nLoops: 1\nScopes: 5, 4, 0\nsum2 = \"phi\"(sum2,sum2)\n`1 = \"phi\"(`1,`1)\ntmp = \"phi\"(tmp,tmp)\ni = \"phi\"(i,i)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)\na = \"phi\"(a,a)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)\nb = \"phi\"(b,b)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)"];
+n4564 [shape=box,label="(4564)\nScopes: 4, 0\nwhile ((true)) @:block 4566"];
+n4563 [shape=box,label="(4563)\nScopes: 4, 0\nvar `1 = 0\nvar ` = iters"];
+n4562 [shape=box,label="(4562)\nScopes: 0\nvar time1End = this.a\nvar time2Start = this.a\nvar sum2 = 0.0"];
+n4561 [shape=box,label="(4561)\nScopes: 1, 0"];
+n4560 [shape=box,label="(4560)\nLoops: 0\nScopes: 2, 1, 0\n`1 = `1 + 1\nvar i = `1 - 1\nvar this\nvar tmp = i * 1.2\nvar tmp = i * 4.3\nthis = new hxmath.math.Vector2Default(tmp,tmp)\nvar a = cast this\nvar this\nvar tmp = i * 1.1\nvar tmp = i * 0.8\nthis = new hxmath.math.Vector2Default(tmp,tmp)\nvar b = cast this\nvar tmp = a.x * b.x\nvar tmp = a.y * b.y\nvar tmp = tmp + tmp\nsum1 = sum1 + tmp"];
+n4559 [shape=box,label="(4559)\nLoops: 0\nScopes: 3, 2, 1, 0\nbreak"];
+n4558 [shape=box,label="(4558)\nLoops: 0\nScopes: 2, 1, 0\nvar tmp = ! ((`1 < `))\n@:cond-branch tmp"];
+n4557 [shape=box,label="<loop-head>
+(4557)\nLoops: 0\nScopes: 2, 1, 0\nsum1 = \"phi\"(sum1,sum1)\n`1 = \"phi\"(`1,`1)\ntmp = \"phi\"(tmp,tmp)\ni = \"phi\"(i,i)\nthis = \"phi\"(this,this)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)\na = \"phi\"(a,a)\nthis = \"phi\"(this,this)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)\nb = \"phi\"(b,b)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)\ntmp = \"phi\"(tmp,tmp)"];
+n4556 [shape=box,label="(4556)\nScopes: 1, 0\nwhile ((true)) @:block 4558"];
+n4555 [shape=box,label="(4555)\nScopes: 1, 0\nvar `1 = 0\nvar ` = iters"];
+n4554 [shape=box,label="<function-end>
+(4554)"];
+n4553 [shape=box,label="<function-begin>
+(4553)\nScopes: 0\nhaxe.Log.trace(\"--Vector2 dot product--\",{fileName : \"TestStress.hx\",lineNumber : 12,className : \"test.TestStress\",methodName : \"testDotProduct\"})\nvar iters = 100000\nvar time1Start = this.a\nvar sum1 = 0.0"];
+n1 [shape=box,label="<root>
+(1)"];
+n1 -> n4553[label="function"];
+n4553 -> n4555[label="goto"];
+n4555 -> n4556[label="goto"];
+n4556 -> n4557[label="goto"];
+n4557 -> n4558[label="goto"];
+n4558 -> n4560[label="else"];
+n4558 -> n4559[label="branch"];
+n4559 -> n4561[label="goto"];
+n4561 -> n4562[label="goto"];
+n4562 -> n4563[label="goto"];
+n4563 -> n4564[label="goto"];
+n4564 -> n4565[label="goto"];
+n4565 -> n4566[label="goto"];
+n4566 -> n4568[label="else"];
+n4566 -> n4567[label="branch"];
+n4567 -> n4569[label="goto"];
+n4569 -> n4570[label="goto"];
+n4570 -> n4554[label="goto"];
+n4568 -> n4565[label="goto"];
+n4560 -> n4557[label="goto"];
+}
