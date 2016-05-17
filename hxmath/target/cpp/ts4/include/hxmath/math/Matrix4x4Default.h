@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES Matrix4x4Default_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Matrix4x4Default_obj OBJ_;
 		Matrix4x4Default_obj();
-		void __construct(Float m00,Float m10,Float m20,Float m30,Float m01,Float m11,Float m21,Float m31,Float m02,Float m12,Float m22,Float m32,Float m03,Float m13,Float m23,Float m33);
 
 	public:
+		void __construct(Float m00,Float m10,Float m20,Float m30,Float m01,Float m11,Float m21,Float m31,Float m02,Float m12,Float m22,Float m32,Float m03,Float m13,Float m23,Float m33);
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.math.Matrix4x4Default")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.math.Matrix4x4Default"); }
 		static hx::ObjectPtr< Matrix4x4Default_obj > __new(Float m00,Float m10,Float m20,Float m30,Float m01,Float m11,Float m21,Float m31,Float m02,Float m12,Float m22,Float m32,Float m03,Float m13,Float m23,Float m33);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

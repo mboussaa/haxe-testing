@@ -33,11 +33,13 @@ class HXCPP_CLASS_ATTRIBUTES MathTestCase_obj : public  ::nanotest::NanoTestCase
 		typedef  ::nanotest::NanoTestCase_obj super;
 		typedef MathTestCase_obj OBJ_;
 		MathTestCase_obj();
-		void __construct( ::Dynamic posInfos);
 
 	public:
+		void __construct( ::Dynamic posInfos);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="test.MathTestCase")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"test.MathTestCase"); }
 		static hx::ObjectPtr< MathTestCase_obj > __new( ::Dynamic posInfos);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

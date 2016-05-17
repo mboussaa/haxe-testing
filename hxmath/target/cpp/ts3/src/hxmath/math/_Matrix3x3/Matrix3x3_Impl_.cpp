@@ -37,7 +37,7 @@ Dynamic Matrix3x3_Impl__obj::__Create(hx::DynamicArray inArgs)
 Int Matrix3x3_Impl__obj::elementCount;
 
  ::hxmath::math::Matrix3x3Default Matrix3x3_Impl__obj::_new(Float m00,Float m10,Float m20,Float m01,Float m11,Float m21,Float m02,Float m12,Float m22){
-            	HX_STACK_FRAME("hxmath.math._Matrix3x3.Matrix3x3_Impl_","_new",0x6932d292,"hxmath.math._Matrix3x3.Matrix3x3_Impl_._new","hxmath/math/Matrix3x3.hx",103,0xaae5f2a1)
+            	HX_STACK_FRAME("hxmath.math._Matrix3x3.Matrix3x3_Impl_","_new",0x6932d292,"hxmath.math._Matrix3x3.Matrix3x3_Impl_._new","hxmath/math/Matrix3x3.hx",99,0xaae5f2a1)
             	HX_STACK_ARG(m00,"m00")
             	HX_STACK_ARG(m10,"m10")
             	HX_STACK_ARG(m20,"m20")
@@ -47,7 +47,7 @@ Int Matrix3x3_Impl__obj::elementCount;
             	HX_STACK_ARG(m02,"m02")
             	HX_STACK_ARG(m12,"m12")
             	HX_STACK_ARG(m22,"m22")
-HXLINE( 103)		return  ::hxmath::math::Matrix3x3Default_obj::__new(m00,m10,m20,m01,m11,m21,m02,m12,m22);
+HXLINE(  99)		return  ::hxmath::math::Matrix3x3Default_obj::__new(m00,m10,m20,m01,m11,m21,m02,m12,m22);
             	}
 
 
@@ -175,55 +175,55 @@ HXDLIN( 255)			Bool _hx_tmp7;
 HXDLIN( 255)			Bool _hx_tmp8;
 HXDLIN( 255)			Bool _hx_tmp9;
 HXDLIN( 255)			if (hx::IsNotNull( a )) {
-HXLINE( 256)				_hx_tmp9 = hx::IsNotNull( b );
+HXLINE( 255)				_hx_tmp9 = hx::IsNotNull( b );
             			}
             			else {
 HXLINE( 255)				_hx_tmp9 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp9) {
-HXLINE( 257)				_hx_tmp8 = (a->m00 == b->m00);
+HXLINE( 255)				_hx_tmp8 = (a->m00 == b->m00);
             			}
             			else {
 HXLINE( 255)				_hx_tmp8 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp8) {
-HXLINE( 258)				_hx_tmp7 = (a->m10 == b->m10);
+HXLINE( 255)				_hx_tmp7 = (a->m10 == b->m10);
             			}
             			else {
 HXLINE( 255)				_hx_tmp7 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp7) {
-HXLINE( 259)				_hx_tmp6 = (a->m20 == b->m20);
+HXLINE( 255)				_hx_tmp6 = (a->m20 == b->m20);
             			}
             			else {
 HXLINE( 255)				_hx_tmp6 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp6) {
-HXLINE( 260)				_hx_tmp5 = (a->m01 == b->m01);
+HXLINE( 255)				_hx_tmp5 = (a->m01 == b->m01);
             			}
             			else {
 HXLINE( 255)				_hx_tmp5 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp5) {
-HXLINE( 261)				_hx_tmp4 = (a->m11 == b->m11);
+HXLINE( 255)				_hx_tmp4 = (a->m11 == b->m11);
             			}
             			else {
 HXLINE( 255)				_hx_tmp4 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp4) {
-HXLINE( 262)				_hx_tmp3 = (a->m21 == b->m21);
+HXLINE( 255)				_hx_tmp3 = (a->m21 == b->m21);
             			}
             			else {
 HXLINE( 255)				_hx_tmp3 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp3) {
-HXLINE( 263)				_hx_tmp2 = (a->m02 == b->m02);
+HXLINE( 255)				_hx_tmp2 = (a->m02 == b->m02);
             			}
             			else {
 HXLINE( 255)				_hx_tmp2 = false;
             			}
 HXDLIN( 255)			if (_hx_tmp2) {
-HXLINE( 264)				_hx_tmp1 = (a->m12 == b->m12);
+HXLINE( 255)				_hx_tmp1 = (a->m12 == b->m12);
             			}
             			else {
 HXLINE( 255)				_hx_tmp1 = false;
@@ -831,7 +831,7 @@ HXLINE( 655)							_hx_tmp = self->m22;
 HXLINE( 655)							HX_STACK_DO_THROW(HX_("Invalid element",73,24,cd,01));
             						}
             					}
-HXDLIN( 655)					HX_VARI( Float,value) = ( (Float)(func(_hx_tmp)) );
+HXDLIN( 655)					HX_VARI( Float,value) = ( (Float)(func(( (Float)(_hx_tmp) ))) );
 HXDLIN( 655)					switch((int)(i)){
             						case (int)0: {
 HXLINE( 655)							self->m00 = value;
@@ -902,16 +902,16 @@ Float Matrix3x3_Impl__obj::get_det( ::hxmath::math::Matrix3x3Default this1){
             	HX_STACK_FRAME("hxmath.math._Matrix3x3.Matrix3x3_Impl_","get_det",0x5844d9d9,"hxmath.math._Matrix3x3.Matrix3x3_Impl_.get_det","hxmath/math/Matrix3x3.hx",678,0xaae5f2a1)
             	HX_STACK_ARG(this1,"this1")
 HXLINE( 679)		HX_VARI(  ::hxmath::math::Matrix3x3Default,self) = this1;
-HXLINE( 681)		HX_VARI( Float,m00) = self->m00;
-HXDLIN( 681)		HX_VARI( Float,m10) = self->m10;
-HXDLIN( 681)		HX_VARI( Float,m20) = self->m20;
-HXLINE( 682)		HX_VARI( Float,m01) = self->m01;
-HXDLIN( 682)		HX_VARI( Float,m11) = self->m11;
-HXDLIN( 682)		HX_VARI( Float,m21) = self->m21;
-HXLINE( 683)		HX_VARI( Float,m02) = self->m02;
-HXDLIN( 683)		HX_VARI( Float,m12) = self->m12;
-HXDLIN( 683)		HX_VARI( Float,m22) = self->m22;
-HXLINE( 680)		return (((m00 * ((m11 * m22) - (m21 * m12))) - (m10 * ((m01 * m22) - (m21 * m02)))) + (m20 * ((m01 * m12) - (m11 * m02))));
+HXLINE( 680)		HX_VARI( Float,m00) = self->m00;
+HXDLIN( 680)		HX_VARI( Float,m10) = self->m10;
+HXDLIN( 680)		HX_VARI( Float,m20) = self->m20;
+HXDLIN( 680)		HX_VARI( Float,m01) = self->m01;
+HXDLIN( 680)		HX_VARI( Float,m11) = self->m11;
+HXDLIN( 680)		HX_VARI( Float,m21) = self->m21;
+HXDLIN( 680)		HX_VARI( Float,m02) = self->m02;
+HXDLIN( 680)		HX_VARI( Float,m12) = self->m12;
+HXDLIN( 680)		HX_VARI( Float,m22) = self->m22;
+HXDLIN( 680)		return (((m00 * ((m11 * m22) - (m21 * m12))) - (m10 * ((m01 * m22) - (m21 * m02)))) + (m20 * ((m01 * m12) - (m11 * m02))));
             	}
 
 

@@ -17,11 +17,13 @@ class HXCPP_CLASS_ATTRIBUTES NanoTestAssertResult_obj : public hx::Object
 		typedef hx::Object super;
 		typedef NanoTestAssertResult_obj OBJ_;
 		NanoTestAssertResult_obj();
-		void __construct( ::Dynamic _result,Int position);
 
 	public:
+		void __construct( ::Dynamic _result,Int position);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="nanotest.NanoTestAssertResult")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"nanotest.NanoTestAssertResult"); }
 		static hx::ObjectPtr< NanoTestAssertResult_obj > __new( ::Dynamic _result,Int position);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

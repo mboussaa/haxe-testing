@@ -219,9 +219,9 @@ public class NanoTestRunner extends haxe.lang.HxObject
 								
 								case 1:
 								{
-									//line 149 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+									//line 151 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 									java.lang.Object posInfos = status.params[1];
-									//line 149 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+									//line 151 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 									java.lang.String message = haxe.lang.Runtime.toString(status.params[0]);
 									//line 152 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 									this.printError.__hx_invoke2_o(0.0, ( "Test failed : " + message ), 0.0, posInfos);
@@ -232,9 +232,9 @@ public class NanoTestRunner extends haxe.lang.HxObject
 								
 								case 2:
 								{
-									//line 149 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+									//line 153 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 									haxe.root.Array<haxe.StackItem> callStack = ((haxe.root.Array<haxe.StackItem>) (status.params[1]) );
-									//line 149 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+									//line 153 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 									java.lang.String message1 = haxe.lang.Runtime.toString(status.params[0]);
 									//line 153 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 									{
@@ -265,7 +265,7 @@ public class NanoTestRunner extends haxe.lang.HxObject
 													
 													case 1:
 													{
-														//line 157 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+														//line 160 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														java.lang.String m = haxe.lang.Runtime.toString(item.params[0]);
 														//line 161 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														this.print.__hx_invoke1_o(0.0, ( ( ( "Called from" + " : module " ) + m ) + "\n" ));
@@ -276,9 +276,9 @@ public class NanoTestRunner extends haxe.lang.HxObject
 													
 													case 2:
 													{
-														//line 157 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+														//line 162 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														int line = ((int) (haxe.lang.Runtime.toInt(item.params[2])) );
-														//line 157 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+														//line 162 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														java.lang.String file = haxe.lang.Runtime.toString(item.params[1]);
 														//line 162 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														{
@@ -317,9 +317,9 @@ public class NanoTestRunner extends haxe.lang.HxObject
 													
 													case 3:
 													{
-														//line 157 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+														//line 175 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														java.lang.String meth = haxe.lang.Runtime.toString(item.params[1]);
-														//line 157 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+														//line 175 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														java.lang.String cname = haxe.lang.Runtime.toString(item.params[0]);
 														//line 176 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														this.print.__hx_invoke1_o(0.0, ( ( ( ( ( "Called from" + " : " ) + cname ) + "." ) + meth ) + "\n" ));
@@ -330,7 +330,7 @@ public class NanoTestRunner extends haxe.lang.HxObject
 													
 													case 4:
 													{
-														//line 157 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
+														//line 178 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														java.lang.Object n = item.params[0];
 														//line 182 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 														this.print.__hx_invoke1_o(0.0, ( ( haxe.lang.Runtime.toString(( "Called from" + " : local function #" )) + haxe.lang.Runtime.toString(n) ) + "\n" ));

@@ -145,7 +145,7 @@ HXLINE(  65)					this->currentResult =  ::Dynamic(hx::Anon_obj::Create(7)
             						->setFixed(5,HX_("testCase",22,a4,ec,44),hx::ObjectPtr<OBJ_>(this))
             						->setFixed(6,HX_("error",c8,cb,29,73),false));
 HXLINE(  75)					this->setup();
-HXLINE(  78)					try {
+HXLINE(  77)					try {
             						HX_STACK_CATCHABLE( ::Dynamic, 0);
 HXLINE(  78)						::Reflect_obj::callMethod(hx::ObjectPtr<OBJ_>(this),field,::cpp::VirtualArray_obj::__new(0));
             					}
@@ -282,7 +282,7 @@ HX_DEFINE_DYNAMIC_FUNC3(NanoTestCase_obj,assertNotEquals,return )
             	HX_STACK_ARG(func,"func")
             	HX_STACK_ARG(isSuccess,"isSuccess")
             	HX_STACK_ARG(p,"p")
-HXLINE( 143)		try {
+HXLINE( 142)		try {
             			HX_STACK_CATCHABLE( ::Dynamic, 0);
 HXLINE( 143)			func();
             		}

@@ -92,7 +92,7 @@ public class HaxeException extends java.lang.RuntimeException
 	{
 		//line 79 "/usr/lib/haxe/std/java/internal/Exceptions.hx"
 		java.lang.String _g = super.getMessage();
-		//line 79 "/usr/lib/haxe/std/java/internal/Exceptions.hx"
+		//line 81 "/usr/lib/haxe/std/java/internal/Exceptions.hx"
 		if (( _g == null )) 
 		{
 			//line 79 "/usr/lib/haxe/std/java/internal/Exceptions.hx"

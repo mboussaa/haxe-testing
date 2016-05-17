@@ -66,7 +66,7 @@ HXLINE(  91)			HX_VARI( Int,tot) = ((( (Int)(p->__Field(HX_("pos",94,5d,55,00),h
 HXLINE(  92)			hx::AddEq(pos,tot);
 HXLINE(  93)			hx::SubEq(len,tot);
 HXLINE(  94)			first = false;
-HXLINE(  95)			if (!(this->global)) {
+HXLINE(  81)			if (!(this->global)) {
 HXLINE(  81)				goto _hx_goto_0;
             			}
             		}

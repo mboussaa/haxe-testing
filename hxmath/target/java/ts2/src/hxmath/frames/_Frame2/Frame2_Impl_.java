@@ -10,9 +10,9 @@ public final class Frame2_Impl_
 	
 	public static hxmath.frames.IFrame2 _new(hxmath.math.Vector2Default offset, double angleDegrees)
 	{
-		//line 25 "/shared/hxmath/hxmath/frames/Frame2.hx"
+		//line 24 "/shared/hxmath/hxmath/frames/Frame2.hx"
 		hxmath.frames.IFrame2 this1 = new hxmath.frames.Frame2Default(offset, angleDegrees, null);
-		//line 25 "/shared/hxmath/hxmath/frames/Frame2.hx"
+		//line 24 "/shared/hxmath/hxmath/frames/Frame2.hx"
 		return ((hxmath.frames.IFrame2) (this1) );
 	}
 	

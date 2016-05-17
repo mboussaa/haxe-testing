@@ -17,11 +17,13 @@ class HXCPP_CLASS_ATTRIBUTES TS2_obj : public hx::Object
 		typedef hx::Object super;
 		typedef TS2_obj OBJ_;
 		TS2_obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="test.TS2")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"test.TS2"); }
 		static hx::ObjectPtr< TS2_obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

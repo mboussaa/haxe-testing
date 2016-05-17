@@ -28,9 +28,9 @@ public final class IntVector2_Impl_
 	
 	public static hxmath.math.IntVector2Default _new(int x, int y)
 	{
-		//line 57 "/shared/hxmath/hxmath/math/IntVector2.hx"
+		//line 56 "/shared/hxmath/hxmath/math/IntVector2.hx"
 		hxmath.math.IntVector2Default this1 = new hxmath.math.IntVector2Default(x, y);
-		//line 57 "/shared/hxmath/hxmath/math/IntVector2.hx"
+		//line 56 "/shared/hxmath/hxmath/math/IntVector2.hx"
 		return ((hxmath.math.IntVector2Default) (this1) );
 	}
 	

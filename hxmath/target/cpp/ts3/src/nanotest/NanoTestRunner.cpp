@@ -117,9 +117,9 @@ HXLINE( 152)									this->printError((HX_("Test failed : ",fb,db,b6,bb) + statu
             								}
             								break;
             								case (int)2: {
-HXLINE( 149)									HX_VARI( ::Array< ::Dynamic>,callStack) = status->_hx_getObject(1).StaticCast< ::Array< ::Dynamic> >();
-HXDLIN( 149)									HX_VARI( ::String,message) = status->_hx_getString(0);
-HXLINE( 153)									{
+HXLINE( 153)									HX_VARI( ::Array< ::Dynamic>,callStack) = status->_hx_getObject(1).StaticCast< ::Array< ::Dynamic> >();
+HXDLIN( 153)									HX_VARI( ::String,message) = status->_hx_getString(0);
+HXDLIN( 153)									{
 HXLINE( 154)										HX_VARI( Bool,first) = true;
 HXLINE( 155)										{
 HXLINE( 155)											HX_VARI_NAME( Int,_g31,"_g3") = (int)0;

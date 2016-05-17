@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES NanoTestRunner_obj : public hx::Object
 		typedef hx::Object super;
 		typedef NanoTestRunner_obj OBJ_;
 		NanoTestRunner_obj();
-		void __construct( ::Dynamic printError);
 
 	public:
+		void __construct( ::Dynamic printError);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="nanotest.NanoTestRunner")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"nanotest.NanoTestRunner"); }
 		static hx::ObjectPtr< NanoTestRunner_obj > __new( ::Dynamic printError);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

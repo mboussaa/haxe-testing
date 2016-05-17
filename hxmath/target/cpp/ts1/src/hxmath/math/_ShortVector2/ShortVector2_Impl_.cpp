@@ -37,10 +37,10 @@ Int ShortVector2_Impl__obj::bitsPerField;
 Int ShortVector2_Impl__obj::fieldMax;
 
 Int ShortVector2_Impl__obj::_new(Int x,Int y){
-            	HX_STACK_FRAME("hxmath.math._ShortVector2.ShortVector2_Impl_","_new",0x5e5d25f0,"hxmath.math._ShortVector2.ShortVector2_Impl_._new","hxmath/math/ShortVector2.hx",55,0xe7dccbdb)
+            	HX_STACK_FRAME("hxmath.math._ShortVector2.ShortVector2_Impl_","_new",0x5e5d25f0,"hxmath.math._ShortVector2.ShortVector2_Impl_._new","hxmath/math/ShortVector2.hx",54,0xe7dccbdb)
             	HX_STACK_ARG(x,"x")
             	HX_STACK_ARG(y,"y")
-HXLINE(  55)		HX_VAR_NAME( Int,this1,"this");
+HXLINE(  54)		HX_VAR_NAME( Int,this1,"this");
 HXLINE(  56)		Bool _hx_tmp;
 HXDLIN(  56)		Bool _hx_tmp1;
 HXDLIN(  56)		Bool _hx_tmp2;
@@ -66,7 +66,7 @@ HXDLIN(  56)		if (!(_hx_tmp)) {
 HXLINE(  58)			HX_STACK_DO_THROW(((((((HX_("Specified (x=",dd,9b,83,fe) + x) + HX_(", y=",18,15,2e,1d)) + y) + HX_(") fields not in the range [0, ",b9,46,9c,1a)) + (int)65535) + HX_("]",5d,00,00,00)));
             		}
 HXLINE(  61)		this1 = ((int)((int)y << (int)(int)16) | (int)x);
-HXLINE(  55)		return this1;
+HXLINE(  54)		return this1;
             	}
 
 

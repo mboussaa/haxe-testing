@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES List_obj : public hx::Object
 		typedef hx::Object super;
 		typedef List_obj OBJ_;
 		List_obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="List")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"List"); }
 		static hx::ObjectPtr< List_obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

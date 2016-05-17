@@ -25,11 +25,13 @@ class HXCPP_CLASS_ATTRIBUTES Frame3Default_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Frame3Default_obj OBJ_;
 		Frame3Default_obj();
-		void __construct( ::hxmath::math::Vector3Default offset, ::hxmath::math::QuaternionDefault orientation,hx::Null< Bool >  __o_isCached);
 
 	public:
+		void __construct( ::hxmath::math::Vector3Default offset, ::hxmath::math::QuaternionDefault orientation,hx::Null< Bool >  __o_isCached);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="hxmath.frames.Frame3Default")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"hxmath.frames.Frame3Default"); }
 		static hx::ObjectPtr< Frame3Default_obj > __new( ::hxmath::math::Vector3Default offset, ::hxmath::math::QuaternionDefault orientation,hx::Null< Bool >  __o_isCached);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

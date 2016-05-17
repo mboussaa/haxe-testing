@@ -19,11 +19,13 @@ class HXCPP_CLASS_ATTRIBUTES MathUtil_obj : public hx::Object
 		typedef hx::Object super;
 		typedef MathUtil_obj OBJ_;
 		MathUtil_obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.math.MathUtil")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.math.MathUtil"); }
 		static hx::ObjectPtr< MathUtil_obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

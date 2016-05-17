@@ -28,9 +28,9 @@ public final class Quaternion_Impl_
 	
 	public static hxmath.math.QuaternionDefault _new(double s, double x, double y, double z)
 	{
-		//line 73 "/shared/hxmath/hxmath/math/Quaternion.hx"
+		//line 72 "/shared/hxmath/hxmath/math/Quaternion.hx"
 		hxmath.math.QuaternionDefault this1 = new hxmath.math.QuaternionDefault(s, x, y, z);
-		//line 73 "/shared/hxmath/hxmath/math/Quaternion.hx"
+		//line 72 "/shared/hxmath/hxmath/math/Quaternion.hx"
 		return ((hxmath.math.QuaternionDefault) (this1) );
 	}
 	

@@ -1048,8 +1048,8 @@ HXDLIN( 200)		Float _hx_tmp3 = ((self1->x * self1->x) + (self1->y * self1->y));
 HXDLIN( 200)		Float _hx_tmp4 = ::Math_obj::sqrt(_hx_tmp3);
 HXDLIN( 200)		this->assertApproxEquals(((Float)0.0),_hx_tmp4,null(),hx::SourceInfo(HX_("TestGeom.hx",30,a7,d3,ef),200,HX_("test.TestGeom",ea,bb,0e,9a),HX_("testRectAddVector",4e,f0,52,41)));
 HXLINE( 203)		HX_VARI_NAME(  ::hxmath::geom::Rect,_this1,"_this") =  ::hxmath::geom::Rect_obj::__new(unit->x,unit->y,unit->width,unit->height);
-HXLINE( 204)		HX_VARI(  ::hxmath::math::Vector2Default,v) =  ::hxmath::math::Vector2Default_obj::__new(-(two->x),-(two->y));
-HXLINE( 203)		Bool _hx_tmp5 = (v->x < ((Float)0.0));
+HXDLIN( 203)		HX_VARI(  ::hxmath::math::Vector2Default,v) =  ::hxmath::math::Vector2Default_obj::__new(-(two->x),-(two->y));
+HXDLIN( 203)		Bool _hx_tmp5 = (v->x < ((Float)0.0));
 HXDLIN( 203)		if (_hx_tmp5) {
 HXLINE( 203)			hx::AddEq(_this1->x,v->x);
 HXDLIN( 203)			hx::SubEq(_this1->width,v->x);

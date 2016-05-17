@@ -60,11 +60,12 @@ haxe test_cpp.hxml
 ```
 This will compile to cpp target and run binaries
 
-3- If you want to compile all test suites and haxe library to different target platforms.
+----------------------------------------------------------------------------------------------
+1- If you want to compile all test suites and haxe library to different target platforms.
 
 For that, we have prepared a compilation script. Thus, you have to run the following command:
 ```
-docker run -w /shared/hxmath -it -v /shared:/shared --name=haxe_compilation mboussaa/haxe /bin/bash -c "./compileAll.sh"
+docker run -it -w /shared/ -v /shared:/shared --name=haxe mboussaa/haxe /bin/bash -c "./compileAll.sh"
 ```
 4- Time to run some test cases to specific target platform
 ``` 

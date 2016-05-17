@@ -225,11 +225,11 @@ HX_DEFINE_DYNAMIC_FUNC0(Test2D_obj,testHomogenousTranslation,(void))
 void Test2D_obj::testTranspose(){
             	HX_STACK_FRAME("test.Test2D","testTranspose",0xa7bd2e39,"test.Test2D.testTranspose","test/Test2D.hx",34,0xc5b4993d)
             	HX_STACK_THIS(this)
-HXLINE(  36)		HX_VARI( Float,a) = ::Math_obj::random();
-HXDLIN(  36)		HX_VARI( Float,b) = ::Math_obj::random();
-HXLINE(  37)		HX_VARI( Float,c) = ::Math_obj::random();
-HXDLIN(  37)		HX_VARI( Float,d) = ::Math_obj::random();
-HXLINE(  35)		HX_VARI(  ::hxmath::math::Matrix2x2Default,m) =  ::hxmath::math::Matrix2x2Default_obj::__new(a,b,c,d);
+HXLINE(  35)		HX_VARI( Float,a) = ::Math_obj::random();
+HXDLIN(  35)		HX_VARI( Float,b) = ::Math_obj::random();
+HXDLIN(  35)		HX_VARI( Float,c) = ::Math_obj::random();
+HXDLIN(  35)		HX_VARI( Float,d) = ::Math_obj::random();
+HXDLIN(  35)		HX_VARI(  ::hxmath::math::Matrix2x2Default,m) =  ::hxmath::math::Matrix2x2Default_obj::__new(a,b,c,d);
 HXLINE(  39)		HX_VARI(  ::hxmath::math::Matrix2x2Default,self) =  ::hxmath::math::Matrix2x2Default_obj::__new(m->a,m->c,m->b,m->d);
 HXDLIN(  39)		HX_VARI(  ::hxmath::math::Matrix2x2Default,n) =  ::hxmath::math::Matrix2x2Default_obj::__new(self->a,self->c,self->b,self->d);
 HXLINE(  42)		HX_VARI_NAME(  ::hxmath::math::Matrix2x2Default,self1,"self") =  ::hxmath::math::Matrix2x2Default_obj::__new(m->a,m->b,m->c,m->d);

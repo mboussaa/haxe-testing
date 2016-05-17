@@ -30,9 +30,9 @@ public final class Vector4_Impl_
 	
 	public static hxmath.math.Vector4Default _new(double x, double y, double z, double w)
 	{
-		//line 80 "/shared/hxmath/hxmath/math/Vector4.hx"
+		//line 79 "/shared/hxmath/hxmath/math/Vector4.hx"
 		hxmath.math.Vector4Default this1 = new hxmath.math.Vector4Default(x, y, z, w);
-		//line 80 "/shared/hxmath/hxmath/math/Vector4.hx"
+		//line 79 "/shared/hxmath/hxmath/math/Vector4.hx"
 		return ((hxmath.math.Vector4Default) (this1) );
 	}
 	

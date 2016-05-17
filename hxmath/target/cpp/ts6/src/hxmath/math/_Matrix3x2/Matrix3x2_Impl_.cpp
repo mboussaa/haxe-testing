@@ -43,14 +43,14 @@ Dynamic Matrix3x2_Impl__obj::__Create(hx::DynamicArray inArgs)
 Int Matrix3x2_Impl__obj::elementCount;
 
  ::hxmath::math::Matrix3x2Default Matrix3x2_Impl__obj::_new(Float a,Float b,Float c,Float d,Float tx,Float ty){
-            	HX_STACK_FRAME("hxmath.math._Matrix3x2.Matrix3x2_Impl_","_new",0xe3251a94,"hxmath.math._Matrix3x2.Matrix3x2_Impl_._new","hxmath/math/Matrix3x2.hx",95,0xaa3cbc02)
+            	HX_STACK_FRAME("hxmath.math._Matrix3x2.Matrix3x2_Impl_","_new",0xe3251a94,"hxmath.math._Matrix3x2.Matrix3x2_Impl_._new","hxmath/math/Matrix3x2.hx",94,0xaa3cbc02)
             	HX_STACK_ARG(a,"a")
             	HX_STACK_ARG(b,"b")
             	HX_STACK_ARG(c,"c")
             	HX_STACK_ARG(d,"d")
             	HX_STACK_ARG(tx,"tx")
             	HX_STACK_ARG(ty,"ty")
-HXLINE(  95)		return  ::hxmath::math::Matrix3x2Default_obj::__new(a,b,c,d,tx,ty);
+HXLINE(  94)		return  ::hxmath::math::Matrix3x2Default_obj::__new(a,b,c,d,tx,ty);
             	}
 
 
@@ -184,37 +184,37 @@ HXDLIN( 240)			Bool _hx_tmp4;
 HXDLIN( 240)			Bool _hx_tmp5;
 HXDLIN( 240)			Bool _hx_tmp6;
 HXDLIN( 240)			if (hx::IsNotNull( m )) {
-HXLINE( 241)				_hx_tmp6 = hx::IsNotNull( n );
+HXLINE( 240)				_hx_tmp6 = hx::IsNotNull( n );
             			}
             			else {
 HXLINE( 240)				_hx_tmp6 = false;
             			}
 HXDLIN( 240)			if (_hx_tmp6) {
-HXLINE( 242)				_hx_tmp5 = (m->a == n->a);
+HXLINE( 240)				_hx_tmp5 = (m->a == n->a);
             			}
             			else {
 HXLINE( 240)				_hx_tmp5 = false;
             			}
 HXDLIN( 240)			if (_hx_tmp5) {
-HXLINE( 243)				_hx_tmp4 = (m->b == n->b);
+HXLINE( 240)				_hx_tmp4 = (m->b == n->b);
             			}
             			else {
 HXLINE( 240)				_hx_tmp4 = false;
             			}
 HXDLIN( 240)			if (_hx_tmp4) {
-HXLINE( 244)				_hx_tmp3 = (m->c == n->c);
+HXLINE( 240)				_hx_tmp3 = (m->c == n->c);
             			}
             			else {
 HXLINE( 240)				_hx_tmp3 = false;
             			}
 HXDLIN( 240)			if (_hx_tmp3) {
-HXLINE( 245)				_hx_tmp2 = (m->d == n->d);
+HXLINE( 240)				_hx_tmp2 = (m->d == n->d);
             			}
             			else {
 HXLINE( 240)				_hx_tmp2 = false;
             			}
 HXDLIN( 240)			if (_hx_tmp2) {
-HXLINE( 246)				_hx_tmp1 = (m->tx == n->tx);
+HXLINE( 240)				_hx_tmp1 = (m->tx == n->tx);
             			}
             			else {
 HXLINE( 240)				_hx_tmp1 = false;
@@ -770,7 +770,7 @@ HXLINE( 610)							_hx_tmp = self->ty;
 HXLINE( 610)							HX_STACK_DO_THROW(HX_("Invalid element",73,24,cd,01));
             						}
             					}
-HXDLIN( 610)					HX_VARI( Float,value) = ( (Float)(func(_hx_tmp)) );
+HXDLIN( 610)					HX_VARI( Float,value) = ( (Float)(func(( (Float)(_hx_tmp) ))) );
 HXDLIN( 610)					switch((int)(i)){
             						case (int)0: {
 HXLINE( 610)							self->a = value;

@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES ListIterator_obj : public hx::Object
 		typedef hx::Object super;
 		typedef ListIterator_obj OBJ_;
 		ListIterator_obj();
-		void __construct( ::_List::ListNode head);
 
 	public:
+		void __construct( ::_List::ListNode head);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="_List.ListIterator")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"_List.ListIterator"); }
 		static hx::ObjectPtr< ListIterator_obj > __new( ::_List::ListNode head);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

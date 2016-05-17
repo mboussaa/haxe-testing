@@ -17,11 +17,13 @@ class HXCPP_CLASS_ATTRIBUTES ListNode_obj : public hx::Object
 		typedef hx::Object super;
 		typedef ListNode_obj OBJ_;
 		ListNode_obj();
-		void __construct( ::Dynamic item, ::_List::ListNode next);
 
 	public:
+		void __construct( ::Dynamic item, ::_List::ListNode next);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="_List.ListNode")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"_List.ListNode"); }
 		static hx::ObjectPtr< ListNode_obj > __new( ::Dynamic item, ::_List::ListNode next);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

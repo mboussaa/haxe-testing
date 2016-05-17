@@ -40,7 +40,7 @@ public final class ShortVector2_Impl_
 	
 	public static int _new(int x, int y)
 	{
-		//line 55 "/shared/hxmath/hxmath/math/ShortVector2.hx"
+		//line 54 "/shared/hxmath/hxmath/math/ShortVector2.hx"
 		int this1 = 0;
 		//line 56 "/shared/hxmath/hxmath/math/ShortVector2.hx"
 		if ( ! ((( ( ( ( x >= 0 ) && ( y >= 0 ) ) && ( x <= 65535 ) ) && ( y <= 65535 ) ))) ) 
@@ -51,7 +51,7 @@ public final class ShortVector2_Impl_
 		
 		//line 61 "/shared/hxmath/hxmath/math/ShortVector2.hx"
 		this1 = ( ( y << 16 ) | x );
-		//line 55 "/shared/hxmath/hxmath/math/ShortVector2.hx"
+		//line 54 "/shared/hxmath/hxmath/math/ShortVector2.hx"
 		return ((int) (this1) );
 	}
 	

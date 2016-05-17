@@ -33,12 +33,12 @@ HXLINE(  35)		this->isDirty = true;
 HXLINE(  32)		this->isCached = true;
 HXLINE(  46)		 ::hxmath::math::Vector2Default _hx_tmp;
 HXDLIN(  46)		if (hx::IsNull( offset )) {
-HXLINE(  47)			_hx_tmp =  ::hxmath::math::Vector2Default_obj::__new(((Float)0.0),((Float)0.0));
+HXLINE(  46)			_hx_tmp =  ::hxmath::math::Vector2Default_obj::__new(((Float)0.0),((Float)0.0));
             		}
             		else {
-HXLINE(  48)			_hx_tmp = offset;
+HXLINE(  46)			_hx_tmp = offset;
             		}
-HXLINE(  46)		this->internalOffset = _hx_tmp;
+HXDLIN(  46)		this->internalOffset = _hx_tmp;
 HXLINE(  49)		this->internalAngleDegrees = angleDegrees;
 HXLINE(  50)		this->isCached = isCached;
 HXLINE(  51)		this->isDirty = true;

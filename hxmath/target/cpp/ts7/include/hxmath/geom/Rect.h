@@ -20,11 +20,13 @@ class HXCPP_CLASS_ATTRIBUTES Rect_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Rect_obj OBJ_;
 		Rect_obj();
-		void __construct(Float x,Float y,Float width,Float height);
 
 	public:
+		void __construct(Float x,Float y,Float width,Float height);
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.geom.Rect")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.geom.Rect"); }
 		static hx::ObjectPtr< Rect_obj > __new(Float x,Float y,Float width,Float height);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

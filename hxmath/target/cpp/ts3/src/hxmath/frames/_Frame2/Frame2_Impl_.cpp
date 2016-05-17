@@ -44,11 +44,11 @@ Dynamic Frame2_Impl__obj::__Create(hx::DynamicArray inArgs)
 }
 
 ::Dynamic Frame2_Impl__obj::_new( ::hxmath::math::Vector2Default offset,Float angleDegrees){
-            	HX_STACK_FRAME("hxmath.frames._Frame2.Frame2_Impl_","_new",0x1863144e,"hxmath.frames._Frame2.Frame2_Impl_._new","hxmath/frames/Frame2.hx",25,0xec6193c7)
+            	HX_STACK_FRAME("hxmath.frames._Frame2.Frame2_Impl_","_new",0x1863144e,"hxmath.frames._Frame2.Frame2_Impl_._new","hxmath/frames/Frame2.hx",24,0xec6193c7)
             	HX_STACK_ARG(offset,"offset")
             	HX_STACK_ARG(angleDegrees,"angleDegrees")
-HXLINE(  25)		HX_VARI_NAME( ::Dynamic,this1,"this") =  ::hxmath::frames::Frame2Default_obj::__new(offset,angleDegrees,null());
-HXDLIN(  25)		return this1;
+HXLINE(  24)		HX_VARI_NAME( ::Dynamic,this1,"this") =  ::hxmath::frames::Frame2Default_obj::__new(offset,angleDegrees,null());
+HXDLIN(  24)		return this1;
             	}
 
 

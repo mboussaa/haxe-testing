@@ -53,8 +53,8 @@ HXDLIN(  18)			switch((int)(_hx_tmp)){
             				}
             				break;
             				case (int)1: {
-HXLINE(  18)					HX_VARI(  ::Dynamic,p) = _g->_hx_getObject(1);
-HXDLIN(  18)					HX_VARI( ::String,mes) = _g->_hx_getString(0);
+HXLINE(  20)					HX_VARI(  ::Dynamic,p) = _g->_hx_getObject(1);
+HXDLIN(  20)					HX_VARI( ::String,mes) = _g->_hx_getString(0);
 HXLINE(  21)					Int _hx_tmp1 = this->position;
 HXDLIN(  21)					::String _hx_tmp2 = ((HX_("",00,00,00,00) + mes) + HX_(" [",3b,1c,00,00));
 HXDLIN(  21)					::String _hx_tmp3 = ::Std_obj::string(d);
@@ -63,8 +63,8 @@ HXDLIN(  21)					 ::Dynamic(this->result->__Field(HX_("status",32,e7,fb,05),hx::
             				}
             				break;
             				case (int)2: {
-HXLINE(  18)					HX_VARI_NAME( ::Array< ::Dynamic>,p1,"p") = _g->_hx_getObject(1).StaticCast< ::Array< ::Dynamic> >();
-HXDLIN(  18)					HX_VARI_NAME( ::String,mes1,"mes") = _g->_hx_getString(0);
+HXLINE(  22)					HX_VARI_NAME( ::Array< ::Dynamic>,p1,"p") = _g->_hx_getObject(1).StaticCast< ::Array< ::Dynamic> >();
+HXDLIN(  22)					HX_VARI_NAME( ::String,mes1,"mes") = _g->_hx_getString(0);
 HXLINE(  23)					Int _hx_tmp5 = this->position;
 HXDLIN(  23)					::String _hx_tmp6 = ((HX_("",00,00,00,00) + mes1) + HX_(" [",3b,1c,00,00));
 HXDLIN(  23)					::String _hx_tmp7 = ::Std_obj::string(d);

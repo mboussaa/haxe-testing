@@ -164,7 +164,7 @@ Bool MathUtil_obj::openRangesIntersect(Float aStart,Float aWidth,Float bStart,Fl
             	HX_STACK_ARG(bWidth,"bWidth")
 HXLINE( 137)		Bool _hx_tmp;
 HXDLIN( 137)		if (!((aStart >= (bStart + bWidth)))) {
-HXLINE( 138)			_hx_tmp = (bStart >= (aStart + aWidth));
+HXLINE( 137)			_hx_tmp = (bStart >= (aStart + aWidth));
             		}
             		else {
 HXLINE( 137)			_hx_tmp = true;

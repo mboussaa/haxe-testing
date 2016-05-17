@@ -24,11 +24,13 @@ class HXCPP_CLASS_ATTRIBUTES Frame2Default_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Frame2Default_obj OBJ_;
 		Frame2Default_obj();
-		void __construct( ::hxmath::math::Vector2Default offset,hx::Null< Float >  __o_angleDegrees,hx::Null< Bool >  __o_isCached);
 
 	public:
+		void __construct( ::hxmath::math::Vector2Default offset,hx::Null< Float >  __o_angleDegrees,hx::Null< Bool >  __o_isCached);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="hxmath.frames.Frame2Default")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"hxmath.frames.Frame2Default"); }
 		static hx::ObjectPtr< Frame2Default_obj > __new( ::hxmath::math::Vector2Default offset,hx::Null< Float >  __o_angleDegrees,hx::Null< Bool >  __o_isCached);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

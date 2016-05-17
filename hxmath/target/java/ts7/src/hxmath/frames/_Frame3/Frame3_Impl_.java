@@ -10,9 +10,9 @@ public final class Frame3_Impl_
 	
 	public static hxmath.frames.IFrame3 _new(hxmath.math.Vector3Default offset, hxmath.math.QuaternionDefault orientation)
 	{
-		//line 26 "/shared/hxmath/hxmath/frames/Frame3.hx"
+		//line 25 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.frames.IFrame3 this1 = new hxmath.frames.Frame3Default(offset, orientation, null);
-		//line 26 "/shared/hxmath/hxmath/frames/Frame3.hx"
+		//line 25 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		return ((hxmath.frames.IFrame3) (this1) );
 	}
 	
@@ -196,7 +196,7 @@ public final class Frame3_Impl_
 		hxmath.frames.IFrame3 self = this1;
 		//line 87 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.QuaternionDefault this2 = self.get_orientation();
-		//line 88 "/shared/hxmath/hxmath/frames/Frame3.hx"
+		//line 87 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default u = other.get_offset();
 		//line 87 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.QuaternionDefault self1 = ((hxmath.math.QuaternionDefault) (this2) );
@@ -208,7 +208,7 @@ public final class Frame3_Impl_
 		double c = ( 2.0 * self1.s );
 		//line 87 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default this3 = new hxmath.math.Vector3Default(( ( ( a * self1.x ) + ( b * u.x ) ) + ( c * (( ( self1.y * u.z ) - ( self1.z * u.y ) )) ) ), ( ( ( a * self1.y ) + ( b * u.y ) ) + ( c * (( ( self1.z * u.x ) - ( self1.x * u.z ) )) ) ), ( ( ( a * self1.z ) + ( b * u.z ) ) + ( c * (( ( self1.x * u.y ) - ( self1.y * u.x ) )) ) ));
-		//line 89 "/shared/hxmath/hxmath/frames/Frame3.hx"
+		//line 87 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default a1 = self.get_offset();
 		//line 87 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default self2 = ((hxmath.math.Vector3Default) (this3) );
@@ -263,7 +263,7 @@ public final class Frame3_Impl_
 		double c = ( 2.0 * self1.s );
 		//line 104 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default this2 = new hxmath.math.Vector3Default(( ( ( a * self1.x ) + ( b * p.x ) ) + ( c * (( ( self1.y * p.z ) - ( self1.z * p.y ) )) ) ), ( ( ( a * self1.y ) + ( b * p.y ) ) + ( c * (( ( self1.z * p.x ) - ( self1.x * p.z ) )) ) ), ( ( ( a * self1.z ) + ( b * p.z ) ) + ( c * (( ( self1.x * p.y ) - ( self1.y * p.x ) )) ) ));
-		//line 106 "/shared/hxmath/hxmath/frames/Frame3.hx"
+		//line 104 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default a1 = self.get_offset();
 		//line 104 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default self2 = ((hxmath.math.Vector3Default) (this2) );
@@ -458,7 +458,7 @@ public final class Frame3_Impl_
 			
 		}
 		
-		//line 163 "/shared/hxmath/hxmath/frames/Frame3.hx"
+		//line 162 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		hxmath.math.Vector3Default u = self.get_offset();
 		//line 162 "/shared/hxmath/hxmath/frames/Frame3.hx"
 		double a = ( 2.0 * (( ( ( self3.x * u.x ) + ( self3.y * u.y ) ) + ( self3.z * u.z ) )) );

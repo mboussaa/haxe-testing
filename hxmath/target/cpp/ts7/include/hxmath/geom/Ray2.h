@@ -19,11 +19,13 @@ class HXCPP_CLASS_ATTRIBUTES Ray2_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Ray2_obj OBJ_;
 		Ray2_obj();
-		void __construct( ::hxmath::math::Vector2Default origin, ::hxmath::math::Vector2Default normal);
 
 	public:
+		void __construct( ::hxmath::math::Vector2Default origin, ::hxmath::math::Vector2Default normal);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="hxmath.geom.Ray2")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"hxmath.geom.Ray2"); }
 		static hx::ObjectPtr< Ray2_obj > __new( ::hxmath::math::Vector2Default origin, ::hxmath::math::Vector2Default normal);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

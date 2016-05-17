@@ -22,11 +22,13 @@ class HXCPP_CLASS_ATTRIBUTES TestStructures_obj : public  ::test::MathTestCase_o
 		typedef  ::test::MathTestCase_obj super;
 		typedef TestStructures_obj OBJ_;
 		TestStructures_obj();
-		void __construct( ::Dynamic posInfos);
 
 	public:
+		void __construct( ::Dynamic posInfos);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="test.TestStructures")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"test.TestStructures"); }
 		static hx::ObjectPtr< TestStructures_obj > __new( ::Dynamic posInfos);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

@@ -52,19 +52,19 @@ HXLINE( 103)		Bool _hx_tmp;
 HXDLIN( 103)		Bool _hx_tmp1;
 HXDLIN( 103)		Bool _hx_tmp2;
 HXDLIN( 103)		if (hx::IsNotNull( r )) {
-HXLINE( 104)			_hx_tmp2 = (this->x == r->x);
+HXLINE( 103)			_hx_tmp2 = (this->x == r->x);
             		}
             		else {
 HXLINE( 103)			_hx_tmp2 = false;
             		}
 HXDLIN( 103)		if (_hx_tmp2) {
-HXLINE( 105)			_hx_tmp1 = (this->y == r->y);
+HXLINE( 103)			_hx_tmp1 = (this->y == r->y);
             		}
             		else {
 HXLINE( 103)			_hx_tmp1 = false;
             		}
 HXDLIN( 103)		if (_hx_tmp1) {
-HXLINE( 106)			_hx_tmp = (this->width == r->width);
+HXLINE( 103)			_hx_tmp = (this->width == r->width);
             		}
             		else {
 HXLINE( 103)			_hx_tmp = false;

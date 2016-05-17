@@ -25,11 +25,13 @@ class HXCPP_CLASS_ATTRIBUTES FlxSpriteFrame2_obj : public hx::Object
 		typedef hx::Object super;
 		typedef FlxSpriteFrame2_obj OBJ_;
 		FlxSpriteFrame2_obj();
-		void __construct( ::Dynamic owner);
 
 	public:
+		void __construct( ::Dynamic owner);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="hxmath.frames.adapters.FlxSpriteFrame2")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"hxmath.frames.adapters.FlxSpriteFrame2"); }
 		static hx::ObjectPtr< FlxSpriteFrame2_obj > __new( ::Dynamic owner);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

@@ -24,9 +24,9 @@ public final class Matrix2x2_Impl_
 	
 	public static hxmath.math.Matrix2x2Default _new(double a, double b, double c, double d)
 	{
-		//line 79 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
+		//line 78 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
 		hxmath.math.Matrix2x2Default this1 = new hxmath.math.Matrix2x2Default(a, b, c, d);
-		//line 79 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
+		//line 78 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
 		return ((hxmath.math.Matrix2x2Default) (this1) );
 	}
 	

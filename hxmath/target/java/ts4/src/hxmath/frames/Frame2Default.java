@@ -35,12 +35,12 @@ public class Frame2Default extends haxe.lang.HxObject implements hxmath.frames.I
 		{
 			//line 47 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
 			hxmath.math.Vector2Default this1 = new hxmath.math.Vector2Default(0.0, 0.0);
-			//line 47 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
+			//line 46 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
 			tmp = ((hxmath.math.Vector2Default) (this1) );
 		}
 		else
 		{
-			//line 48 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
+			//line 46 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
 			tmp = offset;
 		}
 		

@@ -45,7 +45,7 @@ Dynamic Matrix4x4_Impl__obj::__Create(hx::DynamicArray inArgs)
 Int Matrix4x4_Impl__obj::elementCount;
 
  ::hxmath::math::Matrix4x4Default Matrix4x4_Impl__obj::_new(Float m00,Float m10,Float m20,Float m30,Float m01,Float m11,Float m21,Float m31,Float m02,Float m12,Float m22,Float m32,Float m03,Float m13,Float m23,Float m33){
-            	HX_STACK_FRAME("hxmath.math._Matrix4x4.Matrix4x4_Impl_","_new",0x5e2abe0e,"hxmath.math._Matrix4x4.Matrix4x4_Impl_._new","hxmath/math/Matrix4x4.hx",143,0x11ea859f)
+            	HX_STACK_FRAME("hxmath.math._Matrix4x4.Matrix4x4_Impl_","_new",0x5e2abe0e,"hxmath.math._Matrix4x4.Matrix4x4_Impl_._new","hxmath/math/Matrix4x4.hx",138,0x11ea859f)
             	HX_STACK_ARG(m00,"m00")
             	HX_STACK_ARG(m10,"m10")
             	HX_STACK_ARG(m20,"m20")
@@ -62,7 +62,7 @@ Int Matrix4x4_Impl__obj::elementCount;
             	HX_STACK_ARG(m13,"m13")
             	HX_STACK_ARG(m23,"m23")
             	HX_STACK_ARG(m33,"m33")
-HXLINE( 143)		return  ::hxmath::math::Matrix4x4Default_obj::__new(m00,m10,m20,m30,m01,m11,m21,m31,m02,m12,m22,m32,m03,m13,m23,m33);
+HXLINE( 138)		return  ::hxmath::math::Matrix4x4Default_obj::__new(m00,m10,m20,m30,m01,m11,m21,m31,m02,m12,m22,m32,m03,m13,m23,m33);
             	}
 
 
@@ -201,97 +201,97 @@ HXDLIN( 292)			Bool _hx_tmp14;
 HXDLIN( 292)			Bool _hx_tmp15;
 HXDLIN( 292)			Bool _hx_tmp16;
 HXDLIN( 292)			if (hx::IsNotNull( a )) {
-HXLINE( 293)				_hx_tmp16 = hx::IsNotNull( b );
+HXLINE( 292)				_hx_tmp16 = hx::IsNotNull( b );
             			}
             			else {
 HXLINE( 292)				_hx_tmp16 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp16) {
-HXLINE( 294)				_hx_tmp15 = (a->m00 == b->m00);
+HXLINE( 292)				_hx_tmp15 = (a->m00 == b->m00);
             			}
             			else {
 HXLINE( 292)				_hx_tmp15 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp15) {
-HXLINE( 295)				_hx_tmp14 = (a->m10 == b->m10);
+HXLINE( 292)				_hx_tmp14 = (a->m10 == b->m10);
             			}
             			else {
 HXLINE( 292)				_hx_tmp14 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp14) {
-HXLINE( 296)				_hx_tmp13 = (a->m20 == b->m20);
+HXLINE( 292)				_hx_tmp13 = (a->m20 == b->m20);
             			}
             			else {
 HXLINE( 292)				_hx_tmp13 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp13) {
-HXLINE( 297)				_hx_tmp12 = (a->m30 == b->m30);
+HXLINE( 292)				_hx_tmp12 = (a->m30 == b->m30);
             			}
             			else {
 HXLINE( 292)				_hx_tmp12 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp12) {
-HXLINE( 298)				_hx_tmp11 = (a->m01 == b->m01);
+HXLINE( 292)				_hx_tmp11 = (a->m01 == b->m01);
             			}
             			else {
 HXLINE( 292)				_hx_tmp11 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp11) {
-HXLINE( 299)				_hx_tmp10 = (a->m11 == b->m11);
+HXLINE( 292)				_hx_tmp10 = (a->m11 == b->m11);
             			}
             			else {
 HXLINE( 292)				_hx_tmp10 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp10) {
-HXLINE( 300)				_hx_tmp9 = (a->m21 == b->m21);
+HXLINE( 292)				_hx_tmp9 = (a->m21 == b->m21);
             			}
             			else {
 HXLINE( 292)				_hx_tmp9 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp9) {
-HXLINE( 301)				_hx_tmp8 = (a->m31 == b->m31);
+HXLINE( 292)				_hx_tmp8 = (a->m31 == b->m31);
             			}
             			else {
 HXLINE( 292)				_hx_tmp8 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp8) {
-HXLINE( 302)				_hx_tmp7 = (a->m02 == b->m02);
+HXLINE( 292)				_hx_tmp7 = (a->m02 == b->m02);
             			}
             			else {
 HXLINE( 292)				_hx_tmp7 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp7) {
-HXLINE( 303)				_hx_tmp6 = (a->m12 == b->m12);
+HXLINE( 292)				_hx_tmp6 = (a->m12 == b->m12);
             			}
             			else {
 HXLINE( 292)				_hx_tmp6 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp6) {
-HXLINE( 304)				_hx_tmp5 = (a->m22 == b->m22);
+HXLINE( 292)				_hx_tmp5 = (a->m22 == b->m22);
             			}
             			else {
 HXLINE( 292)				_hx_tmp5 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp5) {
-HXLINE( 305)				_hx_tmp4 = (a->m32 == b->m32);
+HXLINE( 292)				_hx_tmp4 = (a->m32 == b->m32);
             			}
             			else {
 HXLINE( 292)				_hx_tmp4 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp4) {
-HXLINE( 306)				_hx_tmp3 = (a->m03 == b->m03);
+HXLINE( 292)				_hx_tmp3 = (a->m03 == b->m03);
             			}
             			else {
 HXLINE( 292)				_hx_tmp3 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp3) {
-HXLINE( 307)				_hx_tmp2 = (a->m13 == b->m13);
+HXLINE( 292)				_hx_tmp2 = (a->m13 == b->m13);
             			}
             			else {
 HXLINE( 292)				_hx_tmp2 = false;
             			}
 HXDLIN( 292)			if (_hx_tmp2) {
-HXLINE( 308)				_hx_tmp1 = (a->m23 == b->m23);
+HXLINE( 292)				_hx_tmp1 = (a->m23 == b->m23);
             			}
             			else {
 HXLINE( 292)				_hx_tmp1 = false;
@@ -1139,7 +1139,7 @@ HXLINE( 761)							_hx_tmp = self->m33;
 HXLINE( 761)							HX_STACK_DO_THROW(HX_("Invalid element",73,24,cd,01));
             						}
             					}
-HXDLIN( 761)					HX_VARI( Float,value) = ( (Float)(func(_hx_tmp)) );
+HXDLIN( 761)					HX_VARI( Float,value) = ( (Float)(func(( (Float)(_hx_tmp) ))) );
 HXDLIN( 761)					switch((int)(i)){
             						case (int)0: {
 HXLINE( 761)							self->m00 = value;
@@ -1318,23 +1318,23 @@ Float Matrix4x4_Impl__obj::get_det( ::hxmath::math::Matrix4x4Default this1){
             	HX_STACK_FRAME("hxmath.math._Matrix4x4.Matrix4x4_Impl_","get_det",0x3ec843dd,"hxmath.math._Matrix4x4.Matrix4x4_Impl_.get_det","hxmath/math/Matrix4x4.hx",863,0x11ea859f)
             	HX_STACK_ARG(this1,"this1")
 HXLINE( 864)		HX_VARI(  ::hxmath::math::Matrix4x4Default,self) = this1;
-HXLINE( 866)		HX_VARI( Float,m00) = self->m00;
-HXDLIN( 866)		HX_VARI( Float,m10) = self->m10;
-HXDLIN( 866)		HX_VARI( Float,m20) = self->m20;
-HXDLIN( 866)		HX_VARI( Float,m30) = self->m30;
-HXLINE( 867)		HX_VARI( Float,m01) = self->m01;
-HXDLIN( 867)		HX_VARI( Float,m11) = self->m11;
-HXDLIN( 867)		HX_VARI( Float,m21) = self->m21;
-HXDLIN( 867)		HX_VARI( Float,m31) = self->m31;
-HXLINE( 868)		HX_VARI( Float,m02) = self->m02;
-HXDLIN( 868)		HX_VARI( Float,m12) = self->m12;
-HXDLIN( 868)		HX_VARI( Float,m22) = self->m22;
-HXDLIN( 868)		HX_VARI( Float,m32) = self->m32;
-HXLINE( 869)		HX_VARI( Float,m03) = self->m03;
-HXDLIN( 869)		HX_VARI( Float,m13) = self->m13;
-HXDLIN( 869)		HX_VARI( Float,m23) = self->m23;
-HXDLIN( 869)		HX_VARI( Float,m33) = self->m33;
-HXLINE( 865)		return ((((m00 * (((m11 * ((m22 * m33) - (m32 * m23))) - (m21 * ((m12 * m33) - (m32 * m13)))) + (m31 * ((m12 * m23) - (m22 * m13))))) - (m10 * (((m01 * ((m22 * m33) - (m32 * m23))) - (m21 * ((m02 * m33) - (m32 * m03)))) + (m31 * ((m02 * m23) - (m22 * m03)))))) + (m20 * (((m01 * ((m12 * m33) - (m32 * m13))) - (m11 * ((m02 * m33) - (m32 * m03)))) + (m31 * ((m02 * m13) - (m12 * m03)))))) - (m30 * (((m01 * ((m12 * m23) - (m22 * m13))) - (m11 * ((m02 * m23) - (m22 * m03)))) + (m21 * ((m02 * m13) - (m12 * m03))))));
+HXLINE( 865)		HX_VARI( Float,m00) = self->m00;
+HXDLIN( 865)		HX_VARI( Float,m10) = self->m10;
+HXDLIN( 865)		HX_VARI( Float,m20) = self->m20;
+HXDLIN( 865)		HX_VARI( Float,m30) = self->m30;
+HXDLIN( 865)		HX_VARI( Float,m01) = self->m01;
+HXDLIN( 865)		HX_VARI( Float,m11) = self->m11;
+HXDLIN( 865)		HX_VARI( Float,m21) = self->m21;
+HXDLIN( 865)		HX_VARI( Float,m31) = self->m31;
+HXDLIN( 865)		HX_VARI( Float,m02) = self->m02;
+HXDLIN( 865)		HX_VARI( Float,m12) = self->m12;
+HXDLIN( 865)		HX_VARI( Float,m22) = self->m22;
+HXDLIN( 865)		HX_VARI( Float,m32) = self->m32;
+HXDLIN( 865)		HX_VARI( Float,m03) = self->m03;
+HXDLIN( 865)		HX_VARI( Float,m13) = self->m13;
+HXDLIN( 865)		HX_VARI( Float,m23) = self->m23;
+HXDLIN( 865)		HX_VARI( Float,m33) = self->m33;
+HXDLIN( 865)		return ((((m00 * (((m11 * ((m22 * m33) - (m32 * m23))) - (m21 * ((m12 * m33) - (m32 * m13)))) + (m31 * ((m12 * m23) - (m22 * m13))))) - (m10 * (((m01 * ((m22 * m33) - (m32 * m23))) - (m21 * ((m02 * m33) - (m32 * m03)))) + (m31 * ((m02 * m23) - (m22 * m03)))))) + (m20 * (((m01 * ((m12 * m33) - (m32 * m13))) - (m11 * ((m02 * m33) - (m32 * m03)))) + (m31 * ((m02 * m13) - (m12 * m03)))))) - (m30 * (((m01 * ((m12 * m23) - (m22 * m13))) - (m11 * ((m02 * m23) - (m22 * m03)))) + (m21 * ((m02 * m13) - (m12 * m03))))));
             	}
 
 

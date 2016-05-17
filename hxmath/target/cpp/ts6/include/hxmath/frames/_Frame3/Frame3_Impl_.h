@@ -24,11 +24,13 @@ class HXCPP_CLASS_ATTRIBUTES Frame3_Impl__obj : public hx::Object
 		typedef hx::Object super;
 		typedef Frame3_Impl__obj OBJ_;
 		Frame3_Impl__obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.frames._Frame3.Frame3_Impl_")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.frames._Frame3.Frame3_Impl_"); }
 		static hx::ObjectPtr< Frame3_Impl__obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

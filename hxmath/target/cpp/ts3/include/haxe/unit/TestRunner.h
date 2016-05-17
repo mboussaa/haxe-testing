@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES TestRunner_obj : public hx::Object
 		typedef hx::Object super;
 		typedef TestRunner_obj OBJ_;
 		TestRunner_obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="haxe.unit.TestRunner")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"haxe.unit.TestRunner"); }
 		static hx::ObjectPtr< TestRunner_obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

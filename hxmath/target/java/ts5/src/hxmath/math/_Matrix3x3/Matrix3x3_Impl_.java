@@ -24,9 +24,9 @@ public final class Matrix3x3_Impl_
 	
 	public static hxmath.math.Matrix3x3Default _new(double m00, double m10, double m20, double m01, double m11, double m21, double m02, double m12, double m22)
 	{
-		//line 103 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 99 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		hxmath.math.Matrix3x3Default this1 = new hxmath.math.Matrix3x3Default(m00, m10, m20, m01, m11, m21, m02, m12, m22);
-		//line 103 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 99 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		return ((hxmath.math.Matrix3x3Default) (this1) );
 	}
 	
@@ -1279,23 +1279,23 @@ public final class Matrix3x3_Impl_
 	{
 		//line 679 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		hxmath.math.Matrix3x3Default self = this1;
-		//line 681 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m00 = self.m00;
-		//line 681 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m10 = self.m10;
-		//line 681 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m20 = self.m20;
-		//line 682 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m01 = self.m01;
-		//line 682 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m11 = self.m11;
-		//line 682 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m21 = self.m21;
-		//line 683 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m02 = self.m02;
-		//line 683 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m12 = self.m12;
-		//line 683 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
+		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		double m22 = self.m22;
 		//line 680 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
 		return ( ( ( m00 * (( ( m11 * m22 ) - ( m21 * m12 ) )) ) - ( m10 * (( ( m01 * m22 ) - ( m21 * m02 ) )) ) ) + ( m20 * (( ( m01 * m12 ) - ( m11 * m02 ) )) ) );

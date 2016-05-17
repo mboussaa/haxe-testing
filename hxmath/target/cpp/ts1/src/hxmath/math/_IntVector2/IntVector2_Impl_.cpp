@@ -36,10 +36,10 @@ Dynamic IntVector2_Impl__obj::__Create(hx::DynamicArray inArgs)
 Int IntVector2_Impl__obj::elementCount;
 
  ::hxmath::math::IntVector2Default IntVector2_Impl__obj::_new(Int x,Int y){
-            	HX_STACK_FRAME("hxmath.math._IntVector2.IntVector2_Impl_","_new",0x4e9bc610,"hxmath.math._IntVector2.IntVector2_Impl_._new","hxmath/math/IntVector2.hx",57,0x576b160e)
+            	HX_STACK_FRAME("hxmath.math._IntVector2.IntVector2_Impl_","_new",0x4e9bc610,"hxmath.math._IntVector2.IntVector2_Impl_._new","hxmath/math/IntVector2.hx",56,0x576b160e)
             	HX_STACK_ARG(x,"x")
             	HX_STACK_ARG(y,"y")
-HXLINE(  57)		return  ::hxmath::math::IntVector2Default_obj::__new(x,y);
+HXLINE(  56)		return  ::hxmath::math::IntVector2Default_obj::__new(x,y);
             	}
 
 
@@ -140,13 +140,13 @@ HXDLIN( 171)		if (!(_hx_tmp)) {
 HXLINE( 172)			Bool _hx_tmp1;
 HXDLIN( 172)			Bool _hx_tmp2;
 HXDLIN( 172)			if (hx::IsNotNull( a )) {
-HXLINE( 173)				_hx_tmp2 = hx::IsNotNull( b );
+HXLINE( 172)				_hx_tmp2 = hx::IsNotNull( b );
             			}
             			else {
 HXLINE( 172)				_hx_tmp2 = false;
             			}
 HXDLIN( 172)			if (_hx_tmp2) {
-HXLINE( 174)				_hx_tmp1 = (a->x == b->x);
+HXLINE( 172)				_hx_tmp1 = (a->x == b->x);
             			}
             			else {
 HXLINE( 172)				_hx_tmp1 = false;
@@ -485,7 +485,7 @@ HXLINE( 403)							_hx_tmp = self->y;
 HXLINE( 403)							HX_STACK_DO_THROW(HX_("Invalid element",73,24,cd,01));
             						}
             					}
-HXDLIN( 403)					HX_VARI( Int,value) = ( (Int)(func(_hx_tmp)) );
+HXDLIN( 403)					HX_VARI( Int,value) = ( (Int)(func(( (Int)(_hx_tmp) ))) );
 HXDLIN( 403)					switch((int)(i)){
             						case (int)0: {
 HXLINE( 403)							self->x = value;

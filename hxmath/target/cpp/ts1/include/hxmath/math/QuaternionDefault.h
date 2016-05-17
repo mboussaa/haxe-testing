@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES QuaternionDefault_obj : public hx::Object
 		typedef hx::Object super;
 		typedef QuaternionDefault_obj OBJ_;
 		QuaternionDefault_obj();
-		void __construct(Float s,Float x,Float y,Float z);
 
 	public:
+		void __construct(Float s,Float x,Float y,Float z);
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.math.QuaternionDefault")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.math.QuaternionDefault"); }
 		static hx::ObjectPtr< QuaternionDefault_obj > __new(Float s,Float x,Float y,Float z);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

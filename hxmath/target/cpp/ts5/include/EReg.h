@@ -16,11 +16,13 @@ class HXCPP_CLASS_ATTRIBUTES EReg_obj : public hx::Object
 		typedef hx::Object super;
 		typedef EReg_obj OBJ_;
 		EReg_obj();
-		void __construct(::String r,::String opt);
 
 	public:
+		void __construct(::String r,::String opt);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="EReg")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,true,"EReg"); }
 		static hx::ObjectPtr< EReg_obj > __new(::String r,::String opt);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

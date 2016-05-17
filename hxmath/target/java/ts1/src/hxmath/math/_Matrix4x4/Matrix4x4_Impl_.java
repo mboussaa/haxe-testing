@@ -28,9 +28,9 @@ public final class Matrix4x4_Impl_
 	
 	public static hxmath.math.Matrix4x4Default _new(double m00, double m10, double m20, double m30, double m01, double m11, double m21, double m31, double m02, double m12, double m22, double m32, double m03, double m13, double m23, double m33)
 	{
-		//line 143 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 138 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		hxmath.math.Matrix4x4Default this1 = new hxmath.math.Matrix4x4Default(m00, m10, m20, m30, m01, m11, m21, m31, m02, m12, m22, m32, m03, m13, m23, m33);
-		//line 143 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 138 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		return ((hxmath.math.Matrix4x4Default) (this1) );
 	}
 	
@@ -1971,37 +1971,37 @@ public final class Matrix4x4_Impl_
 	{
 		//line 864 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		hxmath.math.Matrix4x4Default self = this1;
-		//line 866 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m00 = self.m00;
-		//line 866 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m10 = self.m10;
-		//line 866 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m20 = self.m20;
-		//line 866 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m30 = self.m30;
-		//line 867 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m01 = self.m01;
-		//line 867 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m11 = self.m11;
-		//line 867 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m21 = self.m21;
-		//line 867 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m31 = self.m31;
-		//line 868 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m02 = self.m02;
-		//line 868 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m12 = self.m12;
-		//line 868 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m22 = self.m22;
-		//line 868 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m32 = self.m32;
-		//line 869 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m03 = self.m03;
-		//line 869 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m13 = self.m13;
-		//line 869 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m23 = self.m23;
-		//line 869 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
+		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		double m33 = self.m33;
 		//line 865 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
 		return ( ( ( ( m00 * (( ( ( m11 * (( ( m22 * m33 ) - ( m32 * m23 ) )) ) - ( m21 * (( ( m12 * m33 ) - ( m32 * m13 ) )) ) ) + ( m31 * (( ( m12 * m23 ) - ( m22 * m13 ) )) ) )) ) - ( m10 * (( ( ( m01 * (( ( m22 * m33 ) - ( m32 * m23 ) )) ) - ( m21 * (( ( m02 * m33 ) - ( m32 * m03 ) )) ) ) + ( m31 * (( ( m02 * m23 ) - ( m22 * m03 ) )) ) )) ) ) + ( m20 * (( ( ( m01 * (( ( m12 * m33 ) - ( m32 * m13 ) )) ) - ( m11 * (( ( m02 * m33 ) - ( m32 * m03 ) )) ) ) + ( m31 * (( ( m02 * m13 ) - ( m12 * m03 ) )) ) )) ) ) - ( m30 * (( ( ( m01 * (( ( m12 * m23 ) - ( m22 * m13 ) )) ) - ( m11 * (( ( m02 * m23 ) - ( m22 * m03 ) )) ) ) + ( m21 * (( ( m02 * m13 ) - ( m12 * m03 ) )) ) )) ) );

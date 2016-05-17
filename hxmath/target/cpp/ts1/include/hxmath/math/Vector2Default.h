@@ -18,11 +18,13 @@ class HXCPP_CLASS_ATTRIBUTES Vector2Default_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Vector2Default_obj OBJ_;
 		Vector2Default_obj();
-		void __construct(Float x,Float y);
 
 	public:
+		void __construct(Float x,Float y);
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.math.Vector2Default")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.math.Vector2Default"); }
 		static hx::ObjectPtr< Vector2Default_obj > __new(Float x,Float y);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

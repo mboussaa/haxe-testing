@@ -34,20 +34,20 @@ HXLINE(  36)		this->isDirty = true;
 HXLINE(  33)		this->isCached = true;
 HXLINE(  47)		 ::hxmath::math::Vector3Default _hx_tmp;
 HXDLIN(  47)		if (hx::IsNull( offset )) {
-HXLINE(  48)			_hx_tmp =  ::hxmath::math::Vector3Default_obj::__new(((Float)0.0),((Float)0.0),((Float)0.0));
+HXLINE(  47)			_hx_tmp =  ::hxmath::math::Vector3Default_obj::__new(((Float)0.0),((Float)0.0),((Float)0.0));
             		}
             		else {
-HXLINE(  49)			_hx_tmp = offset;
+HXLINE(  47)			_hx_tmp = offset;
             		}
-HXLINE(  47)		this->internalOffset = _hx_tmp;
+HXDLIN(  47)		this->internalOffset = _hx_tmp;
 HXLINE(  50)		 ::hxmath::math::QuaternionDefault _hx_tmp1;
 HXDLIN(  50)		if (hx::IsNull( orientation )) {
-HXLINE(  51)			_hx_tmp1 =  ::hxmath::math::QuaternionDefault_obj::__new((int)1,(int)0,(int)0,(int)0);
+HXLINE(  50)			_hx_tmp1 =  ::hxmath::math::QuaternionDefault_obj::__new((int)1,(int)0,(int)0,(int)0);
             		}
             		else {
-HXLINE(  52)			_hx_tmp1 = orientation;
+HXLINE(  50)			_hx_tmp1 = orientation;
             		}
-HXLINE(  50)		this->internalOrientation = _hx_tmp1;
+HXDLIN(  50)		this->internalOrientation = _hx_tmp1;
 HXLINE(  53)		this->isCached = isCached;
 HXLINE(  54)		this->isDirty = true;
 HXLINE(  55)		this->internalMatrix =  ::hxmath::math::Matrix4x4Default_obj::__new(((Float)1.0),((Float)0.0),((Float)0.0),((Float)0.0),((Float)0.0),((Float)1.0),((Float)0.0),((Float)0.0),((Float)0.0),((Float)0.0),((Float)1.0),((Float)0.0),((Float)0.0),((Float)0.0),((Float)0.0),((Float)1.0));

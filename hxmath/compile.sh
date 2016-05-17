@@ -1,8 +1,8 @@
 #/bin/bash
 #
 # delete peviously compiled generated code
-echo "delete peviously compiled generated code"
-rm -rf /shared/hxmath/target/*
+#echo "delete peviously compiled hxmath code"
+#rm -rf /shared/hxmath/target/*
 
 for (( i=1; i<=7; i++ ))
 do

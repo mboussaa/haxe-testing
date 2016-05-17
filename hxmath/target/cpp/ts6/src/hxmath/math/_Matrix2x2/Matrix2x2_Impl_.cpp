@@ -37,12 +37,12 @@ Dynamic Matrix2x2_Impl__obj::__Create(hx::DynamicArray inArgs)
 Int Matrix2x2_Impl__obj::elementCount;
 
  ::hxmath::math::Matrix2x2Default Matrix2x2_Impl__obj::_new(Float a,Float b,Float c,Float d){
-            	HX_STACK_FRAME("hxmath.math._Matrix2x2.Matrix2x2_Impl_","_new",0x743ae716,"hxmath.math._Matrix2x2.Matrix2x2_Impl_._new","hxmath/math/Matrix2x2.hx",79,0x43e15fa3)
+            	HX_STACK_FRAME("hxmath.math._Matrix2x2.Matrix2x2_Impl_","_new",0x743ae716,"hxmath.math._Matrix2x2.Matrix2x2_Impl_._new","hxmath/math/Matrix2x2.hx",78,0x43e15fa3)
             	HX_STACK_ARG(a,"a")
             	HX_STACK_ARG(b,"b")
             	HX_STACK_ARG(c,"c")
             	HX_STACK_ARG(d,"d")
-HXLINE(  79)		return  ::hxmath::math::Matrix2x2Default_obj::__new(a,b,c,d);
+HXLINE(  78)		return  ::hxmath::math::Matrix2x2Default_obj::__new(a,b,c,d);
             	}
 
 
@@ -155,25 +155,25 @@ HXDLIN( 212)			Bool _hx_tmp2;
 HXDLIN( 212)			Bool _hx_tmp3;
 HXDLIN( 212)			Bool _hx_tmp4;
 HXDLIN( 212)			if (hx::IsNotNull( m )) {
-HXLINE( 213)				_hx_tmp4 = hx::IsNotNull( n );
+HXLINE( 212)				_hx_tmp4 = hx::IsNotNull( n );
             			}
             			else {
 HXLINE( 212)				_hx_tmp4 = false;
             			}
 HXDLIN( 212)			if (_hx_tmp4) {
-HXLINE( 214)				_hx_tmp3 = (m->a == n->a);
+HXLINE( 212)				_hx_tmp3 = (m->a == n->a);
             			}
             			else {
 HXLINE( 212)				_hx_tmp3 = false;
             			}
 HXDLIN( 212)			if (_hx_tmp3) {
-HXLINE( 215)				_hx_tmp2 = (m->b == n->b);
+HXLINE( 212)				_hx_tmp2 = (m->b == n->b);
             			}
             			else {
 HXLINE( 212)				_hx_tmp2 = false;
             			}
 HXDLIN( 212)			if (_hx_tmp2) {
-HXLINE( 216)				_hx_tmp1 = (m->c == n->c);
+HXLINE( 212)				_hx_tmp1 = (m->c == n->c);
             			}
             			else {
 HXLINE( 212)				_hx_tmp1 = false;
@@ -610,7 +610,7 @@ HXLINE( 540)							_hx_tmp = self->d;
 HXLINE( 540)							HX_STACK_DO_THROW(HX_("Invalid element",73,24,cd,01));
             						}
             					}
-HXDLIN( 540)					HX_VARI( Float,value) = ( (Float)(func(_hx_tmp)) );
+HXDLIN( 540)					HX_VARI( Float,value) = ( (Float)(func(( (Float)(_hx_tmp) ))) );
 HXDLIN( 540)					switch((int)(i)){
             						case (int)0: {
 HXLINE( 540)							self->a = value;

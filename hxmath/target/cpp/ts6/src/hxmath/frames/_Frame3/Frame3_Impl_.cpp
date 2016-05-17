@@ -47,11 +47,11 @@ Dynamic Frame3_Impl__obj::__Create(hx::DynamicArray inArgs)
 }
 
 ::Dynamic Frame3_Impl__obj::_new( ::hxmath::math::Vector3Default offset, ::hxmath::math::QuaternionDefault orientation){
-            	HX_STACK_FRAME("hxmath.frames._Frame3.Frame3_Impl_","_new",0x5f2f962e,"hxmath.frames._Frame3.Frame3_Impl_._new","hxmath/frames/Frame3.hx",26,0xed0aca66)
+            	HX_STACK_FRAME("hxmath.frames._Frame3.Frame3_Impl_","_new",0x5f2f962e,"hxmath.frames._Frame3.Frame3_Impl_._new","hxmath/frames/Frame3.hx",25,0xed0aca66)
             	HX_STACK_ARG(offset,"offset")
             	HX_STACK_ARG(orientation,"orientation")
-HXLINE(  26)		HX_VARI_NAME( ::Dynamic,this1,"this") =  ::hxmath::frames::Frame3Default_obj::__new(offset,orientation,null());
-HXDLIN(  26)		return this1;
+HXLINE(  25)		HX_VARI_NAME( ::Dynamic,this1,"this") =  ::hxmath::frames::Frame3Default_obj::__new(offset,orientation,null());
+HXDLIN(  25)		return this1;
             	}
 
 
@@ -169,14 +169,14 @@ STATIC_HX_DEFINE_DYNAMIC_FUNC2(Frame3_Impl__obj,concat,return )
             	HX_STACK_ARG(other,"other")
 HXLINE(  86)		HX_VARI( ::Dynamic,self) = this1;
 HXLINE(  87)		HX_VARI_NAME(  ::hxmath::math::QuaternionDefault,this2,"this") = ( ( ::hxmath::math::QuaternionDefault)( ::Dynamic(self->__Field(HX_("get_orientation",67,a6,e0,be),hx::paccDynamic))()) );
-HXLINE(  88)		HX_VARI(  ::hxmath::math::Vector3Default,u) = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(other->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
-HXLINE(  87)		HX_VARI_NAME(  ::hxmath::math::QuaternionDefault,self1,"self") = this2;
+HXDLIN(  87)		HX_VARI(  ::hxmath::math::Vector3Default,u) = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(other->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
+HXDLIN(  87)		HX_VARI_NAME(  ::hxmath::math::QuaternionDefault,self1,"self") = this2;
 HXDLIN(  87)		HX_VARI( Float,a) = (((Float)2.0) * (((self1->x * u->x) + (self1->y * u->y)) + (self1->z * u->z)));
 HXDLIN(  87)		HX_VARI( Float,b) = ((((self1->s * self1->s) - (self1->x * self1->x)) - (self1->y * self1->y)) - (self1->z * self1->z));
 HXDLIN(  87)		HX_VARI( Float,c) = (((Float)2.0) * self1->s);
 HXDLIN(  87)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,this3,"this") =  ::hxmath::math::Vector3Default_obj::__new((((a * self1->x) + (b * u->x)) + (c * ((self1->y * u->z) - (self1->z * u->y)))),(((a * self1->y) + (b * u->y)) + (c * ((self1->z * u->x) - (self1->x * u->z)))),(((a * self1->z) + (b * u->z)) + (c * ((self1->x * u->y) - (self1->y * u->x)))));
-HXLINE(  89)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,a1,"a") = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(self->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
-HXLINE(  87)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,self2,"self") = this3;
+HXDLIN(  87)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,a1,"a") = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(self->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
+HXDLIN(  87)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,self2,"self") = this3;
 HXDLIN(  87)		hx::AddEq(self2->x,a1->x);
 HXDLIN(  87)		hx::AddEq(self2->y,a1->y);
 HXDLIN(  87)		hx::AddEq(self2->z,a1->z);
@@ -210,8 +210,8 @@ HXDLIN( 104)		HX_VARI( Float,a) = (((Float)2.0) * (((self1->x * p->x) + (self1->
 HXDLIN( 104)		HX_VARI( Float,b) = ((((self1->s * self1->s) - (self1->x * self1->x)) - (self1->y * self1->y)) - (self1->z * self1->z));
 HXDLIN( 104)		HX_VARI( Float,c) = (((Float)2.0) * self1->s);
 HXDLIN( 104)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,this3,"this") =  ::hxmath::math::Vector3Default_obj::__new((((a * self1->x) + (b * p->x)) + (c * ((self1->y * p->z) - (self1->z * p->y)))),(((a * self1->y) + (b * p->y)) + (c * ((self1->z * p->x) - (self1->x * p->z)))),(((a * self1->z) + (b * p->z)) + (c * ((self1->x * p->y) - (self1->y * p->x)))));
-HXLINE( 106)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,a1,"a") = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(self->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
-HXLINE( 104)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,self2,"self") = this3;
+HXDLIN( 104)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,a1,"a") = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(self->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
+HXDLIN( 104)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,self2,"self") = this3;
 HXDLIN( 104)		hx::AddEq(self2->x,a1->x);
 HXDLIN( 104)		hx::AddEq(self2->y,a1->y);
 HXDLIN( 104)		hx::AddEq(self2->z,a1->z);
@@ -331,8 +331,8 @@ HXDLIN( 158)				hx::MultEq(self3->y,k);
 HXDLIN( 158)				hx::MultEq(self3->z,k);
             			}
             		}
-HXLINE( 163)		HX_VARI(  ::hxmath::math::Vector3Default,u) = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(self->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
-HXLINE( 162)		HX_VARI( Float,a) = (((Float)2.0) * (((self3->x * u->x) + (self3->y * u->y)) + (self3->z * u->z)));
+HXLINE( 162)		HX_VARI(  ::hxmath::math::Vector3Default,u) = ( ( ::hxmath::math::Vector3Default)( ::Dynamic(self->__Field(HX_("get_offset",5c,07,c7,50),hx::paccDynamic))()) );
+HXDLIN( 162)		HX_VARI( Float,a) = (((Float)2.0) * (((self3->x * u->x) + (self3->y * u->y)) + (self3->z * u->z)));
 HXDLIN( 162)		HX_VARI( Float,b) = ((((self3->s * self3->s) - (self3->x * self3->x)) - (self3->y * self3->y)) - (self3->z * self3->z));
 HXDLIN( 162)		HX_VARI( Float,c) = (((Float)2.0) * self3->s);
 HXDLIN( 162)		HX_VARI_NAME(  ::hxmath::math::Vector3Default,self4,"self") =  ::hxmath::math::Vector3Default_obj::__new((((a * self3->x) + (b * u->x)) + (c * ((self3->y * u->z) - (self3->z * u->y)))),(((a * self3->y) + (b * u->y)) + (c * ((self3->z * u->x) - (self3->x * u->z)))),(((a * self3->z) + (b * u->z)) + (c * ((self3->x * u->y) - (self3->y * u->x)))));

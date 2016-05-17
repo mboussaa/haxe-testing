@@ -28,9 +28,9 @@ public final class Vector3_Impl_
 	
 	public static hxmath.math.Vector3Default _new(double x, double y, double z)
 	{
-		//line 69 "/shared/hxmath/hxmath/math/Vector3.hx"
+		//line 68 "/shared/hxmath/hxmath/math/Vector3.hx"
 		hxmath.math.Vector3Default this1 = new hxmath.math.Vector3Default(x, y, z);
-		//line 69 "/shared/hxmath/hxmath/math/Vector3.hx"
+		//line 68 "/shared/hxmath/hxmath/math/Vector3.hx"
 		return ((hxmath.math.Vector3Default) (this1) );
 	}
 	

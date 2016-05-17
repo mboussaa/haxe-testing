@@ -20,11 +20,13 @@ class HXCPP_CLASS_ATTRIBUTES Vector2Converter_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Vector2Converter_obj OBJ_;
 		Vector2Converter_obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.converters.flixel.Vector2Converter")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.converters.flixel.Vector2Converter"); }
 		static hx::ObjectPtr< Vector2Converter_obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

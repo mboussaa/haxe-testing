@@ -111,14 +111,14 @@ HXLINE(  82)				Bool _hx_tmp;
 HXDLIN(  82)				if ((t > ((Float)0.0))) {
 HXLINE(  83)					if ((hitIndex != (int)-1)) {
 HXLINE(  83)						if ((t < closestHit)) {
-HXLINE(  83)							_hx_tmp = (t >= ((Float)0.0));
+HXLINE(  82)							_hx_tmp = (t >= ((Float)0.0));
             						}
             						else {
-HXLINE(  83)							_hx_tmp = false;
+HXLINE(  82)							_hx_tmp = false;
             						}
             					}
             					else {
-HXLINE(  83)						_hx_tmp = true;
+HXLINE(  82)						_hx_tmp = true;
             					}
             				}
             				else {

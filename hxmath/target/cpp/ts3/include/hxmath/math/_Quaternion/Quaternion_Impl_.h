@@ -22,11 +22,13 @@ class HXCPP_CLASS_ATTRIBUTES Quaternion_Impl__obj : public hx::Object
 		typedef hx::Object super;
 		typedef Quaternion_Impl__obj OBJ_;
 		Quaternion_Impl__obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="hxmath.math._Quaternion.Quaternion_Impl_")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"hxmath.math._Quaternion.Quaternion_Impl_"); }
 		static hx::ObjectPtr< Quaternion_Impl__obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

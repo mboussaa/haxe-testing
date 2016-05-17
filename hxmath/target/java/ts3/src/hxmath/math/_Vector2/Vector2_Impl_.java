@@ -34,9 +34,9 @@ public final class Vector2_Impl_
 	
 	public static hxmath.math.Vector2Default _new(double x, double y)
 	{
-		//line 78 "/shared/hxmath/hxmath/math/Vector2.hx"
+		//line 77 "/shared/hxmath/hxmath/math/Vector2.hx"
 		hxmath.math.Vector2Default this1 = new hxmath.math.Vector2Default(x, y);
-		//line 78 "/shared/hxmath/hxmath/math/Vector2.hx"
+		//line 77 "/shared/hxmath/hxmath/math/Vector2.hx"
 		return ((hxmath.math.Vector2Default) (this1) );
 	}
 	

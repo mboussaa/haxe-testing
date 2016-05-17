@@ -16,11 +16,13 @@ class HXCPP_CLASS_ATTRIBUTES Std_obj : public hx::Object
 		typedef hx::Object super;
 		typedef Std_obj OBJ_;
 		Std_obj();
-		void __construct();
 
 	public:
+		void __construct();
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="Std")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"Std"); }
 		static hx::ObjectPtr< Std_obj > __new();
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

@@ -17,11 +17,13 @@ class HXCPP_CLASS_ATTRIBUTES FlxPointMock_obj : public hx::Object
 		typedef hx::Object super;
 		typedef FlxPointMock_obj OBJ_;
 		FlxPointMock_obj();
-		void __construct(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y);
 
 	public:
+		void __construct(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y);
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="test.FlxPointMock")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
+		inline void *operator new(size_t inSize, int extra)
+			{ return hx::Object::operator new(inSize+extra,false,"test.FlxPointMock"); }
 		static hx::ObjectPtr< FlxPointMock_obj > __new(hx::Null< Float >  __o_X,hx::Null< Float >  __o_Y);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);

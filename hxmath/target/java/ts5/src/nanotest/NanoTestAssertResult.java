@@ -63,9 +63,9 @@ public class NanoTestAssertResult extends haxe.lang.HxObject
 				
 				case 1:
 				{
-					//line 18 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
+					//line 20 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
 					java.lang.Object p = _g.params[1];
-					//line 18 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
+					//line 20 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
 					java.lang.String mes = haxe.lang.Runtime.toString(_g.params[0]);
 					//line 21 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
 					((haxe.root.Array<nanotest.NanoTestStatus>) (haxe.lang.Runtime.getField(this.result, "status", true)) ).__set(this.position, nanotest.NanoTestStatus.FAIL(( ( ( ( "" + mes ) + " [" ) + haxe.root.Std.string(d) ) + "]" ), p));
@@ -76,9 +76,9 @@ public class NanoTestAssertResult extends haxe.lang.HxObject
 				
 				case 2:
 				{
-					//line 18 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
+					//line 22 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
 					haxe.root.Array<haxe.StackItem> p1 = ((haxe.root.Array<haxe.StackItem>) (_g.params[1]) );
-					//line 18 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
+					//line 22 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
 					java.lang.String mes1 = haxe.lang.Runtime.toString(_g.params[0]);
 					//line 23 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
 					((haxe.root.Array<nanotest.NanoTestStatus>) (haxe.lang.Runtime.getField(this.result, "status", true)) ).__set(this.position, nanotest.NanoTestStatus.ERROR(( ( ( ( "" + mes1 ) + " [" ) + haxe.root.Std.string(d) ) + "]" ), p1));

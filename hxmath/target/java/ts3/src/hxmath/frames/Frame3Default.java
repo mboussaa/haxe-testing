@@ -33,12 +33,12 @@ public class Frame3Default extends haxe.lang.HxObject implements hxmath.frames.I
 		{
 			//line 48 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 			hxmath.math.Vector3Default this1 = new hxmath.math.Vector3Default(0.0, 0.0, 0.0);
-			//line 48 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
+			//line 47 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 			tmp = ((hxmath.math.Vector3Default) (this1) );
 		}
 		else
 		{
-			//line 49 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
+			//line 47 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 			tmp = offset;
 		}
 		
@@ -51,12 +51,12 @@ public class Frame3Default extends haxe.lang.HxObject implements hxmath.frames.I
 		{
 			//line 51 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 			hxmath.math.QuaternionDefault this2 = new hxmath.math.QuaternionDefault(((double) (1) ), ((double) (0) ), ((double) (0) ), ((double) (0) ));
-			//line 51 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
+			//line 50 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 			tmp1 = ((hxmath.math.QuaternionDefault) (this2) );
 		}
 		else
 		{
-			//line 52 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
+			//line 50 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 			tmp1 = orientation;
 		}
 		
