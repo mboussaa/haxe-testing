@@ -43,6 +43,13 @@ A 2D/3D math library for Haxe implemented using abstracts for maximum compatibil
 
 ...
 
+## Performance properties
+-google/cadvisor:0.19.3
+
+-tatum/influxdb:0.8.8
+
+-docker version 1.6
+
 ## How to use
 1- install docker
 
