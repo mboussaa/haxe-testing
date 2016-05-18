@@ -1,0 +1,42 @@
+digraph graphname {
+n4429 [shape=box,label="(4429)\nvar time2End = this.a\nthis.assertEquals(sum1,sum2,{fileName : \"TestStress.hx\",lineNumber : 116,className : \"test.TestStress\",methodName : \"testMatrixProduct\"})\nvar time1 = time1End - time1Start\nvar time2 = time2End - time2Start\nvar _hx_tmp = \"abstracts = \" + time1\nhaxe.Log.trace(_hx_tmp,{fileName : \"TestStress.hx\",lineNumber : 121,className : \"test.TestStress\",methodName : \"testMatrixProduct\"})\nvar _hx_tmp = \"direct = \" + time2\nhaxe.Log.trace(_hx_tmp,{fileName : \"TestStress.hx\",lineNumber : 122,className : \"test.TestStress\",methodName : \"testMatrixProduct\"})\nvar _hx_tmp = time1 / time2\nvar _hx_tmp = \"abstracts / direct = \" + _hx_tmp\nhaxe.Log.trace(_hx_tmp,{fileName : \"TestStress.hx\",lineNumber : 123,className : \"test.TestStress\",methodName : \"testMatrixProduct\"})"];
+n4428 [shape=box,label="(4428)"];
+n4427 [shape=box,label="(4427)\n`1 = `1 + 1\nvar i = `1 - 1\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar a = new hxmath.math.Matrix3x3Default(_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp)\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar b = new hxmath.math.Matrix3x3Default(_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp)\nvar _hx_tmp = a.m00 * b.m00\nvar _hx_tmp = a.m10 * b.m01\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m20 * b.m02\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m00 * b.m10\nvar _hx_tmp = a.m10 * b.m11\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m20 * b.m12\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m00 * b.m20\nvar _hx_tmp = a.m10 * b.m21\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m20 * b.m22\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m01 * b.m00\nvar _hx_tmp = a.m11 * b.m01\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m21 * b.m02\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m01 * b.m10\nvar _hx_tmp = a.m11 * b.m11\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m21 * b.m12\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m01 * b.m20\nvar _hx_tmp = a.m11 * b.m21\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m21 * b.m22\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m02 * b.m00\nvar _hx_tmp = a.m12 * b.m01\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m22 * b.m02\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m02 * b.m10\nvar _hx_tmp = a.m12 * b.m11\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m22 * b.m12\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m02 * b.m20\nvar _hx_tmp = a.m12 * b.m21\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m22 * b.m22\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar c = new hxmath.math.Matrix3x3Default(_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp)\nvar _hx_tmp = c.m00 + c.m10\nvar _hx_tmp = _hx_tmp + c.m20\nvar _hx_tmp = _hx_tmp + c.m01\nvar _hx_tmp = _hx_tmp + c.m11\nvar _hx_tmp = _hx_tmp + c.m21\nvar _hx_tmp = _hx_tmp + c.m02\nvar _hx_tmp = _hx_tmp + c.m12\nvar _hx_tmp = _hx_tmp + c.m22\nsum2 = sum2 + _hx_tmp"];
+n4426 [shape=box,label="(4426)\nbreak"];
+n4425 [shape=box,label="(4425)\nvar _hx_tmp = ! ((`1 < 10000000))\n@:cond-branch _hx_tmp"];
+n4425 -> n4426[style="dashed",color="gray",label="then"];
+n4425 -> n4427[style="dashed",color="gray",label="next"];
+n4424 [shape=box,label="<loop-head>
+(4424)"];
+n4423 [shape=box,label="(4423)\nwhile ((true)) @:block 4425"];
+n4423 -> n4424[style="dashed",color="gray",label="loop-head"];
+n4423 -> n4425[style="dashed",color="gray",label="loop-body"];
+n4423 -> n4428[style="dashed",color="gray",label="next"];
+n4422 [shape=box,label="(4422)\nvar `1 = 0\nnull"];
+n4422 -> n4423[style="dashed",color="gray",label="merge"];
+n4421 [shape=box,label="(4421)\nvar time1End = this.a\nvar time2Start = this.a\nvar sum2 = 0.0"];
+n4421 -> n4422[style="dashed",color="gray",label="sub"];
+n4421 -> n4429[style="dashed",color="gray",label="next"];
+n4420 [shape=box,label="(4420)"];
+n4419 [shape=box,label="(4419)\n`1 = `1 + 1\nvar i = `1 - 1\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar _hx_tmp = i * 4.3\nvar _hx_tmp = i * 1.2\nvar a = new hxmath.math.Matrix3x3Default(_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp)\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar _hx_tmp = i * 0.8\nvar _hx_tmp = i * 1.1\nvar b = new hxmath.math.Matrix3x3Default(_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp,_hx_tmp)\nvar _hx_tmp = a.m00 * b.m00\nvar _hx_tmp = a.m10 * b.m01\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m20 * b.m02\nvar m00 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m00 * b.m10\nvar _hx_tmp = a.m10 * b.m11\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m20 * b.m12\nvar m10 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m00 * b.m20\nvar _hx_tmp = a.m10 * b.m21\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m20 * b.m22\nvar m20 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m01 * b.m00\nvar _hx_tmp = a.m11 * b.m01\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m21 * b.m02\nvar m01 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m01 * b.m10\nvar _hx_tmp = a.m11 * b.m11\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m21 * b.m12\nvar m11 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m01 * b.m20\nvar _hx_tmp = a.m11 * b.m21\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m21 * b.m22\nvar m21 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m02 * b.m00\nvar _hx_tmp = a.m12 * b.m01\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m22 * b.m02\nvar m02 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m02 * b.m10\nvar _hx_tmp = a.m12 * b.m11\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m22 * b.m12\nvar m12 = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m02 * b.m20\nvar _hx_tmp = a.m12 * b.m21\nvar _hx_tmp = _hx_tmp + _hx_tmp\nvar _hx_tmp = a.m22 * b.m22\nvar m22 = _hx_tmp + _hx_tmp\nvar this\nthis = new hxmath.math.Matrix3x3Default(m00,m10,m20,m01,m11,m21,m02,m12,m22)\nvar c = cast this\nvar _hx_tmp = c.m00 + c.m10\nvar _hx_tmp = _hx_tmp + c.m20\nvar _hx_tmp = _hx_tmp + c.m01\nvar _hx_tmp = _hx_tmp + c.m11\nvar _hx_tmp = _hx_tmp + c.m21\nvar _hx_tmp = _hx_tmp + c.m02\nvar _hx_tmp = _hx_tmp + c.m12\nvar _hx_tmp = _hx_tmp + c.m22\nsum1 = sum1 + _hx_tmp"];
+n4418 [shape=box,label="(4418)\nbreak"];
+n4417 [shape=box,label="(4417)\nvar _hx_tmp = ! ((`1 < 10000000))\n@:cond-branch _hx_tmp"];
+n4417 -> n4418[style="dashed",color="gray",label="then"];
+n4417 -> n4419[style="dashed",color="gray",label="next"];
+n4416 [shape=box,label="<loop-head>
+(4416)"];
+n4415 [shape=box,label="(4415)\nwhile ((true)) @:block 4417"];
+n4415 -> n4416[style="dashed",color="gray",label="loop-head"];
+n4415 -> n4417[style="dashed",color="gray",label="loop-body"];
+n4415 -> n4420[style="dashed",color="gray",label="next"];
+n4414 [shape=box,label="(4414)\nvar `1 = 0\nnull"];
+n4414 -> n4415[style="dashed",color="gray",label="merge"];
+n4413 [shape=box,label="<function-end>
+(4413)"];
+n4412 [shape=box,label="<function-begin>
+(4412)\nhaxe.Log.trace(\"--Matrix3x3 matrix product--\",{fileName : \"TestStress.hx\",lineNumber : 55,className : \"test.TestStress\",methodName : \"testMatrixProduct\"})\nnull\nnull\nvar time1Start = this.a\nvar sum1 = 0.0"];
+n4412 -> n4414[style="dashed",color="gray",label="sub"];
+n4412 -> n4421[style="dashed",color="gray",label="next"];
+n1 [shape=box,label="<root>
+(1)"];
+}

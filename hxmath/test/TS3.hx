@@ -20,7 +20,7 @@ class TS3
 	    //runner.add(new TestStructures());
             //for (i in 0...3000)   
        	    //runner.add(new Test2D());
-            for (i in 0...3000) 
+         
  	    runner.add(new Test3D());
             //runner.add(new TestMathUtil());
             //runner.add(new TestConverters());

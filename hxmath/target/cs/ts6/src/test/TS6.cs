@@ -24,15 +24,7 @@ namespace test {
 		public static bool main() {
 			unchecked {
 				global::nanotest.NanoTestRunner runner = new global::nanotest.NanoTestRunner(((global::haxe.lang.Function) (null) ));
-				{
-					int _g = 0;
-					while (( _g < 3000 )) {
-						 ++ _g;
-						runner.@add(new global::test.TestFrames(((object) (new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "test.TS6", "TS6.hx"}, new int[]{1981972957}, new double[]{((double) (27) )})) )));
-					}
-					
-				}
-				
+				runner.@add(new global::test.TestFrames(((object) (new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "test.TS6", "TS6.hx"}, new int[]{1981972957}, new double[]{((double) (27) )})) )));
 				return runner.run();
 			}
 		}

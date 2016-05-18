@@ -1,0 +1,264 @@
+digraph graphname {
+	node [shape=plaintext];
+n922[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(922) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="e0" align="left">var tmp = (tmp) + 1</td></tr>
+	<tr><td port="e1" align="left">return new haxe.ds.TreeNode(l,k,v,r,tmp)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n921[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(921) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = hr</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n920[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(920) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = hl</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n919[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(919) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var tmp = new haxe.ds.TreeNode(l,k,v,r.left.left,null)</td></tr>
+	<tr><td port="e1" align="left">return new haxe.ds.TreeNode(tmp,r.left.key,r.left.value,new haxe.ds.TreeNode(r.left.right,r.key,r.value,r.right,null),null)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n918[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(918) BKConditional</td></tr>
+	<tr><td port="e0" align="left">return new haxe.ds.TreeNode(new haxe.ds.TreeNode(l,k,v,r.left,null),r.key,r.value,r.right,null)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n917[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(917) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="e0" align="left">var tmp = tmp &gt; tmp</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n916[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(916) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = _this._height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n915[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(915) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n914[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(914) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="e0" align="left">var _this = r.left</td></tr>
+	<tr><td port="e1" align="left">var tmp</td></tr>
+	<tr><td port="e2" align="left">var tmp = _this == null</td></tr>
+	<tr><td port="e3" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n913[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(913) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = _this._height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n912[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(912) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n911[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(911) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var tmp</td></tr>
+	<tr><td port="e1" align="left">var tmp = hl &gt; hr</td></tr>
+	<tr><td port="e2" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n910[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(910) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var _this = r.right</td></tr>
+	<tr><td port="e1" align="left">var tmp</td></tr>
+	<tr><td port="e2" align="left">var tmp = _this == null</td></tr>
+	<tr><td port="e3" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n909[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(909) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var tmp = new haxe.ds.TreeNode(l.left,l.key,l.value,l.right.left,null)</td></tr>
+	<tr><td port="e1" align="left">return new haxe.ds.TreeNode(tmp,l.right.key,l.right.value,new haxe.ds.TreeNode(l.right.right,k,v,r,null),null)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n908[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(908) BKConditional</td></tr>
+	<tr><td port="e0" align="left">return new haxe.ds.TreeNode(l.left,l.key,l.value,new haxe.ds.TreeNode(l.right,k,v,r,null),null)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n907[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(907) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="e0" align="left">var tmp = tmp &gt;= tmp</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n906[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(906) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = _this._height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n905[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(905) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n904[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(904) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">tmp = \"phi\"(tmp,tmp)</td></tr>
+	<tr><td port="e0" align="left">var _this = l.right</td></tr>
+	<tr><td port="e1" align="left">var tmp</td></tr>
+	<tr><td port="e2" align="left">var tmp = _this == null</td></tr>
+	<tr><td port="e3" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n903[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(903) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = _this._height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n902[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(902) BKConditional</td></tr>
+	<tr><td port="e0" align="left">tmp = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n901[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(901) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var tmp = hl + 2</td></tr>
+	<tr><td port="e1" align="left">var tmp = hr &gt; tmp</td></tr>
+	<tr><td port="e2" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n900[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(900) BKConditional</td></tr>
+	<tr><td port="e0" align="left">var _this = l.left</td></tr>
+	<tr><td port="e1" align="left">var tmp</td></tr>
+	<tr><td port="e2" align="left">var tmp = _this == null</td></tr>
+	<tr><td port="e3" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n899[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(899) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">hr = \"phi\"(hr,hr)</td></tr>
+	<tr><td port="e0" align="left">var tmp = hr + 2</td></tr>
+	<tr><td port="e1" align="left">var tmp = hl &gt; tmp</td></tr>
+	<tr><td port="e2" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n898[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(898) BKConditional</td></tr>
+	<tr><td port="e0" align="left">hr = r._height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n897[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(897) BKConditional</td></tr>
+	<tr><td port="e0" align="left">hr = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n896[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(896) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">hl = \"phi\"(hl,hl)</td></tr>
+	<tr><td port="e0" align="left">var hr</td></tr>
+	<tr><td port="e1" align="left">var tmp = r == null</td></tr>
+	<tr><td port="e2" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n895[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(895) BKConditional</td></tr>
+	<tr><td port="e0" align="left">hl = l._height</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n894[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(894) BKConditional</td></tr>
+	<tr><td port="e0" align="left">hl = 0</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n893[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(893) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n892[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(892) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var hl</td></tr>
+	<tr><td port="e1" align="left">var tmp = l == null</td></tr>
+	<tr><td port="e2" align="left">@:cond-branch tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(1) BKRoot</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1:out -> n892:in[label="CFGFunction"];
+n892:out -> n895:in[label="CFGCondElse"];
+n892:out -> n894:in[label="CFGCondBranch true"];
+n894:out -> n896:in[label="CFGGoto"];
+n896:out -> n898:in[label="CFGCondElse"];
+n896:out -> n897:in[label="CFGCondBranch true"];
+n897:out -> n899:in[label="CFGGoto"];
+n899:out -> n901:in[label="CFGCondElse"];
+n899:out -> n900:in[label="CFGCondBranch true"];
+n900:out -> n903:in[label="CFGCondElse"];
+n900:out -> n902:in[label="CFGCondBranch true"];
+n902:out -> n904:in[label="CFGGoto"];
+n904:out -> n906:in[label="CFGCondElse"];
+n904:out -> n905:in[label="CFGCondBranch true"];
+n905:out -> n907:in[label="CFGGoto"];
+n907:out -> n909:in[label="CFGCondElse"];
+n907:out -> n908:in[label="CFGCondBranch true"];
+n908:out -> n893:in[label="CFGGoto"];
+n909:out -> n893:in[label="CFGGoto"];
+n906:out -> n907:in[label="CFGGoto"];
+n903:out -> n904:in[label="CFGGoto"];
+n901:out -> n911:in[label="CFGCondElse"];
+n901:out -> n910:in[label="CFGCondBranch true"];
+n910:out -> n913:in[label="CFGCondElse"];
+n910:out -> n912:in[label="CFGCondBranch true"];
+n912:out -> n914:in[label="CFGGoto"];
+n914:out -> n916:in[label="CFGCondElse"];
+n914:out -> n915:in[label="CFGCondBranch true"];
+n915:out -> n917:in[label="CFGGoto"];
+n917:out -> n919:in[label="CFGCondElse"];
+n917:out -> n918:in[label="CFGCondBranch true"];
+n918:out -> n893:in[label="CFGGoto"];
+n919:out -> n893:in[label="CFGGoto"];
+n916:out -> n917:in[label="CFGGoto"];
+n913:out -> n914:in[label="CFGGoto"];
+n911:out -> n921:in[label="CFGCondElse"];
+n911:out -> n920:in[label="CFGCondBranch true"];
+n920:out -> n922:in[label="CFGGoto"];
+n922:out -> n893:in[label="CFGGoto"];
+n921:out -> n922:in[label="CFGGoto"];
+n898:out -> n899:in[label="CFGGoto"];
+n895:out -> n896:in[label="CFGGoto"];
+n894:e0 -> n896:ep0[color=lightblue,constraint=false];
+n896:ep0 -> n920:e0[color=lightblue,constraint=false];
+n896:ep0 -> n911:e1[color=lightblue,constraint=false];
+n896:ep0 -> n901:e0[color=lightblue,constraint=false];
+n896:ep0 -> n899:e1[color=lightblue,constraint=false];
+n897:e0 -> n899:ep0[color=lightblue,constraint=false];
+n899:ep0 -> n921:e0[color=lightblue,constraint=false];
+n899:ep0 -> n911:e1[color=lightblue,constraint=false];
+n899:ep0 -> n901:e1[color=lightblue,constraint=false];
+n900:e0 -> n903:e0[color=lightblue,constraint=false];
+n902:e0 -> n904:ep0[color=lightblue,constraint=false];
+n904:ep0 -> n907:e0[color=lightblue,constraint=false];
+n904:e0 -> n906:e0[color=lightblue,constraint=false];
+n905:e0 -> n907:ep0[color=lightblue,constraint=false];
+n906:e0 -> n907:ep0[color=lightblue,constraint=false];
+n903:e0 -> n904:ep0[color=lightblue,constraint=false];
+n910:e0 -> n913:e0[color=lightblue,constraint=false];
+n912:e0 -> n914:ep0[color=lightblue,constraint=false];
+n914:ep0 -> n917:e0[color=lightblue,constraint=false];
+n914:e0 -> n916:e0[color=lightblue,constraint=false];
+n915:e0 -> n917:ep0[color=lightblue,constraint=false];
+n916:e0 -> n917:ep0[color=lightblue,constraint=false];
+n913:e0 -> n914:ep0[color=lightblue,constraint=false];
+n920:e0 -> n922:ep0[color=lightblue,constraint=false];
+n921:e0 -> n922:ep0[color=lightblue,constraint=false];
+n898:e0 -> n899:ep0[color=lightblue,constraint=false];
+n895:e0 -> n896:ep0[color=lightblue,constraint=false];
+}

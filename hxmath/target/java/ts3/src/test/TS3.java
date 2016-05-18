@@ -32,21 +32,8 @@ public class TS3 extends haxe.lang.HxObject
 	{
 		//line 12 "/shared/hxmath/test/TS3.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
-		//line 23 "/shared/hxmath/test/TS3.hx"
-		{
-			//line 23 "/shared/hxmath/test/TS3.hx"
-			int _g = 0;
-			//line 23 "/shared/hxmath/test/TS3.hx"
-			while (( _g < 3000 ))
-			{
-				//line 23 "/shared/hxmath/test/TS3.hx"
-				 ++ _g;
-				//line 24 "/shared/hxmath/test/TS3.hx"
-				runner.add(new test.Test3D(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (24) )) )})) )));
-			}
-			
-		}
-		
+		//line 24 "/shared/hxmath/test/TS3.hx"
+		runner.add(new test.Test3D(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (24) )) )})) )));
 		//line 38 "/shared/hxmath/test/TS3.hx"
 		return runner.run();
 	}

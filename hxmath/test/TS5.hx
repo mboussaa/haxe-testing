@@ -21,8 +21,7 @@ class TS5
             //for (i in 0...3000)   
        	    //runner.add(new Test2D());
             // runner.add(new Test3D());
-            //runner.add(new TestMathUtil());
-for (i in 0...3000)            
+            //runner.add(new TestMathUtil()); 
 runner.add(new TestConverters());
             //runner.add(new TestFrames());
             //runner.add(new TestIntMath());

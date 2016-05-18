@@ -17,7 +17,7 @@ class TS1
         
         if (doFunctionalTests)
         {
-            for (i in 0...3000) 
+            
 	    runner.add(new TestStructures());
             //for (i in 0...3000)   
        	    //runner.add(new Test2D());

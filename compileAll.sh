@@ -3,5 +3,5 @@
 cd hxmath
 ./compile.sh
 cd ..
-cd thx.color
-./compile.sh
+#cd thx.color
+#./compile.sh

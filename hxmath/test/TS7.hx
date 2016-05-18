@@ -26,7 +26,7 @@ class TS7
             //runner.add(new TestFrames());
 //for (i in 0...3000)            
 //runner.add(new TestIntMath());
-            for (i in 0...3000)
+        
             runner.add(new TestGeom());            
 
             //runner.add(new TestDataStructures());

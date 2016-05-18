@@ -22,19 +22,9 @@ namespace test {
 		
 		
 		public static bool main() {
-			unchecked {
-				global::nanotest.NanoTestRunner runner = new global::nanotest.NanoTestRunner(((global::haxe.lang.Function) (null) ));
-				{
-					int _g = 0;
-					while (( _g < 3000 )) {
-						 ++ _g;
-						runner.@add(new global::test.TestConverters());
-					}
-					
-				}
-				
-				return runner.run();
-			}
+			global::nanotest.NanoTestRunner runner = new global::nanotest.NanoTestRunner(((global::haxe.lang.Function) (null) ));
+			runner.@add(new global::test.TestConverters());
+			return runner.run();
 		}
 		
 		

@@ -1,0 +1,12 @@
+digraph graphname {
+n2027 [shape=box,label="(2027)\nvar this\nvar tmp = rawData[0]\nvar tmp = rawData[1]\nvar tmp = rawData[2]\nvar tmp = rawData[3]\nvar tmp = rawData[4]\nvar tmp = rawData[5]\nthis = new hxmath.math.Matrix3x2Default(tmp,tmp,tmp,tmp,tmp,tmp)\nreturn cast this"];
+n2026 [shape=box,label="(2026)\nthrow \"Invalid rawData.\""];
+n2025 [shape=box,label="<function-end>
+(2025)"];
+n2024 [shape=box,label="<function-begin>
+(2024)\nvar tmp = rawData.length != 6\n@:cond-branch tmp"];
+n2024 -> n2026[style="dashed",color="gray",label="then"];
+n2024 -> n2027[style="dashed",color="gray",label="next"];
+n1 [shape=box,label="<root>
+(1)"];
+}

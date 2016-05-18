@@ -33,21 +33,8 @@ public class TS5 extends haxe.lang.HxObject
 		//line 12 "/shared/hxmath/test/TS5.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
 		//line 25 "/shared/hxmath/test/TS5.hx"
-		{
-			//line 25 "/shared/hxmath/test/TS5.hx"
-			int _g = 0;
-			//line 25 "/shared/hxmath/test/TS5.hx"
-			while (( _g < 3000 ))
-			{
-				//line 25 "/shared/hxmath/test/TS5.hx"
-				 ++ _g;
-				//line 26 "/shared/hxmath/test/TS5.hx"
-				runner.add(new test.TestConverters());
-			}
-			
-		}
-		
-		//line 38 "/shared/hxmath/test/TS5.hx"
+		runner.add(new test.TestConverters());
+		//line 37 "/shared/hxmath/test/TS5.hx"
 		return runner.run();
 	}
 	

@@ -5,13 +5,7 @@ class test_TS7 {
 	public function __construct(){}
 	static function main() {
 		$runner = new nanotest_NanoTestRunner(null);
-		{
-			$_g = 0;
-			while($_g < 3000) {
-				++$_g;
-				$runner->add(new test_TestGeom(_hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 30, "className" => "test.TS7", "methodName" => "main"))));
-			}
-		}
+		$runner->add(new test_TestGeom(_hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 30, "className" => "test.TS7", "methodName" => "main"))));
 		return $runner->run();
 	}
 	function __toString() { return 'test.TS7'; }

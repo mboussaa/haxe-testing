@@ -40,14 +40,8 @@ Dynamic TS5_obj::__Create(hx::DynamicArray inArgs)
 Bool TS5_obj::main(){
             	HX_STACK_FRAME("test.TS5","main",0xae7a756d,"test.TS5.main","test/TS5.hx",11,0x15509a05)
 HXLINE(  12)		HX_VARI(  ::nanotest::NanoTestRunner,runner) =  ::nanotest::NanoTestRunner_obj::__new(null());
-HXLINE(  25)		{
-HXLINE(  25)			HX_VARI( Int,_g) = (int)0;
-HXDLIN(  25)			while((_g < (int)3000)){
-HXLINE(  25)				++_g;
-HXLINE(  26)				runner->add( ::test::TestConverters_obj::__new());
-            			}
-            		}
-HXLINE(  38)		return runner->run();
+HXLINE(  25)		runner->add( ::test::TestConverters_obj::__new());
+HXLINE(  37)		return runner->run();
             	}
 
 

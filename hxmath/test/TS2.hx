@@ -18,7 +18,7 @@ class TS2
         {
             //for (i in 0...3000) 
 	    //runner.add(new TestStructures());
-            for (i in 0...3000)   
+           
        	    runner.add(new Test2D());
             // runner.add(new Test3D());
             //runner.add(new TestMathUtil());

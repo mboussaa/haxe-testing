@@ -40,13 +40,7 @@ Dynamic TS4_obj::__Create(hx::DynamicArray inArgs)
 Bool TS4_obj::main(){
             	HX_STACK_FRAME("test.TS4","main",0x481f190e,"test.TS4.main","test/TS4.hx",11,0x14a76366)
 HXLINE(  12)		HX_VARI(  ::nanotest::NanoTestRunner,runner) =  ::nanotest::NanoTestRunner_obj::__new(null());
-HXLINE(  24)		{
-HXLINE(  24)			HX_VARI( Int,_g) = (int)0;
-HXDLIN(  24)			while((_g < (int)3000)){
-HXLINE(  24)				++_g;
-HXLINE(  25)				runner->add( ::test::TestMathUtil_obj::__new(hx::SourceInfo(HX_("TS4.hx",09,d0,be,82),25,HX_("test.TS4",b9,2f,01,37),HX_("main",39,38,56,48))));
-            			}
-            		}
+HXLINE(  25)		runner->add( ::test::TestMathUtil_obj::__new(hx::SourceInfo(HX_("TS4.hx",09,d0,be,82),25,HX_("test.TS4",b9,2f,01,37),HX_("main",39,38,56,48))));
 HXLINE(  38)		return runner->run();
             	}
 

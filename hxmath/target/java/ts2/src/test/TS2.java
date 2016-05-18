@@ -32,21 +32,8 @@ public class TS2 extends haxe.lang.HxObject
 	{
 		//line 12 "/shared/hxmath/test/TS2.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
-		//line 21 "/shared/hxmath/test/TS2.hx"
-		{
-			//line 21 "/shared/hxmath/test/TS2.hx"
-			int _g = 0;
-			//line 21 "/shared/hxmath/test/TS2.hx"
-			while (( _g < 3000 ))
-			{
-				//line 21 "/shared/hxmath/test/TS2.hx"
-				 ++ _g;
-				//line 22 "/shared/hxmath/test/TS2.hx"
-				runner.add(new test.Test2D(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS2", "TS2.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (22) )) )})) )));
-			}
-			
-		}
-		
+		//line 22 "/shared/hxmath/test/TS2.hx"
+		runner.add(new test.Test2D(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS2", "TS2.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (22) )) )})) )));
 		//line 37 "/shared/hxmath/test/TS2.hx"
 		return runner.run();
 	}

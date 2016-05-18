@@ -21,7 +21,7 @@ class TS4
             //for (i in 0...3000)   
        	    //runner.add(new Test2D());
             //runner.add(new Test3D());
-              for (i in 0...3000)
+        
 	      runner.add(new TestMathUtil());
             //runner.add(new TestConverters());
             //runner.add(new TestFrames());

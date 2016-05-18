@@ -1,0 +1,15 @@
+digraph graphname {
+n2027 [shape=box,label="(2027)\nScopes: 0\nvar this\nvar tmp = rawData[0]\nvar tmp = rawData[1]\nvar tmp = rawData[2]\nvar tmp = rawData[3]\nvar tmp = rawData[4]\nvar tmp = rawData[5]\nthis = new hxmath.math.Matrix3x2Default(tmp,tmp,tmp,tmp,tmp,tmp)\nreturn cast this"];
+n2026 [shape=box,label="(2026)\nScopes: 1, 0\nthrow \"Invalid rawData.\""];
+n2025 [shape=box,label="<function-end>
+(2025)"];
+n2024 [shape=box,label="<function-begin>
+(2024)\nScopes: 0\nvar tmp = rawData.length != 6\n@:cond-branch tmp"];
+n1 [shape=box,label="<root>
+(1)"];
+n1 -> n2024[label="function [dce, copy, exe]"];
+n2024 -> n2027[label="else [dce, copy, exe]"];
+n2024 -> n2026[label="branch [dce, copy, exe]"];
+n2026 -> n2025[label="goto [dce, copy, exe]"];
+n2027 -> n2025[label="goto [dce, copy, exe]"];
+}

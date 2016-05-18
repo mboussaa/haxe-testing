@@ -5,13 +5,7 @@ class test_TS2 {
 	public function __construct(){}
 	static function main() {
 		$runner = new nanotest_NanoTestRunner(null);
-		{
-			$_g = 0;
-			while($_g < 3000) {
-				++$_g;
-				$runner->add(new test_Test2D(_hx_anonymous(array("fileName" => "TS2.hx", "lineNumber" => 22, "className" => "test.TS2", "methodName" => "main"))));
-			}
-		}
+		$runner->add(new test_Test2D(_hx_anonymous(array("fileName" => "TS2.hx", "lineNumber" => 22, "className" => "test.TS2", "methodName" => "main"))));
 		return $runner->run();
 	}
 	function __toString() { return 'test.TS2'; }
