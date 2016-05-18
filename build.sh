@@ -26,7 +26,7 @@ sleep 5s;
 # start tests
 #
 echo "start tests execution"
-declare -a target=("java" "js" "cpp" "cs")
+declare -a target=("java" "js" "cpp" "cs" "php")
 declare -A bench=(["hxmath"]="7" ["color"]="19")
 declare -A loop_hxmath=(["1"]="70" ["2"]="80" ["3"]="90" ["4"]="100" ["5"]="100" ["6"]="100" ["7"]="100")
 declare -A loop_color=(["1"]="70" ["2"]="70" ["3"]="65" ["4"]="65" ["5"]="70" ["6"]="50" ["7"]="70" ["8"]="70" ["9"]="65" ["10"]="70" ["11"]="70" ["12"]="70" ["13"]="50" ["14"]="70" ["15"]="70" ["16"]="70" ["17"]="70" ["18"]="70" ["19"]="50")
@@ -64,8 +64,8 @@ done
 done
 
 
-paste -d ',' /shared/stats/statistics/time_"$ts"_java.csv  /shared/stats/statistics/time_"$ts"_js.csv  /shared/stats/statistics/time_"$ts"_cpp.csv  /shared/stats/statistics/time_"$ts"_cs.csv  > /shared/stats/time_"$ts".csv;
-paste -d ',' /shared/stats/statistics/memory_"$ts"_java  /shared/stats/statistics/memory_"$ts"_js  /shared/stats/statistics/memory_"$ts"_cpp  /shared/stats/statistics/memory_"$ts"_cs  > /shared/stats/memory_"$ts".csv;
+paste -d ',' /shared/stats/statistics/time_"$ts"_java.csv  /shared/stats/statistics/time_"$ts"_js.csv  /shared/stats/statistics/time_"$ts"_cpp.csv  /shared/stats/statistics/time_"$ts"_cs.csv  /shared/stats/statistics/time_"$ts"_php.csv> /shared/stats/time_"$ts".csv;
+paste -d ',' /shared/stats/statistics/memory_"$ts"_java  /shared/stats/statistics/memory_"$ts"_js  /shared/stats/statistics/memory_"$ts"_cpp  /shared/stats/statistics/memory_"$ts"_cs /shared/stats/statistics/memory_"$ts"_php  > /shared/stats/memory_"$ts".csv;
 
 done
 #docker run -w /shared/hxmath -it --rm -v /shared:/shared --name=haxe_java_"$i" mboussaa/haxe /bin/bash -c "./run_java.sh '$i'"
