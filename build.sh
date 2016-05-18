@@ -27,9 +27,9 @@ sleep 5s;
 #
 echo "start tests execution"
 declare -a target=("java" "js" "cpp" "cs")
-declare -A bench=(["hxmath"]="7" ["thx.color"]="19")
-declare -A hxmath=(["1"]="70" ["2"]="80" ["3"]="90" ["4"]="100" ["5"]="100" ["6"]="100" ["7"]="100")
-declare -A thx.color=(["1"]="70" ["2"]="70" ["3"]="65" ["4"]="65" ["5"]="70" ["6"]="50" ["7"]="70" ["8"]="70" ["9"]="65" ["10"]="70" ["11"]="70" ["12"]="70" ["13"]="50" ["14"]="70" ["15"]="70" ["16"]="70" ["17"]="70" ["18"]="70" ["19"]="50")
+declare -A bench=(["hxmath"]="7" ["color"]="19")
+declare -A loop_hxmath=(["1"]="70" ["2"]="80" ["3"]="90" ["4"]="100" ["5"]="100" ["6"]="100" ["7"]="100")
+declare -A loop_color=(["1"]="70" ["2"]="70" ["3"]="65" ["4"]="65" ["5"]="70" ["6"]="50" ["7"]="70" ["8"]="70" ["9"]="65" ["10"]="70" ["11"]="70" ["12"]="70" ["13"]="50" ["14"]="70" ["15"]="70" ["16"]="70" ["17"]="70" ["18"]="70" ["19"]="50")
 #echo "${animals["moo"]}"
 #for sound in "${!animals[@]}" 
 #do 
@@ -42,10 +42,13 @@ for (( i=1; i<=${bench["$ts"]}; i++ ))
 do
 for j in "${target[@]}"
 do
-echo "ts: "$ts;
-echo "running !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:::::::::::::::::::::::::::::::::::::::::: '$j' '$ts' '$i' 1"; 
+tab=loop_$ts[$i]
+echo ${!tab}
+echo "***************************************************************************************************"
 TIMEFORMAT='%3R'
-time(docker run -w /shared -it --rm -v /shared:/shared --name=haxe_"$j"_"$ts"_"$i" mboussaa/haxe /bin/bash -c "./run.sh '$j' '$ts' '$i' 1") 2>> /shared/stats/statistics/time_"$ts"_"$j".csv
+
+echo "running !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:::::::::::::::::::::::::::::::::::::::::: '$j' '$ts' '$i' ${!tab}";
+time(docker run -w /shared -it --rm -v /shared:/shared --name=haxe_"$j"_"$ts"_"$i" mboussaa/haxe /bin/bash -c "./run.sh '$j' '$ts' '$i' ${!tab}") 2>> /shared/stats/statistics/time_"$ts"_"$j".csv
 done
 done
 

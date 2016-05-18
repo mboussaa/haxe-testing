@@ -1,0 +1,14 @@
+{
+  "name": "thx.color",
+  "url": "https://github.com/fponticelli/thx.color",
+  "license": "MIT",
+  "classPath": "src",
+  "tags": ["color", "thx", "cross"],
+  "description": "Library for color manipulation. Contains definitions for Lab, LCh, Cmy(K), CubeHelix, Grey, Hcl, Hsl(A), Hsv(A), Rgb(A), Xyz and Yxy as well as alpha versions of the sames and color parsing.",
+  "releasenote": "Use travix for travis and some fixes.",
+  "version": "0.18.0",
+  "contributors": ["fponticelli"],
+  "dependencies": {
+    "thx.core": ""
+  }
+}

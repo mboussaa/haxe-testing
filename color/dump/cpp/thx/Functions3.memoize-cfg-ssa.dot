@@ -1,0 +1,166 @@
+digraph graphname {
+	node [shape=plaintext];
+n4456[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4456) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">v1 = \"phi\"(v1,v1)</td></tr>
+	<tr><td port="ep1" align="left">v2 = \"phi\"(v2,v2)</td></tr>
+	<tr><td port="ep2" align="left">v3 = \"phi\"(v3,v3)</td></tr>
+	<tr><td port="ep3" align="left">key = \"phi\"(key,key)</td></tr>
+	<tr><td port="ep4" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="e0" align="left">return \"fun\"(4452)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4455[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4455) BKNormal</td></tr>
+	<tr><td port="e0" align="left">var result = callback(v1,v2,v3)</td></tr>
+	<tr><td port="e1" align="left">map.set(key,result)</td></tr>
+	<tr><td port="e2" align="left">return result</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4454[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4454) BKConditional</td></tr>
+	<tr><td port="e0" align="left">return cast map.get(key)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4453[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4453) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4452[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4452) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var key = resolver(v1,v2,v3)</td></tr>
+	<tr><td port="e1" align="left">var _hx_tmp = map.exists(key)</td></tr>
+	<tr><td port="e2" align="left">@:cond-branch _hx_tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4451[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4451) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">resolver = \"phi\"(resolver,resolver)</td></tr>
+	<tr><td port="ep1" align="left">v1 = \"phi\"(v1,v1)</td></tr>
+	<tr><td port="ep2" align="left">v2 = \"phi\"(v2,v2)</td></tr>
+	<tr><td port="ep3" align="left">v3 = \"phi\"(v3,v3)</td></tr>
+	<tr><td port="ep4" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep5" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep6" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep7" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep8" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep9" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep10" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="e0" align="left">var map = new haxe.ds.StringMap()</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4450[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4450) BKNormal</td></tr>
+	<tr><td port="ep0" align="left">v1 = \"phi\"(v1,v1)</td></tr>
+	<tr><td port="ep1" align="left">v2 = \"phi\"(v2,v2)</td></tr>
+	<tr><td port="ep2" align="left">v3 = \"phi\"(v3,v3)</td></tr>
+	<tr><td port="ep3" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep4" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep5" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep6" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep7" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep8" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="ep9" align="left">_hx_tmp = \"phi\"(_hx_tmp,_hx_tmp)</td></tr>
+	<tr><td port="e0" align="left">resolver = \"fun\"(4448)</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4449[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4449) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4448[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4448) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var _hx_tmp = Std.string(v1)</td></tr>
+	<tr><td port="e1" align="left">var _hx_tmp = \"\" + _hx_tmp</td></tr>
+	<tr><td port="e2" align="left">var _hx_tmp = _hx_tmp + \":\"</td></tr>
+	<tr><td port="e3" align="left">var _hx_tmp = Std.string(v2)</td></tr>
+	<tr><td port="e4" align="left">var _hx_tmp = _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="e5" align="left">var _hx_tmp = _hx_tmp + \":\"</td></tr>
+	<tr><td port="e6" align="left">var _hx_tmp = Std.string(v3)</td></tr>
+	<tr><td port="e7" align="left">return _hx_tmp + _hx_tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4447[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4447) BKConditional</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4446[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4446) BKFunctionEnd</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n4445[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(4445) BKFunctionBegin</td></tr>
+	<tr><td port="e0" align="left">var _hx_tmp = null == resolver</td></tr>
+	<tr><td port="e1" align="left">@:cond-branch _hx_tmp</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1[label=<<table BORDER="0" CELLBORDER="1" CELLSPACING="0">
+	<tr><td port="in" bgcolor="lightgray">(1) BKRoot</td></tr>
+	<tr><td port="out"></td></tr>
+</table>>];
+n1:out -> n4445:in[label="CFGFunction"];
+n4445:out -> n4451:in[label="CFGCondElse"];
+n4445:out -> n4447:in[label="CFGCondBranch true"];
+n4447:out -> n4450:in[label="CFGGoto"];
+n4447:out -> n4448:in[label="CFGFunction"];
+n4448:out -> n4449:in[label="CFGGoto"];
+n4449:out -> n4450:in[label="CFGGoto"];
+n4450:out -> n4451:in[label="CFGGoto"];
+n4451:out -> n4456:in[label="CFGGoto"];
+n4451:out -> n4452:in[label="CFGFunction"];
+n4452:out -> n4455:in[label="CFGCondElse"];
+n4452:out -> n4454:in[label="CFGCondBranch true"];
+n4454:out -> n4453:in[label="CFGGoto"];
+n4453:out -> n4456:in[label="CFGGoto"];
+n4455:out -> n4453:in[label="CFGGoto"];
+n4456:out -> n4446:in[label="CFGGoto"];
+n4451:ep0 -> n4445:e0[color=lightblue,constraint=false];
+n4451:ep1 -> n4450:ep0[color=lightblue,constraint=false];
+n4451:ep1 -> n4448:e0[color=lightblue,constraint=false];
+n4451:ep1 -> n4450:ep0[color=lightblue,constraint=false];
+n4451:ep2 -> n4450:ep1[color=lightblue,constraint=false];
+n4451:ep2 -> n4448:e3[color=lightblue,constraint=false];
+n4451:ep2 -> n4450:ep1[color=lightblue,constraint=false];
+n4451:ep3 -> n4450:ep2[color=lightblue,constraint=false];
+n4451:ep3 -> n4448:e6[color=lightblue,constraint=false];
+n4451:ep3 -> n4450:ep2[color=lightblue,constraint=false];
+n4451:ep4 -> n4450:ep3[color=lightblue,constraint=false];
+n4451:ep5 -> n4450:ep4[color=lightblue,constraint=false];
+n4451:ep6 -> n4450:ep5[color=lightblue,constraint=false];
+n4451:ep7 -> n4450:ep6[color=lightblue,constraint=false];
+n4451:ep8 -> n4450:ep7[color=lightblue,constraint=false];
+n4451:ep9 -> n4450:ep8[color=lightblue,constraint=false];
+n4451:ep10 -> n4450:ep9[color=lightblue,constraint=false];
+n4456:ep0 -> n4455:e0[color=lightblue,constraint=false];
+n4456:ep0 -> n4452:e0[color=lightblue,constraint=false];
+n4456:ep1 -> n4455:e0[color=lightblue,constraint=false];
+n4456:ep1 -> n4452:e0[color=lightblue,constraint=false];
+n4456:ep2 -> n4455:e0[color=lightblue,constraint=false];
+n4456:ep2 -> n4452:e0[color=lightblue,constraint=false];
+n4448:e0 -> n4450:ep3[color=lightblue,constraint=false];
+n4448:e1 -> n4450:ep4[color=lightblue,constraint=false];
+n4448:e2 -> n4450:ep5[color=lightblue,constraint=false];
+n4448:e3 -> n4450:ep6[color=lightblue,constraint=false];
+n4448:e4 -> n4450:ep7[color=lightblue,constraint=false];
+n4448:e5 -> n4450:ep8[color=lightblue,constraint=false];
+n4448:e6 -> n4450:ep9[color=lightblue,constraint=false];
+n4450:ep0 -> n4451:ep1[color=lightblue,constraint=false];
+n4450:ep1 -> n4451:ep2[color=lightblue,constraint=false];
+n4450:ep2 -> n4451:ep3[color=lightblue,constraint=false];
+n4450:ep3 -> n4451:ep4[color=lightblue,constraint=false];
+n4450:ep4 -> n4451:ep5[color=lightblue,constraint=false];
+n4450:ep5 -> n4451:ep6[color=lightblue,constraint=false];
+n4450:ep6 -> n4451:ep7[color=lightblue,constraint=false];
+n4450:ep7 -> n4451:ep8[color=lightblue,constraint=false];
+n4450:ep8 -> n4451:ep9[color=lightblue,constraint=false];
+n4450:ep9 -> n4451:ep10[color=lightblue,constraint=false];
+n4450:e0 -> n4451:ep0[color=lightblue,constraint=false];
+n4451:ep0 -> n4452:e0[color=lightblue,constraint=false];
+n4451:e0 -> n4455:e1[color=lightblue,constraint=false];
+n4451:e0 -> n4454:e0[color=lightblue,constraint=false];
+n4451:e0 -> n4452:e1[color=lightblue,constraint=false];
+n4452:e0 -> n4455:e1[color=lightblue,constraint=false];
+n4452:e0 -> n4456:ep3[color=lightblue,constraint=false];
+n4452:e0 -> n4454:e0[color=lightblue,constraint=false];
+n4452:e1 -> n4456:ep4[color=lightblue,constraint=false];
+}

@@ -1,0 +1,7 @@
+-cp src
+-cp test
+-lib thx.core
+-lib utest
+-lib nanotest
+-main TestAll
+-cpp target/cpp

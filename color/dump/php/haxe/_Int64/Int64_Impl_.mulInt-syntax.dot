@@ -1,0 +1,24 @@
+digraph graphname {
+n1495 [shape=box,label="(1495)\nvar a = haxe._Int32.Int32_Impl_.mul(cast a.low,cast b.high)\nvar b = haxe._Int32.Int32_Impl_.mul(cast a.high,cast b.low)\nvar tmp = cast a + cast b\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\nvar b = tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = cast high + cast b\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\nhigh = tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar x = new haxe._Int64.___Int64(high,low)\nnull\nnull\nreturn cast x"];
+n1494 [shape=box,label="(1494)"];
+n1493 [shape=box,label="(1493)\nhigh = high + 1\nnull\nvar tmp = cast high << haxe._Int32.Int32_Impl_.extraBits\nhigh = tmp >> haxe._Int32.Int32_Impl_.extraBits"];
+n1492 [shape=box,label="(1492)"];
+n1492 -> n1493[style="dashed",color="gray",label="sub"];
+n1492 -> n1494[style="dashed",color="gray",label="next"];
+n1491 [shape=box,label="(1491)\nvar tmp = cast p10 << cast 16\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\np10 = cast tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = cast low + cast p10\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\nlow = cast tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = haxe._Int32.Int32_Impl_.ucompare(low,p10)\nvar tmp = tmp < 0\n@:cond-branch tmp"];
+n1491 -> n1492[style="dashed",color="gray",label="then"];
+n1491 -> n1495[style="dashed",color="gray",label="next"];
+n1490 [shape=box,label="(1490)"];
+n1489 [shape=box,label="(1489)\nhigh = high + 1\nnull\nvar tmp = cast high << haxe._Int32.Int32_Impl_.extraBits\nhigh = tmp >> haxe._Int32.Int32_Impl_.extraBits"];
+n1488 [shape=box,label="(1488)"];
+n1488 -> n1489[style="dashed",color="gray",label="sub"];
+n1488 -> n1490[style="dashed",color="gray",label="next"];
+n1487 [shape=box,label="<function-end>
+(1487)"];
+n1486 [shape=box,label="<function-begin>
+(1486)\nvar tmp = b >> 31\nvar x = new haxe._Int64.___Int64(tmp,b)\nnull\nnull\nvar b = cast x\nnull\nvar al = cast cast a.low & 65535\nvar ah = cast cast a.low >>> 16\nvar bl = cast cast b.low & 65535\nvar bh = cast cast b.low >>> 16\nvar p00 = haxe._Int32.Int32_Impl_.mul(al,bl)\nvar p10 = haxe._Int32.Int32_Impl_.mul(ah,bl)\nvar p01 = haxe._Int32.Int32_Impl_.mul(al,bh)\nvar p11 = haxe._Int32.Int32_Impl_.mul(ah,bh)\nvar low = p00\nvar tmp = cast p11 + (cast cast p01 >>> 16)\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\nvar a = cast tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = cast a + (cast cast p10 >>> 16)\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\nvar high = tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = cast p01 << cast 16\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\np01 = cast tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = cast p00 + cast p01\nvar tmp = tmp << haxe._Int32.Int32_Impl_.extraBits\nlow = cast tmp >> haxe._Int32.Int32_Impl_.extraBits\nvar tmp = haxe._Int32.Int32_Impl_.ucompare(low,p01)\nvar tmp = tmp < 0\n@:cond-branch tmp"];
+n1486 -> n1488[style="dashed",color="gray",label="then"];
+n1486 -> n1491[style="dashed",color="gray",label="next"];
+n1 [shape=box,label="<root>
+(1)"];
+}
