@@ -8,7 +8,7 @@ public class TestConversion_testHsl_66__Fun extends haxe.lang.Function
 {
 	public TestConversion_testHsl_66__Fun()
 	{
-		//line 66 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 66 "/shared/color/test/thx/color/TestConversion.hx"
 		super(1, 0);
 	}
 	
@@ -17,17 +17,17 @@ public class TestConversion_testHsl_66__Fun extends haxe.lang.Function
 	
 	@Override public java.lang.Object __hx_invoke1_o(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 66 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 66 "/shared/color/test/thx/color/TestConversion.hx"
 		java.lang.String name = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (haxe.lang.Runtime.toString(__fn_float1)) : (haxe.lang.Runtime.toString(__fn_dyn1)) );
-		//line 67 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 67 "/shared/color/test/thx/color/TestConversion.hx"
 		int expected = ((int) (haxe.lang.Runtime.toInt(((java.lang.Object) (thx.color.palettes.Web.names.get(name)) ))) );
-		//line 67 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 67 "/shared/color/test/thx/color/TestConversion.hx"
 		haxe.root.Array<java.lang.Object> color = thx.color._Rgb.Rgb_Impl_.toHsl(expected);
-		//line 67 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 67 "/shared/color/test/thx/color/TestConversion.hx"
 		int test = thx.color._Hsl.Hsl_Impl_.toRgb(color);
-		//line 70 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 70 "/shared/color/test/thx/color/TestConversion.hx"
 		utest.Assert.equals(thx.color._Rgb.Rgb_Impl_.toString(expected), thx.color._Rgb.Rgb_Impl_.toString(test), ( ( ( ( ( "expected " + thx.color._Rgb.Rgb_Impl_.toString(expected) ) + " but was " ) + thx.color._Rgb.Rgb_Impl_.toString(test) ) + " for " ) + name ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestConversion", "TestConversion.hx", "testHsl"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (70) )) )}));
-		//line 66 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 66 "/shared/color/test/thx/color/TestConversion.hx"
 		return null;
 	}
 	

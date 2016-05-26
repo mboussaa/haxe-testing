@@ -14,76 +14,76 @@ public final class Yuv_Impl_
 	
 	public static haxe.root.Array<java.lang.Object> create(double y, double u, double v)
 	{
-		//line 26 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 26 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (y) ), ((java.lang.Object) (u) ), ((java.lang.Object) (v) )});
-		//line 26 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 26 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this1) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> fromFloats(haxe.root.Array<java.lang.Object> arr)
 	{
-		//line 29 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 29 "/shared/color/src/thx/color/Yuv.hx"
 		thx.ArrayFloats.resize(arr, 3, null);
-		//line 30 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 30 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(arr.__get(0))) )) ), ((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(arr.__get(1))) )) ), ((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(arr.__get(2))) )) )});
-		//line 30 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 30 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this1) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> fromString(java.lang.String color)
 	{
-		//line 34 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 34 "/shared/color/src/thx/color/Yuv.hx"
 		thx.color.parse.ColorInfo info = thx.color.parse.ColorParser.parseColor(color);
-		//line 35 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 35 "/shared/color/src/thx/color/Yuv.hx"
 		if (( null == info )) 
 		{
-			//line 36 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 36 "/shared/color/src/thx/color/Yuv.hx"
 			return null;
 		}
 		
-		//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 38 "/shared/color/src/thx/color/Yuv.hx"
 		try 
 		{
-			//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 38 "/shared/color/src/thx/color/Yuv.hx"
 			java.lang.String _g = info.name;
-			//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 38 "/shared/color/src/thx/color/Yuv.hx"
 			{
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				java.lang.String __temp_svar3 = (_g);
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				boolean __temp_executeDef4 = true;
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				switch (__temp_svar3.hashCode())
 				{
 					case 120026:
 					{
-						//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+						//line 38 "/shared/color/src/thx/color/Yuv.hx"
 						if (__temp_svar3.equals("yuv")) 
 						{
-							//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+							//line 38 "/shared/color/src/thx/color/Yuv.hx"
 							__temp_executeDef4 = false;
-							//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+							//line 38 "/shared/color/src/thx/color/Yuv.hx"
 							return ((haxe.root.Array<java.lang.Object>) (thx.color.parse.ColorParser.getFloatChannels(info.channels, 3, false)) );
 						}
 						
-						//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+						//line 38 "/shared/color/src/thx/color/Yuv.hx"
 						break;
 					}
 					
 					
 				}
 				
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				if (__temp_executeDef4) 
 				{
-					//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+					//line 38 "/shared/color/src/thx/color/Yuv.hx"
 					return null;
 				}
 				else
 				{
-					//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+					//line 38 "/shared/color/src/thx/color/Yuv.hx"
 					throw null;
 				}
 				
@@ -92,22 +92,22 @@ public final class Yuv_Impl_
 		}
 		catch (java.lang.Throwable __temp_catchallException1)
 		{
-			//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 38 "/shared/color/src/thx/color/Yuv.hx"
 			haxe.lang.Exceptions.setException(__temp_catchallException1);
-			//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 38 "/shared/color/src/thx/color/Yuv.hx"
 			java.lang.Object __temp_catchall2 = __temp_catchallException1;
-			//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 38 "/shared/color/src/thx/color/Yuv.hx"
 			if (( __temp_catchall2 instanceof haxe.lang.HaxeException )) 
 			{
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				__temp_catchall2 = ((haxe.lang.HaxeException) (__temp_catchallException1) ).obj;
 			}
 			
-			//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 38 "/shared/color/src/thx/color/Yuv.hx"
 			{
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				java.lang.Object e = __temp_catchall2;
-				//line 38 "/shared/thx.color/src/thx/color/Yuv.hx"
+				//line 38 "/shared/color/src/thx/color/Yuv.hx"
 				return null;
 			}
 			
@@ -119,120 +119,120 @@ public final class Yuv_Impl_
 	
 	public static haxe.root.Array<java.lang.Object> _new(haxe.root.Array<java.lang.Object> channels)
 	{
-		//line 46 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 46 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (channels) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> interpolate(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other, double t)
 	{
-		//line 50 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 50 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (thx.Floats.interpolate(t, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ))) ), ((java.lang.Object) (thx.Floats.interpolate(t, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ))) ), ((java.lang.Object) (thx.Floats.interpolate(t, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ))) )})) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> min(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other)
 	{
-		//line 57 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 57 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (java.lang.Math.min(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ))) ), ((java.lang.Object) (java.lang.Math.min(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ))) ), ((java.lang.Object) (java.lang.Math.min(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ))) )});
-		//line 57 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 57 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> max(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other)
 	{
-		//line 60 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 60 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (java.lang.Math.max(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ))) ), ((java.lang.Object) (java.lang.Math.max(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ))) ), ((java.lang.Object) (java.lang.Math.max(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ))) )});
-		//line 60 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 60 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> normalize(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = null;
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		double v = ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) );
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		double tmp = ( (( v < 0 )) ? (((double) (0) )) : (( (( v > 1 )) ? (((double) (1) )) : (v) )) );
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		double v1 = ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) );
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		double tmp1 = ( (( v1 < -0.436 )) ? (-0.436) : (( (( v1 > 0.436 )) ? (0.436) : (v1) )) );
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		double v2 = ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) );
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (tmp) ), ((java.lang.Object) (tmp1) ), ((java.lang.Object) (( (( v2 < -0.615 )) ? (-0.615) : (( (( v2 > 0.615 )) ? (0.615) : (v2) )) )) )});
-		//line 63 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 63 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> roundTo(haxe.root.Array<java.lang.Object> this1, int decimals)
 	{
-		//line 66 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 66 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (thx.Floats.roundTo(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), decimals)) ), ((java.lang.Object) (thx.Floats.roundTo(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), decimals)) ), ((java.lang.Object) (thx.Floats.roundTo(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), decimals)) )});
-		//line 66 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 66 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> withY(haxe.root.Array<java.lang.Object> this1, double newy)
 	{
-		//line 69 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 69 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (newy) ), ((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) )) ), ((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) )) )});
-		//line 69 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 69 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> withU(haxe.root.Array<java.lang.Object> this1, double newu)
 	{
-		//line 72 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 72 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) )) ), ((java.lang.Object) (newu) ), ((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) )) )});
-		//line 72 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 72 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> withV(haxe.root.Array<java.lang.Object> this1, double newv)
 	{
-		//line 75 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 75 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) )) ), ((java.lang.Object) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) )) ), ((java.lang.Object) (newv) )});
-		//line 75 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 75 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static java.lang.String toString(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 78 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 78 "/shared/color/src/thx/color/Yuv.hx"
 		return ( ( ( ( ( ( "yuv(" + haxe.lang.Runtime.toString(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) )) ) + "," ) + haxe.lang.Runtime.toString(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) )) ) + "," ) + haxe.lang.Runtime.toString(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) )) ) + ")" );
 	}
 	
 	
 	public static boolean equals(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other)
 	{
-		//line 81 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 81 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Yuv.Yuv_Impl_.nearEquals(this1, other, null);
 	}
 	
 	
 	public static boolean nearEquals(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other, java.lang.Object tolerance)
 	{
-		//line 84 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 84 "/shared/color/src/thx/color/Yuv.hx"
 		java.lang.Object __temp_tolerance148 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
-		//line 84 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 84 "/shared/color/src/thx/color/Yuv.hx"
 		if (( thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ), __temp_tolerance148) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ), __temp_tolerance148) )) 
 		{
-			//line 84 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 84 "/shared/color/src/thx/color/Yuv.hx"
 			return thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ), __temp_tolerance148);
 		}
 		else
 		{
-			//line 84 "/shared/thx.color/src/thx/color/Yuv.hx"
+			//line 84 "/shared/color/src/thx/color/Yuv.hx"
 			return false;
 		}
 		
@@ -241,148 +241,148 @@ public final class Yuv_Impl_
 	
 	public static haxe.root.Array<java.lang.Object> toLab(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 87 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 87 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Xyz.Xyz_Impl_.toLab(thx.color._Yuv.Yuv_Impl_.toXyz(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toLCh(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 90 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 90 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Lab.Lab_Impl_.toLCh(thx.color._Yuv.Yuv_Impl_.toLab(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toLuv(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 93 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 93 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toLuv(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toCmy(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 96 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 96 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toCmy(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toCmyk(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 99 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 99 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toCmyk(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toCubeHelix(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 102 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 102 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toCubeHelixWithGamma(((haxe.root.Array<java.lang.Object>) (thx.color._Yuv.Yuv_Impl_.toRgbx(this1)) ), ((double) (1) ));
 	}
 	
 	
 	public static double toGrey(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 105 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 105 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toGrey(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toHsl(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 108 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 108 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toHsl(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toHsv(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 111 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 111 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toHsv(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toHunterLab(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 114 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 114 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Xyz.Xyz_Impl_.toHunterLab(thx.color._Yuv.Yuv_Impl_.toXyz(this1));
 	}
 	
 	
 	public static int toRgb(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 117 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 117 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toRgb(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static int toRgba(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 120 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 120 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbxa.Rgbxa_Impl_.toRgba(thx.color._Yuv.Yuv_Impl_.toRgbxa(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toRgbx(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 123 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 123 "/shared/color/src/thx/color/Yuv.hx"
 		double r = ( ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ) + ( 1.139837398373983740 * ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ) ) );
-		//line 123 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 123 "/shared/color/src/thx/color/Yuv.hx"
 		double g = ( ( ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ) - ( 0.3946517043589703515 * ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ) ) ) - ( 0.5805986066674976801 * ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ) ) );
-		//line 123 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 123 "/shared/color/src/thx/color/Yuv.hx"
 		double b = ( ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ) + ( 2.032110091743119266 * ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ) ) );
-		//line 127 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 127 "/shared/color/src/thx/color/Yuv.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (r) ), ((java.lang.Object) (g) ), ((java.lang.Object) (b) )});
-		//line 127 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 127 "/shared/color/src/thx/color/Yuv.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toRgbxa(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 131 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 131 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toRgbxa(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static double toTemperature(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 134 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 134 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toTemperature(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toYxy(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 137 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 137 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toYxy(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toXyz(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 140 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 140 "/shared/color/src/thx/color/Yuv.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toXyz(thx.color._Yuv.Yuv_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static double get_y(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 143 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 143 "/shared/color/src/thx/color/Yuv.hx"
 		return ((double) (haxe.lang.Runtime.toDouble(this1.__get(0))) );
 	}
 	
 	
 	public static double get_u(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 145 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 145 "/shared/color/src/thx/color/Yuv.hx"
 		return ((double) (haxe.lang.Runtime.toDouble(this1.__get(1))) );
 	}
 	
 	
 	public static double get_v(haxe.root.Array<java.lang.Object> this1)
 	{
-		//line 147 "/shared/thx.color/src/thx/color/Yuv.hx"
+		//line 147 "/shared/color/src/thx/color/Yuv.hx"
 		return ((double) (haxe.lang.Runtime.toDouble(this1.__get(2))) );
 	}
 	

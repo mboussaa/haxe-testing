@@ -8,29 +8,29 @@ public final class Grey_Impl_
 {
 	static
 	{
-		//line 11 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 11 "/shared/color/src/thx/color/Grey.hx"
 		java.lang.Object __temp_stmt1 = null;
-		//line 11 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 11 "/shared/color/src/thx/color/Grey.hx"
 		{
-			//line 11 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 11 "/shared/color/src/thx/color/Grey.hx"
 			double this1 = ((double) (0) );
-			//line 11 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 11 "/shared/color/src/thx/color/Grey.hx"
 			__temp_stmt1 = ((double) (this1) );
 		}
 		
-		//line 11 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 11 "/shared/color/src/thx/color/Grey.hx"
 		thx.color._Grey.Grey_Impl_.black = ((double) (haxe.lang.Runtime.toDouble(__temp_stmt1)) );
-		//line 12 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 12 "/shared/color/src/thx/color/Grey.hx"
 		java.lang.Object __temp_stmt2 = null;
-		//line 12 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 12 "/shared/color/src/thx/color/Grey.hx"
 		{
-			//line 12 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 12 "/shared/color/src/thx/color/Grey.hx"
 			double this1 = ((double) (1) );
-			//line 12 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 12 "/shared/color/src/thx/color/Grey.hx"
 			__temp_stmt2 = ((double) (this1) );
 		}
 		
-		//line 12 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 12 "/shared/color/src/thx/color/Grey.hx"
 		thx.color._Grey.Grey_Impl_.white = ((double) (haxe.lang.Runtime.toDouble(__temp_stmt2)) );
 	}
 	
@@ -40,66 +40,66 @@ public final class Grey_Impl_
 	
 	public static double create(double v)
 	{
-		//line 15 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 15 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (v) );
 	}
 	
 	
 	public static java.lang.Object fromString(java.lang.String color)
 	{
-		//line 18 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 18 "/shared/color/src/thx/color/Grey.hx"
 		thx.color.parse.ColorInfo info = thx.color.parse.ColorParser.parseColor(color);
-		//line 19 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 19 "/shared/color/src/thx/color/Grey.hx"
 		if (( null == info )) 
 		{
-			//line 20 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 20 "/shared/color/src/thx/color/Grey.hx"
 			return null;
 		}
 		
-		//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 22 "/shared/color/src/thx/color/Grey.hx"
 		try 
 		{
-			//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 22 "/shared/color/src/thx/color/Grey.hx"
 			java.lang.String _g = info.name;
-			//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 22 "/shared/color/src/thx/color/Grey.hx"
 			{
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				java.lang.String __temp_svar3 = (_g);
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				int __temp_hash5 = __temp_svar3.hashCode();
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				boolean __temp_executeDef4 = true;
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				switch (__temp_hash5)
 				{
 					case 3181279:
 					case 3181155:
 					{
-						//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+						//line 22 "/shared/color/src/thx/color/Grey.hx"
 						if (( (( ( __temp_hash5 == 3181279 ) && __temp_svar3.equals("grey") )) || __temp_svar3.equals("gray") )) 
 						{
-							//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+							//line 22 "/shared/color/src/thx/color/Grey.hx"
 							__temp_executeDef4 = false;
-							//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+							//line 22 "/shared/color/src/thx/color/Grey.hx"
 							return ((double) (haxe.lang.Runtime.toDouble(thx.color.parse.ColorParser.getFloatChannels(info.channels, 1, false).__get(0))) );
 						}
 						
-						//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+						//line 22 "/shared/color/src/thx/color/Grey.hx"
 						break;
 					}
 					
 					
 				}
 				
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				if (__temp_executeDef4) 
 				{
-					//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+					//line 22 "/shared/color/src/thx/color/Grey.hx"
 					return null;
 				}
 				else
 				{
-					//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+					//line 22 "/shared/color/src/thx/color/Grey.hx"
 					throw null;
 				}
 				
@@ -108,22 +108,22 @@ public final class Grey_Impl_
 		}
 		catch (java.lang.Throwable __temp_catchallException1)
 		{
-			//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 22 "/shared/color/src/thx/color/Grey.hx"
 			haxe.lang.Exceptions.setException(__temp_catchallException1);
-			//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 22 "/shared/color/src/thx/color/Grey.hx"
 			java.lang.Object __temp_catchall2 = __temp_catchallException1;
-			//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 22 "/shared/color/src/thx/color/Grey.hx"
 			if (( __temp_catchall2 instanceof haxe.lang.HaxeException )) 
 			{
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				__temp_catchall2 = ((haxe.lang.HaxeException) (__temp_catchallException1) ).obj;
 			}
 			
-			//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 22 "/shared/color/src/thx/color/Grey.hx"
 			{
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				java.lang.Object e = __temp_catchall2;
-				//line 22 "/shared/thx.color/src/thx/color/Grey.hx"
+				//line 22 "/shared/color/src/thx/color/Grey.hx"
 				return null;
 			}
 			
@@ -137,22 +137,22 @@ public final class Grey_Impl_
 	
 	public static double _new(double grey)
 	{
-		//line 31 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 31 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (grey) );
 	}
 	
 	
 	public static double contrast(double this1)
 	{
-		//line 35 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 35 "/shared/color/src/thx/color/Grey.hx"
 		if (( this1 > 0.5 )) 
 		{
-			//line 35 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 35 "/shared/color/src/thx/color/Grey.hx"
 			return thx.color._Grey.Grey_Impl_.black;
 		}
 		else
 		{
-			//line 35 "/shared/thx.color/src/thx/color/Grey.hx"
+			//line 35 "/shared/color/src/thx/color/Grey.hx"
 			return thx.color._Grey.Grey_Impl_.white;
 		}
 		
@@ -161,202 +161,202 @@ public final class Grey_Impl_
 	
 	public static double darker(double this1, double t)
 	{
-		//line 38 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 38 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (thx.Floats.interpolate(t, ((double) (this1) ), ((double) (0) ))) );
 	}
 	
 	
 	public static double lighter(double this1, double t)
 	{
-		//line 41 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 41 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (thx.Floats.interpolate(t, ((double) (this1) ), ((double) (1) ))) );
 	}
 	
 	
 	public static double interpolate(double this1, double other, double t)
 	{
-		//line 44 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 44 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (thx.Floats.interpolate(t, ((double) (this1) ), ((double) (other) ))) );
 	}
 	
 	
 	public static double min(double this1, double other)
 	{
-		//line 47 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 47 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (java.lang.Math.min(((double) (this1) ), ((double) (other) ))) );
 	}
 	
 	
 	public static double max(double this1, double other)
 	{
-		//line 50 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 50 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (java.lang.Math.max(((double) (this1) ), ((double) (other) ))) );
 	}
 	
 	
 	public static double normalize(double this1)
 	{
-		//line 53 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 53 "/shared/color/src/thx/color/Grey.hx"
 		double this2 = ( (( this1 < 0 )) ? (((double) (0) )) : (( (( this1 > 1 )) ? (((double) (1) )) : (this1) )) );
-		//line 53 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 53 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (this2) );
 	}
 	
 	
 	public static double roundTo(double this1, int decimals)
 	{
-		//line 56 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 56 "/shared/color/src/thx/color/Grey.hx"
 		return ((double) (thx.Floats.roundTo(((double) (this1) ), decimals)) );
 	}
 	
 	
 	public static java.lang.String toString(double this1)
 	{
-		//line 59 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 59 "/shared/color/src/thx/color/Grey.hx"
 		return ( ( "grey(" + haxe.lang.Runtime.toString(( ((double) (this1) ) * 100 )) ) + "%)" );
 	}
 	
 	
 	public static boolean equals(double this1, double other)
 	{
-		//line 62 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 62 "/shared/color/src/thx/color/Grey.hx"
 		return thx.Floats.nearEquals(this1, other, null);
 	}
 	
 	
 	public static boolean nearEquals(double this1, double other, java.lang.Object tolerance)
 	{
-		//line 65 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 65 "/shared/color/src/thx/color/Grey.hx"
 		java.lang.Object __temp_tolerance119 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
-		//line 65 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 65 "/shared/color/src/thx/color/Grey.hx"
 		return thx.Floats.nearEquals(this1, ((double) (other) ), __temp_tolerance119);
 	}
 	
 	
 	public static double get_grey(double this1)
 	{
-		//line 68 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 68 "/shared/color/src/thx/color/Grey.hx"
 		return this1;
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toLab(double this1)
 	{
-		//line 71 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 71 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Xyz.Xyz_Impl_.toLab(thx.color._Grey.Grey_Impl_.toXyz(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toLCh(double this1)
 	{
-		//line 74 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 74 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Lab.Lab_Impl_.toLCh(thx.color._Grey.Grey_Impl_.toLab(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toLuv(double this1)
 	{
-		//line 77 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 77 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toLuv(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toCmy(double this1)
 	{
-		//line 80 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 80 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toCmy(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toCmyk(double this1)
 	{
-		//line 83 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 83 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toCmyk(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toCubeHelix(double this1)
 	{
-		//line 86 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 86 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toCubeHelixWithGamma(((haxe.root.Array<java.lang.Object>) (thx.color._Grey.Grey_Impl_.toRgbx(this1)) ), ((double) (1) ));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toHsl(double this1)
 	{
-		//line 89 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 89 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toHsl(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toHsv(double this1)
 	{
-		//line 92 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 92 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toHsv(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toHunterLab(double this1)
 	{
-		//line 95 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 95 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Xyz.Xyz_Impl_.toHunterLab(thx.color._Grey.Grey_Impl_.toXyz(this1));
 	}
 	
 	
 	public static int toRgb(double this1)
 	{
-		//line 98 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 98 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toRgb(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static int toRgba(double this1)
 	{
-		//line 101 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 101 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbxa.Rgbxa_Impl_.toRgba(thx.color._Grey.Grey_Impl_.toRgbxa(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toRgbx(double this1)
 	{
-		//line 104 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 104 "/shared/color/src/thx/color/Grey.hx"
 		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (((double) (this1) )) ), ((java.lang.Object) (((double) (this1) )) ), ((java.lang.Object) (((double) (this1) )) )});
-		//line 104 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 104 "/shared/color/src/thx/color/Grey.hx"
 		return ((haxe.root.Array<java.lang.Object>) (this2) );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toRgbxa(double this1)
 	{
-		//line 107 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 107 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toRgbxa(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static double toTemperature(double this1)
 	{
-		//line 110 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 110 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toTemperature(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toYuv(double this1)
 	{
-		//line 113 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 113 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toYuv(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toXyz(double this1)
 	{
-		//line 116 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 116 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toXyz(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> toYxy(double this1)
 	{
-		//line 119 "/shared/thx.color/src/thx/color/Grey.hx"
+		//line 119 "/shared/color/src/thx/color/Grey.hx"
 		return thx.color._Rgbx.Rgbx_Impl_.toYxy(thx.color._Grey.Grey_Impl_.toRgbx(this1));
 	}
 	

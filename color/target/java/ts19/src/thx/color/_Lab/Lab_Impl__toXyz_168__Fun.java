@@ -8,7 +8,7 @@ public class Lab_Impl__toXyz_168__Fun extends haxe.lang.Function
 {
 	public Lab_Impl__toXyz_168__Fun()
 	{
-		//line 169 "/shared/thx.color/src/thx/color/Lab.hx"
+		//line 169 "/shared/color/src/thx/color/Lab.hx"
 		super(1, 1);
 	}
 	
@@ -17,17 +17,17 @@ public class Lab_Impl__toXyz_168__Fun extends haxe.lang.Function
 	
 	@Override public double __hx_invoke1_f(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 168 "/shared/thx.color/src/thx/color/Lab.hx"
+		//line 168 "/shared/color/src/thx/color/Lab.hx"
 		double t = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (((double) (__fn_float1) )) : (((double) (haxe.lang.Runtime.toDouble(__fn_dyn1)) )) );
-		//line 169 "/shared/thx.color/src/thx/color/Lab.hx"
+		//line 169 "/shared/color/src/thx/color/Lab.hx"
 		if (( t > 0.206896551724137928 )) 
 		{
-			//line 170 "/shared/thx.color/src/thx/color/Lab.hx"
+			//line 170 "/shared/color/src/thx/color/Lab.hx"
 			return java.lang.Math.pow(t, ((double) (3) ));
 		}
 		else
 		{
-			//line 172 "/shared/thx.color/src/thx/color/Lab.hx"
+			//line 172 "/shared/color/src/thx/color/Lab.hx"
 			return ( 0.128418549346016653 * (( t - 0.137931034482758619 )) );
 		}
 		

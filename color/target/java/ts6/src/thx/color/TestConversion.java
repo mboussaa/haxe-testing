@@ -13,7 +13,7 @@ public class TestConversion extends haxe.lang.HxObject
 	
 	public TestConversion()
 	{
-		//line 9 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 9 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.color.TestConversion.__hx_ctor_thx_color_TestConversion(this);
 	}
 	
@@ -25,337 +25,337 @@ public class TestConversion extends haxe.lang.HxObject
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 		return new thx.color.TestConversion(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 		return new thx.color.TestConversion();
 	}
 	
 	
 	public void testLab()
 	{
-		//line 12 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 12 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testLab_12__Fun.__hx_current != null )) ? (thx.color.TestConversion_testLab_12__Fun.__hx_current) : (thx.color.TestConversion_testLab_12__Fun.__hx_current = ((thx.color.TestConversion_testLab_12__Fun) (new thx.color.TestConversion_testLab_12__Fun()) )) )) ));
 	}
 	
 	
 	public void testLCh()
 	{
-		//line 21 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 21 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testLCh_21__Fun.__hx_current != null )) ? (thx.color.TestConversion_testLCh_21__Fun.__hx_current) : (thx.color.TestConversion_testLCh_21__Fun.__hx_current = ((thx.color.TestConversion_testLCh_21__Fun) (new thx.color.TestConversion_testLCh_21__Fun()) )) )) ));
 	}
 	
 	
 	public void testLuv()
 	{
-		//line 30 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 30 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testLuv_30__Fun.__hx_current != null )) ? (thx.color.TestConversion_testLuv_30__Fun.__hx_current) : (thx.color.TestConversion_testLuv_30__Fun.__hx_current = ((thx.color.TestConversion_testLuv_30__Fun) (new thx.color.TestConversion_testLuv_30__Fun()) )) )) ));
 	}
 	
 	
 	public void testCmy()
 	{
-		//line 39 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 39 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testCmy_39__Fun.__hx_current != null )) ? (thx.color.TestConversion_testCmy_39__Fun.__hx_current) : (thx.color.TestConversion_testCmy_39__Fun.__hx_current = ((thx.color.TestConversion_testCmy_39__Fun) (new thx.color.TestConversion_testCmy_39__Fun()) )) )) ));
 	}
 	
 	
 	public void testCmyk()
 	{
-		//line 48 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 48 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testCmyk_48__Fun.__hx_current != null )) ? (thx.color.TestConversion_testCmyk_48__Fun.__hx_current) : (thx.color.TestConversion_testCmyk_48__Fun.__hx_current = ((thx.color.TestConversion_testCmyk_48__Fun) (new thx.color.TestConversion_testCmyk_48__Fun()) )) )) ));
 	}
 	
 	
 	public void testCubehelix()
 	{
-		//line 57 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 57 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testCubehelix_57__Fun.__hx_current != null )) ? (thx.color.TestConversion_testCubehelix_57__Fun.__hx_current) : (thx.color.TestConversion_testCubehelix_57__Fun.__hx_current = ((thx.color.TestConversion_testCubehelix_57__Fun) (new thx.color.TestConversion_testCubehelix_57__Fun()) )) )) ));
 	}
 	
 	
 	public void testHsl()
 	{
-		//line 66 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 66 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testHsl_66__Fun.__hx_current != null )) ? (thx.color.TestConversion_testHsl_66__Fun.__hx_current) : (thx.color.TestConversion_testHsl_66__Fun.__hx_current = ((thx.color.TestConversion_testHsl_66__Fun) (new thx.color.TestConversion_testHsl_66__Fun()) )) )) ));
 	}
 	
 	
 	public void testHsv()
 	{
-		//line 75 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 75 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testHsv_75__Fun.__hx_current != null )) ? (thx.color.TestConversion_testHsv_75__Fun.__hx_current) : (thx.color.TestConversion_testHsv_75__Fun.__hx_current = ((thx.color.TestConversion_testHsv_75__Fun) (new thx.color.TestConversion_testHsv_75__Fun()) )) )) ));
 	}
 	
 	
 	public void testHunterLab()
 	{
-		//line 84 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 84 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testHunterLab_84__Fun.__hx_current != null )) ? (thx.color.TestConversion_testHunterLab_84__Fun.__hx_current) : (thx.color.TestConversion_testHunterLab_84__Fun.__hx_current = ((thx.color.TestConversion_testHunterLab_84__Fun) (new thx.color.TestConversion_testHunterLab_84__Fun()) )) )) ));
 	}
 	
 	
 	public void testRgbx()
 	{
-		//line 93 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 93 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testRgbx_93__Fun.__hx_current != null )) ? (thx.color.TestConversion_testRgbx_93__Fun.__hx_current) : (thx.color.TestConversion_testRgbx_93__Fun.__hx_current = ((thx.color.TestConversion_testRgbx_93__Fun) (new thx.color.TestConversion_testRgbx_93__Fun()) )) )) ));
 	}
 	
 	
 	public void testXyz()
 	{
-		//line 102 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 102 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testXyz_102__Fun.__hx_current != null )) ? (thx.color.TestConversion_testXyz_102__Fun.__hx_current) : (thx.color.TestConversion_testXyz_102__Fun.__hx_current = ((thx.color.TestConversion_testXyz_102__Fun) (new thx.color.TestConversion_testXyz_102__Fun()) )) )) ));
 	}
 	
 	
 	public void testYuv()
 	{
-		//line 111 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 111 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testYuv_111__Fun.__hx_current != null )) ? (thx.color.TestConversion_testYuv_111__Fun.__hx_current) : (thx.color.TestConversion_testYuv_111__Fun.__hx_current = ((thx.color.TestConversion_testYuv_111__Fun) (new thx.color.TestConversion_testYuv_111__Fun()) )) )) ));
 	}
 	
 	
 	public void testYxy()
 	{
-		//line 120 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 120 "/shared/color/test/thx/color/TestConversion.hx"
 		thx.Iterators.map(((java.lang.Object) (thx.color.palettes.Web.names.keys()) ), ((haxe.lang.Function) (( (( thx.color.TestConversion_testYxy_120__Fun.__hx_current != null )) ? (thx.color.TestConversion_testYxy_120__Fun.__hx_current) : (thx.color.TestConversion_testYxy_120__Fun.__hx_current = ((thx.color.TestConversion_testYxy_120__Fun) (new thx.color.TestConversion_testYxy_120__Fun()) )) )) ));
 	}
 	
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 		{
-			//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+			//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 			boolean __temp_executeDef1 = true;
-			//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+			//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 			switch (field.hashCode())
 			{
 				case -1422461112:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testYxy")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testYxy")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422474341:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testLab")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testLab")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422461208:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testYuv")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testYuv")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422475265:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testLCh")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testLCh")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422462041:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testXyz")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testXyz")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422473701:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testLuv")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testLuv")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1146846979:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testRgbx")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testRgbx")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422482595:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testCmy")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testCmy")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case 1682266491:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testHunterLab")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testHunterLab")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1147287378:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testCmyk")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testCmyk")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422477607:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testHsv")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testHsv")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -357528329:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testCubehelix")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testCubehelix")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422477617:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testHsl")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testHsl")) );
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+			//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+				//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+				//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 				throw null;
 			}
 			
@@ -366,233 +366,233 @@ public class TestConversion extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, haxe.root.Array dynargs)
 	{
-		//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 		{
-			//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+			//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 			boolean __temp_executeDef1 = true;
-			//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+			//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 			switch (field.hashCode())
 			{
 				case -1422461112:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testYxy")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testYxy();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422474341:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testLab")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testLab();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422461208:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testYuv")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testYuv();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422475265:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testLCh")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testLCh();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422462041:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testXyz")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testXyz();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422473701:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testLuv")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testLuv();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1146846979:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testRgbx")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testRgbx();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422482595:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testCmy")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testCmy();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case 1682266491:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testHunterLab")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testHunterLab();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1147287378:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testCmyk")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testCmyk();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422477607:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testHsv")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testHsv();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -357528329:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testCubehelix")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testCubehelix();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 				case -1422477617:
 				{
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					if (field.equals("testHsl")) 
 					{
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						__temp_executeDef1 = false;
-						//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+						//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 						this.testHsl();
 					}
 					
-					//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+					//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+			//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+				//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 8 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 8 "/shared/color/test/thx/color/TestConversion.hx"
 		return null;
 	}
 	

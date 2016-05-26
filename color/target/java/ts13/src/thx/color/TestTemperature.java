@@ -13,7 +13,7 @@ public class TestTemperature extends haxe.lang.HxObject
 	
 	public TestTemperature()
 	{
-		//line 6 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 6 "/shared/color/test/thx/color/TestTemperature.hx"
 		thx.color.TestTemperature.__hx_ctor_thx_color_TestTemperature(this);
 	}
 	
@@ -25,117 +25,117 @@ public class TestTemperature extends haxe.lang.HxObject
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 		return new thx.color.TestTemperature(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 		return new thx.color.TestTemperature();
 	}
 	
 	
 	public void testBasics()
 	{
-		//line 9 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 9 "/shared/color/test/thx/color/TestTemperature.hx"
 		double this1 = ((double) (5000) );
-		//line 9 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 9 "/shared/color/test/thx/color/TestTemperature.hx"
 		double t = ((double) (this1) );
-		//line 10 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 10 "/shared/color/test/thx/color/TestTemperature.hx"
 		utest.Assert.equals(5000, ((double) (t) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestTemperature", "TestTemperature.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (10) )) )}));
 	}
 	
 	
 	public void testStrings()
 	{
-		//line 14 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 14 "/shared/color/test/thx/color/TestTemperature.hx"
 		double this1 = ((double) (5000) );
-		//line 14 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 14 "/shared/color/test/thx/color/TestTemperature.hx"
 		double t = ((double) (this1) );
-		//line 15 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 15 "/shared/color/test/thx/color/TestTemperature.hx"
 		utest.Assert.equals("temperature(5000)", thx.color._Temperature.Temperature_Impl_.toString(t), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestTemperature", "TestTemperature.hx", "testStrings"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (15) )) )}));
 	}
 	
 	
 	public void testFromString()
 	{
-		//line 19 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 19 "/shared/color/test/thx/color/TestTemperature.hx"
 		double this1 = ((double) (5000) );
-		//line 19 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 19 "/shared/color/test/thx/color/TestTemperature.hx"
 		utest.Assert.isTrue(thx.color._Temperature.Temperature_Impl_.equals(((double) (this1) ), ((double) (haxe.lang.Runtime.toDouble(thx.color._Temperature.Temperature_Impl_.fromString("temperature(5000)"))) )), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestTemperature", "TestTemperature.hx", "testFromString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (19) )) )}));
 	}
 	
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 		{
-			//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+			//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 			boolean __temp_executeDef1 = true;
-			//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+			//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 			switch (field.hashCode())
 			{
 				case 1443991181:
 				{
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					if (field.equals("testFromString")) 
 					{
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						__temp_executeDef1 = false;
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testFromString")) );
 					}
 					
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					break;
 				}
 				
 				
 				case 1223535927:
 				{
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					if (field.equals("testBasics")) 
 					{
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						__temp_executeDef1 = false;
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testBasics")) );
 					}
 					
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					break;
 				}
 				
 				
 				case 2020609424:
 				{
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					if (field.equals("testStrings")) 
 					{
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						__temp_executeDef1 = false;
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testStrings")) );
 					}
 					
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+			//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+				//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+				//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 				throw null;
 			}
 			
@@ -146,73 +146,73 @@ public class TestTemperature extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, haxe.root.Array dynargs)
 	{
-		//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 		{
-			//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+			//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 			boolean __temp_executeDef1 = true;
-			//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+			//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 			switch (field.hashCode())
 			{
 				case 1443991181:
 				{
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					if (field.equals("testFromString")) 
 					{
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						__temp_executeDef1 = false;
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						this.testFromString();
 					}
 					
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					break;
 				}
 				
 				
 				case 1223535927:
 				{
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					if (field.equals("testBasics")) 
 					{
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						__temp_executeDef1 = false;
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						this.testBasics();
 					}
 					
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					break;
 				}
 				
 				
 				case 2020609424:
 				{
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					if (field.equals("testStrings")) 
 					{
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						__temp_executeDef1 = false;
-						//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+						//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 						this.testStrings();
 					}
 					
-					//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+					//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+			//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+				//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 5 "/shared/thx.color/test/thx/color/TestTemperature.hx"
+		//line 5 "/shared/color/test/thx/color/TestTemperature.hx"
 		return null;
 	}
 	

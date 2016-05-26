@@ -19,7 +19,7 @@ public class TS13 extends haxe.lang.HxObject
 	
 	public TS13()
 	{
-		//line 4 "/shared/thx.color/test/TS13.hx"
+		//line 4 "/shared/color/test/TS13.hx"
 		haxe.root.TS13.__hx_ctor__TS13(this);
 	}
 	
@@ -31,46 +31,46 @@ public class TS13 extends haxe.lang.HxObject
 	
 	public static void addTests(utest.Runner runner)
 	{
-		//line 18 "/shared/thx.color/test/TS13.hx"
+		//line 18 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestHsv(), null, null, null, null);
-		//line 19 "/shared/thx.color/test/TS13.hx"
+		//line 19 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestRgb(), null, null, null, null);
-		//line 20 "/shared/thx.color/test/TS13.hx"
+		//line 20 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestRgbx(), null, null, null, null);
-		//line 21 "/shared/thx.color/test/TS13.hx"
+		//line 21 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestTemperature(), null, null, null, null);
-		//line 22 "/shared/thx.color/test/TS13.hx"
+		//line 22 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestXyz(), null, null, null, null);
-		//line 23 "/shared/thx.color/test/TS13.hx"
+		//line 23 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestYxy(), null, null, null, null);
-		//line 25 "/shared/thx.color/test/TS13.hx"
+		//line 25 "/shared/color/test/TS13.hx"
 		runner.addCase(new thx.color.TestRoundTrip(), null, null, null, null);
 	}
 	
 	
 	public static void main()
 	{
-		//line 29 "/shared/thx.color/test/TS13.hx"
+		//line 29 "/shared/color/test/TS13.hx"
 		utest.Runner runner = new utest.Runner();
-		//line 30 "/shared/thx.color/test/TS13.hx"
+		//line 30 "/shared/color/test/TS13.hx"
 		haxe.root.TS13.addTests(runner);
-		//line 31 "/shared/thx.color/test/TS13.hx"
+		//line 31 "/shared/color/test/TS13.hx"
 		utest.ui.Report.create(runner, null, null);
-		//line 32 "/shared/thx.color/test/TS13.hx"
+		//line 32 "/shared/color/test/TS13.hx"
 		runner.run();
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 4 "/shared/thx.color/test/TS13.hx"
+		//line 4 "/shared/color/test/TS13.hx"
 		return new haxe.root.TS13(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 4 "/shared/thx.color/test/TS13.hx"
+		//line 4 "/shared/color/test/TS13.hx"
 		return new haxe.root.TS13();
 	}
 	

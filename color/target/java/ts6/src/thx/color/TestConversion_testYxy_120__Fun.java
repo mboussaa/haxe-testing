@@ -8,7 +8,7 @@ public class TestConversion_testYxy_120__Fun extends haxe.lang.Function
 {
 	public TestConversion_testYxy_120__Fun()
 	{
-		//line 120 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 120 "/shared/color/test/thx/color/TestConversion.hx"
 		super(1, 0);
 	}
 	
@@ -17,17 +17,17 @@ public class TestConversion_testYxy_120__Fun extends haxe.lang.Function
 	
 	@Override public java.lang.Object __hx_invoke1_o(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 120 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 120 "/shared/color/test/thx/color/TestConversion.hx"
 		java.lang.String name = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (haxe.lang.Runtime.toString(__fn_float1)) : (haxe.lang.Runtime.toString(__fn_dyn1)) );
-		//line 121 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 121 "/shared/color/test/thx/color/TestConversion.hx"
 		int expected = ((int) (haxe.lang.Runtime.toInt(((java.lang.Object) (thx.color.palettes.Web.names.get(name)) ))) );
-		//line 121 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 121 "/shared/color/test/thx/color/TestConversion.hx"
 		haxe.root.Array<java.lang.Object> color = thx.color._Rgb.Rgb_Impl_.toYxy(expected);
-		//line 121 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 121 "/shared/color/test/thx/color/TestConversion.hx"
 		int test = thx.color._Yxy.Yxy_Impl_.toRgb(color);
-		//line 124 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 124 "/shared/color/test/thx/color/TestConversion.hx"
 		utest.Assert.equals(thx.color._Rgb.Rgb_Impl_.toString(expected), thx.color._Rgb.Rgb_Impl_.toString(test), ( ( ( ( ( "expected " + thx.color._Rgb.Rgb_Impl_.toString(expected) ) + " but was " ) + thx.color._Rgb.Rgb_Impl_.toString(test) ) + " for " ) + name ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestConversion", "TestConversion.hx", "testYxy"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (124) )) )}));
-		//line 120 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 120 "/shared/color/test/thx/color/TestConversion.hx"
 		return null;
 	}
 	

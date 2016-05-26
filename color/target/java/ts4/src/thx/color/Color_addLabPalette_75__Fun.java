@@ -8,7 +8,7 @@ public class Color_addLabPalette_75__Fun extends haxe.lang.Function
 {
 	public Color_addLabPalette_75__Fun()
 	{
-		//line 75 "/shared/thx.color/src/thx/color/Color.hx"
+		//line 75 "/shared/color/src/thx/color/Color.hx"
 		super(1, 0);
 	}
 	
@@ -17,9 +17,9 @@ public class Color_addLabPalette_75__Fun extends haxe.lang.Function
 	
 	@Override public java.lang.Object __hx_invoke1_o(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 75 "/shared/thx.color/src/thx/color/Color.hx"
+		//line 75 "/shared/color/src/thx/color/Color.hx"
 		java.lang.Object _1 = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (((java.lang.Object) (__fn_float1) )) : (( (( __fn_dyn1 == null )) ? (null) : (((java.lang.Object) (__fn_dyn1) )) )) );
-		//line 75 "/shared/thx.color/src/thx/color/Color.hx"
+		//line 75 "/shared/color/src/thx/color/Color.hx"
 		thx.color.Color.namedColors.set(haxe.lang.Runtime.toString(haxe.lang.Runtime.getField(((java.lang.Object) (_1) ), "_0", true)), thx.color._Lab.Lab_Impl_.toRgbx(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(((java.lang.Object) (_1) ), "_1", true)) )));
 		//line 86 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/macro/lambda/SlambdaMacro.hx"
 		return null;

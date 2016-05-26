@@ -8,7 +8,7 @@ public class TestConversion_testCmyk_48__Fun extends haxe.lang.Function
 {
 	public TestConversion_testCmyk_48__Fun()
 	{
-		//line 48 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 48 "/shared/color/test/thx/color/TestConversion.hx"
 		super(1, 0);
 	}
 	
@@ -17,17 +17,17 @@ public class TestConversion_testCmyk_48__Fun extends haxe.lang.Function
 	
 	@Override public java.lang.Object __hx_invoke1_o(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 48 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 48 "/shared/color/test/thx/color/TestConversion.hx"
 		java.lang.String name = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (haxe.lang.Runtime.toString(__fn_float1)) : (haxe.lang.Runtime.toString(__fn_dyn1)) );
-		//line 49 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 49 "/shared/color/test/thx/color/TestConversion.hx"
 		int expected = ((int) (haxe.lang.Runtime.toInt(((java.lang.Object) (thx.color.palettes.Web.names.get(name)) ))) );
-		//line 49 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 49 "/shared/color/test/thx/color/TestConversion.hx"
 		haxe.root.Array<java.lang.Object> color = thx.color._Rgb.Rgb_Impl_.toCmyk(expected);
-		//line 49 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 49 "/shared/color/test/thx/color/TestConversion.hx"
 		int test = thx.color._Cmyk.Cmyk_Impl_.toRgb(color);
-		//line 52 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 52 "/shared/color/test/thx/color/TestConversion.hx"
 		utest.Assert.equals(thx.color._Rgb.Rgb_Impl_.toString(expected), thx.color._Rgb.Rgb_Impl_.toString(test), ( ( ( ( ( "expected " + thx.color._Rgb.Rgb_Impl_.toString(expected) ) + " but was " ) + thx.color._Rgb.Rgb_Impl_.toString(test) ) + " for " ) + name ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestConversion", "TestConversion.hx", "testCmyk"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (52) )) )}));
-		//line 48 "/shared/thx.color/test/thx/color/TestConversion.hx"
+		//line 48 "/shared/color/test/thx/color/TestConversion.hx"
 		return null;
 	}
 	

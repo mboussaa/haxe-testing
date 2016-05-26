@@ -58,7 +58,7 @@ do
 for j in "${target[@]}"
 do
 curl -o /shared/stats/statistics/influxdb.json -G 'http://10.0.0.1:8086/db/cadvisorDB/series?u=root&p=root&pretty=true' --data-urlencode "q=select container_name, max(memory_usage) from stats where container_name ='haxe_"$j"_"$ts"_"$i"' and memory_usage <> 0 group by container_name"
-python /shared/JSON2CSVFILE.py
+python3 /shared/JSON2CSVFILE.py
 cat /shared/stats/statistics/memory >> /shared/stats/statistics/memory_"$ts"_"$j"
 done
 done

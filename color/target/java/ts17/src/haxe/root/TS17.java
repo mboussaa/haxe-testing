@@ -19,7 +19,7 @@ public class TS17 extends haxe.lang.HxObject
 	
 	public TS17()
 	{
-		//line 4 "/shared/thx.color/test/TS17.hx"
+		//line 4 "/shared/color/test/TS17.hx"
 		haxe.root.TS17.__hx_ctor__TS17(this);
 	}
 	
@@ -31,34 +31,34 @@ public class TS17 extends haxe.lang.HxObject
 	
 	public static void addTests(utest.Runner runner)
 	{
-		//line 8 "/shared/thx.color/test/TS17.hx"
+		//line 8 "/shared/color/test/TS17.hx"
 		runner.addCase(new thx.color.TestXyz(), null, null, null, null);
 	}
 	
 	
 	public static void main()
 	{
-		//line 15 "/shared/thx.color/test/TS17.hx"
+		//line 15 "/shared/color/test/TS17.hx"
 		utest.Runner runner = new utest.Runner();
-		//line 16 "/shared/thx.color/test/TS17.hx"
+		//line 16 "/shared/color/test/TS17.hx"
 		haxe.root.TS17.addTests(runner);
-		//line 17 "/shared/thx.color/test/TS17.hx"
+		//line 17 "/shared/color/test/TS17.hx"
 		utest.ui.Report.create(runner, null, null);
-		//line 18 "/shared/thx.color/test/TS17.hx"
+		//line 18 "/shared/color/test/TS17.hx"
 		runner.run();
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 4 "/shared/thx.color/test/TS17.hx"
+		//line 4 "/shared/color/test/TS17.hx"
 		return new haxe.root.TS17(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 4 "/shared/thx.color/test/TS17.hx"
+		//line 4 "/shared/color/test/TS17.hx"
 		return new haxe.root.TS17();
 	}
 	

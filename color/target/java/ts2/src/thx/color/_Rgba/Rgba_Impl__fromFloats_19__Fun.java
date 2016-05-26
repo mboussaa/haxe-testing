@@ -17,7 +17,7 @@ public class Rgba_Impl__fromFloats_19__Fun extends haxe.lang.Function
 	
 	@Override public double __hx_invoke1_f(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 19 "/shared/thx.color/src/thx/color/Rgba.hx"
+		//line 19 "/shared/color/src/thx/color/Rgba.hx"
 		java.lang.Object _1 = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (((java.lang.Object) (__fn_float1) )) : (( (( __fn_dyn1 == null )) ? (null) : (((java.lang.Object) (__fn_dyn1) )) )) );
 		//line 86 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/macro/lambda/SlambdaMacro.hx"
 		return ((double) (((int) (java.lang.Math.round(( ((double) (haxe.lang.Runtime.toDouble(_1)) ) * ((double) (255) ) ))) )) );

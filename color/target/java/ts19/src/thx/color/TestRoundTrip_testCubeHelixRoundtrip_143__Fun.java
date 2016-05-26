@@ -8,7 +8,7 @@ public class TestRoundTrip_testCubeHelixRoundtrip_143__Fun extends haxe.lang.Fun
 {
 	public TestRoundTrip_testCubeHelixRoundtrip_143__Fun()
 	{
-		//line 143 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+		//line 143 "/shared/color/test/thx/color/TestRoundTrip.hx"
 		super(1, 0);
 	}
 	
@@ -17,31 +17,31 @@ public class TestRoundTrip_testCubeHelixRoundtrip_143__Fun extends haxe.lang.Fun
 	
 	@Override public java.lang.Object __hx_invoke1_o(double __fn_float1, java.lang.Object __fn_dyn1)
 	{
-		//line 143 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+		//line 143 "/shared/color/test/thx/color/TestRoundTrip.hx"
 		java.lang.Object _1 = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (((java.lang.Object) (__fn_float1) )) : (( (( __fn_dyn1 == null )) ? (null) : (((java.lang.Object) (__fn_dyn1) )) )) );
-		//line 143 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+		//line 143 "/shared/color/test/thx/color/TestRoundTrip.hx"
 		{
-			//line 144 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 144 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Lab.Lab_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "lab", true)) )), thx.color._Lab.Lab_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "lab", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (144) )) )}));
-			//line 145 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 145 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._LCh.LCh_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "lch", true)) )), thx.color._LCh.LCh_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "lch", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (145) )) )}));
-			//line 146 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 146 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Cmy.Cmy_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "cmy", true)) )), thx.color._Cmy.Cmy_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "cmy", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (146) )) )}));
-			//line 147 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 147 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Cmyk.Cmyk_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "cmyk", true)) )), thx.color._Cmyk.Cmyk_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "cmyk", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (147) )) )}));
-			//line 148 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 148 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Rgbx.Rgbx_Impl_.toCubeHelixWithGamma(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "rgbx", true)) ), ((double) (1) )), thx.color._Rgbx.Rgbx_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "rgbx", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (148) )) )}));
-			//line 149 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 149 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Hsl.Hsl_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "hsl", true)) )), thx.color._Hsl.Hsl_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "hsl", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (149) )) )}));
-			//line 150 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 150 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Hsv.Hsv_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "hsv", true)) )), thx.color._Hsv.Hsv_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "hsv", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (150) )) )}));
-			//line 151 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 151 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._HunterLab.HunterLab_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "hl", true)) )), thx.color._HunterLab.HunterLab_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "hl", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (151) )) )}));
-			//line 152 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 152 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Xyz.Xyz_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "xyz", true)) )), thx.color._Xyz.Xyz_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "xyz", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (152) )) )}));
-			//line 153 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 153 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Yuv.Yuv_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "yuv", true)) )), thx.color._Yuv.Yuv_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "yuv", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (153) )) )}));
-			//line 154 "/shared/thx.color/test/thx/color/TestRoundTrip.hx"
+			//line 154 "/shared/color/test/thx/color/TestRoundTrip.hx"
 			thx.color.TestRoundTrip.assertCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "ch", true)) ), thx.color._Yxy.Yxy_Impl_.toCubeHelix(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "yxy", true)) )), thx.color._Yxy.Yxy_Impl_.toString(((haxe.root.Array<java.lang.Object>) (haxe.lang.Runtime.getField(_1, "yxy", true)) )), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestRoundTrip", "TestRoundTrip.hx", "testCubeHelixRoundtrip"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (154) )) )}));
 		}
 		

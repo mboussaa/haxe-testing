@@ -1,4 +1,4 @@
-/shared/thx.color
+/shared/color
 begin defines
 dce
 haxe3

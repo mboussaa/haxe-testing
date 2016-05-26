@@ -17,49 +17,49 @@ public class ChannelInfo extends haxe.lang.ParamEnum
 	
 	public static thx.color.parse.ChannelInfo CIPercent(double value)
 	{
-		//line 146 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 146 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return new thx.color.parse.ChannelInfo(0, new java.lang.Object[]{value});
 	}
 	
 	
 	public static thx.color.parse.ChannelInfo CIFloat(double value)
 	{
-		//line 147 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 147 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return new thx.color.parse.ChannelInfo(1, new java.lang.Object[]{value});
 	}
 	
 	
 	public static thx.color.parse.ChannelInfo CIDegree(double value)
 	{
-		//line 148 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 148 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return new thx.color.parse.ChannelInfo(2, new java.lang.Object[]{value});
 	}
 	
 	
 	public static thx.color.parse.ChannelInfo CIInt8(int value)
 	{
-		//line 149 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 149 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return new thx.color.parse.ChannelInfo(3, new java.lang.Object[]{value});
 	}
 	
 	
 	public static thx.color.parse.ChannelInfo CIInt(int value)
 	{
-		//line 150 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 150 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return new thx.color.parse.ChannelInfo(4, new java.lang.Object[]{value});
 	}
 	
 	
 	public static thx.color.parse.ChannelInfo CIBool(boolean value)
 	{
-		//line 151 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 151 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return new thx.color.parse.ChannelInfo(5, new java.lang.Object[]{value});
 	}
 	
 	
 	@Override public java.lang.String getTag()
 	{
-		//line 145 "/shared/thx.color/src/thx/color/parse/ColorParser.hx"
+		//line 145 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		return thx.color.parse.ChannelInfo.__hx_constructs[this.index];
 	}
 	
