@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "български",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "bg",
+  "ietf": "bg",
+  "iso2": "bg",
+  "iso3": "bul",
+  "nameRegionEnglish": null,
+  "win3": "BGR",
+  "dateTime": null,
+  "nameEnglish": "Bulgarian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 2
+}

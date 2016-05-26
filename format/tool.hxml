@@ -1,0 +1,11 @@
+-cp src 
+-cp test 
+-main TestAll.hx 
+-lib mcover 
+--macro mcover.MCover.coverage([''], ['src/thx/format/'], null) 
+-lib mconsole 
+-lib thx.format 
+-lib thx.core 
+-lib utest 
+-lib nanotest 
+-js target/js/ts/ts.js

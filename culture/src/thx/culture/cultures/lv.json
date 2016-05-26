@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "latviešu",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "lv",
+  "ietf": "lv",
+  "iso2": "lv",
+  "iso3": "lav",
+  "nameRegionEnglish": null,
+  "win3": "LVI",
+  "dateTime": null,
+  "nameEnglish": "Latvian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 38
+}

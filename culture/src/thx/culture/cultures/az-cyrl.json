@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Азәрбајҹан дили",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "az-Cyrl",
+  "ietf": "az-Cyrl",
+  "iso2": "az",
+  "iso3": "aze",
+  "nameRegionEnglish": null,
+  "win3": "AZC",
+  "dateTime": null,
+  "nameEnglish": "Azeri (Cyrillic)",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 29740
+}

@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "norsk",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "no",
+  "ietf": "no",
+  "iso2": "nb",
+  "iso3": "nob",
+  "nameRegionEnglish": null,
+  "win3": "NOR",
+  "dateTime": null,
+  "nameEnglish": "Norwegian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 20
+}

@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "srpski",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "sr",
+  "ietf": "sr",
+  "iso2": "sr",
+  "iso3": "srp",
+  "nameRegionEnglish": null,
+  "win3": "SRB",
+  "dateTime": null,
+  "nameEnglish": "Serbian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 31770
+}

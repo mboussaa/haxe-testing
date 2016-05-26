@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Türkçe",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "tr",
+  "ietf": "tr",
+  "iso2": "tr",
+  "iso3": "tur",
+  "nameRegionEnglish": null,
+  "win3": "TRK",
+  "dateTime": null,
+  "nameEnglish": "Turkish",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 31
+}

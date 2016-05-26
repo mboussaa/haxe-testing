@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Gaeilge",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "ga",
+  "ietf": "ga",
+  "iso2": "ga",
+  "iso3": "gle",
+  "nameRegionEnglish": null,
+  "win3": "IRE",
+  "dateTime": null,
+  "nameEnglish": "Irish",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 60
+}

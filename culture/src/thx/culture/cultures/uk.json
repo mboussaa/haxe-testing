@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "українська",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "uk",
+  "ietf": "uk",
+  "iso2": "uk",
+  "iso3": "ukr",
+  "nameRegionEnglish": null,
+  "win3": "UKR",
+  "dateTime": null,
+  "nameEnglish": "Ukrainian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 34
+}

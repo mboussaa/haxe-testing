@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "català",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "ca",
+  "ietf": "ca",
+  "iso2": "ca",
+  "iso3": "cat",
+  "nameRegionEnglish": null,
+  "win3": "CAT",
+  "dateTime": null,
+  "nameEnglish": "Catalan",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 3
+}

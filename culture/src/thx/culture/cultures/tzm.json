@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Tamazight",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "tzm",
+  "ietf": "tzm",
+  "iso2": "tzm",
+  "iso3": "tzm",
+  "nameRegionEnglish": null,
+  "win3": "TZM",
+  "dateTime": null,
+  "nameEnglish": "Tamazight",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 95
+}

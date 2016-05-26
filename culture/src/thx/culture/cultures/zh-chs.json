@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "中文(简体) 旧版",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "zh-CHS",
+  "ietf": "zh-Hans",
+  "iso2": "zh",
+  "iso3": "zho",
+  "nameRegionEnglish": null,
+  "win3": "CHS",
+  "dateTime": null,
+  "nameEnglish": "Chinese (Simplified) Legacy",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 4
+}

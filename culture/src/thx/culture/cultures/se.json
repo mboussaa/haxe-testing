@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "davvisámegiella",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "se",
+  "ietf": "se",
+  "iso2": "se",
+  "iso3": "sme",
+  "nameRegionEnglish": null,
+  "win3": "SME",
+  "dateTime": null,
+  "nameEnglish": "Sami (Northern)",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 59
+}

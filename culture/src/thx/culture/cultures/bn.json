@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "বাংলা",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "bn",
+  "ietf": "bn",
+  "iso2": "bn",
+  "iso3": "bng",
+  "nameRegionEnglish": null,
+  "win3": "BNG",
+  "dateTime": null,
+  "nameEnglish": "Bengali",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 69
+}

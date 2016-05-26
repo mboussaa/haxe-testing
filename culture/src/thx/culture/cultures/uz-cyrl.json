@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Ўзбек",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "uz-Cyrl",
+  "ietf": "uz-Cyrl",
+  "iso2": "uz",
+  "iso3": "uzb",
+  "nameRegionEnglish": null,
+  "win3": "UZB",
+  "dateTime": null,
+  "nameEnglish": "Uzbek (Cyrillic)",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 30787
+}

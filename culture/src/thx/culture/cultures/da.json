@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "dansk",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "da",
+  "ietf": "da",
+  "iso2": "da",
+  "iso3": "dan",
+  "nameRegionEnglish": null,
+  "win3": "DAN",
+  "dateTime": null,
+  "nameEnglish": "Danish",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 6
+}

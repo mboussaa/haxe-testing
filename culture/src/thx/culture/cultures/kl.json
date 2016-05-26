@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "kalaallisut",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "kl",
+  "ietf": "kl",
+  "iso2": "kl",
+  "iso3": "kal",
+  "nameRegionEnglish": null,
+  "win3": "KAL",
+  "dateTime": null,
+  "nameEnglish": "Greenlandic",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 111
+}

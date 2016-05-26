@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Тоҷикӣ",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "tg-Cyrl",
+  "ietf": "tg-Cyrl",
+  "iso2": "tg",
+  "iso3": "tgk",
+  "nameRegionEnglish": null,
+  "win3": "TAJ",
+  "dateTime": null,
+  "nameEnglish": "Tajik (Cyrillic)",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 31784
+}

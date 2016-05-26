@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "brezhoneg",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "br",
+  "ietf": "br",
+  "iso2": "br",
+  "iso3": "bre",
+  "nameRegionEnglish": null,
+  "win3": "BRE",
+  "dateTime": null,
+  "nameEnglish": "Breton",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 126
+}

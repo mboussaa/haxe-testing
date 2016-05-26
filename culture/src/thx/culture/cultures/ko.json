@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "한국어",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "ko",
+  "ietf": "ko",
+  "iso2": "ko",
+  "iso3": "kor",
+  "nameRegionEnglish": null,
+  "win3": "KOR",
+  "dateTime": null,
+  "nameEnglish": "Korean",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 18
+}

@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "eesti",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "et",
+  "ietf": "et",
+  "iso2": "et",
+  "iso3": "est",
+  "nameRegionEnglish": null,
+  "win3": "ETI",
+  "dateTime": null,
+  "nameEnglish": "Estonian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 37
+}

@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "suomi",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "fi",
+  "ietf": "fi",
+  "iso2": "fi",
+  "iso3": "fin",
+  "nameRegionEnglish": null,
+  "win3": "FIN",
+  "dateTime": null,
+  "nameEnglish": "Finnish",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 11
+}

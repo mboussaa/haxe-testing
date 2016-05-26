@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "ThaiBuddhist",
+  "number": null,
+  "nameNative": "ไทย",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "th",
+  "ietf": "th",
+  "iso2": "th",
+  "iso3": "tha",
+  "nameRegionEnglish": null,
+  "win3": "THA",
+  "dateTime": null,
+  "nameEnglish": "Thai",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 30
+}

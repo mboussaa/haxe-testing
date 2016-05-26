@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Elsässisch",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "gsw",
+  "ietf": "gsw",
+  "iso2": "gsw",
+  "iso3": "gsw",
+  "nameRegionEnglish": null,
+  "win3": "GSW",
+  "dateTime": null,
+  "nameEnglish": "Alsatian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 132
+}

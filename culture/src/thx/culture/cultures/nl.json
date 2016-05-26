@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Nederlands",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "nl",
+  "ietf": "nl",
+  "iso2": "nl",
+  "iso3": "nld",
+  "nameRegionEnglish": null,
+  "win3": "NLD",
+  "dateTime": null,
+  "nameEnglish": "Dutch",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 19
+}

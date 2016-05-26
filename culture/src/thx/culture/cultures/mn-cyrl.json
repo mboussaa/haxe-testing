@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Монгол хэл",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "mn-Cyrl",
+  "ietf": "mn-Cyrl",
+  "iso2": "mn",
+  "iso3": "mon",
+  "nameRegionEnglish": null,
+  "win3": "MNN",
+  "dateTime": null,
+  "nameEnglish": "Mongolian (Cyrillic)",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 30800
+}

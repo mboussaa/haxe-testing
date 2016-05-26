@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "日本語",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "ja",
+  "ietf": "ja",
+  "iso2": "ja",
+  "iso3": "jpn",
+  "nameRegionEnglish": null,
+  "win3": "JPN",
+  "dateTime": null,
+  "nameEnglish": "Japanese",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 17
+}

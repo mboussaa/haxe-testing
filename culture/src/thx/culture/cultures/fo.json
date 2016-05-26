@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "føroyskt",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "fo",
+  "ietf": "fo",
+  "iso2": "fo",
+  "iso3": "fao",
+  "nameRegionEnglish": null,
+  "win3": "FOS",
+  "dateTime": null,
+  "nameEnglish": "Faroese",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 56
+}

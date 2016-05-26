@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Kinyarwanda",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "rw",
+  "ietf": "rw",
+  "iso2": "rw",
+  "iso3": "kin",
+  "nameRegionEnglish": null,
+  "win3": "KIN",
+  "dateTime": null,
+  "nameEnglish": "Kinyarwanda",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 135
+}

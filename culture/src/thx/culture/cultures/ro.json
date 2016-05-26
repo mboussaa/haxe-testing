@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "română",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "ro",
+  "ietf": "ro",
+  "iso2": "ro",
+  "iso3": "ron",
+  "nameRegionEnglish": null,
+  "win3": "ROM",
+  "dateTime": null,
+  "nameEnglish": "Romanian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 24
+}

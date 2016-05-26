@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Ελληνικά",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "el",
+  "ietf": "el",
+  "iso2": "el",
+  "iso3": "ell",
+  "nameRegionEnglish": null,
+  "win3": "ELL",
+  "dateTime": null,
+  "nameEnglish": "Greek",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 8
+}

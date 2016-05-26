@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "hrvatski",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "hr",
+  "ietf": "hr",
+  "iso2": "hr",
+  "iso3": "hrv",
+  "nameRegionEnglish": null,
+  "win3": "HRV",
+  "dateTime": null,
+  "nameEnglish": "Croatian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 26
+}

@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "bosanski",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "bs-Latn",
+  "ietf": "bs-Latn",
+  "iso2": "bs",
+  "iso3": "bsb",
+  "nameRegionEnglish": null,
+  "win3": "BSB",
+  "dateTime": null,
+  "nameEnglish": "Bosnian (Latin)",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 26650
+}

@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "čeština",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "cs",
+  "ietf": "cs",
+  "iso2": "cs",
+  "iso3": "ces",
+  "nameRegionEnglish": null,
+  "win3": "CSY",
+  "dateTime": null,
+  "nameEnglish": "Czech",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 5
+}

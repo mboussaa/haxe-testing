@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "svenska",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "sv",
+  "ietf": "sv",
+  "iso2": "sv",
+  "iso3": "swe",
+  "nameRegionEnglish": null,
+  "win3": "SVE",
+  "dateTime": null,
+  "nameEnglish": "Swedish",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 29
+}

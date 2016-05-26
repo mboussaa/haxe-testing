@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "עברית",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "he",
+  "ietf": "he",
+  "iso2": "he",
+  "iso3": "heb",
+  "nameRegionEnglish": null,
+  "win3": "HEB",
+  "dateTime": null,
+  "nameEnglish": "Hebrew",
+  "isNeutral": true,
+  "isRightToLeft": true,
+  "lcid": 13
+}

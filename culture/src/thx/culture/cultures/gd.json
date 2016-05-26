@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "Gàidhlig",
+  "separatorList": ",",
+  "nameRegionNative": null,
+  "code": "gd",
+  "ietf": "gd",
+  "iso2": "gd",
+  "iso3": "gla",
+  "nameRegionEnglish": null,
+  "win3": "GLA",
+  "dateTime": null,
+  "nameEnglish": "Scottish Gaelic",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 145
+}

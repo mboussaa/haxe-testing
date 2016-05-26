@@ -1,0 +1,15 @@
+{
+  "name": "thx.format",
+  "url": "https://github.com/fponticelli/thx.format",
+  "license": "MIT",
+  "classPath": "src",
+  "tags": ["format", "localization", "thx", "cross"],
+  "description": "Formatting library (Numbers and Dates).",
+  "releasenote": "Fixed issue with rounding.",
+  "version": "0.5.1",
+  "contributors": ["fponticelli"],
+  "dependencies": {
+    "thx.core": "",
+    "thx.culture": ""
+  }
+}

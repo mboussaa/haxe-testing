@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "galego",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "gl",
+  "ietf": "gl",
+  "iso2": "gl",
+  "iso3": "glg",
+  "nameRegionEnglish": null,
+  "win3": "GLC",
+  "dateTime": null,
+  "nameEnglish": "Galician",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 86
+}

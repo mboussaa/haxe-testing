@@ -1,0 +1,18 @@
+{
+  "nameCalendar": "Gregorian",
+  "number": null,
+  "nameNative": "magyar",
+  "separatorList": ";",
+  "nameRegionNative": null,
+  "code": "hu",
+  "ietf": "hu",
+  "iso2": "hu",
+  "iso3": "hun",
+  "nameRegionEnglish": null,
+  "win3": "HUN",
+  "dateTime": null,
+  "nameEnglish": "Hungarian",
+  "isNeutral": true,
+  "isRightToLeft": false,
+  "lcid": 14
+}
