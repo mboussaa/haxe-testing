@@ -1,0 +1,2 @@
+-cmd haxe tests.hxml -js bin/test.js
+-cmd /usr/bin/X11/node bin/test.js
