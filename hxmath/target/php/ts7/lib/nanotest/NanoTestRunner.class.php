@@ -17,7 +17,7 @@ class nanotest_NanoTestRunner {
 		haxe_unit_TestRunner::hprint($d);
 	}
 	public $printError;
-
+	public function hprint($d) { return call_user_func_array($this->hprint, array($d)); }
 	public $hprint = null;
 	public function add($testCase) {
 		$this->cases->push($testCase);
