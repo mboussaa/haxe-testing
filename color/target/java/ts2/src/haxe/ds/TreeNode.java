@@ -18,34 +18,34 @@ public class TreeNode<K, V> extends haxe.lang.HxObject
 	}
 	
 	
-	public static <K_c, V_c> void __hx_ctor_haxe_ds_TreeNode(haxe.ds.TreeNode<K_c, V_c> __temp_me25, haxe.ds.TreeNode<K_c, V_c> l, K_c k, V_c v, haxe.ds.TreeNode<K_c, V_c> r, java.lang.Object h)
+	public static <K_c, V_c> void __hx_ctor_haxe_ds_TreeNode(haxe.ds.TreeNode<K_c, V_c> __temp_me18, haxe.ds.TreeNode<K_c, V_c> l, K_c k, V_c v, haxe.ds.TreeNode<K_c, V_c> r, java.lang.Object h)
 	{
 		//line 223 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		int __temp_h24 = ( (haxe.lang.Runtime.eq(h, null)) ? (-1) : (((int) (haxe.lang.Runtime.toInt(h)) )) );
+		int __temp_h17 = ( (haxe.lang.Runtime.eq(h, null)) ? (-1) : (((int) (haxe.lang.Runtime.toInt(h)) )) );
 		//line 224 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		__temp_me25.left = l;
+		__temp_me18.left = l;
 		//line 225 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		__temp_me25.key = k;
+		__temp_me18.key = k;
 		//line 226 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		__temp_me25.value = v;
+		__temp_me18.value = v;
 		//line 227 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		__temp_me25.right = r;
+		__temp_me18.right = r;
 		//line 228 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		if (( __temp_h24 == -1 )) 
+		if (( __temp_h17 == -1 )) 
 		{
 			//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
 			int tmp = 0;
 			//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-			haxe.ds.TreeNode<K_c, V_c> _this = __temp_me25.left;
+			haxe.ds.TreeNode<K_c, V_c> _this = __temp_me18.left;
 			//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
 			int tmp1 = ( (( _this == null )) ? (0) : (_this._height) );
 			//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-			haxe.ds.TreeNode<K_c, V_c> _this1 = __temp_me25.right;
+			haxe.ds.TreeNode<K_c, V_c> _this1 = __temp_me18.right;
 			//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
 			if (( tmp1 > (( (( _this1 == null )) ? (0) : (_this1._height) )) )) 
 			{
 				//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-				haxe.ds.TreeNode<K_c, V_c> _this2 = __temp_me25.left;
+				haxe.ds.TreeNode<K_c, V_c> _this2 = __temp_me18.left;
 				//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
 				if (( _this2 == null )) 
 				{
@@ -62,7 +62,7 @@ public class TreeNode<K, V> extends haxe.lang.HxObject
 			else
 			{
 				//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-				haxe.ds.TreeNode<K_c, V_c> _this3 = __temp_me25.right;
+				haxe.ds.TreeNode<K_c, V_c> _this3 = __temp_me18.right;
 				//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
 				if (( _this3 == null )) 
 				{
@@ -78,12 +78,12 @@ public class TreeNode<K, V> extends haxe.lang.HxObject
 			}
 			
 			//line 229 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-			__temp_me25._height = ( tmp + 1 );
+			__temp_me18._height = ( tmp + 1 );
 		}
 		else
 		{
 			//line 231 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-			__temp_me25._height = __temp_h24;
+			__temp_me18._height = __temp_h17;
 		}
 		
 	}

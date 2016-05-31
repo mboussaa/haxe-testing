@@ -22,10 +22,10 @@ public class NullArgument extends thx.Error
 	}
 	
 	
-	public static void __hx_ctor_thx_error_NullArgument(thx.error.NullArgument __temp_me148, java.lang.String message, java.lang.Object posInfo)
+	public static void __hx_ctor_thx_error_NullArgument(thx.error.NullArgument __temp_me142, java.lang.String message, java.lang.Object posInfo)
 	{
 		//line 19 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/error/NullArgument.hx"
-		thx.Error.__hx_ctor_thx_Error(__temp_me148, message, null, posInfo);
+		thx.Error.__hx_ctor_thx_Error(__temp_me142, message, null, posInfo);
 	}
 	
 	

@@ -268,8 +268,6 @@ public class Runner extends haxe.lang.HxObject
 				int i = _g1++;
 				//line 126 "/usr/lib/haxe/lib/utest/1,4,1/src/utest/Runner.hx"
 				utest.TestHandler<utest.TestFixture> h = this.runFixture(this.fixtures.__get(i));
-				//line 127 "/usr/lib/haxe/lib/utest/1,4,1/src/utest/Runner.hx"
-				this.onTestComplete.dispatch(h);
 				//line 128 "/usr/lib/haxe/lib/utest/1,4,1/src/utest/Runner.hx"
 				java.lang.Object __temp_stmt2 = null;
 				//line 128 "/usr/lib/haxe/lib/utest/1,4,1/src/utest/Runner.hx"

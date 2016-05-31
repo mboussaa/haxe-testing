@@ -6,7 +6,7 @@ import haxe.root.*;
 @SuppressWarnings(value={"rawtypes", "unchecked"})
 public class Strings_wrapColumns_609__Fun extends haxe.lang.Function
 {
-	public Strings_wrapColumns_609__Fun(java.lang.String newline, java.lang.String indent, int __temp_columns109)
+	public Strings_wrapColumns_609__Fun(java.lang.String newline, java.lang.String indent, int __temp_columns103)
 	{
 		//line 610 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		super(1, 0);
@@ -15,7 +15,7 @@ public class Strings_wrapColumns_609__Fun extends haxe.lang.Function
 		//line 610 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		this.indent = indent;
 		//line 610 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		this.__temp_columns109 = __temp_columns109;
+		this.__temp_columns103 = __temp_columns103;
 	}
 	
 	
@@ -24,7 +24,7 @@ public class Strings_wrapColumns_609__Fun extends haxe.lang.Function
 		//line 609 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		java.lang.String part = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (haxe.lang.Runtime.toString(__fn_float1)) : (haxe.lang.Runtime.toString(__fn_dyn1)) );
 		//line 610 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		return thx.Strings.wrapLine(thx.Strings.WSG.replace(part, " ").trim(), this.__temp_columns109, this.indent, this.newline);
+		return thx.Strings.wrapLine(thx.Strings.WSG.replace(part, " ").trim(), this.__temp_columns103, this.indent, this.newline);
 	}
 	
 	
@@ -32,7 +32,7 @@ public class Strings_wrapColumns_609__Fun extends haxe.lang.Function
 	
 	public java.lang.String indent;
 	
-	public int __temp_columns109;
+	public int __temp_columns103;
 	
 }
 

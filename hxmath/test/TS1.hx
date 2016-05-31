@@ -1,6 +1,6 @@
 package test;
-import nanotest.NanoTestRunner;
 
+import nanotest.NanoTestRunner;
 /**
  * ...
   in 0...100)  {

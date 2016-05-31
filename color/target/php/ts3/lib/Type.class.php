@@ -202,6 +202,48 @@ class Type {
 		}
 		return ValueType::$TUnknown;
 	}
+	static function enumEq($a, $b) {
+		if((is_object($_t = $a) && ($_t instanceof Enum) ? $_t == $b : _hx_equal($_t, $b))) {
+			return true;
+		}
+		try {
+			if(!_hx_equal($a->index, $b->index)) {
+				return false;
+			}
+			{
+				$_g1 = 0;
+				$_g = count($a->params);
+				while($_g1 < $_g) {
+					$i = $_g1++;
+					$tmp = $a->params[$i];
+					$tmp1 = Type::getEnum($tmp);
+					if($tmp1 !== null) {
+						$tmp2 = $a->params[$i];
+						$tmp3 = $b->params[$i];
+						$tmp4 = !Type::enumEq($tmp2, $tmp3);
+						if($tmp4) {
+							return false;
+						}
+						unset($tmp4,$tmp3,$tmp2);
+					} else {
+						$tmp5 = !_hx_equal($a->params[$i], $b->params[$i]);
+						if($tmp5) {
+							return false;
+						}
+						unset($tmp5);
+					}
+					unset($tmp1,$tmp,$i);
+				}
+			}
+		}catch(Exception $__hx__e) {
+			$_ex_ = ($__hx__e instanceof HException) && $__hx__e->getCode() == null ? $__hx__e->e : $__hx__e;
+			$e = $_ex_;
+			{
+				return false;
+			}
+		}
+		return true;
+	}
 	static function enumConstructor($e) {
 		return $e->tag;
 	}

@@ -55,11 +55,11 @@ HXLINE(   6)		runner->addCase( ::thx::color::TestLab_obj::__new(),null(),null(),
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(TS1_obj,addTests,(void))
 
 void TS1_obj::main(){
-            	HX_STACK_FRAME("TS1","main",0x9c448855,"TS1.main","TS1.hx",9,0x80c32c2c)
-HXLINE(  10)		HX_VARI(  ::utest::Runner,runner) =  ::utest::Runner_obj::__new();
-HXLINE(  11)		::TS1_obj::addTests(runner);
-HXLINE(  12)		::utest::ui::Report_obj::create(runner,null(),null());
-HXLINE(  13)		runner->run();
+            	HX_STACK_FRAME("TS1","main",0x9c448855,"TS1.main","TS1.hx",10,0x80c32c2c)
+HXLINE(  12)		HX_VARI(  ::utest::Runner,runner) =  ::utest::Runner_obj::__new();
+HXLINE(  13)		::TS1_obj::addTests(runner);
+HXLINE(  14)		::utest::ui::Report_obj::create(runner,null(),null());
+HXLINE(  15)		runner->run();
             	}
 
 

@@ -18,7 +18,7 @@ public class Dates extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Dates(thx.Dates __temp_me61)
+	public static void __hx_ctor_thx_Dates(thx.Dates __temp_me55)
 	{
 	}
 	
@@ -57,114 +57,114 @@ public class Dates extends haxe.lang.HxObject
 	public static haxe.root.Date create(int year, java.lang.Object month, java.lang.Object day, java.lang.Object hour, java.lang.Object minute, java.lang.Object second)
 	{
 		//line 29 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_second58 = ( (haxe.lang.Runtime.eq(second, null)) ? (((java.lang.Object) (0) )) : (second) );
+		java.lang.Object __temp_second52 = ( (haxe.lang.Runtime.eq(second, null)) ? (((java.lang.Object) (0) )) : (second) );
 		//line 29 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_minute57 = ( (haxe.lang.Runtime.eq(minute, null)) ? (((java.lang.Object) (0) )) : (minute) );
+		java.lang.Object __temp_minute51 = ( (haxe.lang.Runtime.eq(minute, null)) ? (((java.lang.Object) (0) )) : (minute) );
 		//line 29 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_hour56 = ( (haxe.lang.Runtime.eq(hour, null)) ? (((java.lang.Object) (0) )) : (hour) );
+		java.lang.Object __temp_hour50 = ( (haxe.lang.Runtime.eq(hour, null)) ? (((java.lang.Object) (0) )) : (hour) );
 		//line 29 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_day55 = ( (haxe.lang.Runtime.eq(day, null)) ? (((java.lang.Object) (1) )) : (day) );
+		java.lang.Object __temp_day49 = ( (haxe.lang.Runtime.eq(day, null)) ? (((java.lang.Object) (1) )) : (day) );
 		//line 29 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_month54 = ( (haxe.lang.Runtime.eq(month, null)) ? (((java.lang.Object) (0) )) : (month) );
+		java.lang.Object __temp_month48 = ( (haxe.lang.Runtime.eq(month, null)) ? (((java.lang.Object) (0) )) : (month) );
 		//line 31 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_minute57 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_minute57, ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_second58)) ) / ((double) (60) ) ))) ))) );
+		__temp_minute51 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_minute51, ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_second52)) ) / ((double) (60) ) ))) ))) );
 		//line 32 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_second58 = ( ((int) (haxe.lang.Runtime.toInt(__temp_second58)) ) % ((int) (60) ) );
+		__temp_second52 = ( ((int) (haxe.lang.Runtime.toInt(__temp_second52)) ) % ((int) (60) ) );
 		//line 33 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( haxe.lang.Runtime.compare(__temp_second58, 0) < 0 )) 
+		if (( haxe.lang.Runtime.compare(__temp_second52, 0) < 0 )) 
 		{
 			//line 33 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			__temp_second58 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_second58, 60)) );
+			__temp_second52 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_second52, 60)) );
 		}
 		
 		//line 35 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_hour56 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_hour56, ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_minute57)) ) / ((double) (60) ) ))) ))) );
+		__temp_hour50 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_hour50, ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_minute51)) ) / ((double) (60) ) ))) ))) );
 		//line 36 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_minute57 = ( ((int) (haxe.lang.Runtime.toInt(__temp_minute57)) ) % ((int) (60) ) );
+		__temp_minute51 = ( ((int) (haxe.lang.Runtime.toInt(__temp_minute51)) ) % ((int) (60) ) );
 		//line 37 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( haxe.lang.Runtime.compare(__temp_minute57, 0) < 0 )) 
+		if (( haxe.lang.Runtime.compare(__temp_minute51, 0) < 0 )) 
 		{
 			//line 37 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			__temp_minute57 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_minute57, 60)) );
+			__temp_minute51 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_minute51, 60)) );
 		}
 		
 		//line 39 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_day55 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_day55, ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_hour56)) ) / ((double) (24) ) ))) ))) );
+		__temp_day49 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_day49, ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_hour50)) ) / ((double) (24) ) ))) ))) );
 		//line 40 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_hour56 = ( ((int) (haxe.lang.Runtime.toInt(__temp_hour56)) ) % ((int) (24) ) );
+		__temp_hour50 = ( ((int) (haxe.lang.Runtime.toInt(__temp_hour50)) ) % ((int) (24) ) );
 		//line 41 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( haxe.lang.Runtime.compare(__temp_hour56, 0) < 0 )) 
+		if (( haxe.lang.Runtime.compare(__temp_hour50, 0) < 0 )) 
 		{
 			//line 41 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			__temp_hour56 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_hour56, 24)) );
+			__temp_hour50 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_hour50, 24)) );
 		}
 		
 		//line 43 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (haxe.lang.Runtime.eq(__temp_day55, 0)) 
+		if (haxe.lang.Runtime.eq(__temp_day49, 0)) 
 		{
 			//line 44 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 			{
 				//line 44 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-				__temp_month54 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ) - 1 );
+				__temp_month48 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ) - 1 );
 			}
 			
 			//line 45 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			if (( haxe.lang.Runtime.compare(__temp_month54, 0) < 0 )) 
+			if (( haxe.lang.Runtime.compare(__temp_month48, 0) < 0 )) 
 			{
 				//line 46 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-				__temp_month54 = 11;
+				__temp_month48 = 11;
 				//line 47 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 				 -- year;
 			}
 			
 			//line 49 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			__temp_day55 = thx.Dates.daysInMonth(year, ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ));
+			__temp_day49 = thx.Dates.daysInMonth(year, ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ));
 		}
 		
 		//line 52 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		year += ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_month54)) ) / ((double) (12) ) ))) );
+		year += ((int) (java.lang.Math.floor(( ((double) (haxe.lang.Runtime.toDouble(__temp_month48)) ) / ((double) (12) ) ))) );
 		//line 53 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		__temp_month54 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ) % ((int) (12) ) );
+		__temp_month48 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ) % ((int) (12) ) );
 		//line 54 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( haxe.lang.Runtime.compare(__temp_month54, 0) < 0 )) 
+		if (( haxe.lang.Runtime.compare(__temp_month48, 0) < 0 )) 
 		{
 			//line 54 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			__temp_month54 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_month54, 12)) );
+			__temp_month48 = ((java.lang.Object) (haxe.lang.Runtime.plus(__temp_month48, 12)) );
 		}
 		
 		//line 56 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		int days = thx.Dates.daysInMonth(year, ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ));
+		int days = thx.Dates.daysInMonth(year, ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ));
 		//line 57 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		while (( haxe.lang.Runtime.compare(__temp_day55, days) > 0 ))
+		while (( haxe.lang.Runtime.compare(__temp_day49, days) > 0 ))
 		{
 			//line 58 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			if (( haxe.lang.Runtime.compare(__temp_day55, days) > 0 )) 
+			if (( haxe.lang.Runtime.compare(__temp_day49, days) > 0 )) 
 			{
 				//line 59 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-				__temp_day55 = ( ((int) (haxe.lang.Runtime.toInt(__temp_day55)) ) - ((int) (days) ) );
+				__temp_day49 = ( ((int) (haxe.lang.Runtime.toInt(__temp_day49)) ) - ((int) (days) ) );
 				//line 60 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 				{
 					//line 60 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-					__temp_month54 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ) + 1 );
+					__temp_month48 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ) + 1 );
 				}
 				
 			}
 			
 			//line 62 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			if (( haxe.lang.Runtime.compare(__temp_month54, 11) > 0 )) 
+			if (( haxe.lang.Runtime.compare(__temp_month48, 11) > 0 )) 
 			{
 				//line 63 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-				__temp_month54 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ) - ((int) (12) ) );
+				__temp_month48 = ( ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ) - ((int) (12) ) );
 				//line 64 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 				 ++ year;
 			}
 			
 			//line 66 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			days = thx.Dates.daysInMonth(year, ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ));
+			days = thx.Dates.daysInMonth(year, ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ));
 		}
 		
 		//line 69 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		return new haxe.root.Date(year, ((int) (haxe.lang.Runtime.toInt(__temp_month54)) ), ((int) (haxe.lang.Runtime.toInt(__temp_day55)) ), ((int) (haxe.lang.Runtime.toInt(__temp_hour56)) ), ((int) (haxe.lang.Runtime.toInt(__temp_minute57)) ), ((int) (haxe.lang.Runtime.toInt(__temp_second58)) ));
+		return new haxe.root.Date(year, ((int) (haxe.lang.Runtime.toInt(__temp_month48)) ), ((int) (haxe.lang.Runtime.toInt(__temp_day49)) ), ((int) (haxe.lang.Runtime.toInt(__temp_hour50)) ), ((int) (haxe.lang.Runtime.toInt(__temp_minute51)) ), ((int) (haxe.lang.Runtime.toInt(__temp_second52)) ));
 	}
 	
 	
@@ -205,7 +205,7 @@ public class Dates extends haxe.lang.HxObject
 	public static boolean nearEquals(haxe.root.Date self, haxe.root.Date other, java.lang.Object units, thx.TimePeriod period)
 	{
 		//line 102 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_units59 = ( (haxe.lang.Runtime.eq(units, null)) ? (((java.lang.Object) (1) )) : (units) );
+		java.lang.Object __temp_units53 = ( (haxe.lang.Runtime.eq(units, null)) ? (((java.lang.Object) (1) )) : (units) );
 		//line 103 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 		if (( null == period )) 
 		{
@@ -214,16 +214,16 @@ public class Dates extends haxe.lang.HxObject
 		}
 		
 		//line 105 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( haxe.lang.Runtime.compare(__temp_units59, 0) < 0 )) 
+		if (( haxe.lang.Runtime.compare(__temp_units53, 0) < 0 )) 
 		{
 			//line 106 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-			__temp_units59 = ( - (((int) (haxe.lang.Runtime.toInt(__temp_units59)) )) );
+			__temp_units53 = ( - (((int) (haxe.lang.Runtime.toInt(__temp_units53)) )) );
 		}
 		
 		//line 107 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		haxe.root.Date min = thx.Dates.jump(self, period, ( - (((int) (haxe.lang.Runtime.toInt(__temp_units59)) )) ));
+		haxe.root.Date min = thx.Dates.jump(self, period, ( - (((int) (haxe.lang.Runtime.toInt(__temp_units53)) )) ));
 		//line 107 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		haxe.root.Date max = thx.Dates.jump(self, period, ((int) (haxe.lang.Runtime.toInt(__temp_units59)) ));
+		haxe.root.Date max = thx.Dates.jump(self, period, ((int) (haxe.lang.Runtime.toInt(__temp_units53)) ));
 		//line 109 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 		if (( thx.Dates.compare(min, other) <= 0 )) 
 		{
@@ -613,20 +613,20 @@ public class Dates extends haxe.lang.HxObject
 	public static haxe.root.Date snapToWeekDay(haxe.root.Date date, int day, java.lang.Object firstDayOfWk)
 	{
 		//line 322 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		java.lang.Object __temp_firstDayOfWk60 = ( (haxe.lang.Runtime.eq(firstDayOfWk, null)) ? (((java.lang.Object) (0) )) : (firstDayOfWk) );
+		java.lang.Object __temp_firstDayOfWk54 = ( (haxe.lang.Runtime.eq(firstDayOfWk, null)) ? (((java.lang.Object) (0) )) : (firstDayOfWk) );
 		//line 323 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 		int d = date.date.getDay();
 		//line 323 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 		int s = day;
 		//line 327 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( s < ((int) (haxe.lang.Runtime.toInt(__temp_firstDayOfWk60)) ) )) 
+		if (( s < ((int) (haxe.lang.Runtime.toInt(__temp_firstDayOfWk54)) ) )) 
 		{
 			//line 327 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 			s += 7;
 		}
 		
 		//line 328 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
-		if (( d < ((int) (haxe.lang.Runtime.toInt(__temp_firstDayOfWk60)) ) )) 
+		if (( d < ((int) (haxe.lang.Runtime.toInt(__temp_firstDayOfWk54)) ) )) 
 		{
 			//line 328 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dates.hx"
 			d += 7;

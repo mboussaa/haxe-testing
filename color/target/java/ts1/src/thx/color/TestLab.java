@@ -4,36 +4,42 @@ package thx.color;
 import haxe.root.*;
 
 @SuppressWarnings(value={"rawtypes", "unchecked"})
-public class TestLab extends haxe.lang.HxObject
+public class TestLab extends nanotest.NanoTestCase
 {
 	public TestLab(haxe.lang.EmptyObject empty)
 	{
+		//line 6 "/shared/color/test/thx/color/TestLab.hx"
+		super(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
 	}
 	
 	
-	public TestLab()
+	public TestLab(java.lang.Object posInfos)
 	{
-		//line 7 "/shared/color/test/thx/color/TestLab.hx"
-		thx.color.TestLab.__hx_ctor_thx_color_TestLab(this);
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		super(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		thx.color.TestLab.__hx_ctor_thx_color_TestLab(this, posInfos);
 	}
 	
 	
-	public static void __hx_ctor_thx_color_TestLab(thx.color.TestLab __temp_me140)
+	public static void __hx_ctor_thx_color_TestLab(thx.color.TestLab __temp_me134, java.lang.Object posInfos)
 	{
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me134, posInfos);
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
 		//line 6 "/shared/color/test/thx/color/TestLab.hx"
-		return new thx.color.TestLab(haxe.lang.EmptyObject.EMPTY);
+		return new thx.color.TestLab(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
 		//line 6 "/shared/color/test/thx/color/TestLab.hx"
-		return new thx.color.TestLab();
+		return new thx.color.TestLab(((java.lang.Object) (arr.__get(0)) ));
 	}
 	
 	
@@ -44,11 +50,11 @@ public class TestLab extends haxe.lang.HxObject
 		//line 10 "/shared/color/test/thx/color/TestLab.hx"
 		haxe.root.Array<java.lang.Object> color = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 11 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.equals(100, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (color) ).__get(0))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (11) )) )}));
+		this.assertTrue(( 100 == ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (color) ).__get(0))) ) ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (11) )) )}));
 		//line 12 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.equals(10, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (color) ).__get(1))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (12) )) )}));
+		this.assertTrue(( 10 == ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (color) ).__get(1))) ) ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (12) )) )}));
 		//line 13 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.equals(-10, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (color) ).__get(2))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (13) )) )}));
+		this.assertTrue(( -10 == ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (color) ).__get(2))) ) ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (13) )) )}));
 	}
 	
 	
@@ -59,7 +65,7 @@ public class TestLab extends haxe.lang.HxObject
 		//line 17 "/shared/color/test/thx/color/TestLab.hx"
 		haxe.root.Array<java.lang.Object> color = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 18 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.equals("lab(100,10,-10)", thx.color._Lab.Lab_Impl_.toString(color), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (18) )) )}));
+		this.assertEquals(haxe.lang.Runtime.toString("lab(100,10,-10)"), haxe.lang.Runtime.toString(thx.color._Lab.Lab_Impl_.toString(color)), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (18) )) )})) ));
 	}
 	
 	
@@ -68,7 +74,7 @@ public class TestLab extends haxe.lang.HxObject
 		//line 22 "/shared/color/test/thx/color/TestLab.hx"
 		haxe.root.Array<java.lang.Object> color = thx.color._Lab.Lab_Impl_.fromString("lab(100,10,-10)");
 		//line 23 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.equals("lab(100,10,-10)", thx.color._Lab.Lab_Impl_.toString(color), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (23) )) )}));
+		this.assertEquals(haxe.lang.Runtime.toString("lab(100,10,-10)"), haxe.lang.Runtime.toString(thx.color._Lab.Lab_Impl_.toString(color)), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (23) )) )})) ));
 	}
 	
 	
@@ -79,7 +85,7 @@ public class TestLab extends haxe.lang.HxObject
 		//line 27 "/shared/color/test/thx/color/TestLab.hx"
 		haxe.root.Array<java.lang.Object> f = thx.color._Lab.Lab_Impl_.fromFloats(new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (50.0) ), ((java.lang.Object) (10.0) ), ((java.lang.Object) (-10.0) )}));
 		//line 29 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.same(s, f, null, null, null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testFromFloat"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (29) )) )}));
+		this.assertEquals(((haxe.root.Array<java.lang.Object>) (s) ), ((haxe.root.Array<java.lang.Object>) (f) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testFromFloat"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (29) )) )})) ));
 	}
 	
 	
@@ -90,7 +96,7 @@ public class TestLab extends haxe.lang.HxObject
 		//line 34 "/shared/color/test/thx/color/TestLab.hx"
 		haxe.root.Array<java.lang.Object> color = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 35 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.same(color, thx.color._Lab.Lab_Impl_.fromString("lab(50,10,-10)"), null, null, null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testFromString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (35) )) )}));
+		this.assertEquals(((haxe.root.Array<java.lang.Object>) (color) ), ((haxe.root.Array<java.lang.Object>) (thx.color._Lab.Lab_Impl_.fromString("lab(50,10,-10)")) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testFromString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (35) )) )})) ));
 	}
 	
 	
@@ -107,7 +113,7 @@ public class TestLab extends haxe.lang.HxObject
 		//line 39 "/shared/color/test/thx/color/TestLab.hx"
 		double distOrangeBlue = thx.color._Lab.Lab_Impl_.distance(orange, blue);
 		//line 44 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.isTrue(( distOrangeRed < distOrangeBlue ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testDistance"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (44) )) )}));
+		this.assertTrue(( distOrangeRed < distOrangeBlue ), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testDistance"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (44) )) )}));
 	}
 	
 	
@@ -116,7 +122,7 @@ public class TestLab extends haxe.lang.HxObject
 		//line 48 "/shared/color/test/thx/color/TestLab.hx"
 		haxe.root.Array<haxe.root.Array<java.lang.Object>> arr = new haxe.root.Array<haxe.root.Array<java.lang.Object>>(new haxe.root.Array[]{thx.color._Rgb.Rgb_Impl_.toLab(thx.color.palettes.Web.red), thx.color._Rgb.Rgb_Impl_.toLab(thx.color.palettes.Web.blue)});
 		//line 49 "/shared/color/test/thx/color/TestLab.hx"
-		utest.Assert.isTrue(thx.color._Lab.Lab_Impl_.equals(thx.color._Lab.Lab_Impl_.match(thx.color._Rgb.Rgb_Impl_.toLab(thx.color.palettes.Web.orange), arr), thx.color._Rgb.Rgb_Impl_.toLab(thx.color.palettes.Web.red)), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testMatch"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (49) )) )}));
+		this.assertTrue(thx.color._Lab.Lab_Impl_.equals(thx.color._Lab.Lab_Impl_.match(thx.color._Rgb.Rgb_Impl_.toLab(thx.color.palettes.Web.orange), arr), thx.color._Rgb.Rgb_Impl_.toLab(thx.color.palettes.Web.red)), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestLab", "TestLab.hx", "testMatch"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (49) )) )}));
 	}
 	
 	

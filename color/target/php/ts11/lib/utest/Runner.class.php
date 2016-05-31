@@ -121,7 +121,6 @@ class utest_Runner {
 			while($_g1 < $_g) {
 				$i = $_g1++;
 				$h = $this->runFixture($this->fixtures[$i]);
-				$this->onTestComplete->dispatch($h);
 				$tmp = utest_TestResult::ofHandler($h);
 				$this->onProgress->dispatch(_hx_anonymous(array("result" => $tmp, "done" => $i + 1, "totals" => $this->length)));
 				unset($tmp,$i,$h);

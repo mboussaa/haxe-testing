@@ -4,14 +4,14 @@
 #echo "delete peviously compiled generated code"
 #rm -rf /shared/thx.color/target/*
 
-for (( i=1; i<=19; i++ ))
+for (( i=1; i<=3; i++ ))
 do
 
-haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -cpp target/cpp/ts"$i"
-haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -java target/java/ts"$i"
-haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -cs target/cs/ts"$i"
+#haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -cpp target/cpp/ts"$i"
+haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib nanotest -java target/java/ts"$i"
+#haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -cs target/cs/ts"$i"
 haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -php target/php/ts"$i"
-haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -js target/js/ts"$i"/ts"$i".js
+#haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -js target/js/ts"$i"/ts"$i".js
 
 done
 #for (( i=1; i<=7; i++ ))

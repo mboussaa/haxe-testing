@@ -18,7 +18,7 @@ public class Bools extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Bools(thx.Bools __temp_me53)
+	public static void __hx_ctor_thx_Bools(thx.Bools __temp_me47)
 	{
 	}
 	

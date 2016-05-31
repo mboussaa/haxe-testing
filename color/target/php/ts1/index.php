@@ -8,9 +8,6 @@ if(version_compare(PHP_VERSION, '5.1.0', '<')) {
 ;
 require_once dirname(__FILE__).'/lib/php/Boot.class.php';
 
-{
-	TS1::main();
-	haxe_EntryPoint::run();
-}
+TS1::main();
 
 ?>

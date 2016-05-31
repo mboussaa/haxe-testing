@@ -18,7 +18,7 @@ public class ArrayStrings extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_ArrayStrings(thx.ArrayStrings __temp_me52)
+	public static void __hx_ctor_thx_ArrayStrings(thx.ArrayStrings __temp_me46)
 	{
 	}
 	

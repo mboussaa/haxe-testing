@@ -1,35 +1,36 @@
 package thx.color;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
+//import utest.Assert;
 
-import utest.Assert;
+class TestCmy extends NanoTestCase{
 
-class TestCmy {
-  public function new() { }
 
   public function testBasics() {
     var color = Cmy.create(0.5,0.5,0.5);
-    Assert.equals(0.5, color.cyan);
-    Assert.equals(0.5, color.magenta);
-    Assert.equals(0.5, color.yellow);
+    assertEquals(0.5, color.cyan);
+    assertEquals(0.5, color.magenta);
+    assertEquals(0.5, color.yellow);
 
     color = Cmy.create(2,-2,2).normalize();
-    Assert.equals(1, color.cyan);
-    Assert.equals(0, color.magenta);
-    Assert.equals(1, color.yellow);
+    assertTrue(1 == color.cyan);
+    assertTrue(0 == color.magenta);
+    assertTrue(1 == color.yellow);
   }
 
   public function testString() {
     var color = Cmy.create(0.5,0.5,0.5);
-    Assert.equals("cmy(0.5,0.5,0.5)", color.toString());
+    assertEquals("cmy(0.5,0.5,0.5)", color.toString());
   }
 
   public function testParse() {
     var color : Cmy = "cmy(0.5,0.5,0.5)";
-    Assert.equals("cmy(0.5,0.5,0.5)", color.toString());
+    assertEquals("cmy(0.5,0.5,0.5)", color.toString());
   }
 
   public function testFromFloat() {
     var s : Cmy = "cmy(0.5,0.5,0.5)",
         f : Cmy = [0.5,0.5,0.5];
-    Assert.isTrue(s == f);
+    assertTrue(s == f);
   }
 }

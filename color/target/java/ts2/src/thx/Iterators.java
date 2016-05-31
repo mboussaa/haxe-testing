@@ -18,7 +18,7 @@ public class Iterators extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Iterators(thx.Iterators __temp_me96)
+	public static void __hx_ctor_thx_Iterators(thx.Iterators __temp_me90)
 	{
 	}
 	
