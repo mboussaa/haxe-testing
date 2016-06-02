@@ -18,7 +18,7 @@ public class ArrayInts extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_ArrayInts(thx.ArrayInts __temp_me51)
+	public static void __hx_ctor_thx_ArrayInts(thx.ArrayInts __temp_me45)
 	{
 	}
 	
@@ -47,12 +47,12 @@ public class ArrayInts extends haxe.lang.HxObject
 	public static haxe.root.Array<java.lang.Object> resize(haxe.root.Array<java.lang.Object> array, int length, java.lang.Object fill)
 	{
 		//line 1249 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		int __temp_fill50 = ( (haxe.lang.Runtime.eq(fill, null)) ? (0) : (((int) (haxe.lang.Runtime.toInt(fill)) )) );
+		int __temp_fill44 = ( (haxe.lang.Runtime.eq(fill, null)) ? (0) : (((int) (haxe.lang.Runtime.toInt(fill)) )) );
 		//line 1250 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 		while (( array.length < length ))
 		{
 			//line 1251 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-			array.push(__temp_fill50);
+			array.push(__temp_fill44);
 		}
 		
 		//line 1252 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"

@@ -18,16 +18,16 @@ public class RangeIterator extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_RangeIterator(thx.RangeIterator __temp_me94, int start, java.lang.Object stop, java.lang.Object step)
+	public static void __hx_ctor_thx_RangeIterator(thx.RangeIterator __temp_me88, int start, java.lang.Object stop, java.lang.Object step)
 	{
 		//line 279 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		int __temp_step93 = ( (haxe.lang.Runtime.eq(step, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(step)) )) );
+		int __temp_step87 = ( (haxe.lang.Runtime.eq(step, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(step)) )) );
 		//line 280 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		__temp_me94.current = start;
+		__temp_me88.current = start;
 		//line 281 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		__temp_me94.stop = stop;
+		__temp_me88.stop = stop;
 		//line 282 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		__temp_me94.step = __temp_step93;
+		__temp_me88.step = __temp_step87;
 	}
 	
 	

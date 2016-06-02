@@ -4,115 +4,121 @@ package thx.color;
 import haxe.root.*;
 
 @SuppressWarnings(value={"rawtypes", "unchecked"})
-public class TestHcl extends haxe.lang.HxObject
+public class TestHcl extends nanotest.NanoTestCase
 {
 	public TestHcl(haxe.lang.EmptyObject empty)
 	{
-	}
-	
-	
-	public TestHcl()
-	{
 		//line 7 "/shared/color/test/thx/color/TestHcl.hx"
-		thx.color.TestHcl.__hx_ctor_thx_color_TestHcl(this);
+		super(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
 	}
 	
 	
-	public static void __hx_ctor_thx_color_TestHcl(thx.color.TestHcl __temp_me140)
+	public TestHcl(java.lang.Object posInfos)
 	{
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		super(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		thx.color.TestHcl.__hx_ctor_thx_color_TestHcl(this, posInfos);
+	}
+	
+	
+	public static void __hx_ctor_thx_color_TestHcl(thx.color.TestHcl __temp_me134, java.lang.Object posInfos)
+	{
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me134, posInfos);
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 6 "/shared/color/test/thx/color/TestHcl.hx"
-		return new thx.color.TestHcl(haxe.lang.EmptyObject.EMPTY);
+		//line 7 "/shared/color/test/thx/color/TestHcl.hx"
+		return new thx.color.TestHcl(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 6 "/shared/color/test/thx/color/TestHcl.hx"
-		return new thx.color.TestHcl();
+		//line 7 "/shared/color/test/thx/color/TestHcl.hx"
+		return new thx.color.TestHcl(((java.lang.Object) (arr.__get(0)) ));
 	}
 	
 	
 	public void testParse()
 	{
-		//line 10 "/shared/color/test/thx/color/TestHcl.hx"
-		haxe.root.Array<java.lang.Object> hcl = thx.color._LCh.LCh_Impl_.fromString("hcl(0.5,0,1)");
 		//line 11 "/shared/color/test/thx/color/TestHcl.hx"
-		utest.Assert.equals(0.5, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (hcl) ).__get(2))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (11) )) )}));
+		haxe.root.Array<java.lang.Object> hcl = thx.color._LCh.LCh_Impl_.fromString("hcl(0.5,0,1)");
 		//line 12 "/shared/color/test/thx/color/TestHcl.hx"
-		utest.Assert.equals(0, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (hcl) ).__get(1))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (12) )) )}));
+		this.assertEquals(((java.lang.Object) (0.5) ), ((int) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (hcl) ).__get(2))) )) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (12) )) )})) ));
 		//line 13 "/shared/color/test/thx/color/TestHcl.hx"
-		utest.Assert.equals(1, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (hcl) ).__get(0))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (13) )) )}));
+		this.assertEquals(((java.lang.Object) (0) ), ((int) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (hcl) ).__get(1))) )) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (13) )) )})) ));
+		//line 14 "/shared/color/test/thx/color/TestHcl.hx"
+		this.assertEquals(((java.lang.Object) (1) ), ((int) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (hcl) ).__get(0))) )) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testParse"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (14) )) )})) ));
 	}
 	
 	
 	public void testStrings()
 	{
-		//line 17 "/shared/color/test/thx/color/TestHcl.hx"
-		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (1) ), ((java.lang.Object) (0.5) ), ((java.lang.Object) (0) )});
-		//line 17 "/shared/color/test/thx/color/TestHcl.hx"
-		haxe.root.Array<java.lang.Object> hcl = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 18 "/shared/color/test/thx/color/TestHcl.hx"
-		utest.Assert.equals("hcl(0,0.5,1)", thx.color._LCh.LCh_Impl_.toHclString(hcl), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testStrings"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (18) )) )}));
+		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (1) ), ((java.lang.Object) (0.5) ), ((java.lang.Object) (0) )});
+		//line 18 "/shared/color/test/thx/color/TestHcl.hx"
+		haxe.root.Array<java.lang.Object> hcl = ((haxe.root.Array<java.lang.Object>) (this1) );
+		//line 19 "/shared/color/test/thx/color/TestHcl.hx"
+		this.assertEquals(haxe.lang.Runtime.toString("hcl(0,0.5,1)"), haxe.lang.Runtime.toString(thx.color._LCh.LCh_Impl_.toHclString(hcl)), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestHcl", "TestHcl.hx", "testStrings"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (19) )) )})) ));
 	}
 	
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+		//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 		{
-			//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+			//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+			//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 			switch (field.hashCode())
 			{
 				case 2020609424:
 				{
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					if (field.equals("testStrings")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testStrings")) );
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					break;
 				}
 				
 				
 				case -1194528447:
 				{
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					if (field.equals("testParse")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testParse")) );
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+			//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+				//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+				//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 				throw null;
 			}
 			
@@ -123,57 +129,57 @@ public class TestHcl extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, haxe.root.Array dynargs)
 	{
-		//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+		//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 		{
-			//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+			//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+			//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 			switch (field.hashCode())
 			{
 				case 2020609424:
 				{
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					if (field.equals("testStrings")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						this.testStrings();
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					break;
 				}
 				
 				
 				case -1194528447:
 				{
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					if (field.equals("testParse")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+						//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 						this.testParse();
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+					//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+			//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+				//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 6 "/shared/color/test/thx/color/TestHcl.hx"
+		//line 7 "/shared/color/test/thx/color/TestHcl.hx"
 		return null;
 	}
 	

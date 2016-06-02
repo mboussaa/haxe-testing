@@ -26,12 +26,12 @@ public class ColorParser extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_color_parse_ColorParser(thx.color.parse.ColorParser __temp_me115)
+	public static void __hx_ctor_thx_color_parse_ColorParser(thx.color.parse.ColorParser __temp_me139)
 	{
 		//line 20 "/shared/color/src/thx/color/parse/ColorParser.hx"
-		__temp_me115.pattern_color = new haxe.root.EReg("^\\s*([^(]+)\\s*\\(([^)]*)\\)\\s*$", "i");
+		__temp_me139.pattern_color = new haxe.root.EReg("^\\s*([^(]+)\\s*\\(([^)]*)\\)\\s*$", "i");
 		//line 21 "/shared/color/src/thx/color/parse/ColorParser.hx"
-		__temp_me115.pattern_channel = new haxe.root.EReg("^\\s*(-?\\d*.\\d+|-?\\d+)(%|deg|rad)?\\s*$", "i");
+		__temp_me139.pattern_channel = new haxe.root.EReg("^\\s*(-?\\d*.\\d+|-?\\d+)(%|deg|rad)?\\s*$", "i");
 	}
 	
 	
@@ -93,7 +93,7 @@ public class ColorParser extends haxe.lang.HxObject
 	public static double getFloatChannel(thx.color.parse.ChannelInfo channel, java.lang.Object useInt8)
 	{
 		//line 112 "/shared/color/src/thx/color/parse/ColorParser.hx"
-		boolean __temp_useInt8114 = ( (haxe.lang.Runtime.eq(useInt8, null)) ? (true) : (haxe.lang.Runtime.toBool(useInt8)) );
+		boolean __temp_useInt8138 = ( (haxe.lang.Runtime.eq(useInt8, null)) ? (true) : (haxe.lang.Runtime.toBool(useInt8)) );
 		//line 112 "/shared/color/src/thx/color/parse/ColorParser.hx"
 		switch (channel.index)
 		{
@@ -129,7 +129,7 @@ public class ColorParser extends haxe.lang.HxObject
 				//line 117 "/shared/color/src/thx/color/parse/ColorParser.hx"
 				int v3 = ((int) (haxe.lang.Runtime.toInt(channel.params[0])) );
 				//line 117 "/shared/color/src/thx/color/parse/ColorParser.hx"
-				if (__temp_useInt8114) 
+				if (__temp_useInt8138) 
 				{
 					//line 112 "/shared/color/src/thx/color/parse/ColorParser.hx"
 					return ( ((double) (v3) ) / 255 );

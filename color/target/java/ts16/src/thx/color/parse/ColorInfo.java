@@ -18,12 +18,12 @@ public class ColorInfo extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_color_parse_ColorInfo(thx.color.parse.ColorInfo __temp_me146, java.lang.String name, haxe.root.Array<thx.color.parse.ChannelInfo> channels)
+	public static void __hx_ctor_thx_color_parse_ColorInfo(thx.color.parse.ColorInfo __temp_me140, java.lang.String name, haxe.root.Array<thx.color.parse.ChannelInfo> channels)
 	{
 		//line 137 "/shared/color/src/thx/color/parse/ColorParser.hx"
-		__temp_me146.name = name;
+		__temp_me140.name = name;
 		//line 138 "/shared/color/src/thx/color/parse/ColorParser.hx"
-		__temp_me146.channels = channels;
+		__temp_me140.channels = channels;
 	}
 	
 	

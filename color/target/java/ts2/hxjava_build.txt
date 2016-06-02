@@ -449,8 +449,6 @@ M java.lang.Runnable
 M java.security.SignatureException
 M java.nio.channels.AsynchronousChannel
 M java.util.regex.Pattern
-M thx.color.TestCmy
-C thx.color.TestCmy
 M nanotest.NanoTestResult
 M java.util.Date
 M haxe.ds.ObjectMap
@@ -731,6 +729,8 @@ C thx.Maps_merge_107__Fun
 C thx.Maps_merge_106__Fun
 M java.lang.Byte
 M java.lang.Integer
+M thx.color.TestLCh
+C thx.color.TestLCh
 M java.io.UnsupportedEncodingException
 M java.net.SocketException
 M thx.color.Rgba

@@ -22,10 +22,10 @@ public class EnumValueMap<K, V> extends haxe.ds.BalancedTree<K, V> implements ha
 	}
 	
 	
-	public static <K_c, V_c> void __hx_ctor_haxe_ds_EnumValueMap(haxe.ds.EnumValueMap<K_c, V_c> __temp_me26)
+	public static <K_c, V_c> void __hx_ctor_haxe_ds_EnumValueMap(haxe.ds.EnumValueMap<K_c, V_c> __temp_me19)
 	{
 		//line 41 "/usr/lib/haxe/std/haxe/ds/BalancedTree.hx"
-		haxe.ds.BalancedTree.__hx_ctor_haxe_ds_BalancedTree(((haxe.ds.BalancedTree<K_c, V_c>) (__temp_me26) ));
+		haxe.ds.BalancedTree.__hx_ctor_haxe_ds_BalancedTree(((haxe.ds.BalancedTree<K_c, V_c>) (__temp_me19) ));
 	}
 	
 	
@@ -43,12 +43,12 @@ public class EnumValueMap<K, V> extends haxe.ds.BalancedTree<K, V> implements ha
 	}
 	
 	
-	@Override public int compare(K __temp_k127, K __temp_k228)
+	@Override public int compare(K __temp_k120, K __temp_k221)
 	{
 		//line 33 "/usr/lib/haxe/std/haxe/ds/EnumValueMap.hx"
-		java.lang.Object k2 = ((java.lang.Object) (__temp_k228) );
+		java.lang.Object k2 = ((java.lang.Object) (__temp_k221) );
 		//line 33 "/usr/lib/haxe/std/haxe/ds/EnumValueMap.hx"
-		java.lang.Object k1 = ((java.lang.Object) (__temp_k127) );
+		java.lang.Object k1 = ((java.lang.Object) (__temp_k120) );
 		//line 34 "/usr/lib/haxe/std/haxe/ds/EnumValueMap.hx"
 		int d = ( haxe.root.Type.enumIndex(k1) - haxe.root.Type.enumIndex(k2) );
 		//line 35 "/usr/lib/haxe/std/haxe/ds/EnumValueMap.hx"

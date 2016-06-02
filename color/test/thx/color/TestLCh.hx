@@ -10,7 +10,7 @@ class TestLCh extends NanoTestCase{
     var color = LCh.create(0.5, 0.4, -10).normalize();
     assertEquals(0.5, color.lightness);
     assertEquals(0.4,  color.chroma);
-    assertEquals(350, color.hue);
+    assertEquals(350, Std.int(color.hue));
   }
 
   public function testString() {

@@ -40,7 +40,7 @@ public class Ints extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Ints(thx.Ints __temp_me92)
+	public static void __hx_ctor_thx_Ints(thx.Ints __temp_me86)
 	{
 	}
 	
@@ -414,16 +414,16 @@ public class Ints extends haxe.lang.HxObject
 	public static int random(java.lang.Object min, int max)
 	{
 		//line 178 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		int __temp_min89 = ( (haxe.lang.Runtime.eq(min, null)) ? (0) : (((int) (haxe.lang.Runtime.toInt(min)) )) );
+		int __temp_min83 = ( (haxe.lang.Runtime.eq(min, null)) ? (0) : (((int) (haxe.lang.Runtime.toInt(min)) )) );
 		//line 178 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		return ( haxe.root.Std.random(( max + 1 )) + __temp_min89 );
+		return ( haxe.root.Std.random(( max + 1 )) + __temp_min83 );
 	}
 	
 	
 	public static haxe.root.Array<java.lang.Object> range(int start, java.lang.Object stop, java.lang.Object step)
 	{
 		//line 185 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		int __temp_step90 = ( (haxe.lang.Runtime.eq(step, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(step)) )) );
+		int __temp_step84 = ( (haxe.lang.Runtime.eq(step, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(step)) )) );
 		//line 186 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
 		if (( null == stop )) 
 		{
@@ -434,7 +434,7 @@ public class Ints extends haxe.lang.HxObject
 		}
 		
 		//line 190 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		if (( ( ((double) ((( ((int) (haxe.lang.Runtime.toInt(stop)) ) - ((int) (start) ) ))) ) / __temp_step90 ) == java.lang.Double.POSITIVE_INFINITY )) 
+		if (( ( ((double) ((( ((int) (haxe.lang.Runtime.toInt(stop)) ) - ((int) (start) ) ))) ) / __temp_step84 ) == java.lang.Double.POSITIVE_INFINITY )) 
 		{
 			//line 190 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
 			throw haxe.lang.HaxeException.wrap("infinite range");
@@ -447,13 +447,13 @@ public class Ints extends haxe.lang.HxObject
 		//line 191 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
 		int j = 0;
 		//line 192 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		if (( __temp_step90 < 0 )) 
+		if (( __temp_step84 < 0 )) 
 		{
 			//line 193 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
 			while (true)
 			{
 				//line 193 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-				j = ( start + ( __temp_step90 *  ++ i ) );
+				j = ( start + ( __temp_step84 *  ++ i ) );
 				//line 193 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
 				if ( ! ((( haxe.lang.Runtime.compare(j, stop) > 0 ))) ) 
 				{
@@ -472,7 +472,7 @@ public class Ints extends haxe.lang.HxObject
 			while (true)
 			{
 				//line 195 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-				j = ( start + ( __temp_step90 *  ++ i ) );
+				j = ( start + ( __temp_step84 *  ++ i ) );
 				//line 195 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
 				if ( ! ((( haxe.lang.Runtime.compare(j, stop) < 0 ))) ) 
 				{
@@ -494,9 +494,9 @@ public class Ints extends haxe.lang.HxObject
 	public static java.lang.Object rangeIter(int start, java.lang.Object stop, java.lang.Object step)
 	{
 		//line 200 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		int __temp_step91 = ( (haxe.lang.Runtime.eq(step, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(step)) )) );
+		int __temp_step85 = ( (haxe.lang.Runtime.eq(step, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(step)) )) );
 		//line 200 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Ints.hx"
-		return new thx.RangeIterator(start, stop, __temp_step91);
+		return new thx.RangeIterator(start, stop, __temp_step85);
 	}
 	
 	

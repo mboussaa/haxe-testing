@@ -18,10 +18,10 @@ public class StringBuf extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor__StringBuf(haxe.root.StringBuf __temp_me12)
+	public static void __hx_ctor__StringBuf(haxe.root.StringBuf __temp_me9)
 	{
 		//line 31 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-		__temp_me12.b = new java.lang.StringBuilder();
+		__temp_me9.b = new java.lang.StringBuilder();
 	}
 	
 	
@@ -61,13 +61,6 @@ public class StringBuf extends haxe.lang.HxObject
 			this.b.append(((java.lang.Object) (x) ));
 		}
 		
-	}
-	
-	
-	public void addChar(int c)
-	{
-		//line 55 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-		this.b.append(((char) (c) ));
 	}
 	
 	
@@ -165,22 +158,6 @@ public class StringBuf extends haxe.lang.HxObject
 				}
 				
 				
-				case -1149089897:
-				{
-					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-					if (field.equals("addChar")) 
-					{
-						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-						__temp_executeDef1 = false;
-						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "addChar")) );
-					}
-					
-					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-					break;
-				}
-				
-				
 				case 96417:
 				{
 					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
@@ -259,22 +236,6 @@ public class StringBuf extends haxe.lang.HxObject
 				}
 				
 				
-				case -1149089897:
-				{
-					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-					if (field.equals("addChar")) 
-					{
-						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-						__temp_executeDef1 = false;
-						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-						this.addChar(((int) (haxe.lang.Runtime.toInt(dynargs.__get(0))) ));
-					}
-					
-					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-					break;
-				}
-				
-				
 			}
 			
 			//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
@@ -283,11 +244,14 @@ public class StringBuf extends haxe.lang.HxObject
 				//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
+			else
+			{
+				//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+				throw null;
+			}
 			
 		}
 		
-		//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-		return null;
 	}
 	
 	

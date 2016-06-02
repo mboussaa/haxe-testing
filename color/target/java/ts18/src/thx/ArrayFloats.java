@@ -18,7 +18,7 @@ public class ArrayFloats extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_ArrayFloats(thx.ArrayFloats __temp_me49)
+	public static void __hx_ctor_thx_ArrayFloats(thx.ArrayFloats __temp_me43)
 	{
 	}
 	
@@ -54,12 +54,12 @@ public class ArrayFloats extends haxe.lang.HxObject
 	public static haxe.root.Array<java.lang.Object> resize(haxe.root.Array<java.lang.Object> array, int length, java.lang.Object fill)
 	{
 		//line 1194 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		double __temp_fill48 = ( (haxe.lang.Runtime.eq(fill, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(fill)) )) );
+		double __temp_fill42 = ( (haxe.lang.Runtime.eq(fill, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(fill)) )) );
 		//line 1195 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 		while (( array.length < length ))
 		{
 			//line 1196 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-			array.push(__temp_fill48);
+			array.push(__temp_fill42);
 		}
 		
 		//line 1197 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"

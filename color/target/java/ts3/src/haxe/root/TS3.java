@@ -33,21 +33,8 @@ public class TS3 extends haxe.lang.HxObject
 		//line 6 "/shared/color/test/TS3.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
 		//line 7 "/shared/color/test/TS3.hx"
-		{
-			//line 7 "/shared/color/test/TS3.hx"
-			int _g = 0;
-			//line 7 "/shared/color/test/TS3.hx"
-			while (( _g < 1000 ))
-			{
-				//line 7 "/shared/color/test/TS3.hx"
-				 ++ _g;
-				//line 8 "/shared/color/test/TS3.hx"
-				runner.add(new thx.color.TestLuv(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (8) )) )})) )));
-			}
-			
-		}
-		
-		//line 10 "/shared/color/test/TS3.hx"
+		runner.add(new thx.color.TestLuv(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (7) )) )})) )));
+		//line 9 "/shared/color/test/TS3.hx"
 		return runner.run();
 	}
 	

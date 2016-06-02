@@ -518,7 +518,7 @@ public class Web extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_color_palettes_Web(thx.color.palettes.Web __temp_me144)
+	public static void __hx_ctor_thx_color_palettes_Web(thx.color.palettes.Web __temp_me138)
 	{
 	}
 	

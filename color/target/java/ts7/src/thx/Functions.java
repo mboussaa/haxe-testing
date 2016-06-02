@@ -18,7 +18,7 @@ public class Functions extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Functions(thx.Functions __temp_me88)
+	public static void __hx_ctor_thx_Functions(thx.Functions __temp_me82)
 	{
 	}
 	

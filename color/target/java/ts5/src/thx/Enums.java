@@ -18,7 +18,7 @@ public class Enums extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Enums(thx.Enums __temp_me66)
+	public static void __hx_ctor_thx_Enums(thx.Enums __temp_me60)
 	{
 	}
 	

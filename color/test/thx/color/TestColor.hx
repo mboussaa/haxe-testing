@@ -48,6 +48,4 @@ class TestColor extends NanoTestCase{
     assertEquals(new Rgba(0x00FF00FF), Color.parse("rgba(0,100%,0,1)"));
   }
 
-  public function assertEquals(a : Rgbxa, b : Rgbxa, ?pos : PosInfos)
-    assertTrue(a.equals(b), 'expected $a but was $b', pos);
 }

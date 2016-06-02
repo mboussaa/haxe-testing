@@ -18,7 +18,7 @@ public class Iterables extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Iterables(thx.Iterables __temp_me95)
+	public static void __hx_ctor_thx_Iterables(thx.Iterables __temp_me89)
 	{
 	}
 	

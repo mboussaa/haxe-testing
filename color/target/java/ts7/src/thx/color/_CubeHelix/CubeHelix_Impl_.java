@@ -184,15 +184,15 @@ public final class CubeHelix_Impl_
 	public static java.lang.Object analogous(haxe.root.Array<java.lang.Object> this1, java.lang.Object spread)
 	{
 		//line 58 "/shared/color/src/thx/color/CubeHelix.hx"
-		double __temp_spread115 = ( (haxe.lang.Runtime.eq(spread, null)) ? (30.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
+		double __temp_spread109 = ( (haxe.lang.Runtime.eq(spread, null)) ? (30.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
 		//line 58 "/shared/color/src/thx/color/CubeHelix.hx"
 		java.lang.Object this2 = null;
 		//line 58 "/shared/color/src/thx/color/CubeHelix.hx"
 		{
 			//line 59 "/shared/color/src/thx/color/CubeHelix.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1,  - (__temp_spread115) );
+			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1,  - (__temp_spread109) );
 			//line 60 "/shared/color/src/thx/color/CubeHelix.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1, __temp_spread115);
+			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1, __temp_spread109);
 			//line 58 "/shared/color/src/thx/color/CubeHelix.hx"
 			this2 = new haxe.lang.DynamicObject(new java.lang.String[]{"_0", "_1"}, new java.lang.Object[]{__temp_odecl1, __temp_odecl2}, new java.lang.String[]{}, new double[]{});
 		}
@@ -321,15 +321,15 @@ public final class CubeHelix_Impl_
 	public static java.lang.Object split(haxe.root.Array<java.lang.Object> this1, java.lang.Object spread)
 	{
 		//line 114 "/shared/color/src/thx/color/CubeHelix.hx"
-		double __temp_spread116 = ( (haxe.lang.Runtime.eq(spread, null)) ? (144.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
+		double __temp_spread110 = ( (haxe.lang.Runtime.eq(spread, null)) ? (144.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
 		//line 114 "/shared/color/src/thx/color/CubeHelix.hx"
 		java.lang.Object this2 = null;
 		//line 114 "/shared/color/src/thx/color/CubeHelix.hx"
 		{
 			//line 115 "/shared/color/src/thx/color/CubeHelix.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1,  - (__temp_spread116) );
+			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1,  - (__temp_spread110) );
 			//line 116 "/shared/color/src/thx/color/CubeHelix.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1, __temp_spread116);
+			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._CubeHelix.CubeHelix_Impl_.rotate(this1, __temp_spread110);
 			//line 114 "/shared/color/src/thx/color/CubeHelix.hx"
 			this2 = new haxe.lang.DynamicObject(new java.lang.String[]{"_0", "_1"}, new java.lang.Object[]{__temp_odecl1, __temp_odecl2}, new java.lang.String[]{}, new double[]{});
 		}
@@ -460,12 +460,12 @@ public final class CubeHelix_Impl_
 	public static boolean nearEquals(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other, java.lang.Object tolerance)
 	{
 		//line 162 "/shared/color/src/thx/color/CubeHelix.hx"
-		java.lang.Object __temp_tolerance117 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
+		java.lang.Object __temp_tolerance111 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
 		//line 162 "/shared/color/src/thx/color/CubeHelix.hx"
-		if (( ( ( haxe.lang.Runtime.compare(java.lang.Math.abs(thx.Floats.angleDifference(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ), 360.0)), __temp_tolerance117) <= 0 ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ), __temp_tolerance117) ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ), __temp_tolerance117) )) 
+		if (( ( ( haxe.lang.Runtime.compare(java.lang.Math.abs(thx.Floats.angleDifference(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ), 360.0)), __temp_tolerance111) <= 0 ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ), __temp_tolerance111) ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ), __temp_tolerance111) )) 
 		{
 			//line 162 "/shared/color/src/thx/color/CubeHelix.hx"
-			return thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(3))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(3))) ), __temp_tolerance117);
+			return thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(3))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(3))) ), __temp_tolerance111);
 		}
 		else
 		{

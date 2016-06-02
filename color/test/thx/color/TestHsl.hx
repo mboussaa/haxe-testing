@@ -9,9 +9,9 @@ class TestHsl  extends NanoTestCase{
 
   public function testBasics() {
     var hsl = Hsl.create(1, 0, 0);
-    assertEquals(1, hsl.hue);
-    assertEquals(0, hsl.saturation);
-    assertEquals(0, hsl.lightness);
+    assertEquals(1, Std.int(hsl.hue));
+    assertEquals(0, Std.int(hsl.saturation));
+    assertEquals(0, Std.int(hsl.lightness));
   }
 
   public function testStrings() {

@@ -33,7 +33,7 @@ public class TS2 extends haxe.lang.HxObject
 		//line 6 "/shared/color/test/TS2.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
 		//line 7 "/shared/color/test/TS2.hx"
-		runner.add(new thx.color.TestCmy(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS2", "TS2.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (7) )) )})) )));
+		runner.add(new thx.color.TestLCh(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS2", "TS2.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (7) )) )})) )));
 		//line 9 "/shared/color/test/TS2.hx"
 		return runner.run();
 	}

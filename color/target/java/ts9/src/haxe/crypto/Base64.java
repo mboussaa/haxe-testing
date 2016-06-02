@@ -24,7 +24,7 @@ public class Base64 extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_crypto_Base64(haxe.crypto.Base64 __temp_me22)
+	public static void __hx_ctor_haxe_crypto_Base64(haxe.crypto.Base64 __temp_me15)
 	{
 	}
 	

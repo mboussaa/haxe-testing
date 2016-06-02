@@ -18,7 +18,7 @@ public class Dynamics extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Dynamics(thx.Dynamics __temp_me63)
+	public static void __hx_ctor_thx_Dynamics(thx.Dynamics __temp_me57)
 	{
 	}
 	
@@ -501,7 +501,7 @@ public class Dynamics extends haxe.lang.HxObject
 	public static java.lang.Object clone(java.lang.Object v, java.lang.Object cloneInstances)
 	{
 		//line 168 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
-		java.lang.Object __temp_cloneInstances62 = ( (haxe.lang.Runtime.eq(cloneInstances, null)) ? (((java.lang.Object) (false) )) : (cloneInstances) );
+		java.lang.Object __temp_cloneInstances56 = ( (haxe.lang.Runtime.eq(cloneInstances, null)) ? (((java.lang.Object) (false) )) : (cloneInstances) );
 		//line 168 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
 		haxe.root.ValueType _g = haxe.root.Type.typeof(v);
 		//line 168 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
@@ -558,7 +558,7 @@ public class Dynamics extends haxe.lang.HxObject
 								//line 177 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
 								__temp_executeDef2 = false;
 								//line 179 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
-								return ((haxe.root.Array<java.lang.Object>) (((haxe.root.Array) (v) ).map(((haxe.lang.Function) (new thx.Dynamics_clone_179__Fun(__temp_cloneInstances62)) ))) );
+								return ((haxe.root.Array<java.lang.Object>) (((haxe.root.Array) (v) ).map(((haxe.lang.Function) (new thx.Dynamics_clone_179__Fun(__temp_cloneInstances56)) ))) );
 							}
 							
 							//line 177 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
@@ -589,7 +589,7 @@ public class Dynamics extends haxe.lang.HxObject
 					if (__temp_executeDef2) 
 					{
 						//line 185 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
-						if (haxe.lang.Runtime.toBool((__temp_cloneInstances62))) 
+						if (haxe.lang.Runtime.toBool((__temp_cloneInstances56))) 
 						{
 							//line 186 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
 							java.lang.Object o = ((java.lang.Object) (haxe.root.Type.createEmptyInstance(((java.lang.Class) (c) ))) );
@@ -607,7 +607,7 @@ public class Dynamics extends haxe.lang.HxObject
 									//line 187 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
 									 ++ _g1;
 									//line 188 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
-									haxe.root.Reflect.setField(o, field, thx.Dynamics.clone(haxe.root.Reflect.field(v, field), __temp_cloneInstances62));
+									haxe.root.Reflect.setField(o, field, thx.Dynamics.clone(haxe.root.Reflect.field(v, field), __temp_cloneInstances56));
 								}
 								
 							}

@@ -6,12 +6,12 @@ import haxe.root.*;
 @SuppressWarnings(value={"rawtypes", "unchecked"})
 public class Dynamics_clone_179__Fun extends haxe.lang.Function
 {
-	public Dynamics_clone_179__Fun(java.lang.Object __temp_cloneInstances62)
+	public Dynamics_clone_179__Fun(java.lang.Object __temp_cloneInstances56)
 	{
 		//line 180 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
 		super(1, 0);
 		//line 180 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
-		this.__temp_cloneInstances62 = __temp_cloneInstances62;
+		this.__temp_cloneInstances56 = __temp_cloneInstances56;
 	}
 	
 	
@@ -20,11 +20,11 @@ public class Dynamics_clone_179__Fun extends haxe.lang.Function
 		//line 179 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
 		java.lang.Object v1 = ( (( __fn_dyn1 == haxe.lang.Runtime.undefined )) ? (((java.lang.Object) (__fn_float1) )) : (((java.lang.Object) (__fn_dyn1) )) );
 		//line 180 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Dynamics.hx"
-		return thx.Dynamics.clone(v1, this.__temp_cloneInstances62);
+		return thx.Dynamics.clone(v1, this.__temp_cloneInstances56);
 	}
 	
 	
-	public java.lang.Object __temp_cloneInstances62;
+	public java.lang.Object __temp_cloneInstances56;
 	
 }
 

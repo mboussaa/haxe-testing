@@ -211,7 +211,7 @@ public final class Rgb_Impl_
 	}
 	
 	
-	public static int withAlpha(int this1, int alpha)
+	public static java.lang.Object withAlpha(int this1, int alpha)
 	{
 		//line 81 "/shared/color/src/thx/color/Rgb.hx"
 		return thx.color._Rgba.Rgba_Impl_.fromInts(new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{thx.color._Rgb.Rgb_Impl_.get_red(this1), thx.color._Rgb.Rgb_Impl_.get_green(this1), thx.color._Rgb.Rgb_Impl_.get_blue(this1), alpha}));
@@ -368,7 +368,7 @@ public final class Rgb_Impl_
 	}
 	
 	
-	public static int toRgba(int this1)
+	public static java.lang.Object toRgba(int this1)
 	{
 		//line 141 "/shared/color/src/thx/color/Rgb.hx"
 		return thx.color._Rgb.Rgb_Impl_.withAlpha(this1, 255);
@@ -378,7 +378,7 @@ public final class Rgb_Impl_
 	public static haxe.root.Array<java.lang.Object> toRgbxa(int this1)
 	{
 		//line 144 "/shared/color/src/thx/color/Rgb.hx"
-		return thx.color._Rgba.Rgba_Impl_.toRgbxa(thx.color._Rgb.Rgb_Impl_.toRgba(this1));
+		return thx.color._Rgba.Rgba_Impl_.toRgbxa(((int) (haxe.lang.Runtime.toInt(thx.color._Rgb.Rgb_Impl_.toRgba(this1))) ));
 	}
 	
 	

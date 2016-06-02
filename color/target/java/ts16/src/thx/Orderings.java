@@ -34,7 +34,7 @@ public class Orderings extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Orderings(thx.Orderings __temp_me104)
+	public static void __hx_ctor_thx_Orderings(thx.Orderings __temp_me98)
 	{
 	}
 	

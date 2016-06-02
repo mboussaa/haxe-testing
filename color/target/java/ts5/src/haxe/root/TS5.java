@@ -8,7 +8,6 @@ public class TS5 extends haxe.lang.HxObject
 {
 	public static void main(String[] args)
 	{
-		Sys._args = args;
 		main();
 	}
 	
@@ -19,46 +18,37 @@ public class TS5 extends haxe.lang.HxObject
 	
 	public TS5()
 	{
-		//line 4 "/shared/color/test/TS5.hx"
+		//line 2 "/shared/color/test/TS5.hx"
 		haxe.root.TS5.__hx_ctor__TS5(this);
 	}
 	
 	
-	public static void __hx_ctor__TS5(haxe.root.TS5 __temp_me15)
+	public static void __hx_ctor__TS5(haxe.root.TS5 __temp_me11)
 	{
 	}
 	
 	
-	public static void addTests(utest.Runner runner)
+	public static boolean main()
 	{
-		//line 10 "/shared/color/test/TS5.hx"
-		runner.addCase(new thx.color.TestColorParser(), null, null, null, null);
-	}
-	
-	
-	public static void main()
-	{
-		//line 14 "/shared/color/test/TS5.hx"
-		utest.Runner runner = new utest.Runner();
-		//line 15 "/shared/color/test/TS5.hx"
-		haxe.root.TS5.addTests(runner);
-		//line 16 "/shared/color/test/TS5.hx"
-		utest.ui.Report.create(runner, null, null);
-		//line 17 "/shared/color/test/TS5.hx"
-		runner.run();
+		//line 6 "/shared/color/test/TS5.hx"
+		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
+		//line 7 "/shared/color/test/TS5.hx"
+		runner.add(new thx.color.TestYxy(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS5", "TS5.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (7) )) )})) )));
+		//line 9 "/shared/color/test/TS5.hx"
+		return runner.run();
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 4 "/shared/color/test/TS5.hx"
+		//line 2 "/shared/color/test/TS5.hx"
 		return new haxe.root.TS5(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 4 "/shared/color/test/TS5.hx"
+		//line 2 "/shared/color/test/TS5.hx"
 		return new haxe.root.TS5();
 	}
 	

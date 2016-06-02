@@ -60,7 +60,7 @@ public class Strings extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Strings(thx.Strings __temp_me110)
+	public static void __hx_ctor_thx_Strings(thx.Strings __temp_me104)
 	{
 	}
 	
@@ -113,9 +113,9 @@ public class Strings extends haxe.lang.HxObject
 	public static java.lang.String capitalizeWords(java.lang.String value, java.lang.Object whiteSpaceOnly)
 	{
 		//line 52 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		java.lang.Object __temp_whiteSpaceOnly105 = ( (haxe.lang.Runtime.eq(whiteSpaceOnly, null)) ? (((java.lang.Object) (false) )) : (whiteSpaceOnly) );
+		java.lang.Object __temp_whiteSpaceOnly99 = ( (haxe.lang.Runtime.eq(whiteSpaceOnly, null)) ? (((java.lang.Object) (false) )) : (whiteSpaceOnly) );
 		//line 52 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		if (haxe.lang.Runtime.toBool((__temp_whiteSpaceOnly105))) 
+		if (haxe.lang.Runtime.toBool((__temp_whiteSpaceOnly99))) 
 		{
 			//line 56 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 			return thx.Strings.UCWORDSWS.map(( haxe.lang.StringExt.substr(value, 0, 1).toUpperCase() + haxe.lang.StringExt.substr(value, 1, ( value.length() - 1 )) ), ((haxe.lang.Function) (new haxe.lang.Closure(thx.Strings.class, "upperMatch")) ));
@@ -302,24 +302,24 @@ public class Strings extends haxe.lang.HxObject
 		}
 		
 		//line 198 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		java.lang.Object __temp_maxlen106 = ( (haxe.lang.Runtime.eq(maxlen, null)) ? (((java.lang.Object) (20) )) : (maxlen) );
+		java.lang.Object __temp_maxlen100 = ( (haxe.lang.Runtime.eq(maxlen, null)) ? (((java.lang.Object) (20) )) : (maxlen) );
 		//line 199 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		int sl = s.length();
 		//line 199 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		int symboll = symbol.length();
 		//line 201 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		if (( haxe.lang.Runtime.compare(sl, __temp_maxlen106) > 0 )) 
+		if (( haxe.lang.Runtime.compare(sl, __temp_maxlen100) > 0 )) 
 		{
 			//line 202 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-			if (( haxe.lang.Runtime.compare(__temp_maxlen106, symboll) < 0 )) 
+			if (( haxe.lang.Runtime.compare(__temp_maxlen100, symboll) < 0 )) 
 			{
 				//line 203 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-				return haxe.lang.StringExt.substr(symbol, ( ((int) (symboll) ) - ((int) (haxe.lang.Runtime.toInt(__temp_maxlen106)) ) ), __temp_maxlen106);
+				return haxe.lang.StringExt.substr(symbol, ( ((int) (symboll) ) - ((int) (haxe.lang.Runtime.toInt(__temp_maxlen100)) ) ), __temp_maxlen100);
 			}
 			else
 			{
 				//line 205 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-				return ( haxe.lang.StringExt.substr(s, 0, ( ((int) (haxe.lang.Runtime.toInt(__temp_maxlen106)) ) - ((int) (symboll) ) )) + symbol );
+				return ( haxe.lang.StringExt.substr(s, 0, ( ((int) (haxe.lang.Runtime.toInt(__temp_maxlen100)) ) - ((int) (symboll) ) )) + symbol );
 			}
 			
 		}
@@ -342,25 +342,25 @@ public class Strings extends haxe.lang.HxObject
 		}
 		
 		//line 218 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		java.lang.Object __temp_maxlen107 = ( (haxe.lang.Runtime.eq(maxlen, null)) ? (((java.lang.Object) (20) )) : (maxlen) );
+		java.lang.Object __temp_maxlen101 = ( (haxe.lang.Runtime.eq(maxlen, null)) ? (((java.lang.Object) (20) )) : (maxlen) );
 		//line 219 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		int sl = s.length();
 		//line 219 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 		int symboll = symbol.length();
 		//line 221 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		if (( haxe.lang.Runtime.compare(sl, __temp_maxlen107) > 0 )) 
+		if (( haxe.lang.Runtime.compare(sl, __temp_maxlen101) > 0 )) 
 		{
 			//line 222 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-			if (( haxe.lang.Runtime.compare(__temp_maxlen107, symboll) <= 0 )) 
+			if (( haxe.lang.Runtime.compare(__temp_maxlen101, symboll) <= 0 )) 
 			{
 				//line 223 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-				return thx.Strings.ellipsis(s, __temp_maxlen107, symbol);
+				return thx.Strings.ellipsis(s, __temp_maxlen101, symbol);
 			}
 			
 			//line 225 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-			int hll = ((int) (java.lang.Math.ceil(( ((double) ((( ((int) (haxe.lang.Runtime.toInt(__temp_maxlen107)) ) - ((int) (symboll) ) ))) ) / 2 ))) );
+			int hll = ((int) (java.lang.Math.ceil(( ((double) ((( ((int) (haxe.lang.Runtime.toInt(__temp_maxlen101)) ) - ((int) (symboll) ) ))) ) / 2 ))) );
 			//line 225 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-			int hlr = ((int) (java.lang.Math.floor(( ((double) ((( ((int) (haxe.lang.Runtime.toInt(__temp_maxlen107)) ) - ((int) (symboll) ) ))) ) / 2 ))) );
+			int hlr = ((int) (java.lang.Math.floor(( ((double) ((( ((int) (haxe.lang.Runtime.toInt(__temp_maxlen101)) ) - ((int) (symboll) ) ))) ) / 2 ))) );
 			//line 227 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
 			return ( ( haxe.lang.StringExt.substr(s, 0, hll) + symbol ) + haxe.lang.StringExt.substr(s, ( sl - hlr ), hlr) );
 		}
@@ -567,9 +567,9 @@ public class Strings extends haxe.lang.HxObject
 	public static java.lang.String random(java.lang.String value, java.lang.Object length)
 	{
 		//line 358 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		int __temp_length108 = ( (haxe.lang.Runtime.eq(length, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(length)) )) );
+		int __temp_length102 = ( (haxe.lang.Runtime.eq(length, null)) ? (1) : (((int) (haxe.lang.Runtime.toInt(length)) )) );
 		//line 358 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		return haxe.lang.StringExt.substr(value, ((int) (java.lang.Math.floor(( (( ( value.length() - __temp_length108 ) + 1 )) * java.lang.Math.random() ))) ), __temp_length108);
+		return haxe.lang.StringExt.substr(value, ((int) (java.lang.Math.floor(( (( ( value.length() - __temp_length102 ) + 1 )) * java.lang.Math.random() ))) ), __temp_length102);
 	}
 	
 	
@@ -944,9 +944,9 @@ public class Strings extends haxe.lang.HxObject
 		}
 		
 		//line 609 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		int __temp_columns109 = ( (haxe.lang.Runtime.eq(columns, null)) ? (78) : (((int) (haxe.lang.Runtime.toInt(columns)) )) );
+		int __temp_columns103 = ( (haxe.lang.Runtime.eq(columns, null)) ? (78) : (((int) (haxe.lang.Runtime.toInt(columns)) )) );
 		//line 609 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Strings.hx"
-		return ((haxe.root.Array<java.lang.String>) (((haxe.root.Array) (thx.Strings.SPLIT_LINES.split(s).map(((haxe.lang.Function) (new thx.Strings_wrapColumns_609__Fun(newline, indent, __temp_columns109)) ))) )) ).join(newline);
+		return ((haxe.root.Array<java.lang.String>) (((haxe.root.Array) (thx.Strings.SPLIT_LINES.split(s).map(((haxe.lang.Function) (new thx.Strings_wrapColumns_609__Fun(newline, indent, __temp_columns103)) ))) )) ).join(newline);
 	}
 	
 	

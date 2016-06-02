@@ -8,7 +8,7 @@ class TestTemperature extends NanoTestCase{
 
   public function testBasics() {
     var t = new Temperature(5000);
-    assertEquals(5000, t.kelvin);
+    assertEquals(5000, Std.int(t.kelvin));
   }
 
   public function testStrings() {

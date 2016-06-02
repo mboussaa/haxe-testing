@@ -23,30 +23,6 @@ public class Lambda extends haxe.lang.HxObject
 	}
 	
 	
-	public static <A> haxe.root.Array<A> array(java.lang.Object it)
-	{
-		//line 45 "/usr/lib/haxe/std/Lambda.hx"
-		haxe.root.Array<A> a = new haxe.root.Array<A>();
-		//line 46 "/usr/lib/haxe/std/Lambda.hx"
-		{
-			//line 46 "/usr/lib/haxe/std/Lambda.hx"
-			java.lang.Object tmp = ((java.lang.Object) (haxe.lang.Runtime.callField(it, "iterator", null)) );
-			//line 46 "/usr/lib/haxe/std/Lambda.hx"
-			while (haxe.lang.Runtime.toBool(haxe.lang.Runtime.callField(tmp, "hasNext", null)))
-			{
-				//line 46 "/usr/lib/haxe/std/Lambda.hx"
-				A i = ((A) (haxe.lang.Runtime.callField(tmp, "next", null)) );
-				//line 47 "/usr/lib/haxe/std/Lambda.hx"
-				a.push(i);
-			}
-			
-		}
-		
-		//line 48 "/usr/lib/haxe/std/Lambda.hx"
-		return a;
-	}
-	
-	
 	public static <A> boolean has(java.lang.Object it, A elt)
 	{
 		//line 125 "/usr/lib/haxe/std/Lambda.hx"

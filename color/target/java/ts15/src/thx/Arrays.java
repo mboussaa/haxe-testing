@@ -18,7 +18,7 @@ public class Arrays extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Arrays(thx.Arrays __temp_me47)
+	public static void __hx_ctor_thx_Arrays(thx.Arrays __temp_me41)
 	{
 	}
 	
@@ -49,7 +49,7 @@ public class Arrays extends haxe.lang.HxObject
 	public static <T> haxe.root.Array<T> applyIndexes(haxe.root.Array<T> array, haxe.root.Array<java.lang.Object> indexes, java.lang.Object incrementDuplicates)
 	{
 		//line 51 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		java.lang.Object __temp_incrementDuplicates44 = ( (haxe.lang.Runtime.eq(incrementDuplicates, null)) ? (((java.lang.Object) (false) )) : (incrementDuplicates) );
+		java.lang.Object __temp_incrementDuplicates38 = ( (haxe.lang.Runtime.eq(incrementDuplicates, null)) ? (((java.lang.Object) (false) )) : (incrementDuplicates) );
 		//line 52 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 		if (( indexes.length != array.length )) 
 		{
@@ -60,7 +60,7 @@ public class Arrays extends haxe.lang.HxObject
 		//line 54 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 		haxe.root.Array<T> result = new haxe.root.Array<T>(( (T[]) (new java.lang.Object[] {}) ));
 		//line 55 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		if (haxe.lang.Runtime.toBool((__temp_incrementDuplicates44))) 
+		if (haxe.lang.Runtime.toBool((__temp_incrementDuplicates38))) 
 		{
 			//line 56 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 			haxe.ds.IntMap<java.lang.Object> usedIndexes = thx._Set.Set_Impl_.createInt(null);
@@ -1226,13 +1226,13 @@ public class Arrays extends haxe.lang.HxObject
 	public static <T> haxe.root.Array<java.lang.Object> rank(haxe.root.Array<T> array, haxe.lang.Function compare, java.lang.Object incrementDuplicates)
 	{
 		//line 687 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		java.lang.Object __temp_incrementDuplicates45 = ( (haxe.lang.Runtime.eq(incrementDuplicates, null)) ? (((java.lang.Object) (true) )) : (incrementDuplicates) );
+		java.lang.Object __temp_incrementDuplicates39 = ( (haxe.lang.Runtime.eq(incrementDuplicates, null)) ? (((java.lang.Object) (true) )) : (incrementDuplicates) );
 		//line 688 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 		haxe.root.Array<java.lang.Object> arr = ((haxe.root.Array<java.lang.Object>) (thx.Arrays.mapi(((haxe.root.Array<T>) (array) ), ((haxe.lang.Function) (new thx.Arrays_rank_688__Fun<T>()) ))) );
 		//line 689 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 		arr.sort(new thx.Arrays_rank_689__Fun<T>(compare));
 		//line 690 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		if (haxe.lang.Runtime.toBool((__temp_incrementDuplicates45))) 
+		if (haxe.lang.Runtime.toBool((__temp_incrementDuplicates39))) 
 		{
 			//line 691 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
 			haxe.ds.IntMap<java.lang.Object> usedIndexes = thx._Set.Set_Impl_.createInt(null);
@@ -2057,9 +2057,9 @@ public class Arrays extends haxe.lang.HxObject
 	public static <T> haxe.root.Array<T> withSlice(haxe.root.Array<T> arr, haxe.root.Array<T> other, int start, java.lang.Object length)
 	{
 		//line 1116 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		java.lang.Object __temp_length46 = ( (haxe.lang.Runtime.eq(length, null)) ? (((java.lang.Object) (0) )) : (length) );
+		java.lang.Object __temp_length40 = ( (haxe.lang.Runtime.eq(length, null)) ? (((java.lang.Object) (0) )) : (length) );
 		//line 1116 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Arrays.hx"
-		return arr.slice(0, start).concat(((haxe.root.Array<T>) (other) )).concat(arr.slice(((int) (haxe.lang.Runtime.toInt(haxe.lang.Runtime.plus(start, __temp_length46))) ), null));
+		return arr.slice(0, start).concat(((haxe.root.Array<T>) (other) )).concat(arr.slice(((int) (haxe.lang.Runtime.toInt(haxe.lang.Runtime.plus(start, __temp_length40))) ), null));
 	}
 	
 	

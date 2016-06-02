@@ -235,7 +235,6 @@ src/haxe/java/Lib.java
 src/thx/color/_Hsva/Hsva_Impl_.java
 src/thx/color/_Rgb/Rgb_Impl_.java
 src/haxe/IMap.java
-src/thx/color/TestCmy.java
 src/haxe/ds/ObjectMap.java
 src/haxe/ds/ObjectMap_keys_363__Fun.java
 src/haxe/ds/ObjectMap_keys_374__Fun.java
@@ -383,6 +382,7 @@ src/thx/Maps_toObject_69__Fun.java
 src/thx/Maps_string_90__Fun.java
 src/thx/Maps_merge_107__Fun.java
 src/thx/Maps_merge_106__Fun.java
+src/thx/color/TestLCh.java
 src/thx/color/_Rgba/Rgba_Impl_.java
 src/thx/color/_Rgba/Rgba_Impl__fromFloats_19__Fun.java
 src/thx/Error.java

@@ -5,7 +5,7 @@ class TS2 {
 	public function __construct(){}
 	static function main() {
 		$runner = new nanotest_NanoTestRunner(null);
-		$runner->add(new thx_color_TestCmy(_hx_anonymous(array("fileName" => "TS2.hx", "lineNumber" => 7, "className" => "TS2", "methodName" => "main"))));
+		$runner->add(new thx_color_TestLCh(_hx_anonymous(array("fileName" => "TS2.hx", "lineNumber" => 7, "className" => "TS2", "methodName" => "main"))));
 		return $runner->run();
 	}
 	function __toString() { return 'TS2'; }

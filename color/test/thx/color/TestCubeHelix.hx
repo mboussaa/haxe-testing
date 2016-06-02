@@ -9,9 +9,9 @@ class TestCubeHelix extends NanoTestCase{
 
   public function testBasics() {
     var cubeHelix = CubeHelix.create(1, 0, 0);
-    assertEquals(1, cubeHelix.hue);
-    assertEquals(0, cubeHelix.saturation);
-    assertEquals(0, cubeHelix.lightness);
+    assertEquals(1, Std.int(cubeHelix.hue));
+    assertEquals(0, Std.int(cubeHelix.saturation));
+    assertEquals(0, Std.int(cubeHelix.lightness));
   }
 
   public function testStrings() {
@@ -26,7 +26,7 @@ class TestCubeHelix extends NanoTestCase{
   public function testNearEquals() {
     var c1 = CubeHelix.create(206.182, 0.441, 0.090),
         c2 = CubeHelix.create(206.181, 0.440, 0.090);
-    asserFalse(c1 == c2);
+    assertFalse(c1 == c2);
     assertTrue(c1.nearEquals(c2, 0.01));
   }
 }

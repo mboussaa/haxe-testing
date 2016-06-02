@@ -18,7 +18,7 @@ public class DynamicsT extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_DynamicsT(thx.DynamicsT __temp_me64)
+	public static void __hx_ctor_thx_DynamicsT(thx.DynamicsT __temp_me58)
 	{
 	}
 	

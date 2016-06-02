@@ -8,7 +8,6 @@ public class TS8 extends haxe.lang.HxObject
 {
 	public static void main(String[] args)
 	{
-		Sys._args = args;
 		main();
 	}
 	
@@ -24,28 +23,19 @@ public class TS8 extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor__TS8(haxe.root.TS8 __temp_me15)
+	public static void __hx_ctor__TS8(haxe.root.TS8 __temp_me11)
 	{
 	}
 	
 	
-	public static void addTests(utest.Runner runner)
+	public static boolean main()
 	{
-		//line 13 "/shared/color/test/TS8.hx"
-		runner.addCase(new thx.color.TestCmyk(), null, null, null, null);
-	}
-	
-	
-	public static void main()
-	{
-		//line 17 "/shared/color/test/TS8.hx"
-		utest.Runner runner = new utest.Runner();
-		//line 18 "/shared/color/test/TS8.hx"
-		haxe.root.TS8.addTests(runner);
-		//line 19 "/shared/color/test/TS8.hx"
-		utest.ui.Report.create(runner, null, null);
-		//line 20 "/shared/color/test/TS8.hx"
-		runner.run();
+		//line 8 "/shared/color/test/TS8.hx"
+		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
+		//line 9 "/shared/color/test/TS8.hx"
+		runner.add(new thx.color.TestCmyk(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS8", "TS8.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (9) )) )})) )));
+		//line 11 "/shared/color/test/TS8.hx"
+		return runner.run();
 	}
 	
 	

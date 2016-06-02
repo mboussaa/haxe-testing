@@ -18,7 +18,7 @@ public class ValidationExtensions extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_ValidationExtensions(thx.ValidationExtensions __temp_me112)
+	public static void __hx_ctor_thx_ValidationExtensions(thx.ValidationExtensions __temp_me106)
 	{
 	}
 	

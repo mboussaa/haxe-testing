@@ -18,10 +18,10 @@ public class IntMap<T> extends haxe.lang.HxObject implements haxe.IMap<java.lang
 	}
 	
 	
-	public static <T_c> void __hx_ctor_haxe_ds_IntMap(haxe.ds.IntMap<T_c> __temp_me29)
+	public static <T_c> void __hx_ctor_haxe_ds_IntMap(haxe.ds.IntMap<T_c> __temp_me22)
 	{
 		//line 52 "/usr/lib/haxe/std/java/_std/haxe/ds/IntMap.hx"
-		__temp_me29.cachedIndex = -1;
+		__temp_me22.cachedIndex = -1;
 	}
 	
 	

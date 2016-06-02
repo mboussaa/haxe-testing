@@ -18,7 +18,7 @@ public class Options extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Options(thx.Options __temp_me103)
+	public static void __hx_ctor_thx_Options(thx.Options __temp_me97)
 	{
 	}
 	

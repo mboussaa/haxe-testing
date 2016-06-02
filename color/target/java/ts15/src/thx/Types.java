@@ -18,7 +18,7 @@ public class Types extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Types(thx.Types __temp_me111)
+	public static void __hx_ctor_thx_Types(thx.Types __temp_me105)
 	{
 	}
 	

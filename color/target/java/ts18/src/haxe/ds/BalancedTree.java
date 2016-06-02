@@ -18,7 +18,7 @@ public class BalancedTree<K, V> extends haxe.lang.HxObject
 	}
 	
 	
-	public static <K_c, V_c> void __hx_ctor_haxe_ds_BalancedTree(haxe.ds.BalancedTree<K_c, V_c> __temp_me23)
+	public static <K_c, V_c> void __hx_ctor_haxe_ds_BalancedTree(haxe.ds.BalancedTree<K_c, V_c> __temp_me16)
 	{
 	}
 	

@@ -18,7 +18,7 @@ public class Maps extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Maps(thx.Maps __temp_me99)
+	public static void __hx_ctor_thx_Maps(thx.Maps __temp_me93)
 	{
 	}
 	

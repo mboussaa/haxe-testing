@@ -6,8 +6,5 @@ class php_Lib {
 	static function hprint($v) {
 		echo(Std::string($v));
 	}
-	static function isCli() {
-		return (0 == strncasecmp(PHP_SAPI, 'cli', 3));
-	}
 	function __toString() { return 'php.Lib'; }
 }

@@ -145,15 +145,15 @@ public final class Hsla_Impl_
 	public static java.lang.Object analogous(haxe.root.Array<java.lang.Object> this1, java.lang.Object spread)
 	{
 		//line 46 "/shared/color/src/thx/color/Hsla.hx"
-		double __temp_spread123 = ( (haxe.lang.Runtime.eq(spread, null)) ? (30.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
+		double __temp_spread116 = ( (haxe.lang.Runtime.eq(spread, null)) ? (30.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
 		//line 46 "/shared/color/src/thx/color/Hsla.hx"
 		java.lang.Object this2 = null;
 		//line 46 "/shared/color/src/thx/color/Hsla.hx"
 		{
 			//line 47 "/shared/color/src/thx/color/Hsla.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._Hsla.Hsla_Impl_.rotate(this1,  - (__temp_spread123) );
+			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._Hsla.Hsla_Impl_.rotate(this1,  - (__temp_spread116) );
 			//line 48 "/shared/color/src/thx/color/Hsla.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._Hsla.Hsla_Impl_.rotate(this1, __temp_spread123);
+			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._Hsla.Hsla_Impl_.rotate(this1, __temp_spread116);
 			//line 46 "/shared/color/src/thx/color/Hsla.hx"
 			this2 = new haxe.lang.DynamicObject(new java.lang.String[]{"_0", "_1"}, new java.lang.Object[]{__temp_odecl1, __temp_odecl2}, new java.lang.String[]{}, new double[]{});
 		}
@@ -249,15 +249,15 @@ public final class Hsla_Impl_
 	public static java.lang.Object split(haxe.root.Array<java.lang.Object> this1, java.lang.Object spread)
 	{
 		//line 104 "/shared/color/src/thx/color/Hsla.hx"
-		double __temp_spread124 = ( (haxe.lang.Runtime.eq(spread, null)) ? (150.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
+		double __temp_spread117 = ( (haxe.lang.Runtime.eq(spread, null)) ? (150.0) : (((double) (haxe.lang.Runtime.toDouble(spread)) )) );
 		//line 104 "/shared/color/src/thx/color/Hsla.hx"
 		java.lang.Object this2 = null;
 		//line 104 "/shared/color/src/thx/color/Hsla.hx"
 		{
 			//line 105 "/shared/color/src/thx/color/Hsla.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._Hsla.Hsla_Impl_.rotate(this1,  - (__temp_spread124) );
+			haxe.root.Array<java.lang.Object> __temp_odecl1 = thx.color._Hsla.Hsla_Impl_.rotate(this1,  - (__temp_spread117) );
 			//line 106 "/shared/color/src/thx/color/Hsla.hx"
-			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._Hsla.Hsla_Impl_.rotate(this1, __temp_spread124);
+			haxe.root.Array<java.lang.Object> __temp_odecl2 = thx.color._Hsla.Hsla_Impl_.rotate(this1, __temp_spread117);
 			//line 104 "/shared/color/src/thx/color/Hsla.hx"
 			this2 = new haxe.lang.DynamicObject(new java.lang.String[]{"_0", "_1"}, new java.lang.Object[]{__temp_odecl1, __temp_odecl2}, new java.lang.String[]{}, new double[]{});
 		}
@@ -327,12 +327,12 @@ public final class Hsla_Impl_
 	public static boolean nearEquals(haxe.root.Array<java.lang.Object> this1, haxe.root.Array<java.lang.Object> other, java.lang.Object tolerance)
 	{
 		//line 131 "/shared/color/src/thx/color/Hsla.hx"
-		java.lang.Object __temp_tolerance125 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
+		java.lang.Object __temp_tolerance118 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
 		//line 131 "/shared/color/src/thx/color/Hsla.hx"
-		if (( ( ( haxe.lang.Runtime.compare(java.lang.Math.abs(thx.Floats.angleDifference(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ), 360.0)), __temp_tolerance125) <= 0 ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ), __temp_tolerance125) ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ), __temp_tolerance125) )) 
+		if (( ( ( haxe.lang.Runtime.compare(java.lang.Math.abs(thx.Floats.angleDifference(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(0))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(0))) ), 360.0)), __temp_tolerance118) <= 0 ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(1))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(1))) ), __temp_tolerance118) ) && thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(2))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(2))) ), __temp_tolerance118) )) 
 		{
 			//line 131 "/shared/color/src/thx/color/Hsla.hx"
-			return thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(3))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(3))) ), __temp_tolerance125);
+			return thx.Floats.nearEquals(((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (this1) ).__get(3))) ), ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (other) ).__get(3))) ), __temp_tolerance118);
 		}
 		else
 		{

@@ -10,6 +10,34 @@ class Math {
 	static function abs($v) {
 		return abs($v);
 	}
+	static function min($a, $b) {
+		$tmp = !Math::isNaN($a);
+		if($tmp) {
+			return min($a, $b);
+		} else {
+			return Math::$NaN;
+		}
+	}
+	static function max($a, $b) {
+		$tmp = !Math::isNaN($b);
+		if($tmp) {
+			return max($a, $b);
+		} else {
+			return Math::$NaN;
+		}
+	}
+	static function sin($v) {
+		return sin($v);
+	}
+	static function cos($v) {
+		return cos($v);
+	}
+	static function atan2($y, $x) {
+		return atan2($y, $x);
+	}
+	static function log($v) {
+		return log($v);
+	}
 	static function sqrt($v) {
 		return sqrt($v);
 	}

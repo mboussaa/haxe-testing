@@ -22,12 +22,12 @@ public class ErrorWrapper extends thx.Error
 	}
 	
 	
-	public static void __hx_ctor_thx_error_ErrorWrapper(thx.error.ErrorWrapper __temp_me117, java.lang.String message, java.lang.Object innerError, haxe.root.Array<haxe.StackItem> stack, java.lang.Object pos)
+	public static void __hx_ctor_thx_error_ErrorWrapper(thx.error.ErrorWrapper __temp_me141, java.lang.String message, java.lang.Object innerError, haxe.root.Array<haxe.StackItem> stack, java.lang.Object pos)
 	{
 		//line 14 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/error/ErrorWrapper.hx"
-		thx.Error.__hx_ctor_thx_Error(__temp_me117, message, stack, pos);
+		thx.Error.__hx_ctor_thx_Error(__temp_me141, message, stack, pos);
 		//line 16 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/error/ErrorWrapper.hx"
-		__temp_me117.innerError = innerError;
+		__temp_me141.innerError = innerError;
 	}
 	
 	

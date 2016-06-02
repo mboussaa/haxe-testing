@@ -18,12 +18,12 @@ public class MapIterator<A, B> extends haxe.lang.HxObject
 	}
 	
 	
-	public static <A_c, B_c> void __hx_ctor_thx_MapIterator(thx.MapIterator<A_c, B_c> __temp_me97, java.lang.Object base, haxe.lang.Function f)
+	public static <A_c, B_c> void __hx_ctor_thx_MapIterator(thx.MapIterator<A_c, B_c> __temp_me91, java.lang.Object base, haxe.lang.Function f)
 	{
 		//line 354 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Iterators.hx"
-		__temp_me97.base = base;
+		__temp_me91.base = base;
 		//line 355 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Iterators.hx"
-		__temp_me97.f = f;
+		__temp_me91.f = f;
 	}
 	
 	

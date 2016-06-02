@@ -18,10 +18,10 @@ public class Error extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Error(thx.Error __temp_me67, java.lang.String message, haxe.root.Array<haxe.StackItem> stack, java.lang.Object pos)
+	public static void __hx_ctor_thx_Error(thx.Error __temp_me61, java.lang.String message, haxe.root.Array<haxe.StackItem> stack, java.lang.Object pos)
 	{
 		//line 47 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Error.hx"
-		__temp_me67.message = message;
+		__temp_me61.message = message;
 		//line 49 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Error.hx"
 		if (( null == stack )) 
 		{
@@ -93,9 +93,9 @@ public class Error extends haxe.lang.HxObject
 		}
 		
 		//line 54 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Error.hx"
-		__temp_me67.stackItems = stack;
+		__temp_me61.stackItems = stack;
 		//line 55 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Error.hx"
-		__temp_me67.pos = pos;
+		__temp_me61.pos = pos;
 	}
 	
 	

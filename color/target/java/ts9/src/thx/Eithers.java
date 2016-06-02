@@ -18,7 +18,7 @@ public class Eithers extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Eithers(thx.Eithers __temp_me65)
+	public static void __hx_ctor_thx_Eithers(thx.Eithers __temp_me59)
 	{
 	}
 	

@@ -42,7 +42,7 @@ public class Floats extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Floats(thx.Floats __temp_me77)
+	public static void __hx_ctor_thx_Floats(thx.Floats __temp_me71)
 	{
 	}
 	
@@ -56,21 +56,21 @@ public class Floats extends haxe.lang.HxObject
 	public static double angleDifference(double a, double b, java.lang.Object turn)
 	{
 		//line 18 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		java.lang.Object __temp_turn68 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((java.lang.Object) (360.0) )) : (turn) );
+		java.lang.Object __temp_turn62 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((java.lang.Object) (360.0) )) : (turn) );
 		//line 19 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		double r = ( ((double) ((( b - a ))) ) % ((double) (haxe.lang.Runtime.toDouble(__temp_turn68)) ) );
+		double r = ( ((double) ((( b - a ))) ) % ((double) (haxe.lang.Runtime.toDouble(__temp_turn62)) ) );
 		//line 20 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
 		if (( r < 0 )) 
 		{
 			//line 21 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-			r = ((double) (haxe.lang.Runtime.toDouble(haxe.lang.Runtime.plus(r, __temp_turn68))) );
+			r = ((double) (haxe.lang.Runtime.toDouble(haxe.lang.Runtime.plus(r, __temp_turn62))) );
 		}
 		
 		//line 22 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		if (( r > ( ((double) (haxe.lang.Runtime.toDouble(__temp_turn68)) ) / ((double) (2) ) ) )) 
+		if (( r > ( ((double) (haxe.lang.Runtime.toDouble(__temp_turn62)) ) / ((double) (2) ) ) )) 
 		{
 			//line 23 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-			r = ( ((double) (r) ) - ((double) (haxe.lang.Runtime.toDouble(__temp_turn68)) ) );
+			r = ( ((double) (r) ) - ((double) (haxe.lang.Runtime.toDouble(__temp_turn62)) ) );
 		}
 		
 		//line 24 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
@@ -196,58 +196,58 @@ public class Floats extends haxe.lang.HxObject
 	public static double interpolateAngle(double f, double a, double b, java.lang.Object turn)
 	{
 		//line 86 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		double __temp_turn69 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
+		double __temp_turn63 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
 		//line 86 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		return thx.Floats.wrapCircular(thx.Floats.interpolate(f, a, ( a + thx.Floats.angleDifference(a, b, __temp_turn69) )), __temp_turn69);
+		return thx.Floats.wrapCircular(thx.Floats.interpolate(f, a, ( a + thx.Floats.angleDifference(a, b, __temp_turn63) )), __temp_turn63);
 	}
 	
 	
 	public static double interpolateAngleWidest(double f, double a, double b, java.lang.Object turn)
 	{
 		//line 94 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		double __temp_turn70 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
+		double __temp_turn64 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
 		//line 94 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		return thx.Floats.wrapCircular(( thx.Floats.interpolateAngle(f, a, b, __temp_turn70) - ( __temp_turn70 / 2 ) ), __temp_turn70);
+		return thx.Floats.wrapCircular(( thx.Floats.interpolateAngle(f, a, b, __temp_turn64) - ( __temp_turn64 / 2 ) ), __temp_turn64);
 	}
 	
 	
 	public static double interpolateAngleCW(double f, double a, double b, java.lang.Object turn)
 	{
 		//line 100 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		double __temp_turn71 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
+		double __temp_turn65 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
 		//line 101 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		a = thx.Floats.wrapCircular(a, __temp_turn71);
+		a = thx.Floats.wrapCircular(a, __temp_turn65);
 		//line 102 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		b = thx.Floats.wrapCircular(b, __temp_turn71);
+		b = thx.Floats.wrapCircular(b, __temp_turn65);
 		//line 103 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
 		if (( b < a )) 
 		{
 			//line 104 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-			b += __temp_turn71;
+			b += __temp_turn65;
 		}
 		
 		//line 105 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		return thx.Floats.wrapCircular(thx.Floats.interpolate(f, a, b), __temp_turn71);
+		return thx.Floats.wrapCircular(thx.Floats.interpolate(f, a, b), __temp_turn65);
 	}
 	
 	
 	public static double interpolateAngleCCW(double f, double a, double b, java.lang.Object turn)
 	{
 		//line 111 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		double __temp_turn72 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
+		double __temp_turn66 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((double) (360) )) : (((double) (haxe.lang.Runtime.toDouble(turn)) )) );
 		//line 112 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		a = thx.Floats.wrapCircular(a, __temp_turn72);
+		a = thx.Floats.wrapCircular(a, __temp_turn66);
 		//line 113 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		b = thx.Floats.wrapCircular(b, __temp_turn72);
+		b = thx.Floats.wrapCircular(b, __temp_turn66);
 		//line 114 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
 		if (( b > a )) 
 		{
 			//line 115 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-			b -= __temp_turn72;
+			b -= __temp_turn66;
 		}
 		
 		//line 116 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		return thx.Floats.wrapCircular(thx.Floats.interpolate(f, a, b), __temp_turn72);
+		return thx.Floats.wrapCircular(thx.Floats.interpolate(f, a, b), __temp_turn66);
 	}
 	
 	
@@ -288,7 +288,7 @@ public class Floats extends haxe.lang.HxObject
 	public static boolean nearEquals(double a, double b, java.lang.Object tollerance)
 	{
 		//line 136 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		java.lang.Object __temp_tollerance73 = ( (haxe.lang.Runtime.eq(tollerance, null)) ? (((java.lang.Object) (1e-9) )) : (tollerance) );
+		java.lang.Object __temp_tollerance67 = ( (haxe.lang.Runtime.eq(tollerance, null)) ? (((java.lang.Object) (1e-9) )) : (tollerance) );
 		//line 137 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
 		if (haxe.lang.Runtime.isFinite(a)) 
 		{
@@ -300,7 +300,7 @@ public class Floats extends haxe.lang.HxObject
 			}
 			
 			//line 142 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-			return ( haxe.lang.Runtime.compare(java.lang.Math.abs(( a - b )), __temp_tollerance73) <= 0 );
+			return ( haxe.lang.Runtime.compare(java.lang.Math.abs(( a - b )), __temp_tollerance67) <= 0 );
 		}
 		
 		//line 144 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
@@ -332,20 +332,20 @@ public class Floats extends haxe.lang.HxObject
 	public static boolean nearEqualAngles(double a, double b, java.lang.Object turn, java.lang.Object tollerance)
 	{
 		//line 161 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		java.lang.Object __temp_tollerance75 = ( (haxe.lang.Runtime.eq(tollerance, null)) ? (((java.lang.Object) (1e-9) )) : (tollerance) );
+		java.lang.Object __temp_tollerance69 = ( (haxe.lang.Runtime.eq(tollerance, null)) ? (((java.lang.Object) (1e-9) )) : (tollerance) );
 		//line 161 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		java.lang.Object __temp_turn74 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((java.lang.Object) (360.0) )) : (turn) );
+		java.lang.Object __temp_turn68 = ( (haxe.lang.Runtime.eq(turn, null)) ? (((java.lang.Object) (360.0) )) : (turn) );
 		//line 161 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		return ( haxe.lang.Runtime.compare(java.lang.Math.abs(thx.Floats.angleDifference(a, b, __temp_turn74)), __temp_tollerance75) <= 0 );
+		return ( haxe.lang.Runtime.compare(java.lang.Math.abs(thx.Floats.angleDifference(a, b, __temp_turn68)), __temp_tollerance69) <= 0 );
 	}
 	
 	
 	public static boolean nearZero(double n, java.lang.Object tollerance)
 	{
 		//line 168 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		java.lang.Object __temp_tollerance76 = ( (haxe.lang.Runtime.eq(tollerance, null)) ? (((java.lang.Object) (1e-9) )) : (tollerance) );
+		java.lang.Object __temp_tollerance70 = ( (haxe.lang.Runtime.eq(tollerance, null)) ? (((java.lang.Object) (1e-9) )) : (tollerance) );
 		//line 168 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Floats.hx"
-		return ( haxe.lang.Runtime.compare(java.lang.Math.abs(n), __temp_tollerance76) <= 0 );
+		return ( haxe.lang.Runtime.compare(java.lang.Math.abs(n), __temp_tollerance70) <= 0 );
 	}
 	
 	

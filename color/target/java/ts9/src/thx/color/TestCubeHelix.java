@@ -4,175 +4,181 @@ package thx.color;
 import haxe.root.*;
 
 @SuppressWarnings(value={"rawtypes", "unchecked"})
-public class TestCubeHelix extends haxe.lang.HxObject
+public class TestCubeHelix extends nanotest.NanoTestCase
 {
 	public TestCubeHelix(haxe.lang.EmptyObject empty)
 	{
-	}
-	
-	
-	public TestCubeHelix()
-	{
 		//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		thx.color.TestCubeHelix.__hx_ctor_thx_color_TestCubeHelix(this);
+		super(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
 	}
 	
 	
-	public static void __hx_ctor_thx_color_TestCubeHelix(thx.color.TestCubeHelix __temp_me140)
+	public TestCubeHelix(java.lang.Object posInfos)
 	{
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		super(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		thx.color.TestCubeHelix.__hx_ctor_thx_color_TestCubeHelix(this, posInfos);
+	}
+	
+	
+	public static void __hx_ctor_thx_color_TestCubeHelix(thx.color.TestCubeHelix __temp_me134, java.lang.Object posInfos)
+	{
+		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
+		nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me134, posInfos);
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		return new thx.color.TestCubeHelix(haxe.lang.EmptyObject.EMPTY);
+		//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		return new thx.color.TestCubeHelix(((haxe.lang.EmptyObject) (haxe.lang.EmptyObject.EMPTY) ));
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		return new thx.color.TestCubeHelix();
+		//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		return new thx.color.TestCubeHelix(((java.lang.Object) (arr.__get(0)) ));
 	}
 	
 	
 	public void testBasics()
 	{
-		//line 10 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (1) ), ((java.lang.Object) (0) ), ((java.lang.Object) (0) ), ((java.lang.Object) (1.0) )});
-		//line 10 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> cubeHelix = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 11 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.equals(1, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (cubeHelix) ).__get(0))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (11) )) )}));
+		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (1) ), ((java.lang.Object) (0) ), ((java.lang.Object) (0) ), ((java.lang.Object) (1.0) )});
+		//line 11 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		haxe.root.Array<java.lang.Object> cubeHelix = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 12 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.equals(0, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (cubeHelix) ).__get(1))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (12) )) )}));
+		this.assertEquals(((java.lang.Object) (1) ), ((int) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (cubeHelix) ).__get(0))) )) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (12) )) )})) ));
 		//line 13 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.equals(0, ((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (cubeHelix) ).__get(2))) ), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (13) )) )}));
+		this.assertEquals(((java.lang.Object) (0) ), ((int) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (cubeHelix) ).__get(1))) )) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (13) )) )})) ));
+		//line 14 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		this.assertEquals(((java.lang.Object) (0) ), ((int) (((double) (haxe.lang.Runtime.toDouble(((haxe.root.Array<java.lang.Object>) (cubeHelix) ).__get(2))) )) ), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testBasics"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (14) )) )})) ));
 	}
 	
 	
 	public void testStrings()
 	{
-		//line 17 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (0) ), ((java.lang.Object) (0) ), ((java.lang.Object) (1) ), ((java.lang.Object) (1.0) )});
-		//line 17 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> cubeHelix = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 18 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.equals("cubehelix(0,0,1)", thx.color._CubeHelix.CubeHelix_Impl_.toString(cubeHelix), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testStrings"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (18) )) )}));
+		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (0) ), ((java.lang.Object) (0) ), ((java.lang.Object) (1) ), ((java.lang.Object) (1.0) )});
+		//line 18 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		haxe.root.Array<java.lang.Object> cubeHelix = ((haxe.root.Array<java.lang.Object>) (this1) );
+		//line 19 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		this.assertEquals(haxe.lang.Runtime.toString("cubehelix(0,0,1)"), haxe.lang.Runtime.toString(thx.color._CubeHelix.CubeHelix_Impl_.toString(cubeHelix)), ((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testStrings"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (19) )) )})) ));
 	}
 	
 	
 	public void testFromString()
 	{
-		//line 22 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		//line 23 "/shared/color/test/thx/color/TestCubeHelix.hx"
 		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (0.5) ), ((java.lang.Object) (0.2) ), ((java.lang.Object) (0.1) ), ((java.lang.Object) (1.0) )});
-		//line 22 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.isTrue(thx.color._CubeHelix.CubeHelix_Impl_.equals(((haxe.root.Array<java.lang.Object>) (this1) ), thx.color._CubeHelix.CubeHelix_Impl_.fromString("cubehelix(50%,0.2,10%)")), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testFromString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (22) )) )}));
+		//line 23 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		this.assertTrue(thx.color._CubeHelix.CubeHelix_Impl_.equals(((haxe.root.Array<java.lang.Object>) (this1) ), thx.color._CubeHelix.CubeHelix_Impl_.fromString("cubehelix(50%,0.2,10%)")), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testFromString"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (23) )) )}));
 	}
 	
 	
 	public void testNearEquals()
 	{
-		//line 26 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (206.182) ), ((java.lang.Object) (0.441) ), ((java.lang.Object) (0.090) ), ((java.lang.Object) (1.0) )});
-		//line 26 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> c1 = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 27 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (206.181) ), ((java.lang.Object) (0.440) ), ((java.lang.Object) (0.090) ), ((java.lang.Object) (1.0) )});
-		//line 26 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		haxe.root.Array<java.lang.Object> c2 = ((haxe.root.Array<java.lang.Object>) (this2) );
+		haxe.root.Array<java.lang.Object> this1 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (206.182) ), ((java.lang.Object) (0.441) ), ((java.lang.Object) (0.090) ), ((java.lang.Object) (1.0) )});
+		//line 27 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		haxe.root.Array<java.lang.Object> c1 = ((haxe.root.Array<java.lang.Object>) (this1) );
 		//line 28 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.isFalse(thx.color._CubeHelix.CubeHelix_Impl_.equals(c1, c2), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testNearEquals"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (28) )) )}));
+		haxe.root.Array<java.lang.Object> this2 = new haxe.root.Array<java.lang.Object>(new java.lang.Object[]{((java.lang.Object) (206.181) ), ((java.lang.Object) (0.440) ), ((java.lang.Object) (0.090) ), ((java.lang.Object) (1.0) )});
+		//line 27 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		haxe.root.Array<java.lang.Object> c2 = ((haxe.root.Array<java.lang.Object>) (this2) );
 		//line 29 "/shared/color/test/thx/color/TestCubeHelix.hx"
-		utest.Assert.isTrue(thx.color._CubeHelix.CubeHelix_Impl_.nearEquals(c1, c2, 0.01), null, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testNearEquals"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (29) )) )}));
+		this.assertFalse(thx.color._CubeHelix.CubeHelix_Impl_.equals(c1, c2), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testNearEquals"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (29) )) )}));
+		//line 30 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		this.assertTrue(thx.color._CubeHelix.CubeHelix_Impl_.nearEquals(c1, c2, 0.01), new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"thx.color.TestCubeHelix", "TestCubeHelix.hx", "testNearEquals"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (30) )) )}));
 	}
 	
 	
 	@Override public java.lang.Object __hx_getField(java.lang.String field, boolean throwErrors, boolean isCheck, boolean handleProperties)
 	{
-		//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 		{
-			//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+			//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+			//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 			switch (field.hashCode())
 			{
 				case -1291499463:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testNearEquals")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testNearEquals")) );
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 				case 1223535927:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testBasics")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testBasics")) );
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 				case 1443991181:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testFromString")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testFromString")) );
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 				case 2020609424:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testStrings")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "testStrings")) );
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+			//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+				//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 				return super.__hx_getField(field, throwErrors, isCheck, handleProperties);
 			}
 			else
 			{
-				//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+				//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 				throw null;
 			}
 			
@@ -183,89 +189,89 @@ public class TestCubeHelix extends haxe.lang.HxObject
 	
 	@Override public java.lang.Object __hx_invokeField(java.lang.String field, haxe.root.Array dynargs)
 	{
-		//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 		{
-			//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+			//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 			boolean __temp_executeDef1 = true;
-			//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+			//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 			switch (field.hashCode())
 			{
 				case -1291499463:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testNearEquals")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						this.testNearEquals();
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 				case 1223535927:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testBasics")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						this.testBasics();
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 				case 1443991181:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testFromString")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						this.testFromString();
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 				case 2020609424:
 				{
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					if (field.equals("testStrings")) 
 					{
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						__temp_executeDef1 = false;
-						//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+						//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 						this.testStrings();
 					}
 					
-					//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+					//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 					break;
 				}
 				
 				
 			}
 			
-			//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+			//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 			if (__temp_executeDef1) 
 			{
-				//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+				//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
 			
 		}
 		
-		//line 6 "/shared/color/test/thx/color/TestCubeHelix.hx"
+		//line 7 "/shared/color/test/thx/color/TestCubeHelix.hx"
 		return null;
 	}
 	

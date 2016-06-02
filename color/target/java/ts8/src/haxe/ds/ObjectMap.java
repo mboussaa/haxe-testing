@@ -18,10 +18,10 @@ public class ObjectMap<K, V> extends haxe.lang.HxObject implements haxe.IMap<K, 
 	}
 	
 	
-	public static <K_c, V_c> void __hx_ctor_haxe_ds_ObjectMap(haxe.ds.ObjectMap<K_c, V_c> __temp_me30)
+	public static <K_c, V_c> void __hx_ctor_haxe_ds_ObjectMap(haxe.ds.ObjectMap<K_c, V_c> __temp_me23)
 	{
 		//line 61 "/usr/lib/haxe/std/java/_std/haxe/ds/ObjectMap.hx"
-		__temp_me30.cachedIndex = -1;
+		__temp_me23.cachedIndex = -1;
 	}
 	
 	

@@ -18,7 +18,7 @@ public class Objects extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_thx_Objects(thx.Objects __temp_me102)
+	public static void __hx_ctor_thx_Objects(thx.Objects __temp_me96)
 	{
 	}
 	
@@ -183,7 +183,7 @@ public class Objects extends haxe.lang.HxObject
 	public static java.lang.Object copyTo(java.lang.Object src, java.lang.Object dst, java.lang.Object cloneInstances)
 	{
 		//line 98 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
-		boolean __temp_cloneInstances100 = ( (haxe.lang.Runtime.eq(cloneInstances, null)) ? (false) : (haxe.lang.Runtime.toBool(cloneInstances)) );
+		boolean __temp_cloneInstances94 = ( (haxe.lang.Runtime.eq(cloneInstances, null)) ? (false) : (haxe.lang.Runtime.toBool(cloneInstances)) );
 		//line 99 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
 		{
 			//line 99 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
@@ -198,7 +198,7 @@ public class Objects extends haxe.lang.HxObject
 				//line 99 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
 				 ++ _g;
 				//line 100 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
-				java.lang.Object sv = thx.Dynamics.clone(haxe.root.Reflect.field(src, field), __temp_cloneInstances100);
+				java.lang.Object sv = thx.Dynamics.clone(haxe.root.Reflect.field(src, field), __temp_cloneInstances94);
 				//line 101 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
 				java.lang.Object dv = haxe.root.Reflect.field(dst, field);
 				//line 102 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
@@ -225,9 +225,9 @@ public class Objects extends haxe.lang.HxObject
 	public static <T> T clone(T src, java.lang.Object cloneInstances)
 	{
 		//line 115 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
-		boolean __temp_cloneInstances101 = ( (haxe.lang.Runtime.eq(cloneInstances, null)) ? (false) : (haxe.lang.Runtime.toBool(cloneInstances)) );
+		boolean __temp_cloneInstances95 = ( (haxe.lang.Runtime.eq(cloneInstances, null)) ? (false) : (haxe.lang.Runtime.toBool(cloneInstances)) );
 		//line 115 "/usr/lib/haxe/lib/thx,core/0,40,1/src/thx/Objects.hx"
-		return ((T) (thx.Dynamics.clone(src, __temp_cloneInstances101)) );
+		return ((T) (thx.Dynamics.clone(src, __temp_cloneInstances95)) );
 	}
 	
 	

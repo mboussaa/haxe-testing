@@ -227,9 +227,9 @@ public final class Grey_Impl_
 	public static boolean nearEquals(double this1, double other, java.lang.Object tolerance)
 	{
 		//line 65 "/shared/color/src/thx/color/Grey.hx"
-		java.lang.Object __temp_tolerance119 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
+		java.lang.Object __temp_tolerance112 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (((java.lang.Object) (1e-9) )) : (tolerance) );
 		//line 65 "/shared/color/src/thx/color/Grey.hx"
-		return thx.Floats.nearEquals(this1, ((double) (other) ), __temp_tolerance119);
+		return thx.Floats.nearEquals(this1, ((double) (other) ), __temp_tolerance112);
 	}
 	
 	
