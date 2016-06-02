@@ -1,11 +1,12 @@
 package thx.color;
 
 import haxe.PosInfos;
-import utest.Assert;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
 import thx.color.palettes.Web;
 
-class TestColor {
-  public function new() {}
+class TestColor extends NanoTestCase{
+ 
 
   public function testParseHex() {
     assertEquals(Web.red, Color.parse("#ff0000"));
@@ -48,5 +49,5 @@ class TestColor {
   }
 
   public function assertEquals(a : Rgbxa, b : Rgbxa, ?pos : PosInfos)
-    Assert.isTrue(a.equals(b), 'expected $a but was $b', pos);
+    assertTrue(a.equals(b), 'expected $a but was $b', pos);
 }

@@ -2,11 +2,12 @@ package thx.color;
 
 import haxe.PosInfos;
 import thx.Floats;
-import utest.Assert;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
 import thx.color.parse.ColorParser;
 
-class TestColorParser {
-  public function new() {}
+class TestColorParser extends NanoTestCase{
+ 
 
   public function testFeatures() {
     assert(

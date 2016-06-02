@@ -1,13 +1,14 @@
 package thx.color;
 
-import utest.Assert;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
 import thx.color.*;
 using thx.Arrays;
 using thx.Iterators;
 using thx.Functions;
 using thx.Floats;
 
-class TestRoundTrip {
+class TestRoundTrip extends NanoTestCase{
   public function new() {
     tests = [
         Rgbx.create(0.05, 0.10, 0.15), // pure black is not guaranteed to make a clean roundtrip
@@ -244,84 +245,84 @@ class TestRoundTrip {
     tests
       .map.fn({
         var t : Lab = _.lab.toString();
-        Assert.isTrue(_.lab == t, 'expected ${_.lab} but was $t');
+        assertTrue(_.lab == t, 'expected ${_.lab} but was $t');
         var t : LCh = _.lch.toString();
-        Assert.isTrue(_.lch == t, 'expected ${_.lch} but was $t');
+        assertTrue(_.lch == t, 'expected ${_.lch} but was $t');
         var t : Cmy = _.cmy.toString();
-        Assert.isTrue(_.cmy == t, 'expected ${_.cmy} but was $t');
+        assertTrue(_.cmy == t, 'expected ${_.cmy} but was $t');
         var t : Cmyk = _.cmyk.toString();
-        Assert.isTrue(_.cmyk == t, 'expected ${_.cmyk} but was $t');
+        assertTrue(_.cmyk == t, 'expected ${_.cmyk} but was $t');
         var t : CubeHelix = _.ch.toString();
-        Assert.isTrue(_.ch == t, 'expected ${_.ch} but was $t');
+        assertTrue(_.ch == t, 'expected ${_.ch} but was $t');
         var t : Grey = _.g.toString();
-        Assert.isTrue(_.g == t, 'expected ${_.g} but was $t');
+        assertTrue(_.g == t, 'expected ${_.g} but was $t');
         var t : Hsl = _.hsl.toString();
-        Assert.isTrue(_.hsl == t, 'expected ${_.hsl} but was $t');
+        assertTrue(_.hsl == t, 'expected ${_.hsl} but was $t');
         var t : Hsv = _.hsv.toString();
-        Assert.isTrue(_.hsv == t, 'expected ${_.hsv} but was $t');
+        assertTrue(_.hsv == t, 'expected ${_.hsv} but was $t');
         var t : Rgbx = _.rgbx.toString();
-        Assert.isTrue(_.rgbx == t, 'expected ${_.rgbx} but was $t');
+        assertTrue(_.rgbx == t, 'expected ${_.rgbx} but was $t');
         var t : Xyz = _.xyz.toString();
-        Assert.isTrue(_.xyz == t, 'expected ${_.xyz} but was $t');
+        assertTrue(_.xyz == t, 'expected ${_.xyz} but was $t');
         var t : Yxy = _.yxy.toString();
-        Assert.isTrue(_.yxy == t, 'expected ${_.yxy} but was $t');
+        assertTrue(_.yxy == t, 'expected ${_.yxy} but was $t');
         var t : Yuv = _.yuv.toString();
-        Assert.isTrue(_.yuv == t, 'expected ${_.yuv} but was $t');
+        assertTrue(_.yuv == t, 'expected ${_.yuv} but was $t');
       });
   }
 
   static function assertRgbx(e : Rgbx, t : Rgbx, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertLab(e : Lab, t : Lab, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertLCh(e : LCh, t : LCh, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertCmy(e : Cmy, t : Cmy, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertCmyk(e : Cmyk, t : Cmyk, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertCubeHelix(e : CubeHelix, t : CubeHelix, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.1),
+    assertTrue(e.nearEquals(t, 0.1),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertHsl(e : Hsl, t : Hsl, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.1),
+    assertTrue(e.nearEquals(t, 0.1),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertHsv(e : Hsv, t : Hsv, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.1),
+    assertTrue(e.nearEquals(t, 0.1),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertXyz(e : Xyz, t : Xyz, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertYuv(e : Yuv, t : Yuv, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 
   static function assertYxy(e : Yxy, t : Yxy, s : String, ?pos : haxe.PosInfos) {
-    Assert.isTrue(e.nearEquals(t, 0.01),
+    assertTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }
 }

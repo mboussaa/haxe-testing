@@ -1,21 +1,22 @@
 package thx.color;
 
-import utest.Assert;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
 
-class TestTemperature {
-  public function new() { }
+class TestTemperature extends NanoTestCase{
+ 
 
   public function testBasics() {
     var t = new Temperature(5000);
-    Assert.equals(5000, t.kelvin);
+    assertEquals(5000, t.kelvin);
   }
 
   public function testStrings() {
     var t = new Temperature(5000);
-    Assert.equals("temperature(5000)", t.toString());
+    assertEquals("temperature(5000)", t.toString());
   }
 
   public function testFromString() {
-    Assert.isTrue(new Temperature(5000).equals("temperature(5000)"));
+    assertTrue(new Temperature(5000).equals("temperature(5000)"));
   }
 }

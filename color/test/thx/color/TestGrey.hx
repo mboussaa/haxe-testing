@@ -1,21 +1,22 @@
 package thx.color;
 
-import utest.Assert;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
 
-class TestGrey {
-  public function new() { }
+class TestGrey extends NanoTestCase{
+ 
 
   public function testBasics() {
     var grey = new Grey(0.2);
-    Assert.equals(0.2, grey.grey);
+    assertEquals(0.2, grey.grey);
   }
 
   public function testStrings() {
     var grey = new Grey(0.5);
-    Assert.equals("grey(50%)", grey.toString());
+    assertEquals("grey(50%)", grey.toString());
   }
 
   public function testFromString() {
-    Assert.isTrue(new Grey(0.2).equals("grey(20%)"));
+    assertTrue(new Grey(0.2).equals("grey(20%)"));
   }
 }

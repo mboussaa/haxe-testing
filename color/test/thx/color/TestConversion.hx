@@ -2,18 +2,19 @@ package thx.color;
 
 import thx.color.Color;
 import thx.color.palettes.Web;
-import utest.Assert;
+import nanotest.NanoTestCase;
+import nanotest.NanoTestRunner;
 using thx.Iterators;
 
-class TestConversion {
-  public function new() {}
+class TestConversion extends NanoTestCase{
+ 
 
   public function testLab() {
     Web.names.keys().map(function(name) {
       var expected : Rgb = Web.names.get(name),
           color : Lab = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -22,7 +23,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : LCh = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -31,7 +32,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Luv = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -40,7 +41,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Cmy = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -49,7 +50,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Cmyk = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -58,7 +59,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : CubeHelix = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -67,7 +68,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Hsl = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -76,7 +77,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Hsv = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -85,7 +86,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : HunterLab = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -94,7 +95,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Rgbx = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -103,7 +104,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Xyz = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -112,7 +113,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Yuv = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 
@@ -121,7 +122,7 @@ class TestConversion {
       var expected : Rgb = Web.names.get(name),
           color : Yxy = expected,
           test : Rgb = color;
-      Assert.equals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
+      assertEquals(expected.toString(), test.toString(), 'expected $expected but was $test for $name');
     });
   }
 }
