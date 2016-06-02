@@ -13,4 +13,3 @@ class TS1 {
     runner.run();
   }
 }
-

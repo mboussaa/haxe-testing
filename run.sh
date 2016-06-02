@@ -2,45 +2,30 @@
 #--java
 if [ $1 = "java" ] 
 then
-for (( i=1; i<="$4"; i++ ))
-do
-java -jar "$2"/target/java/ts"$3"/TS"$3".jar
-done
+java -jar "$2"/target/java/ts"$3"/TS"$3".jar "$4"
 fi
 
 #--js
 if [ $1 = "js" ]
 then
-for (( i=1; i<="$4"; i++ ))
-do
-/usr/bin/X11/node "$2"/target/js/ts"$3"/ts"$3".js
-done
+/usr/bin/X11/node "$2"/target/js/ts"$3"/ts"$3".js "$4"
 fi
 
 #--c++
 if [ $1 = "cpp" ]
 then
-for (( i=1; i<="$4"; i++ ))
-do
- "$2"/target/cpp/ts"$3"/TS"$3"
-done
+ "$2"/target/cpp/ts"$3"/TS"$3" "$4"
 fi
 
 #--cs
 if [ $1 = "cs" ]
 then
-for (( i=1; i<="$4"; i++ ))
-do
-mono "$2"/target/cs/ts"$3"/bin/TS"$3".exe
-done
+mono "$2"/target/cs/ts"$3"/bin/TS"$3".exe "$4"
 fi
 
 #--php
 if [ $1 = "php" ]
 then
-for (( i=1; i<="$4"; i++ ))
-do
-php "$2"/target/php/ts"$3"/index.php
-done
+php "$2"/target/php/ts"$3"/index.php "$4"
 fi
 

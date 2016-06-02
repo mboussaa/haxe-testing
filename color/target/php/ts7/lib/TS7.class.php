@@ -4,7 +4,21 @@
 class TS7 {
 	public function __construct(){}
 	static function addTests($runner) {
-		$runner->addCase(new thx_color_TestCmy(), null, null, null, null);
+		$w = "";
+		{
+			$_g = 0;
+			$_g1 = Sys::args();
+			while($_g < $_g1->length) {
+				$arg = $_g1[$_g];
+				++$_g;
+				$w = $arg;
+				unset($arg);
+			}
+		}
+		haxe_Log::trace("The value of loop_wrapper is " . _hx_string_or_null($w), _hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 15, "className" => "TS7", "methodName" => "addTests")));
+		$x = Std::parseInt($w);
+		haxe_Log::trace("" . _hx_string_rec($x, ""), _hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 18, "className" => "TS7", "methodName" => "addTests")));
+		$runner->addCase(new thx_color_TestCmy($x), null, null, null, null);
 	}
 	static function main() {
 		$runner = new utest_Runner();

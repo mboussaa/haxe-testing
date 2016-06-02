@@ -21,7 +21,24 @@ public class TS7 : global::haxe.lang.HxObject {
 	
 	
 	public static void addTests(global::utest.Runner runner) {
-		runner.addCase(new global::thx.color.TestCmy(), null, null, null, null);
+		unchecked {
+			string w = "";
+			{
+				int _g = 0;
+				global::Array<object> _g1 = global::Sys.args();
+				while (( _g < _g1.length )) {
+					string arg = global::haxe.lang.Runtime.toString(_g1[_g]);
+					 ++ _g;
+					w = arg;
+				}
+				
+			}
+			
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("The value of loop_wrapper is ", w), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addTests", "TS7", "TS7.hx"}, new int[]{1981972957}, new double[]{((double) (15) )}));
+			int x = (global::Std.parseInt(w)).@value;
+			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("", global::haxe.lang.Runtime.toString(x)), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addTests", "TS7", "TS7.hx"}, new int[]{1981972957}, new double[]{((double) (18) )}));
+			runner.addCase(new global::thx.color.TestCmy(((int) (x) )), null, null, null, null);
+		}
 	}
 	
 	

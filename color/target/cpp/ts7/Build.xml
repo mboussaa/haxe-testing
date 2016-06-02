@@ -928,7 +928,10 @@
   </file>
   <file name="src/TS7.cpp" >
    <depend name="include/EReg.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
    <depend name="include/TS7.h"/>
+   <depend name="include/haxe/Log.h"/>
    <depend name="include/thx/color/TestCmy.h"/>
    <depend name="include/utest/Runner.h"/>
    <depend name="include/utest/ui/Report.h"/>

@@ -8,56 +8,125 @@ namespace thx.color {
 		}
 		
 		
-		public TestCmy() {
-			global::thx.color.TestCmy.__hx_ctor_thx_color_TestCmy(this);
+		public TestCmy(int i) {
+			global::thx.color.TestCmy.__hx_ctor_thx_color_TestCmy(this, i);
 		}
 		
 		
-		public static void __hx_ctor_thx_color_TestCmy(global::thx.color.TestCmy __temp_me160) {
+		public static void __hx_ctor_thx_color_TestCmy(global::thx.color.TestCmy __temp_me160, int i) {
+			__temp_me160.x = i;
 		}
 		
 		
 		public static new object __hx_createEmpty() {
-			return new global::thx.color.TestCmy(global::haxe.lang.EmptyObject.EMPTY);
+			return new global::thx.color.TestCmy(((global::haxe.lang.EmptyObject) (global::haxe.lang.EmptyObject.EMPTY) ));
 		}
 		
 		
 		public static new object __hx_create(global::Array arr) {
-			return new global::thx.color.TestCmy();
+			return new global::thx.color.TestCmy(((int) (global::haxe.lang.Runtime.toInt(arr[0])) ));
 		}
 		
 		
+		public int x;
+		
 		public virtual void testBasics() {
 			unchecked {
-				global::Array<double> color = ((global::Array<double>) (new global::Array<double>(new double[]{0.5, 0.5, 0.5})) );
-				global::utest.Assert.@equals(0.5, ((global::Array<double>) (color) )[0], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (10) )}));
-				global::utest.Assert.@equals(0.5, ((global::Array<double>) (color) )[1], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (11) )}));
-				global::utest.Assert.@equals(0.5, ((global::Array<double>) (color) )[2], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (12) )}));
-				color = global::thx.color._Cmy.Cmy_Impl_.normalize(((global::Array<double>) (new global::Array<double>(new double[]{((double) (2) ), ((double) (-2) ), ((double) (2) )})) ));
-				global::utest.Assert.@equals(1, ((global::Array<double>) (color) )[0], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (15) )}));
-				global::utest.Assert.@equals(0, ((global::Array<double>) (color) )[1], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (16) )}));
-				global::utest.Assert.@equals(1, ((global::Array<double>) (color) )[2], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (17) )}));
+				int _g1 = 0;
+				int _g = this.x;
+				while (( _g1 < _g )) {
+					 ++ _g1;
+					global::Array<double> color = ((global::Array<double>) (new global::Array<double>(new double[]{0.5, 0.5, 0.5})) );
+					global::utest.Assert.@equals(0.5, ((global::Array<double>) (color) )[0], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (14) )}));
+					global::utest.Assert.@equals(0.5, ((global::Array<double>) (color) )[1], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (15) )}));
+					global::utest.Assert.@equals(0.5, ((global::Array<double>) (color) )[2], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (16) )}));
+					color = global::thx.color._Cmy.Cmy_Impl_.normalize(((global::Array<double>) (new global::Array<double>(new double[]{((double) (2) ), ((double) (-2) ), ((double) (2) )})) ));
+					global::utest.Assert.@equals(1, ((global::Array<double>) (color) )[0], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (19) )}));
+					global::utest.Assert.@equals(0, ((global::Array<double>) (color) )[1], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (20) )}));
+					global::utest.Assert.@equals(1, ((global::Array<double>) (color) )[2], null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testBasics", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (21) )}));
+				}
+				
 			}
 		}
 		
 		
 		public virtual void testString() {
 			unchecked {
-				global::utest.Assert.@equals("cmy(0.5,0.5,0.5)", global::thx.color._Cmy.Cmy_Impl_.toString(((global::Array<double>) (new global::Array<double>(new double[]{0.5, 0.5, 0.5})) )), null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testString", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (22) )}));
+				int _g1 = 0;
+				int _g = this.x;
+				while (( _g1 < _g )) {
+					 ++ _g1;
+					global::utest.Assert.@equals("cmy(0.5,0.5,0.5)", global::thx.color._Cmy.Cmy_Impl_.toString(((global::Array<double>) (new global::Array<double>(new double[]{0.5, 0.5, 0.5})) )), null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testString", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (28) )}));
+				}
+				
 			}
 		}
 		
 		
 		public virtual void testParse() {
 			unchecked {
-				global::utest.Assert.@equals("cmy(0.5,0.5,0.5)", global::thx.color._Cmy.Cmy_Impl_.toString(global::thx.color._Cmy.Cmy_Impl_.fromString("cmy(0.5,0.5,0.5)")), null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testParse", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (27) )}));
+				int _g1 = 0;
+				int _g = this.x;
+				while (( _g1 < _g )) {
+					 ++ _g1;
+					global::utest.Assert.@equals("cmy(0.5,0.5,0.5)", global::thx.color._Cmy.Cmy_Impl_.toString(global::thx.color._Cmy.Cmy_Impl_.fromString("cmy(0.5,0.5,0.5)")), null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testParse", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (34) )}));
+				}
+				
 			}
 		}
 		
 		
 		public virtual void testFromFloat() {
 			unchecked {
-				global::utest.Assert.isTrue(global::thx.color._Cmy.Cmy_Impl_.@equals(global::thx.color._Cmy.Cmy_Impl_.fromString("cmy(0.5,0.5,0.5)"), global::thx.color._Cmy.Cmy_Impl_.fromFloats(new global::Array<double>(new double[]{0.5, 0.5, 0.5}))), null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testFromFloat", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (33) )}));
+				int _g1 = 0;
+				int _g = this.x;
+				while (( _g1 < _g )) {
+					 ++ _g1;
+					global::utest.Assert.isTrue(global::thx.color._Cmy.Cmy_Impl_.@equals(global::thx.color._Cmy.Cmy_Impl_.fromString("cmy(0.5,0.5,0.5)"), global::thx.color._Cmy.Cmy_Impl_.fromFloats(new global::Array<double>(new double[]{0.5, 0.5, 0.5}))), null, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"testFromFloat", "thx.color.TestCmy", "TestCmy.hx"}, new int[]{1981972957}, new double[]{((double) (41) )}));
+				}
+				
+			}
+		}
+		
+		
+		public override double __hx_setField_f(string field, int hash, double @value, bool handleProperties) {
+			unchecked {
+				switch (hash) {
+					case 120:
+					{
+						this.x = ((int) (@value) );
+						return @value;
+					}
+					
+					
+					default:
+					{
+						return base.__hx_setField_f(field, hash, @value, handleProperties);
+					}
+					
+				}
+				
+			}
+		}
+		
+		
+		public override object __hx_setField(string field, int hash, object @value, bool handleProperties) {
+			unchecked {
+				switch (hash) {
+					case 120:
+					{
+						this.x = ((int) (global::haxe.lang.Runtime.toInt(@value)) );
+						return @value;
+					}
+					
+					
+					default:
+					{
+						return base.__hx_setField(field, hash, @value, handleProperties);
+					}
+					
+				}
+				
 			}
 		}
 		
@@ -89,9 +158,35 @@ namespace thx.color {
 					}
 					
 					
+					case 120:
+					{
+						return this.x;
+					}
+					
+					
 					default:
 					{
 						return base.__hx_getField(field, hash, throwErrors, isCheck, handleProperties);
+					}
+					
+				}
+				
+			}
+		}
+		
+		
+		public override double __hx_getField_f(string field, int hash, bool throwErrors, bool handleProperties) {
+			unchecked {
+				switch (hash) {
+					case 120:
+					{
+						return ((double) (this.x) );
+					}
+					
+					
+					default:
+					{
+						return base.__hx_getField_f(field, hash, throwErrors, handleProperties);
 					}
 					
 				}
@@ -140,6 +235,15 @@ namespace thx.color {
 				
 				return null;
 			}
+		}
+		
+		
+		public override void __hx_getFields(global::Array<object> baseArr) {
+			baseArr.push("x");
+			{
+				base.__hx_getFields(baseArr);
+			}
+			
 		}
 		
 		

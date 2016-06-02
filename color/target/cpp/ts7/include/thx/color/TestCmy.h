@@ -20,21 +20,24 @@ class HXCPP_CLASS_ATTRIBUTES TestCmy_obj : public hx::Object
 		TestCmy_obj();
 
 	public:
-		void __construct();
+		void __construct(Int i);
 		inline void *operator new(size_t inSize, bool inContainer=false,const char *inName="thx.color.TestCmy")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
 			{ return hx::Object::operator new(inSize+extra,false,"thx.color.TestCmy"); }
-		static hx::ObjectPtr< TestCmy_obj > __new();
+		static hx::ObjectPtr< TestCmy_obj > __new(Int i);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~TestCmy_obj();
 
 		HX_DO_RTTI_ALL;
 		hx::Val __Field(const ::String &inString, hx::PropertyAccess inCallProp);
+		hx::Val __SetField(const ::String &inString,const hx::Val &inValue, hx::PropertyAccess inCallProp);
+		void __GetFields(Array< ::String> &outFields);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("TestCmy","\x3d","\x15","\x0b","\x8b"); }
 
+		Int x;
 		void testBasics();
 		::Dynamic testBasics_dyn();
 

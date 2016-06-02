@@ -16,6 +16,19 @@ public class Sys : global::haxe.lang.HxObject {
 	}
 	
 	
+	public static global::Array<object> _args;
+	
+	public static global::Array<object> args() {
+		if (( global::Sys._args == null )) {
+			global::Array<object> ret = new global::Array<object>(((object[]) (global::System.Environment.GetCommandLineArgs()) ));
+			ret.shift();
+			global::Sys._args = ret;
+		}
+		
+		return global::Sys._args.copy();
+	}
+	
+	
 	public static readonly long epochTicks = new global::System.DateTime(1970, 1, 1).Ticks;
 	
 	public static double time() {

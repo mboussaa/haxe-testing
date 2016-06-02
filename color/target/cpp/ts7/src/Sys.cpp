@@ -24,6 +24,14 @@ Dynamic Sys_obj::__Create(hx::DynamicArray inArgs)
 	return _hx_result;
 }
 
+::Array< ::String > Sys_obj::args(){
+            	HX_STACK_FRAME("Sys","args",0xeaeddc7e,"Sys.args","/usr/lib/haxe/std/cpp/_std/Sys.hx",55,0x00fffd0f)
+HXLINE(  55)		return ::__get_args();
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC0(Sys_obj,args,return )
+
 void Sys_obj::exit(Int code){
             	HX_STACK_FRAME("Sys","exit",0xed97463f,"Sys.exit","/usr/lib/haxe/std/cpp/_std/Sys.hx",108,0x00fffd0f)
             	HX_STACK_ARG(code,"code")
@@ -42,6 +50,7 @@ bool Sys_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Propert
 {
 	switch(inName.length) {
 	case 4:
+		if (HX_FIELD_EQ(inName,"args") ) { outValue = args_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"exit") ) { outValue = exit_dyn(); return true; }
 	}
 	return false;
@@ -66,6 +75,7 @@ static void Sys_obj_sVisitStatics(HX_VISIT_PARAMS) {
 hx::Class Sys_obj::__mClass;
 
 static ::String Sys_obj_sStaticFields[] = {
+	HX_HCSTRING("args","\x5d","\x8d","\x74","\x40"),
 	HX_HCSTRING("exit","\x1e","\xf7","\x1d","\x43"),
 	::String(null())
 };

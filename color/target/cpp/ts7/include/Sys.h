@@ -33,6 +33,9 @@ class HXCPP_CLASS_ATTRIBUTES Sys_obj : public hx::Object
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("Sys","\xed","\x64","\x3f","\x00"); }
 
+		static ::Array< ::String > args();
+		static ::Dynamic args_dyn();
+
 		static void exit(Int code);
 		static ::Dynamic exit_dyn();
 
