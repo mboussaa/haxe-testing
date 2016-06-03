@@ -4,7 +4,7 @@
 #echo "delete peviously compiled generated code"
 #rm -rf /shared/thx.color/target/*
 
-for (( i=7; i<=7; i++ ))
+for (( i=1; i<=19; i++ ))
 do
 
 haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -cpp target/cpp/ts"$i"

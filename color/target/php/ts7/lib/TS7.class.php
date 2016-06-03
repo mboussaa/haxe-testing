@@ -15,9 +15,8 @@ class TS7 {
 				unset($arg);
 			}
 		}
-		haxe_Log::trace("The value of loop_wrapper is " . _hx_string_or_null($w), _hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 15, "className" => "TS7", "methodName" => "addTests")));
+		haxe_Log::trace("The value of loop_wrapper is " . _hx_string_or_null($w), _hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 17, "className" => "TS7", "methodName" => "addTests")));
 		$x = Std::parseInt($w);
-		haxe_Log::trace("" . _hx_string_rec($x, ""), _hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 18, "className" => "TS7", "methodName" => "addTests")));
 		$runner->addCase(new thx_color_TestCmy($x), null, null, null, null);
 	}
 	static function main() {

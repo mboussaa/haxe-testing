@@ -19,7 +19,7 @@ public class TS7 extends haxe.lang.HxObject
 	
 	public TS7()
 	{
-		//line 4 "/shared/color/test/TS7.hx"
+		//line 6 "/shared/color/test/TS7.hx"
 		haxe.root.TS7.__hx_ctor__TS7(this);
 	}
 	
@@ -31,61 +31,59 @@ public class TS7 extends haxe.lang.HxObject
 	
 	public static void addTests(utest.Runner runner)
 	{
-		//line 12 "/shared/color/test/TS7.hx"
+		//line 14 "/shared/color/test/TS7.hx"
 		java.lang.String w = "";
-		//line 13 "/shared/color/test/TS7.hx"
+		//line 15 "/shared/color/test/TS7.hx"
 		{
-			//line 13 "/shared/color/test/TS7.hx"
+			//line 15 "/shared/color/test/TS7.hx"
 			int _g = 0;
-			//line 13 "/shared/color/test/TS7.hx"
+			//line 15 "/shared/color/test/TS7.hx"
 			haxe.root.Array<java.lang.String> _g1 = haxe.root.Sys.args();
-			//line 13 "/shared/color/test/TS7.hx"
+			//line 15 "/shared/color/test/TS7.hx"
 			while (( _g < _g1.length ))
 			{
-				//line 13 "/shared/color/test/TS7.hx"
+				//line 15 "/shared/color/test/TS7.hx"
 				java.lang.String arg = _g1.__get(_g);
-				//line 13 "/shared/color/test/TS7.hx"
+				//line 15 "/shared/color/test/TS7.hx"
 				 ++ _g;
-				//line 14 "/shared/color/test/TS7.hx"
+				//line 16 "/shared/color/test/TS7.hx"
 				w = arg;
 			}
 			
 		}
 		
-		//line 15 "/shared/color/test/TS7.hx"
-		haxe.Log.trace.__hx_invoke2_o(0.0, ( "The value of loop_wrapper is " + w ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS7", "TS7.hx", "addTests"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (15) )) )}));
 		//line 17 "/shared/color/test/TS7.hx"
-		int x = ((int) (haxe.lang.Runtime.toInt(haxe.root.Std.parseInt(w))) );
-		//line 18 "/shared/color/test/TS7.hx"
-		haxe.Log.trace.__hx_invoke2_o(0.0, ( "" + x ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS7", "TS7.hx", "addTests"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (18) )) )}));
+		haxe.Log.trace.__hx_invoke2_o(0.0, ( "The value of loop_wrapper is " + w ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS7", "TS7.hx", "addTests"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (17) )) )}));
 		//line 19 "/shared/color/test/TS7.hx"
+		int x = ((int) (haxe.lang.Runtime.toInt(haxe.root.Std.parseInt(w))) );
+		//line 20 "/shared/color/test/TS7.hx"
 		runner.addCase(new thx.color.TestCmy(((int) (x) )), null, null, null, null);
 	}
 	
 	
 	public static void main()
 	{
-		//line 24 "/shared/color/test/TS7.hx"
-		utest.Runner runner = new utest.Runner();
 		//line 25 "/shared/color/test/TS7.hx"
-		haxe.root.TS7.addTests(runner);
+		utest.Runner runner = new utest.Runner();
 		//line 26 "/shared/color/test/TS7.hx"
-		utest.ui.Report.create(runner, null, null);
+		haxe.root.TS7.addTests(runner);
 		//line 27 "/shared/color/test/TS7.hx"
+		utest.ui.Report.create(runner, null, null);
+		//line 28 "/shared/color/test/TS7.hx"
 		runner.run();
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 4 "/shared/color/test/TS7.hx"
+		//line 6 "/shared/color/test/TS7.hx"
 		return new haxe.root.TS7(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 4 "/shared/color/test/TS7.hx"
+		//line 6 "/shared/color/test/TS7.hx"
 		return new haxe.root.TS7();
 	}
 	

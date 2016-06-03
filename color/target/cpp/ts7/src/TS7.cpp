@@ -55,33 +55,32 @@ Dynamic TS7_obj::__Create(hx::DynamicArray inArgs)
 }
 
 void TS7_obj::addTests( ::utest::Runner runner){
-            	HX_STACK_FRAME("TS7","addTests",0x19400356,"TS7.addTests","TS7.hx",5,0x84ba73e6)
+            	HX_STACK_FRAME("TS7","addTests",0x19400356,"TS7.addTests","TS7.hx",7,0x84ba73e6)
             	HX_STACK_ARG(runner,"runner")
-HXLINE(  12)		HX_VARI( ::String,w) = HX_("",00,00,00,00);
-HXLINE(  13)		{
-HXLINE(  13)			HX_VARI( Int,_g) = (int)0;
-HXDLIN(  13)			HX_VARI( ::Array< ::String >,_g1) = ::Sys_obj::args();
-HXDLIN(  13)			while((_g < _g1->length)){
-HXLINE(  13)				HX_VARI( ::String,arg) = _g1->__get(_g);
-HXDLIN(  13)				++_g;
-HXLINE(  14)				w = arg;
+HXLINE(  14)		HX_VARI( ::String,w) = HX_("",00,00,00,00);
+HXLINE(  15)		{
+HXLINE(  15)			HX_VARI( Int,_g) = (int)0;
+HXDLIN(  15)			HX_VARI( ::Array< ::String >,_g1) = ::Sys_obj::args();
+HXDLIN(  15)			while((_g < _g1->length)){
+HXLINE(  15)				HX_VARI( ::String,arg) = _g1->__get(_g);
+HXDLIN(  15)				++_g;
+HXLINE(  16)				w = arg;
             			}
             		}
-HXLINE(  15)		::haxe::Log_obj::trace((HX_("The value of loop_wrapper is ",79,76,58,6c) + w),hx::SourceInfo(HX_("TS7.hx",e6,73,ba,84),15,HX_("TS7",d8,05,40,00),HX_("addTests",00,a6,f2,86)));
-HXLINE(  17)		HX_VARI( Int,x) = ::Std_obj::parseInt(w);
-HXLINE(  18)		::haxe::Log_obj::trace((HX_("",00,00,00,00) + x),hx::SourceInfo(HX_("TS7.hx",e6,73,ba,84),18,HX_("TS7",d8,05,40,00),HX_("addTests",00,a6,f2,86)));
-HXLINE(  19)		runner->addCase( ::thx::color::TestCmy_obj::__new(x),null(),null(),null(),null());
+HXLINE(  17)		::haxe::Log_obj::trace((HX_("The value of loop_wrapper is ",79,76,58,6c) + w),hx::SourceInfo(HX_("TS7.hx",e6,73,ba,84),17,HX_("TS7",d8,05,40,00),HX_("addTests",00,a6,f2,86)));
+HXLINE(  19)		HX_VARI( Int,x) = ::Std_obj::parseInt(w);
+HXLINE(  20)		runner->addCase( ::thx::color::TestCmy_obj::__new(x),null(),null(),null(),null());
             	}
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(TS7_obj,addTests,(void))
 
 void TS7_obj::main(){
-            	HX_STACK_FRAME("TS7","main",0x0268b28f,"TS7.main","TS7.hx",22,0x84ba73e6)
-HXLINE(  24)		HX_VARI(  ::utest::Runner,runner) =  ::utest::Runner_obj::__new();
-HXLINE(  25)		::TS7_obj::addTests(runner);
-HXLINE(  26)		::utest::ui::Report_obj::create(runner,null(),null());
-HXLINE(  27)		runner->run();
+            	HX_STACK_FRAME("TS7","main",0x0268b28f,"TS7.main","TS7.hx",23,0x84ba73e6)
+HXLINE(  25)		HX_VARI(  ::utest::Runner,runner) =  ::utest::Runner_obj::__new();
+HXLINE(  26)		::TS7_obj::addTests(runner);
+HXLINE(  27)		::utest::ui::Report_obj::create(runner,null(),null());
+HXLINE(  28)		runner->run();
             	}
 
 

@@ -458,10 +458,8 @@ TS7.addTests = function(runner) {
 		++_g;
 		w = arg;
 	}
-	haxe_Log.trace("The value of loop_wrapper is " + w,{ fileName : "TS7.hx", lineNumber : 15, className : "TS7", methodName : "addTests"});
-	var x = Std.parseInt(w);
-	haxe_Log.trace("" + x,{ fileName : "TS7.hx", lineNumber : 18, className : "TS7", methodName : "addTests"});
-	runner.addCase(new thx_color_TestCmy(x));
+	haxe_Log.trace("The value of loop_wrapper is " + w,{ fileName : "TS7.hx", lineNumber : 17, className : "TS7", methodName : "addTests"});
+	runner.addCase(new thx_color_TestCmy(Std.parseInt(w)));
 };
 TS7.main = function() {
 	var runner = new utest_Runner();
