@@ -6,9 +6,13 @@ import utest.Assert;
 import thx.color.parse.ColorParser;
 
 class TestColorParser {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testFeatures() {
+    for (i in 0...x){
     assert(
       "a",  [CIInt8(2)],
       "a(2)");
@@ -24,9 +28,10 @@ class TestColorParser {
     assert(
       "hsla", [CIDegree(1), CIPercent(2), CIPercent(3), CIFloat(0.5)],
       "hsla(1deg,2%,3%,0.5)");
-  }
+  }}
 
   public function testChannels() {
+    for (i in 0...x){
     assertStringChannel(CIDegree(1),  "1deg");
     assertStringChannel(CIPercent(1), "1%");
     assertStringChannel(CIFloat(0.1), "0.1");
@@ -34,18 +39,21 @@ class TestColorParser {
     assertStringChannel(CIBool(true), "1");
     assertStringChannel(CIInt8(2),    "2");
     assertStringChannel(CIInt(256),   "256");
-  }
+  }}
 
   public function testInvalidColor() {
+    for (i in 0...x){
     Assert.isNull(ColorParser.parseColor("x"));
     Assert.isNull(ColorParser.parseColor("x[]"));
     Assert.isNull(ColorParser.parseColor("x(x)"));
-  }
+  }}
 
-  public function testInvalidChannel()
+  public function testInvalidChannel(){
+    for (i in 0...x){
     Assert.isNull(ColorParser.parseChannel("x"));
+  }}
 
-  public function assertStringChannel(expected : ChannelInfo, test : String, ?pos : PosInfos)
+  public function (expected : ChannelInfo, test : String, ?pos : PosInfos)
     assertChannel(expected, ColorParser.parseChannel(test), pos);
 
   public function assertChannel(expected : ChannelInfo, test : ChannelInfo, ?pos : PosInfos) {

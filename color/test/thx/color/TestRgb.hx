@@ -4,9 +4,13 @@ import utest.Assert;
 import thx.color.Rgba;
 
 class TestRgb {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testBasics() {
+    for (i in 0...x){
     var red = new Rgb(0xFF0000);
     Assert.equals(0xFF, red.red);
     Assert.equals(0x00, red.green);
@@ -46,16 +50,18 @@ class TestRgb {
     Assert.equals(0x00, black.red);
     Assert.equals(0x00, black.green);
     Assert.equals(0x00, black.blue);
-  }
+  }}
 
   public function testStrings() {
+    for (i in 0...x){
     var color = new Rgb(0x00AAFF);
     Assert.equals("#00AAFF", color.toHex());
     Assert.equals("#00AAFF", color.toString());
     Assert.equals("rgb(0,170,255)", color.toCss3());
-  }
+  }}
 
   public function testFromString() {
+    for (i in 0...x){
     Assert.isTrue(new Rgb(0xFF0000).equals("#ff0000"));
     Assert.isTrue(new Rgb(0xFF0000).equals("#f00"));
     Assert.isTrue(new Rgb(0xFF0000).equals("rgb(255,0,0)"));
@@ -65,14 +71,15 @@ class TestRgb {
     Assert.isTrue(new Rgba(0x00FF00FF).equals("#f0f0"));
     Assert.isTrue(new Rgba(0x00FF00FF).equals("rgba(0,255,0,1)"));
     Assert.isTrue(new Rgba(0x00FF00FF).equals("rgba(0,100%,0,1)"));
-  }
+  }}
 
   public function testCombineColor() {
+    for (i in 0...x){
     var rgba     = Rgb.fromInts([255, 0, 0]).withAlphaf(.42),
         bg       = Rgb.fromInts([153, 200, 224]),
         combined = rgba.combineColor(bg),
         result   = Rgb.fromInts([196, 116, 130]);
 
     Assert.isTrue(result.equals(combined), 'expected ${result} but it is ${combined}');
-  }
+  }}
 }

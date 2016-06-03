@@ -1,3 +1,5 @@
+
+
 import utest.Runner;
 import utest.ui.Report;
 
@@ -15,7 +17,6 @@ w = arg;}
 trace('The value of loop_wrapper is $w');
 
 var x : Int = Std.parseInt(w);
-trace('$x');
 runner.addCase(new thx.color.TestCmy(x));
 }
 
@@ -28,4 +29,3 @@ runner.run();
 
   }
 }
-

@@ -8,7 +8,10 @@ using thx.Functions;
 using thx.Floats;
 
 class TestRoundTrip {
-  public function new() {
+  var x : Int;
+
+  public function new(i) {
+     this.x = i;
     tests = [
         Rgbx.create(0.05, 0.10, 0.15), // pure black is not guaranteed to make a clean roundtrip
         Rgbx.create(1, 0, 0),
@@ -53,6 +56,7 @@ class TestRoundTrip {
   }>;
 
   public function testRgbxRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         // Color Space -> Rgbx -> Color Space
@@ -68,9 +72,10 @@ class TestRoundTrip {
         assertRgbx(_.rgbx, _.yuv, _.yuv);
         assertRgbx(_.rgbx, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testLabRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertLab(_.lab, _.rgbx, _.rgbx);
@@ -85,9 +90,10 @@ class TestRoundTrip {
         assertLab(_.lab, _.yuv, _.yuv);
         assertLab(_.lab, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testLChRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertLCh(_.lch, _.lab, _.lab);
@@ -102,9 +108,10 @@ class TestRoundTrip {
         assertLCh(_.lch, _.yuv, _.yuv);
         assertLCh(_.lch, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testCmyRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertCmy(_.cmy, _.lab, _.lab);
@@ -119,9 +126,10 @@ class TestRoundTrip {
         assertCmy(_.cmy, _.yuv, _.yuv);
         assertCmy(_.cmy, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testCmykRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertCmyk(_.cmyk, _.lab, _.lab);
@@ -136,9 +144,10 @@ class TestRoundTrip {
         assertCmyk(_.cmyk, _.yuv, _.yuv);
         assertCmyk(_.cmyk, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testCubeHelixRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertCubeHelix(_.ch, _.lab, _.lab);
@@ -153,9 +162,10 @@ class TestRoundTrip {
         assertCubeHelix(_.ch, _.yuv, _.yuv);
         assertCubeHelix(_.ch, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testHslRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertHsl(_.hsl, _.lab, _.lab);
@@ -170,9 +180,10 @@ class TestRoundTrip {
         assertHsl(_.hsl, _.yuv, _.yuv);
         assertHsl(_.hsl, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testHsvRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertHsv(_.hsv, _.lab, _.lab);
@@ -187,9 +198,10 @@ class TestRoundTrip {
         assertHsv(_.hsv, _.yuv, _.yuv);
         assertHsv(_.hsv, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testXyzRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertXyz(_.xyz, _.lab, _.lab);
@@ -204,9 +216,10 @@ class TestRoundTrip {
         assertXyz(_.xyz, _.yuv, _.yuv);
         assertXyz(_.xyz, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testYuvRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertYuv(_.xyz, _.lab, _.lab);
@@ -221,9 +234,10 @@ class TestRoundTrip {
         assertYuv(_.xyz, _.xyz, _.xyz);
         assertYuv(_.xyz, _.yxy, _.yxy);
       });
-  }
+  }}
 
   public function testYxyRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         assertYxy(_.yxy, _.lab, _.lab);
@@ -238,9 +252,10 @@ class TestRoundTrip {
         assertYxy(_.yxy, _.rgbx, _.rgbx);
         assertYxy(_.yxy, _.yuv, _.yuv);
       });
-  }
+  }}
 
   public function testToStringRoundtrip() {
+        for (i in 0...x){
     tests
       .map.fn({
         var t : Lab = _.lab.toString();
@@ -268,9 +283,10 @@ class TestRoundTrip {
         var t : Yuv = _.yuv.toString();
         Assert.isTrue(_.yuv == t, 'expected ${_.yuv} but was $t');
       });
-  }
+  }}
 
   static function assertRgbx(e : Rgbx, t : Rgbx, s : String, ?pos : haxe.PosInfos) {
+    
     Assert.isTrue(e.nearEquals(t, 0.01),
       '\n      $e expected, but was\n      $t for\n      $s', pos);
   }

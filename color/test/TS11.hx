@@ -1,3 +1,4 @@
+
 import utest.Runner;
 import utest.ui.Report;
 
@@ -9,18 +10,21 @@ class TS11 {
     //runner.addCase(new thx.color.TestColor());
     //runner.addCase(new thx.color.TestColorParser());
     //runner.addCase(new thx.color.TestConversion());
-    //runner.addCase(new thx.color.TestCmy());
-    //runner.addCase(new thx.color.TestCmyk());
-    //runner.addCase(new thx.color.TestCubeHelix());
-    //runner.addCase(new thx.color.TestGrey());
-    runner.addCase(new thx.color.TestHcl());
- }
+var w : String = "";
+for (arg in Sys.args()){
+w = arg;}
+trace('The value of loop_wrapper is $w');
 
-  public static function main() {
-    var runner = new Runner();
-    addTests(runner);
-    Report.create(runner);
-    runner.run();
-  }
+var x : Int = Std.parseInt(w);
+runner.addCase(new thx.color.TestHcl(x));
 }
 
+  public static function main() {
+
+var runner = new Runner();
+addTests(runner);
+Report.create(runner);
+runner.run();
+
+  }
+}
