@@ -6,9 +6,13 @@ using thx.fp.Lists;
 import thx.Functions.*;
 
 class TestList {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testFoldLeft() {
+        for (i in 0...x){
     var list : List<Int> = Cons(1, Cons(2, Cons(3, Nil)));
     Assert.equals(6, list.foldLeft(0, fn(_0 + _1)));
 
@@ -16,45 +20,52 @@ class TestList {
       acc.push(v);
       return acc;
     }));
-  }
+  }}
 
   public function testToArray() {
+        for (i in 0...x){
     var list : List<Int> = Cons(1, Cons(2, Cons(3, Nil)));
     Assert.same([1,2,3], list.toArray());
-  }
+  }}
 
   public function testIntersperse() {
+        for (i in 0...x){
     var list : List<Int> = Cons(1, Cons(2, Cons(3, Nil))),
         interspersed = list.intersperse(0);
     Assert.same(Cons(1, Cons(0, Cons(2, Cons(0, Cons(3, Nil))))), interspersed);
-  }
+  }}
 
   public function testFromArray() {
+        for (i in 0...x){
     var arr = [1,2,3,4];
     Assert.same(arr, (arr : List<Int>).toArray());
-  }
+  }}
 
   public function testConcat() {
+        for (i in 0...x){
     var l1 : List<Int> = Cons(1, Cons(2, Nil)),
         l2 : List<Int> = Cons(3, Cons(4, Nil)),
         l = l1.concat(l2);
     Assert.same(Cons(1, Cons(2, Cons(3, Cons(4, Nil)))), l);
-  }
+  }}
 
   public function testToString() {
+        for (i in 0...x){
     var list : List<Int> = Cons(1, Cons(2, Cons(3, Nil)));
     Assert.same("[1,2,3]", list.toString());
 
     var list : List<String> = Cons("1", Cons("2", Cons("3", Nil)));
     Assert.same("[1,2,3]", list.toString());
-  }
+  }}
 
   public function testMap() {
+        for (i in 0...x){
     var list : List<Int> = Cons(1, Cons(2, Cons(3, Nil)));
     Assert.same(Cons(2, Cons(4, Cons(6, Nil))), list.map(function(v) return v * 2));
-  }
+  }}
 
   public function testFlatMap() {
+        for (i in 0...x){
     var list : List<Int> = Cons(1, Cons(2, Cons(3, Nil)));
     function map(v : Int) {
       if(v == 0)
@@ -64,10 +75,11 @@ class TestList {
     }
     var slist = list.flatMap(map);
     Assert.same(Cons(1, Cons(2, Cons(1, Cons(3, Cons(2, Cons(1, Nil)))))), slist);
-  }
+  }}
 
   // This transitively tests zipAp and zip2Ap..zip5Ap
   public function testZip5Ap() {
+        for (i in 0...x){
     var sx = List.fromArray(["a", "b", "c"]);
     var ix = List.fromArray([1, 2]);
     var tx = List.fromArray(["x", "y", "z"]);
@@ -75,5 +87,5 @@ class TestList {
     var bx = List.fromArray([true, false, true]);
 
     Assert.same(List.fromArray(["a1x3true", "b2y4false"]), List.zip5Ap(function(s: String, i: Int, t: String, j: Int, b: Bool) return '$s$i$t$j$b', sx, ix, tx, jx, bx));
-  }
+  }}
 }

@@ -8,7 +8,10 @@ import thx.fp.Functions.const;
 import utest.Assert;
 
 class TestWriter {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testMap() {
     var s = pure(1, Strings.monoid).map(function(v) return v + 1);

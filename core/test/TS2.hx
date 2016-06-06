@@ -11,8 +11,7 @@ trace('The value of loop_wrapper is $w');
 
 var x : Int = Std.parseInt(w);
  //   runner.addCase(new thx.TestAnonymousMap(x));
-runner.addCase(new thx.fp.TestState(x));
-//      runner.addCase(new thx.fp.TestWriter(x));
+    runner.addCase(new thx.TestArrays(x));
  //   runner.addCase(new thx.TestAssert(x));
  //   runner.addCase(new thx.TestBigInt(x));
  //   runner.addCase(new thx.TestBitMatrix(x));
