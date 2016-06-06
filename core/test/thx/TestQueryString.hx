@@ -4,9 +4,13 @@ import utest.Assert;
 using thx.QueryString;
 
 class TestQueryString {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testBasics() {
+    for (i in 0...x){
     Assert.same(
       { foo : "bar" },
       QueryString.parse("?foo=bar").toObject()
@@ -97,5 +101,5 @@ class TestQueryString {
       "a=b&c=d" == qs ||
       "c=d&a=b" == qs
     );
-  }
+  }}
 }

@@ -10,14 +10,19 @@ import thx.Ord;
 using thx.Strings;
 
 class TestStrings {
-  public function new(){}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testLowerUpperCaseFirst() {
+    for (i in 0...x){
     Assert.equals("aBC", "ABC".lowerCaseFirst());
     Assert.equals("Abc", "abc".upperCaseFirst());
-  }
+  }}
 
   public function testContains() {
+    for (i in 0...x){
     Assert.isTrue("test".contains(""));
     Assert.isTrue("test".contains("t"));
     Assert.isTrue("test".contains("te"));
@@ -29,9 +34,10 @@ class TestStrings {
     Assert.isFalse("test".contains("test "));
     Assert.isFalse("test".contains(" test"));
     Assert.isFalse("test".contains("tes "));
-  }
+  }}
 
   public function testCount() {
+    for (i in 0...x){
     Assert.equals(3, "one two three four five six seven eight nine ten".count("o"));
     Assert.equals(2, "one two three four five six seven eight nine ten".count("en"));
     Assert.equals(3, "one two three four five six seven eight nine ten".count(" t"));
@@ -42,9 +48,10 @@ class TestStrings {
     Assert.equals(2, "xxxxxx".count("xxx"));
     Assert.equals(1, "xxxxxx".count("xxxx"));
     Assert.equals(0, "x".count("xx"));
-  }
+  }}
 
   public function testContainsAny() {
+    for (i in 0...x){
     Assert.isTrue("test".containsAny(["t", "x", "y"]));
     Assert.isTrue("test".containsAny(["e", "x", "y"]));
     Assert.isTrue("test".containsAny(["s", "x", "y"]));
@@ -57,16 +64,18 @@ class TestStrings {
     Assert.isTrue("one two three".containsAny(["zero", "one", "two"]));
     Assert.isTrue("one two three".containsAny(["one", "two", "three"]));
     Assert.isTrue("one two three".containsAny(["one two", "x", "three"]));
-  }
+  }}
 
   public function testHashCode() {
+    for (i in 0...x){
     Assert.equals(97, "a".hashCode());
     Assert.equals(96354, "abc".hashCode());
     Assert.equals(898829415, "abcdefghijklm".hashCode());
     Assert.equals(410520826, "abcdefghijklmabcdefghijklmabcdefghijklmabcdefghijklmabcdefghijklm!!!".hashCode());
-  }
+  }}
 
   public function testUcwordsws() {
+    for (i in 0...x){
     var tests = [
       { expected : "Test", test : "test" },
       { expected : "Test Test", test : "test test" },
@@ -76,17 +85,19 @@ class TestStrings {
     ];
     for (item in tests)
       Assert.equals(item.expected, item.test.capitalizeWords(true));
-  }
+  }}
 
   public function testDifferAt() {
+    for (i in 0...x){
     Assert.equals(3, Strings.diffAt("abcdef", "abc123"));
     Assert.equals(0, Strings.diffAt("", "abc123"));
     Assert.equals(1, Strings.diffAt("a", "abc123"));
     Assert.equals(0, Strings.diffAt("abc123", ""));
     Assert.equals(1, Strings.diffAt("abc123", "a"));
-  }
+  }}
 
   public function testEllipsis() {
+    for (i in 0...x){
     var test = 'abcdefghijkl',
         tests : Array<{ expected : String, len : Null<Int>, symbol : String }> = [
       { expected : "abcdefghijkl", len : null, symbol : null },
@@ -98,9 +109,10 @@ class TestStrings {
     ];
     for (item in tests)
       Assert.equals(item.expected, test.ellipsis(item.len, item.symbol));
-  }
+  }}
 
   public function testEllipsisMiddle() {
+    for (i in 0...x){
     var test = 'abcdefghijkl',
         tests : Array<{ expected : String, len : Null<Int>, symbol : String }> = [
       { expected : "abcdefghijkl", len : null, symbol : null },
@@ -112,9 +124,10 @@ class TestStrings {
     ];
     for (item in tests)
       Assert.equals(item.expected, test.ellipsisMiddle(item.len, item.symbol));
-  }
+  }}
 
   public function testUcwords() {
+    for (i in 0...x){
     var tests = [
       { expected : "Test", test : "test" },
       { expected : "Test Test", test : "test test" },
@@ -124,9 +137,10 @@ class TestStrings {
     ];
     for (item in tests)
       Assert.equals(item.expected, item.test.capitalizeWords());
-  }
+  }}
 
   public function testAlphaNum() {
+    for (i in 0...x){
     var tests = [
       { expected : true, test : "a" },
       { expected : true, test : "1a" },
@@ -136,15 +150,17 @@ class TestStrings {
     ];
     for (item in tests)
       Assert.equals(item.expected, item.test.isAlphaNum());
-  }
+  }}
 
   public function testHumanize() {
+    for (i in 0...x){
     Assert.equals("hello world", Strings.humanize("helloWorld"));
     Assert.equals("my long string", Strings.humanize("my_long_string"));
     Assert.equals("ignore many", Strings.humanize("ignoreMANY"));
-  }
+  }}
 
   public function testWrapColumn() {
+    for (i in 0...x){
     var text = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
 
     Assert.equals(
@@ -184,92 +200,106 @@ text.wrapColumns(20));
     consequat.",
 text.wrapColumns(20, "    "));
 
-  }
+  }}
 
   public function testWrapColumnPreserveNewLines() {
+    for (i in 0...x){
     var text = "Lorem ipsum dolor sit amet,\n\nconsectetur adipisicing elit";
     Assert.equals(
       "Lorem ipsum dolor\nsit amet,\n\nconsectetur\nadipisicing elit",
       text.wrapColumns(18));
-  }
+  }}
 
   public function testWrapColumnLong() {
+    for (i in 0...x){
     var text = "aaaaaaaaaa aaaa aaa aa";
     Assert.equals(
 "aaaaaaaaaa
 aaaa
 aaa aa", text.wrapColumns(6));
-  }
+  }}
 
   public function testRepeat() {
+    for (i in 0...x){
     Assert.equals('XyXyXy', 'Xy'.repeat(3));
-  }
+  }}
 
   public function testUpTo() {
+    for (i in 0...x){
     Assert.equals('abcdef', 'abcdef'.upTo('x'));
     Assert.equals('ab', 'abcdef'.upTo('cd'));
-  }
+  }}
 
   public function testFrom() {
+    for (i in 0...x){
     Assert.equals('', 'abcdef'.from('x'));
     Assert.equals('cdef', 'abcdef'.from('cd'));
-  }
+  }}
 
   public function testAfter() {
+    for (i in 0...x){
     Assert.equals('', 'abcdef'.after('x'));
     Assert.equals('ef', 'abcdef'.after('cd'));
-  }
+  }}
 
   public function testStripTags() {
+    for (i in 0...x){
     Assert.equals('a code; x', 'a<br/> <script src="aaa">code;</script> x'.stripTags());
-  }
+  }}
 
   public function testLtrim() {
+    for (i in 0...x){
     Assert.equals('abcde', 'abcde'.trimCharsLeft('x'));
     Assert.equals('de', 'abcde'.trimCharsLeft('cba'));
     Assert.equals('abcde', 'abcde'.trimCharsLeft('b'));
 
     Assert.equals('', '/'.trimCharsLeft('/'));
-  }
+  }}
 
   public function testRtrim() {
+    for (i in 0...x){
     Assert.equals('abcde', 'abcde'.trimCharsRight('x'));
     Assert.equals('ab', 'abcde'.trimCharsRight('ced'));
     Assert.equals('abcde', 'abcde'.trimCharsRight('d'));
 
     Assert.equals('', '/'.trimCharsRight('/'));
-  }
+  }}
 
   public function testTrim() {
+    for (i in 0...x){
     Assert.equals('abcde', 'abcde'.trimChars('x'));
     Assert.equals('cd', 'abcde'.trimChars('abe'));
     Assert.equals('abcde', 'abcde'.trimChars('bd'));
 
     Assert.equals('', '/'.trimChars('/'));
-  }
+  }}
 
   public function testToArray() {
+    for (i in 0...x){
     var t = "a☺b☺☺c☺☺☺",
         e = ["a","☺","b","☺","☺","c","☺","☺","☺"];
     Assert.same(e, t.toArray());
-  }
+  }}
 
   public function testToLines() {
+    for (i in 0...x){
     var text = "Split
 to
 lines";
     Assert.same(["Split", "to", "lines"], text.toLines());
-  }
+  }}
 
   public function testReverse() {
+    for (i in 0...x){
     var t = "a☺b☺☺c☺☺☺",
         e = "☺☺☺c☺☺b☺a";
     Assert.same(e, t.reverse());
-  }
+  }}
 
   public function testOrder() {
+    for (i in 0...x){
     Assert.equals(EQ, Strings.order.order("companyId", "companyId"));
     Assert.equals(LT, Strings.order.order("companyIc", "companyId"));
     Assert.equals(GT, Strings.order.order("companyId", "companyIc"));
-  }
+  }}
 }

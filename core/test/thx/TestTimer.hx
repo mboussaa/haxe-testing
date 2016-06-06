@@ -9,7 +9,10 @@ import utest.Assert;
 import thx.Timer;
 
 class TestTimer {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   function assertTime(expected : Float, test : Float, ?pos : haxe.PosInfos) {
     var tollerance = expected * .5;
@@ -17,11 +20,13 @@ class TestTimer {
   }
 
   public function testResolution() {
+    for (i in 0...x){
     var r = Timer.resolution();
     Assert.isTrue(r > 0);
-  }
+  }}
 
   public function testRepeat() {
+    for (i in 0...x){
     var done    = Assert.createAsync(1000),
         delay   = 100,
         start   = Date.now().getTime(),
@@ -36,9 +41,10 @@ class TestTimer {
         done();
       }
     }, delay);
-  }
+  }}
 
   public function testDelay() {
+    for (i in 0...x){
     var done  = Assert.createAsync(),
         delay = 100,
         start = Date.now().getTime();
@@ -47,9 +53,10 @@ class TestTimer {
       assertTime(delay, span);
       done();
     }, delay);
-  }
+  }}
 
   public function testCancelDelay() {
+    for (i in 0...x){
     var done  = Assert.createAsync(1000),
         delay = 100,
         stop  = 50;
@@ -65,5 +72,5 @@ class TestTimer {
       Assert.isTrue(true);
       done();
     }, stop + delay);
-  }
+  }}
 }

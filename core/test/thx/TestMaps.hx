@@ -7,9 +7,12 @@ using thx.Maps;
 using thx.Options;
 
 class TestMaps {
-  public function new() { }
-
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
   public function testTuples() {
+    for (i in 0...x){
     var map = [
       "key1" => 1,
       "key2" => 2
@@ -23,9 +26,10 @@ class TestMaps {
     Assert.equals(tuples[0]._1, 1);
     Assert.equals(tuples[1]._0, "key2");
     Assert.equals(tuples[1]._1, 2);
-  }
+  }}
 
   public function testValues() {
+    for (i in 0...x){
     var map = [
       "key1" => 1,
       "key2" => 2,
@@ -33,16 +37,18 @@ class TestMaps {
     ];
     var values = map.values().order(Ints.compare);
     Assert.same([1, 2, 3], values);
-  }
+  }}
 
   public function testGetOption() {
+    for (i in 0...x){
     var map = [ "key1" => 1];
 
     Assert.same(map.getOption("key1").get(), 1);
     Assert.same(map.getOption("key2").toBool(), false);
-  }
+  }}
 
   public function testMerge() {
+    for (i in 0...x){
     var map1 = [
       "key1" => 1,
       "key2" => 1,
@@ -94,5 +100,5 @@ class TestMaps {
     Assert.same(2, map2.get("key3"));
     Assert.same(1, map3.keys().toArray().length);
     Assert.same(3, map3.get("key3"));
-  }
+  }}
 }

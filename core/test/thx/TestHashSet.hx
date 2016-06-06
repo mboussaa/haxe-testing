@@ -5,22 +5,28 @@ using thx.Arrays;
 using thx.Functions;
 
 class TestHashSet {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testCreate() {
+    for (i in 0...x){
     var s = HashSet.create([new TestItem(1), new TestItem(3), new TestItem(2), new TestItem(3), new TestItem(1)]);
     Assert.same(3, s.length);
     Assert.isTrue(s.exists(new TestItem(1)));
-  }
+  }}
 
   public function testEmpty() {
+    for (i in 0...x){
     var s1 : HashSet<TestItem> = HashSet.create([new TestItem(1)]);
     var s2 = s1.empty();
     Assert.same(1, s1.length);
     Assert.same(0, s2.length);
-  }
+  }}
 
   public function testExists() {
+    for (i in 0...x){
     var i1 = new TestItem(1);
     var i2a = new TestItem(2);
     var i2b = new TestItem(2);
@@ -31,9 +37,10 @@ class TestHashSet {
     Assert.isTrue(s.exists(i2a));
     Assert.isTrue(s.exists(i2b));
     Assert.isTrue(s.exists(new TestItem(2)));
-  }
+  }}
 
   public function testAdd() {
+    for (i in 0...x){
     var s : HashSet<TestItem> = HashSet.create();
     Assert.isTrue(s.add(new TestItem(1)));
     Assert.isTrue(s.add(new TestItem(2)));
@@ -41,9 +48,10 @@ class TestHashSet {
     Assert.isTrue(s.add(new TestItem(3)));
     Assert.isFalse(s.add(new TestItem(3)));
     Assert.same(3, s.length);
-  }
+  }}
 
   public function testPush() {
+    for (i in 0...x){
     var s : HashSet<TestItem> = HashSet.create();
     s.add(new TestItem(1));
     s.add(new TestItem(2));
@@ -51,9 +59,10 @@ class TestHashSet {
     s.add(new TestItem(3));
     s.add(new TestItem(3));
     Assert.same(3, s.length);
-  }
+  }}
 
   public function testRemove() {
+    for (i in 0...x){
     var i1 = new TestItem(1);
     var i2 = new TestItem(2);
     var s = HashSet.create([i1, i2]);
@@ -61,9 +70,10 @@ class TestHashSet {
     Assert.same(1, s.length);
     s.remove(new TestItem(2));
     Assert.same(0, s.length);
-  }
+  }}
 
   public function testCopy() {
+    for (i in 0...x){
     var i1 = new TestItem(1);
     var i2 = new TestItem(2);
     var s1 = HashSet.create([i1, i2]);
@@ -77,9 +87,10 @@ class TestHashSet {
     s1.add(new TestItem(3));
     Assert.same(3, s1.length);
     Assert.same(2, s2.length);
-  }
+  }}
 
   public function testUnion() {
+    for (i in 0...x){
     var s1 = HashSet.create([new TestItem(1), new TestItem(2), new TestItem(3)]);
     var s2 = HashSet.create([new TestItem(2), new TestItem(3), new TestItem(4), new TestItem(5)]);
     var s3 = s1.union(s2);
@@ -91,9 +102,10 @@ class TestHashSet {
     Assert.isTrue(s3.exists(new TestItem(3)));
     Assert.isTrue(s3.exists(new TestItem(4)));
     Assert.isTrue(s3.exists(new TestItem(5)));
-  }
+  }}
 
   public function testIntersection() {
+    for (i in 0...x){
     var s1 = HashSet.create([new TestItem(1), new TestItem(2), new TestItem(3)]);
     var s2 = HashSet.create([new TestItem(2), new TestItem(3), new TestItem(4), new TestItem(5)]);
     var s3 = s1.intersection(s2);
@@ -102,9 +114,10 @@ class TestHashSet {
     Assert.same(2, s3.length);
     Assert.isTrue(s3.exists(new TestItem(2)));
     Assert.isTrue(s3.exists(new TestItem(3)));
-  }
+  }}
 
   public function testDifference() {
+    for (i in 0...x){
     var s1 = HashSet.create([new TestItem(1), new TestItem(2), new TestItem(3)]);
     var s2 = HashSet.create([new TestItem(2), new TestItem(3), new TestItem(4), new TestItem(5)]);
     var s3 = s1.difference(s2); // items in 1 that are not in 2
@@ -116,9 +129,10 @@ class TestHashSet {
     Assert.isTrue(s3.exists(new TestItem(1)));
     Assert.isTrue(s4.exists(new TestItem(4)));
     Assert.isTrue(s4.exists(new TestItem(5)));
-  }
+  }}
 
   public function testSymmetricDifference() {
+    for (i in 0...x){
     var s1 = HashSet.create([new TestItem(1), new TestItem(2), new TestItem(3)]);
     var s2 = HashSet.create([new TestItem(2), new TestItem(3), new TestItem(4), new TestItem(5)]);
     var s3 = s1.symmetricDifference(s2);
@@ -133,20 +147,22 @@ class TestHashSet {
     Assert.isTrue(s4.exists(new TestItem(1)));
     Assert.isTrue(s4.exists(new TestItem(4)));
     Assert.isTrue(s4.exists(new TestItem(5)));
-  }
+  }}
 
   public function testToArray() {
+    for (i in 0...x){
     var s = HashSet.create([new TestItem(1), new TestItem(2)]);
     var a = s.toArray();
     Assert.same(2, a.length);
     Assert.same(1, a.find.fn(_.code == 1).code);
     Assert.same(2, a.find.fn(_.code == 2).code);
-  }
+  }}
 
   public function testToString() {
+    for (i in 0...x){
     var s = HashSet.create([new TestItem(1), new TestItem(2)]);
     Assert.isTrue(~/TestItem \d, TestItem \d}/.match(s.toString()));
-  }
+  }}
 }
 
 class TestItem {

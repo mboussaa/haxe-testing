@@ -3,9 +3,13 @@ package thx;
 import utest.Assert;
 
 class TestStaticResource {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testBasics() {
+    for (i in 0...x){
     Assert.equals(1, ResourceTest.a);
     Assert.notNull(ResourceTest.b);
     Assert.equals("thx", ResourceTest.b.s);
@@ -13,12 +17,13 @@ class TestStaticResource {
     Assert.equals("haxe", ResourceTest.d);
     Assert.equals("value", ResourceTest.fileJson.some);
     Assert.equals("some text\n", ResourceTest.fileText);
-  }
+  }}
 
   public function testDir() {
+    for (i in 0...x){
     Assert.equals("some text\n", ResourceDir.text);
     Assert.equals("value", ResourceDir.object.some);
-  }
+  }}
 }
 
 @:content({ a : 1 })

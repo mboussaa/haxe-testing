@@ -4,9 +4,13 @@ import utest.Assert;
 import thx.Rational;
 
 class TestRational {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testOperations() {
+    for (i in 0...x){
     var x : Rational,
         y : Rational;
 
@@ -45,12 +49,13 @@ class TestRational {
     x = Rational.create( 1,  6);
     y = Rational.create(-4, -8);
     Assert.equals("-1/3", (x - y).toString());
-  }
+  }}
 
   public function testFromInt() {
+    for (i in 0...x){
     var r : Rational = 3;
     Assert.equals("3", r.toString());
     r = r / 2;
     Assert.equals("3/2", r.toString());
-  }
+  }}
 }

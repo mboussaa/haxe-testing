@@ -5,9 +5,13 @@ import thx.Time;
 using haxe.Int64;
 
 class TestTime {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testBasics() {
+    for (i in 0...x){
     var time = Time.createDays(10,9,8,7,6);
     Assert.equals(   10, time.days);
     Assert.equals(    9, time.hours);
@@ -23,9 +27,10 @@ class TestTime {
     Assert.equals(       896887 , time.totalSeconds.toInt());
     Assert.equals(    896887006 , time.totalMilliseconds.toInt());
     Assert.equals("896887006000", time.totalMicroseconds.toStr());
-  }
+  }}
 
   public function testFromString() {
+    for (i in 0...x){
     var time : Time = "125:55:45.123";
     Assert.equals(   5,  time.days);
     Assert.equals('125', time.totalHours.toStr());
@@ -37,5 +42,5 @@ class TestTime {
     Assert.equals("125:55:45.123", time.toString());
     Assert.equals("89:25:30.005", ("3.17:25:30.005" : Time).toString());
     Assert.equals("-89:25:30.05", ("-3.17:25:30.05" : Time).toString());
-  }
+  }}
 }

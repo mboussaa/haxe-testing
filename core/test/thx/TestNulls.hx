@@ -18,7 +18,10 @@ class TestNulls {
   public var nested : { a : { b : String }};
   public var empty : { a : { b : String }};
 
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function setup() {
     this.v = null;
@@ -27,6 +30,7 @@ class TestNulls {
   }
 
   public function testOr() {
+    for (i in 0...x){
     var s : String = null;
     Assert.equals('B', s.or('B'));
     s = 'A';
@@ -60,9 +64,10 @@ class TestNulls {
     setter = 'A';
     Assert.equals('A', Nulls.or(setter, 'B'));
     Assert.equals('A', setter.or('B'));
-  }
+  }}
 
   public function testOpt() {
+    for (i in 0...x){
     var o : { a : { b : { c : String }}} = null;
 
     Assert.isNull((o.a.b.c).opt());
@@ -106,16 +111,17 @@ class TestNulls {
     arr = [[[1,2,3],[4,5,6]]];
     Assert.equals(1, (arr[0][0][0]).opt());
     Assert.equals(6, (arr[0][1][2]).opt());
-  }
+  }}
 
   public function testOrWithIndex() {
+    for (i in 0...x){
     var arr : Array<Array<Array<Null<Int>>>> = null,
         i = 4;
     Assert.equals(7, (arr[0][1][3]).or(7));
     Assert.equals(7, (arr[i][1][3]).or(7));
     Assert.equals(7, (arr[0][i][3]).or(7));
     Assert.equals(7, (arr[0][1][i]).or(7));
-  }
+  }}
 
   var m : {
     f : String -> { change : Void -> String }
@@ -126,6 +132,7 @@ class TestNulls {
   };
 
   public function testOrMethod() {
+    for (i in 0...x){
     Assert.equals('x', (this.m.f('Y').change()).or('x'));
     var first = true;
     m = {
@@ -145,21 +152,24 @@ class TestNulls {
 #if !python
     Assert.equals('x', (this.m2.f('Y').toLowerCase()).or('x'));
 #end
-  }
+  }}
 
   public function testIsNull() {
+    for (i in 0...x){
     Assert.isTrue((empty).isNull());
     Assert.isTrue((empty.a).isNull());
     Assert.isTrue((empty.a.b).isNull());
-  }
+  }}
 
   public function testNotNull() {
+    for (i in 0...x){
     Assert.isTrue((nested).notNull());
     Assert.isTrue((nested.a).notNull());
     Assert.isTrue((nested.a.b).notNull());
-  }
+  }}
 
   public function testEnsure() {
+    for (i in 0...x){
     var nops : String = null,
         yups : String = "some content";
 
@@ -191,7 +201,7 @@ class TestNulls {
     Nulls.ensure(ensureStaticField, "alt");
     Nulls.ensure(ensureField, "alt");
     Nulls.ensure(ensureStaticField, "alt");
-  }
+  }}
 
   var ensureField : String = null;
   static var ensureStaticField : String = null;

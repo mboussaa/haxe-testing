@@ -6,10 +6,14 @@ using thx.Options;
 import utest.Assert;
 
 class TestOrderedMap {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   @:access(thx.core.OrderedMapList.new)
   public function testBasics() {
+    for (i in 0...x){
     var ml = OrderedMap.createString();
 
     Assert.equals(0, ml.length);
@@ -47,17 +51,19 @@ class TestOrderedMap {
 
     Assert.same(["Z", "X"], ml.toArray());
     Assert.same(["z", "x"], ml.keys().toArray());
-  }
+  }}
 
   public function testGetOption() {
+    for (i in 0...x){
     var m = OrderedMap.createString();
     m.set("key1", 1);
 
     Assert.same(m.getOption("key1").get(), 1);
     Assert.same(m.getOption("key2").toBool(), false);
-  }
+  }}
 
   public function testToTuples() {
+    for (i in 0...x){
     var m = OrderedMap.createString();
     m.set("foo", 10);
     m.set("bar", 20);
@@ -69,9 +75,10 @@ class TestOrderedMap {
     Assert.same(20, tuples[1].right);
     Assert.same("baz", tuples[2].left);
     Assert.same(30, tuples[2].right);
-  }
+  }}
 
   public function testAbstract() {
+    for (i in 0...x){
     var ml = OrderedMap.createString();
     ml["k"] = "value";
     Assert.equals("value", ml["k"]);
@@ -86,27 +93,30 @@ class TestOrderedMap {
     Assert.notNull(OrderedMap.createInt());
     Assert.notNull(OrderedMap.createEnum());
     Assert.notNull(OrderedMap.createObject());
-  }
+  }}
 
   public function testEmpty() {
+    for (i in 0...x){
     var ml = OrderedMap.createString();
     ml["k"] = "value";
     var e = ml.empty();
     Assert.isNull(e["k"]);
-  }
+  }}
 
   public function testCopyTo() {
+    for (i in 0...x){
     var ml = OrderedMap.createString();
     ml["k"] = "value";
     var e = ml.empty();
     ml.copyTo(e);
     Assert.equals("value", e["k"]);
-  }
+  }}
 
   public function testClone() {
+    for (i in 0...x){
     var ml = OrderedMap.createString();
     ml["k"] = "value";
     var e = ml.clone();
     Assert.equals("value", e["k"]);
-  }
+  }}
 }

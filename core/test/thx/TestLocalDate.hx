@@ -5,12 +5,16 @@ import utest.Assert;
 import thx.Weekday;
 
 class TestLocalDate {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
   var date = LocalDate.create(2015, 7, 26);
   var tomorrow = LocalDate.create(2015, 7, 27);
 
 
   public function testCreate() {
+    for (i in 0...x){
     Assert.equals(2015, date.year, 'expected 2015 but got ${date.year} for year');
     Assert.equals(7, date.month, 'expected 7 but got ${date.month} for month');
     Assert.equals(26, date.day, 'expected 26 but got ${date.day} for day');
@@ -32,19 +36,22 @@ class TestLocalDate {
     expectations.map(function(o) {
       Assert.isTrue(o.expected == o.test, 'expected ${o.expected.toString()} but was  ${o.test.toString()}');
     });
-  }
+  }}
 
   public function testToString() {
+    for (i in 0...x){
     Assert.equals('2015-07-26', date.toString());
     Assert.equals('1-01-01', LocalDate.fromInt(0).toString());
-  }
+  }}
 
   public function testEquals() {
+    for (i in 0...x){
     Assert.isTrue(date == date);
     Assert.isTrue(date != tomorrow);
-  }
+  }}
 
   public function testCompare() {
+    for (i in 0...x){
     Assert.isFalse(date > date);
     Assert.isTrue(date >= date);
     Assert.isFalse(date < date);
@@ -59,40 +66,46 @@ class TestLocalDate {
     Assert.isTrue(tomorrow >= date);
     Assert.isFalse(tomorrow < date);
     Assert.isFalse(tomorrow <= date);
-  }
+  }}
 
 // C# Date functions are broken in <= 3.2.1
 #if (!cs || haxe_ver > 3.210)
   public function testFromToDate() {
+    for (i in 0...x){
     var d = LocalDate.fromDate(date.toDate());
     Assert.isTrue(date == d, 'expected $date but got ${(d : LocalDate)}');
   }
+  }
 
   public function testFromToTime() {
+    for (i in 0...x){
     var date2 : LocalDate = LocalDate.fromTime(date.toDate().getTime());
     Assert.isTrue(date == date2, 'expected $date but got $date2');
-  }
+  }}
 #end
 
   public function testFromToString() {
+    for (i in 0...x){
     Assert.isTrue(date == LocalDate.fromString(date.toString()));
 
     Assert.equals("-1-07-27",    ("0-06-07" : LocalDate).toString());
     Assert.equals("-1-06-07",    ("-1-06-07" : LocalDate).toString());
     Assert.equals("1-06-07",     ("1-06-07" : LocalDate).toString());
     Assert.equals("-2014-01-01", ("-2014-01-01" : LocalDate).toString());
-  }
+  }}
 
   public function testAdd() {
+    for (i in 0...x){
     var d = date
               .addYears(2)
               .addMonths(9)
               .addDays(10),
         e = "2018-05-06";
     Assert.isTrue(d == e, 'expected $e but got $d');
-  }
+  }}
 
   public function testAddMonth() {
+    for (i in 0...x){
     var tests = [
       { t : date.addMonths(1), e : LocalDate.fromString("2015-08-26") },
       { t : date.addMonths(0), e : LocalDate.fromString("2015-07-26") },
@@ -107,9 +120,10 @@ class TestLocalDate {
     for(test in tests) {
       Assert.isTrue(test.t == test.e, 'expexted ${test.e} but got ${test.t}');
     }
-  }
+  }}
 
   public function testSnapNext() {
+    for (i in 0...x){
     assertSnapNext("2014-01-01", "2014-01-01", Minute);
     assertSnapNext("2014-01-01", "2014-01-01", Hour);
     assertSnapNext("2014-01-02", "2014-01-01", Day);
@@ -120,9 +134,10 @@ class TestLocalDate {
     assertSnapNext("2015-01-01", "2014-12-18", Month);
     assertSnapNext("2015-01-01", "2014-05-12", Year);
     assertSnapNext("2015-01-01", "2014-12-18", Year);
-  }
+  }}
 
   public function testSnapPrev() {
+    for (i in 0...x){
     assertSnapPrev("2013-12-31", "2014-01-01", Minute);
     assertSnapPrev("2013-12-31", "2014-01-01", Hour);
     assertSnapPrev("2013-12-31", "2014-01-01", Day);
@@ -134,9 +149,10 @@ class TestLocalDate {
     assertSnapPrev("2014-12-01", "2014-12-18", Month);
     assertSnapPrev("2014-01-01", "2014-05-12", Year);
     assertSnapPrev("2014-01-01", "2014-12-18", Year);
-  }
+  }}
 
   public function testSnapTo() {
+    for (i in 0...x){
     assertSnapTo("2014-01-01", "2014-01-01", Minute);
     assertSnapTo("2014-01-01", "2014-01-01", Hour);
     assertSnapTo("2014-01-01", "2014-01-01", Day);
@@ -147,7 +163,7 @@ class TestLocalDate {
     assertSnapTo("2015-01-01", "2014-12-18", Month);
     assertSnapTo("2014-01-01", "2014-05-12", Year);
     assertSnapTo("2015-01-01", "2014-12-18", Year);
-  }
+  }}
 
   function assertSnapTo(expected : String, date : String, period : TimePeriod, ?pos : PosInfos) {
     var t = LocalDate.fromString(date).snapTo(period);

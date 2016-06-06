@@ -4,9 +4,13 @@ import utest.Assert;
 import thx.BitSet;
 
 class TestBitSet {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testBitSet() {
+    for (i in 0...x){
     var bits = new BitSet(0);
     Assert.same(0, bits.length);
     Assert.same('', bits.toString());
@@ -54,38 +58,43 @@ class TestBitSet {
     bits.clearAll();
     Assert.same(33, bits.length);
     Assert.same('000000000000000000000000000000000', bits.toString());
-  }
+  }}
 
   public function testFromBools() {
+    for (i in 0...x){
     var bits = BitSet.fromBools([true, false, true, true]);
     Assert.same(4, bits.length);
     Assert.same(true, bits[0]);
     Assert.same(false, bits[1]);
     Assert.same(true, bits[2]);
     Assert.same(true, bits[3]);
-  }
+  }}
 
   public function testToBools() {
+    for (i in 0...x){
     var bits = BitSet.fromString('10101');
     Assert.same([true, false, true, false, true], bits.toBools());
-  }
+  }}
 
   public function testToInt32s() {
+    for (i in 0...x){
     var bits = BitSet.fromString('10101');
     var result = bits.toInt32s();
     Assert.same([21], result);
-  }
+  }}
 
   public function testFromString() {
+    for (i in 0...x){
     var bits = BitSet.fromString('1011');
     Assert.same(4, bits.length);
     Assert.same(true, bits[0]);
     Assert.same(false, bits[1]);
     Assert.same(true, bits[2]);
     Assert.same(true, bits[3]);
-  }
+  }}
 
   public function testPresetLength() {
+    for (i in 0...x){
     var bits1 = new BitSet(35);
     Assert.same(35, bits1.length);
     for (i in 0...35) {
@@ -99,9 +108,10 @@ class TestBitSet {
       Assert.isTrue(bits2[i]);
     }
     Assert.raises(function( ) { var bit = bits2[35]; });
-  }
+  }}
 
   public function testConcat() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('10101');
     var b2 = BitSet.fromString('111');
     var b3 = b1.concat(b2);
@@ -111,18 +121,20 @@ class TestBitSet {
     Assert.same(5, b1.length);
     Assert.same(3, b2.length);
     Assert.same(8, b3.length);
-  }
+  }}
 
   public function testExpand() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('1011');
     var b2 = b1.expand(1);
     var b3 = b1.expand(3);
     Assert.same('1011', b1.toString());
     Assert.same('11001111', b2.toString());
     Assert.same('1111000011111111', b3.toString());
-  }
+  }}
 
   public function testEquals() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('10101100');
     var b2 = BitSet.fromString('10101100');
     var b3 = BitSet.fromString('101011001');
@@ -136,9 +148,10 @@ class TestBitSet {
     Assert.isFalse(b1 == b3);
     Assert.isFalse(b1 == b4);
     Assert.isFalse(b1 == b5);
-  }
+  }}
 
   public function testNotEquals() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('10101100');
     var b2 = BitSet.fromString('10101100');
     var b3 = BitSet.fromString('101011001');
@@ -152,9 +165,10 @@ class TestBitSet {
     Assert.isTrue(b1 != b3);
     Assert.isTrue(b1 != b4);
     Assert.isTrue(b1 != b5);
-  }
+  }}
 
   public function testAnd() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('10101100');
     var b2 = BitSet.fromString('11111111');
     var b3 = BitSet.fromString('00000000');
@@ -164,9 +178,10 @@ class TestBitSet {
     Assert.isTrue(BitSet.fromString('00000000') == (b1.and(b3)));
     Assert.raises(function() { b1.and(b4); });
     Assert.raises(function() { b1.and(b5); });
-  }
+  }}
 
   public function testOr() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('10101100');
     var b2 = BitSet.fromString('11111111');
     var b3 = BitSet.fromString('00000000');
@@ -176,9 +191,10 @@ class TestBitSet {
     Assert.isTrue(BitSet.fromString('10101100') == (b1.or(b3)));
     Assert.raises(function() { b1.or(b4); });
     Assert.raises(function() { b1.or(b5); });
-  }
+  }}
 
   public function testXor() {
+    for (i in 0...x){
     var b1 = BitSet.fromString('10101100');
     var b2 = BitSet.fromString('11111111');
     var b3 = BitSet.fromString('00000000');
@@ -188,19 +204,21 @@ class TestBitSet {
     Assert.isTrue(BitSet.fromString('10101100') == (b1.xor(b3)));
     Assert.raises(function() { b1.xor(b4); });
     Assert.raises(function() { b1.xor(b5); });
-  }
+  }}
 
   public function testNegate() {
+    for (i in 0...x){
     Assert.isTrue(BitSet.fromString('00000000') == BitSet.fromString('11111111').negate());
     Assert.isTrue(BitSet.fromString('11111111') == BitSet.fromString('00000000').negate());
     Assert.isTrue(BitSet.fromString('01010011') == BitSet.fromString('10101100').negate());
-  }
+  }}
 
   public function testClone() {
+    for (i in 0...x){
     var a = BitSet.fromString('0101');
     var b = a.clone();
     b.setAt(0, true);
     Assert.same('0101', a.toString());
     Assert.same('1101', b.toString());
-  }
+  }}
 }

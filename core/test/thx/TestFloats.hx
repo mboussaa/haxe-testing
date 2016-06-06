@@ -10,31 +10,38 @@ import utest.Assert;
 using thx.Floats;
 
 class TestFloats {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testNormalize() {
+    for (i in 0...x){
     Assert.floatEquals(0.0, Floats.normalize( 0.0));
     Assert.floatEquals(1.0, Floats.normalize( 1.0));
     Assert.floatEquals(0.5, Floats.normalize( 0.5));
     Assert.floatEquals(0.0, Floats.normalize(-1.0));
     Assert.floatEquals(1.0, Floats.normalize(10.0));
-  }
+  }}
 
   public function testClamp() {
+    for (i in 0...x){
     Assert.floatEquals(10, Floats.clamp(0, 10, 100));
     Assert.floatEquals(10, Floats.clamp(10, 10, 100));
     Assert.floatEquals(50, Floats.clamp(50, 10, 100));
     Assert.floatEquals(100, Floats.clamp(100, 10, 100));
     Assert.floatEquals(100, Floats.clamp(110, 10, 100));
-  }
+  }}
 
   public function testClampSym() {
+    for (i in 0...x){
     Assert.floatEquals( -10, Floats.clampSym( -100, 10));
     Assert.floatEquals( 10, Floats.clampSym( 100, 10));
     Assert.floatEquals( 0, Floats.clampSym( 0, 10));
-  }
+  }}
 
   public function testCompare() {
+    for (i in 0...x){
     Assert.equals(-1, (1.0).compare(2.0));
     Assert.equals(-1, (1.0).compare(3.0));
     Assert.equals(-1, (-1.0).compare(3.0));
@@ -50,9 +57,10 @@ class TestFloats {
     Assert.equals(1, (2.0).compare(1.0));
     Assert.equals(1, (-3.0).compare(-56.0));
     Assert.equals(1, (Math.PI).compare(-Math.PI));
-  }
+  }}
 
   public function testRound() {
+    for (i in 0...x){
     var value = 123.456;
     Assert.floatEquals(123.5, value.roundTo(1));
     Assert.floatEquals(123.46, value.roundTo(2));
@@ -64,9 +72,10 @@ class TestFloats {
     Assert.floatEquals(1234567890.12, value.roundTo(2));
     Assert.floatEquals(1234567890.123, value.roundTo(3));
     Assert.floatEquals(1234567890.1235, value.roundTo(4));
-  }
+  }}
 
   public function testAngleDifference() {
+    for (i in 0...x){
     var tests = [
       { a : 30,  b : 60,  d : 30 },
       { a : 60,  b : 30,  d : -30 },
@@ -80,9 +89,10 @@ class TestFloats {
       var d = Floats.angleDifference(test.a, test.b);
       Assert.equals(test.d, d, 'expected distance between ${test.a} and ${test.b} to be ${test.d} but it is $d');
     }
-  }
+  }}
 
   public function testInterpolateAngle() {
+    for (i in 0...x){
     var tests = [
       { a : 30,  b : 330, s : 0,   l : 180, cw : 180, ccw : 0   },
       { a : 330, b : 30,  s : 0,   l : 180, cw : 0,   ccw : 180 },
@@ -119,5 +129,5 @@ class TestFloats {
       r = Floats.interpolateAngleCCW(0.5, test.a, test.b);
       Assert.equals(test.ccw, r, 'circular interpolation CCW at 50% between ${test.a} and ${test.b} should be ${test.ccw} but it is ${r}');
     }
-  }
+  }}
 }

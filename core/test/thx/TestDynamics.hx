@@ -5,9 +5,13 @@ import Type;
 using thx.Dynamics;
 
 class TestDynamics {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testDynamics() {
+    for (i in 0...x){
     Assert.equals(null, Dynamics.clone(null));
     Assert.equals(true, true.clone());
     Assert.equals("hello", "hello".clone());
@@ -35,7 +39,7 @@ class TestDynamics {
     var inst3 = inst1.clone(true);
     Assert.notEquals(inst1, inst3);
     Assert.same(inst1.x, inst3.x);
-  }
+  }}
 }
 
 class Point {

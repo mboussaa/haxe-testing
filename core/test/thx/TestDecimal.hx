@@ -4,7 +4,10 @@ import utest.Assert;
 import thx.Decimal;
 
 class TestDecimal {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   var divisionSize : Int;
 
@@ -18,11 +21,13 @@ class TestDecimal {
   }
 
   public function testToBigInt() {
+    for (i in 0...x){
     var v : Decimal = "10234.0001040000";
     Assert.isTrue(v.toBigInt() == "10234", 'expected 10234 but got ${v.toBigInt()}');
-  }
+  }}
 
   public function testTrim() {
+    for (i in 0...x){
     var v : Decimal = "10234.0001040000";
     Assert.isTrue(v.scale == 10);
     Assert.isTrue(v.trim().scale == 6);
@@ -33,18 +38,20 @@ class TestDecimal {
     Assert.isTrue(v.trim(2).scale == 2, 'expected ${v.trim(2)}.scale == 2 but is ${v.trim(2).scale}');
     v = "1.20000000";
     Assert.isTrue(v.trim().scale == 1, 'expected ${v.trim()}.scale == 1 but got ${v.trim().scale}');
-  }
+  }}
 
   public function testStringExp() {
+    for (i in 0...x){
     Assert.isTrue(("1.12345e-10" : Decimal) == "0.000000000112345", 'expected ${("0.000000000112345" : Decimal)} but got ${("1.12345e-10" : Decimal)}');
     Assert.isTrue(("1.12345e+10" : Decimal) == "11234500000", 'expected ${("11234500000" : Decimal)} but got ${("1.12345e+10" : Decimal)}');
     Assert.isTrue(("-1.12345e-10" : Decimal) == "-0.000000000112345", 'expected ${("-0.000000000112345" : Decimal)} but got ${("-1.12345e-10" : Decimal)}');
     Assert.isTrue(("-1.12345e+10" : Decimal) == "-11234500000", 'expected ${("-11234500000" : Decimal)} but got ${("-1.12345e+10" : Decimal)}');
     Assert.isTrue(("0E7" : Decimal) == "0", 'expected ${("0" : Decimal)} but got ${("0E7" : Decimal)}');
     Assert.isTrue((1.234e-50 : Decimal) == '1.234000e-050', 'expected ${(1.234e-50 : Decimal)} == ${("1.234000e-050" : Decimal)}');
-  }
+  }}
 
   public function testModulo() {
+    for (i in 0...x){
     Assert.isTrue((10 : Decimal) % 3 == 1);
     Assert.isTrue((10.2 : Decimal) % 3 == 1.2);
     Assert.isTrue(("12345678900000000" : Decimal) %  "0.0000000012345678" == "0.0000000009832122");
@@ -59,9 +66,10 @@ class TestDecimal {
     Assert.isTrue( (0 : Decimal) % 3 == "0.0");
 
     Assert.raises(function() (1 : Decimal) % 0);
-  }
+  }}
 
   public function testDivision() {
+    for (i in 0...x){
     Assert.isTrue(("12345678900000000" : Decimal) /  "0.0000000012345678" == "10000000729000059778004901.79640194730495967900669367854888");
     Assert.isTrue(("12345678901234567890.12346789" : Decimal) / "987654321.987654321" == "12499999874.843750115314464248433558", 'expected ${("12345678901234567890.12346789" : Decimal)} / ${("987654321.987654321" : Decimal)} == ${("12499999874.843750115314464248433558" : Decimal)} but got ${("12345678901234567890.12346789" : Decimal) / ("987654321.987654321" : Decimal)}');
     Assert.isTrue(("12345678901234567890.12346789" : Decimal) / "-987654321.987654321" == "-12499999874.843750115314464248433558");
@@ -77,41 +85,48 @@ class TestDecimal {
     Assert.isTrue( (0 : Decimal) / 3 == "0.0");
 
     Assert.raises(function() (1 : Decimal) / 0);
-  }
+  }}
 
   public function testMultiply() {
+    for (i in 0...x){
     Assert.isTrue(("12345678900000000" : Decimal) *  "0.0000000012345678" == "15241577.63907942");
-  }
+  }}
 
   public function testInts() {
+    for (i in 0...x){
     Assert.isTrue((123 : Decimal) == ("123" : Decimal));
     Assert.isTrue((-123 : Decimal) == ("-123" : Decimal));
     Assert.isTrue((1234567890 : Decimal) == ("1234567890" : Decimal));
-  }
+  }}
 
   public function testFloats() {
+    for (i in 0...x){
     Assert.isTrue((123.456 : Decimal) == ("123.456" : Decimal));
     Assert.isTrue((-123.456 : Decimal) == ("-123.456" : Decimal));
     Assert.isTrue((0.123456789 : Decimal) == ("0.123456789" : Decimal));
-  }
+  }}
 
   public function testEquality() {
+    for (i in 0...x){
     Assert.isTrue(("123.456" : Decimal) == ("123.4560000" : Decimal));
-  }
+  }}
 
   public function testAddition() {
+    for (i in 0...x){
     Assert.isTrue(("123.456" : Decimal) + "76.544000" == "200");
     Assert.isTrue(("123.456" : Decimal) + "0.004" == "123.46");
     Assert.isTrue(("123.456" : Decimal) + "-0.456" == "123");
-  }
+  }}
 
   public function testSubtraction() {
+    for (i in 0...x){
     Assert.isTrue(("123.456" : Decimal) - "76.544000" == "46.912000");
     Assert.isTrue(("123.456" : Decimal) - "0.004" == "123.452");
     Assert.isTrue(("123.456" : Decimal) - "-0.456" == "123.912");
-  }
+  }}
 
   public function testComparison() {
+    for (i in 0...x){
     Assert.isTrue(("1" : Decimal) > "0.11111");
     Assert.isTrue(("1" : Decimal) > -1);
     Assert.isFalse(("1" : Decimal) > 1);
@@ -124,9 +139,10 @@ class TestDecimal {
     Assert.isTrue(("-1.12345e+10" : Decimal) <= "-11234500000");
     Assert.isTrue(("1.12345e+10" : Decimal) >= "11234500000");
     Assert.isTrue(("1.12345e+10" : Decimal) <= "11234500000");
-  }
+  }}
 
   public function testString() {
+    for (i in 0...x){
     var tests = ["0", "0.00000789", "0.001", "0.123", "1.0", "1", "1.1", "123456789.0123456789", "123456789.012345678900000"],
         dec : Decimal;
     for(test in tests) {
@@ -138,13 +154,14 @@ class TestDecimal {
       dec = '-$test';
       Assert.equals('-$test', dec.toString());
     }
-  }
+  }}
 
   function assertDecimalEquals(test : Decimal, expected : Decimal, ?pos : haxe.PosInfos) {
     Assert.isTrue(test == expected, 'expected $expected but got $test', pos);
   }
 
   public function testRound() {
+    for (i in 0...x){
     assertDecimalEquals((0 : Decimal).round(), 0);
     assertDecimalEquals((0 : Decimal).ceil(), 0);
     assertDecimalEquals((0 : Decimal).floor(), 0);
@@ -185,9 +202,10 @@ class TestDecimal {
     assertDecimalEquals(("-1234567890.1234567890" : Decimal).floorTo(3), "-1234567890.123");
     assertDecimalEquals(("-1234567890.1234567890" : Decimal).floorTo(5), "-1234567890.12345");
     assertDecimalEquals(("-1234567890.1234567890" : Decimal).floorTo(6), "-1234567890.123456");
-  }
+  }}
 
   public function testScaleTo() {
+    for (i in 0...x){
     var tests = [
             { src : "0", exp : "0", scale : 0 },
             { src : "0", exp : "0.00000", scale : 5 },
@@ -207,9 +225,10 @@ class TestDecimal {
       dec = '-${test.src}';
       Assert.equals('-${test.exp}', dec.scaleTo(test.scale).toString(), 'expected -${test.src} to be -${test.exp} when scaled to ${test.scale} but got -${dec.scaleTo(test.scale).toString()}');
     }
-  }
+  }}
 
   public function testNegativePow() {
+    for (i in 0...x){
     Assert.isTrue((10 : Decimal).pow(-2) == 0.01);
-  }
+  }}
 }

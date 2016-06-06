@@ -10,9 +10,13 @@ typedef SpecialObject = {
 };
 
 class TestObjects {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testIssue20151201() {
+    for (i in 0...x){
     var o = { oldId: "1", newId: "2" },
         s = Objects.string(o);
     Assert.stringContains('oldId : "1"', s);
@@ -20,9 +24,10 @@ class TestObjects {
     Assert.stringContains(', ', s);
     Assert.isTrue(s.startsWith("{"));
     Assert.isTrue(s.endsWith("}"));
-  }
+  }}
 
   public function testObjects() {
+    for (i in 0...x){
     var ob = {};
     Assert.isTrue(ob.isEmpty());
     Assert.same([], ob.fields());
@@ -45,8 +50,9 @@ class TestObjects {
     tuples.sort(function(a, b) return Strings.compare(a._0, b._0));
 
     Assert.same([{ _0 : 'a', _1 : 'A'}, { _0 : 'b', _1 : 'B'}], tuples);
-  }
+  }}
   public function testAssign() {
+    for (i in 0...x){
     var o = {'name' : 'Franco', age : 19};
     var out : Dynamic = thx.Objects.assign(o, { 'foo': 'bar', 'name' : 'Michael', 'age' : 'Two'});
 
@@ -57,9 +63,10 @@ class TestObjects {
     for (field in Reflect.fields(out)) {
       Assert.same(Reflect.field(out, field), Reflect.field(o, field));
     }
-  }
+  }}
 
   public function testCombine() {
+    for (i in 0...x){
     var o = {'name' : 'Franco', age : 19};
     var out : Dynamic = thx.Objects.combine(o, { 'foo': 'bar', 'name' : 'Michael', 'age' : 'Two'});
 
@@ -67,9 +74,10 @@ class TestObjects {
     Assert.same("Two", out.age);
     Assert.same("bar", out.foo);
     Assert.same("Franco", o.name);
-  }
+  }}
 
   public function testMergeWithNullable() {
+    for (i in 0...x){
     var a : Null<SpecialObject>,
         options : { sub : Null<SpecialObject> } = { sub : {}};
 
@@ -79,9 +87,10 @@ class TestObjects {
     }, options.sub);
 
     Assert.same('baz', a.foo);
-  }
+  }}
 
   public function testMergeWithTypedef() {
+    for (i in 0...x){
     var to : SpecialObject = {
           bar : "qux"
         },
@@ -95,9 +104,10 @@ class TestObjects {
     Assert.same(merged.foo, from.foo);
     Assert.same(merged.bar, to.bar);
     Assert.same(Reflect.field(merged, 'extra'), 'field');
-  }
+  }}
 
   public function testHasPath() {
+    for (i in 0...x){
     var o = {
       key1: {
         key2: 123,
@@ -120,9 +130,10 @@ class TestObjects {
 
     Assert.isFalse(o.hasPath('key1.key4.2'));
     Assert.isFalse(o.hasPath('key1.key7'));
-  }
+  }}
 
   public function testHasPathValue() {
+    for (i in 0...x){
     var o = {
       key1: {
         key2: 123,
@@ -143,9 +154,10 @@ class TestObjects {
     Assert.isFalse(o.hasPathValue('key1.key6'));
     Assert.isFalse(o.hasPathValue('key1.key4.2'));
     Assert.isFalse(o.hasPathValue('key1.key7'));
-  }
+  }}
 
   public function testGetPath() {
+    for (i in 0...x){
     var o = {
       key1: {
         key2: 123,
@@ -171,9 +183,10 @@ class TestObjects {
     Assert.isNull(o.getPath(""));
     Assert.isNull(o.getPath("bad"));
     Assert.isNull(o.getPath("bad.key"));
-  }
+  }}
 
   public function testSetPath() {
+    for (i in 0...x){
     Assert.same({ key: "val" }, ({}).setPath("key", "val"));
     Assert.same({ key1: "val1", key2: "val2" }, ({}).setPath("key1", "val1").setPath("key2", "val2"));
     Assert.same({ key1: { key2: "val" } }, ({}).setPath("key1.key2", "val"));
@@ -190,9 +203,10 @@ class TestObjects {
     Assert.same({ list : [1, 2] }, ({}).setPath("list.*", 1).setPath("list.*", 2));
     Assert.same([[1, 2]], [].setPath("0.*", 1).setPath("0.*", 2));
     Assert.same([[1], [2]], [].setPath("0.*", 1).setPath("*.*", 2));
-  }
+  }}
 
   public function testRemovePath() {
+    for (i in 0...x){
     var simple = { foo: "bar" };
     var nested = {
       foo: {
@@ -216,5 +230,5 @@ class TestObjects {
 
     Assert.same(arr, arr.removePath('foo.0.bar'));
     Assert.same({ foo: [{}, {}]}, arr.removePath('foo.1.bar'));
-  }
+  }}
 }

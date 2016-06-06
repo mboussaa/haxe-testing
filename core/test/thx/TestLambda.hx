@@ -4,9 +4,13 @@ import thx.Functions.*;
 import thx.Conditions.*;
 
 class TestLambda {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testFunctions() {
+    for (i in 0...x){
     Assert.same([2,3], [1,2].map(fn(_+1)));
 
     Assert.equals(0, fn((0))());
@@ -36,10 +40,11 @@ class TestLambda {
     Assert.equals("21", fn({ var _2a = 2; '$_2a$_0'; })("1"));
     Assert.equals("$_1$_0", fn("$_1$_0")());
     Assert.equals("$_0", fn('$$_0')());
-  }
+  }}
 
 
   public function testForms() {
+    for (i in 0...x){
     with(Assert,{
       _.equals(1,1);
 
@@ -82,6 +87,6 @@ class TestLambda {
       _.equals(true,not(false));
 
     });
-  }
+  }}
 
 }

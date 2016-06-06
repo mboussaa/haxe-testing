@@ -4,9 +4,13 @@ import utest.Assert;
 using thx.Url;
 
 class TestUrl {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
 	public function testBasics() {
+    for (i in 0...x){
 		var url : Url = "http://user:password@www.example.com:8888/some/path/name.ext?a=b&c=d#hashtag/is/here";
 		Assert.equals("http", url.protocol);
 		Assert.equals("user:password", url.auth);
@@ -19,9 +23,10 @@ class TestUrl {
     );
 		Assert.equals("/some/path/name.ext", url.pathName);
 		Assert.equals("hashtag/is/here", url.hash);
-	}
+	}}
 
   public function testToString() {
+    for (i in 0...x){
     var urls : Array<String> = [
       "http://user:password@www.example.com:8888/some/path/name.ext?a=b#hashtag/is/here",
       "http://example.com",
@@ -36,9 +41,10 @@ class TestUrl {
     ];
     for(url in urls)
       Assert.equals(url, Url.parse(url, false).toString());
-  }
+  }}
 
   public function testAbsolute() {
+    for (i in 0...x){
     var url : Url = "http://example.com";
     Assert.isTrue(url.isAbsolute);
     Assert.isFalse(url.isRelative);
@@ -50,5 +56,5 @@ class TestUrl {
     url = "/some/path";
     Assert.isFalse(url.isAbsolute);
     Assert.isTrue(url.isRelative);
-  }
+  }}
 }

@@ -5,18 +5,23 @@ import thx.Error;
 import thx.Path;
 
 class TestPath {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testIsRelativeAndIsAbsolute() {
+    for (i in 0...x){
     var rel : Path = "a/b",
         abs : Path = "/a/b";
     Assert.isTrue(rel.isRelative());
     Assert.isFalse(rel.isAbsolute());
     Assert.isTrue(abs.isAbsolute());
     Assert.isFalse(abs.isRelative());
-  }
+  }}
 
   public function testPathTo() {
+    for (i in 0...x){
     var path1 : Path = "/a/b/c",
         path2 : Path = "/a/d",
         path3 : Path = "/x/y/z",
@@ -29,35 +34,40 @@ class TestPath {
     Assert.equals('/a/b/c/a/b/c', path1.pathTo(path4).toString());
     Assert.equals('/a/d', path5.pathTo(path2).toString());
     Assert.equals('a/b/c/x/y/z', path4.pathTo(path5).toString());
-  }
+  }}
 
   public function testUp() {
+    for (i in 0...x){
     Assert.equals('/a/b', ('/a/b/c/' : Path).up().toString());
     Assert.equals('/', ('/a' : Path).up(2).toString());
-  }
+  }}
 
   public function testDir() {
+    for (i in 0...x){
     Assert.equals('/a/b', ("/a/b/c" : Path).dir());
     Assert.equals('a/b',  ("a/b/c" : Path).dir());
     Assert.equals('.',  ("a" : Path).dir());
     Assert.equals('.',  (".." : Path).dir());
-  }
+  }}
 
   public function testBase() {
+    for (i in 0...x){
     var path : Path = "/a/b.c";
     Assert.equals('b.c', path.base());
     Assert.equals('b', path.base('.c'));
     Assert.equals('b.', path.base('c'));
     Assert.equals('b.c', path.base('.d'));
-  }
+  }}
 
   public function testExt() {
+    for (i in 0...x){
     var path : Path = "";
     Assert.equals('c', ('/a/b.c' : Path).ext());
     Assert.equals('', ('/a/b/c' : Path).ext());
-  }
+  }}
 
   public function testSep() {
+    for (i in 0...x){
     var path : Path = "/path/to/file.png",
         win = path.toWin32("C:");
     Assert.equals('/', path.sep);
@@ -66,20 +76,23 @@ class TestPath {
     Assert.isFalse(path.isWin32());
     Assert.isTrue(win.isWin32());
     Assert.isFalse(win.isNix());
-  }
+  }}
 
   public function testJoin() {
+    for (i in 0...x){
     Assert.equals('/a/b/c', (('/a/x' : Path) / ('../b/c' : Path)).toString());
     Assert.equals('../b/c', (('../x' : Path) / ('../b/c' : Path)).toString());
     Assert.equals('/b/c', (('/a/x' : Path) / ('/b/c' : Path)).toString());
-  }
+  }}
 
   public function testJoinString() {
+    for (i in 0...x){
     Assert.equals('/a/b/c', (('/a/b' : Path) / "c").toString());
     Assert.equals('../d', (('../x' : Path) / "../d").toString());
-  }
+  }}
 
   public function testToWin32ToNix() {
+    for (i in 0...x){
     var path : Path = "/path/to/file.png",
         win = path.toWin32();
     Assert.equals("C:\\path\\to\\file.png", win.toString());
@@ -89,16 +102,18 @@ class TestPath {
     win = path.toWin32();
     Assert.equals("path\\to\\file.png", win.toString());
     Assert.equals("path/to/file.png", win.toNix().toString());
-  }
+  }}
 
   public function testNormalization() {
+    for (i in 0...x){
     Assert.equals('c', ('a/.././b/../c/.' : Path).toString());
     Assert.equals('a/c', ('a/./b/../c/.' : Path).toString());
     Assert.equals('/b/c', ('/a/.././b/./c/.' : Path).toString());
     Assert.equals('../../c', ('a/../../../b/../c/.' : Path).toString());
-  }
+  }}
 
   public function testToString() {
+    for (i in 0...x){
     Assert.equals('.', ('.' : Path).toString());
     Assert.equals('..', ('..' : Path).toString());
     Assert.equals('..', ('../' : Path).toString());
@@ -108,9 +123,10 @@ class TestPath {
     Assert.equals('/a/a', ('/a/a/' : Path).toString());
     Assert.equals('.', ('a/..' : Path).toString());
     Assert.equals('a', ('a' : Path).toString());
-  }
+  }}
 
   public function testNormalize() {
+    for (i in 0...x){
     var p = Path.raw(["/", "/", "a/*>b"]);
     Assert.isFalse(p.isValid());
     p = p.normalize();
@@ -121,9 +137,10 @@ class TestPath {
     p = p.normalize();
     Assert.isTrue(p.isValid());
     Assert.equals("C:\\a___b", p.toString());
-  }
+  }}
 
   public function testRoot() {
+    for (i in 0...x){
     var root : Path = "C:\\";
     Assert.isFalse(root.isNix());
     Assert.isTrue(root.isWin32());
@@ -141,5 +158,5 @@ class TestPath {
     Assert.isTrue(root.isRoot());
     Assert.equals("/", root.toString());
     Assert.equals(".", root.asRelative().toString());
-  }
+  }}
 }

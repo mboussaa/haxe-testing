@@ -9,9 +9,13 @@ import utest.Assert;
 using thx.Ints;
 
 class TestInts {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testRange() {
+    for (i in 0...x){
     var range = Ints.range(2, 7, 1);
     Assert.same([2,3,4,5,6], range);
     range = Ints.range(2, 7, 2);
@@ -21,9 +25,10 @@ class TestInts {
 
     range = Ints.range(7, 2, -2);
     Assert.same([7,5,3], range);
-  }
+  }}
 
   public function testParse() {
+    for (i in 0...x){
     var tests = [
       { e : -50, t : "-50", b : 10 },
       { e :  50, t : "50", b : 10 },
@@ -55,9 +60,10 @@ class TestInts {
       Assert.isTrue(test.t.canParse(), 'Ints.parse should not be able to parse ${test.t}');
       Assert.equals(test.e, test.t.parse(test.b), 'expected ${test.e} converting "${test.t}" with base ${test.b} but got ${test.t.parse(test.b)}');
     }
-  }
+  }}
 
   public function testToString() {
+    for (i in 0...x){
     var tests = [
       { e : "1010", t : 10, b : 2 },
       { e : "12", t : 10, b : 8 },
@@ -68,5 +74,5 @@ class TestInts {
     for(test in tests) {
       Assert.equals(test.e, test.t.toString(test.b));
     }
-  }
+  }}
 }

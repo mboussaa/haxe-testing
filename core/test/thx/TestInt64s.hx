@@ -10,9 +10,13 @@ using thx.Ints;
 using thx.Int64s;
 
 class TestInt64s {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testRounding() {
+    for (i in 0...x){
     var tests = [
       { roundUp :  3, roundDown :  2, round :  3, num : 5, div :  2, pos : here() },
       { roundUp :  0, roundDown :  0, round :  0, num : 0, div :  2, pos : here() },
@@ -40,7 +44,7 @@ class TestInt64s {
       Assert.isTrue(up    == num.divCeil(div),  'expected $up but got ${num.divCeil(div)} from $num.divCeil($div)', test.pos);
       Assert.isTrue(down  == num.divFloor(div), 'expected $down but got ${num.divFloor(div)} from $num.divFloor($div)', test.pos);
     }
-  }
+  }}
 
   static inline function here(?pos : haxe.PosInfos) return pos;
 }

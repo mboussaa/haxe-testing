@@ -8,9 +8,13 @@ import utest.Assert;
 import thx.ReadonlyArray;
 
 class TestReadonlyArray {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testInsertAt() {
+    for (i in 0...x){
     var a : ReadonlyArray<Int> = [1,2,4],
         b = a.insertAt(0, 0);
     Assert.isTrue(a != b);
@@ -21,9 +25,10 @@ class TestReadonlyArray {
 
     b = a.insertAt(10, 5);
     Assert.same([1,2,4,5], b);
-  }
+  }}
 
   public function testReplaceAt() {
+    for (i in 0...x){
     var a : ReadonlyArray<Int> = [1,2,4],
         b = a.replaceAt(0, 0);
     Assert.isTrue(a != b);
@@ -34,16 +39,18 @@ class TestReadonlyArray {
 
     b = a.replaceAt(10, 5);
     Assert.same([1,2,4,5], b);
-  }
+  }}
 
   public function testPush() {
+    for (i in 0...x){
     var a : ReadonlyArray<Int> = [1, 2, 3];
     var b = a.push(4);
     Assert.same([1, 2, 3], a);
     Assert.same([1, 2, 3, 4], b);
-  }
+  }}
 
   public function testPop() {
+    for (i in 0...x){
     var a : ReadonlyArray<Int> = [1, 2];
 
     var result = a.pop();
@@ -61,9 +68,10 @@ class TestReadonlyArray {
     Assert.same([], result._1);
 
     Assert.same([1, 2], a);
-  }
+  }}
 
   public function testShift() {
+    for (i in 0...x){
     var a : ReadonlyArray<Int> = [1, 2];
 
     var result = a.shift();
@@ -81,12 +89,13 @@ class TestReadonlyArray {
     Assert.same([], result._1);
 
     Assert.same([1, 2], a);
-  }
+  }}
 
   public function testUnshift() {
+    for (i in 0...x){
     var a : ReadonlyArray<Int> = [1, 2, 3];
     var b = a.unshift(4);
     Assert.same([1, 2, 3], a);
     Assert.same([4, 1, 2, 3], b);
-  }
+  }}
 }

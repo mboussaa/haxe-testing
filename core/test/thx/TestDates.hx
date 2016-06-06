@@ -5,9 +5,13 @@ import utest.Assert;
 using thx.Dates;
 
 class TestDates {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testCreate() {
+    for (i in 0...x){
     var expectations = [
       // normal
       { expected : new Date(2014, 11, 1, 0, 0, 0), test : Dates.create(2014,11,1) },
@@ -35,9 +39,10 @@ class TestDates {
     expectations.map(function(o) {
       Assert.floatEquals(o.expected.getTime(), o.test.getTime(), 'expected ${o.expected.toString()} but was  ${o.test.toString()}');
     });
-  }
+  }}
 
   public function testSnapNext() {
+    for (i in 0...x){
     assertSnapNext("2014-01-01 10:07:00", "2014-01-01 10:06:10", Minute);
     assertSnapNext("2014-01-01 10:06:00", "2014-01-01 10:05:50", Minute);
     assertSnapNext("2014-01-01 11:00:00", "2014-01-01 10:10:10", Hour);
@@ -50,9 +55,10 @@ class TestDates {
     assertSnapNext("2015-01-01 00:00:00", "2014-12-18 00:00:00", Month);
     assertSnapNext("2015-01-01 00:00:00", "2014-05-12 00:00:00", Year);
     assertSnapNext("2015-01-01 00:00:00", "2014-12-18 00:00:00", Year);
-  }
+  }}
 
   public function testSnapPrev() {
+    for (i in 0...x){
     assertSnapPrev("2014-01-01 10:06:00", "2014-01-01 10:06:10", Minute);
     assertSnapPrev("2014-01-01 10:05:00", "2014-01-01 10:05:50", Minute);
     assertSnapPrev("2014-01-01 10:00:00", "2014-01-01 10:10:10", Hour);
@@ -65,9 +71,10 @@ class TestDates {
     assertSnapPrev("2014-12-01 00:00:00", "2014-12-18 00:00:00", Month);
     assertSnapPrev("2014-01-01 00:00:00", "2014-05-12 00:00:00", Year);
     assertSnapPrev("2014-01-01 00:00:00", "2014-12-18 00:00:00", Year);
-  }
+  }}
 
   public function testSnapTo() {
+    for (i in 0...x){
     assertSnapTo("2014-01-01 10:06:00", "2014-01-01 10:06:10", Minute);
     assertSnapTo("2014-01-01 10:06:00", "2014-01-01 10:05:50", Minute);
     assertSnapTo("2014-01-01 10:00:00", "2014-01-01 10:10:10", Hour);
@@ -80,7 +87,7 @@ class TestDates {
     assertSnapTo("2015-01-01 00:00:00", "2014-12-18 00:00:00", Month);
     assertSnapTo("2014-01-01 00:00:00", "2014-05-12 00:00:00", Year);
     assertSnapTo("2015-01-01 00:00:00", "2014-12-18 00:00:00", Year);
-  }
+  }}
 
   function assertSnapTo(expected : String, date : String, period : TimePeriod, ?pos : PosInfos) {
     var t = Dates.snapTo(Date.fromString(date), period);

@@ -5,7 +5,10 @@ import utest.Assert as A;
 using thx.Assert;
 
 class TestAssert {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   var orig : IAssertBehavior;
   var behavior : CollectBehavior;
@@ -15,19 +18,22 @@ class TestAssert {
   }
 
   public function teardown() {
+
     Assert.behavior = orig;
   }
 
   public function testIsBool() {
+        for (i in 0...x){
     Assert.isTrue(true);
     Assert.isTrue(false);
     Assert.isFalse(true);
     Assert.isFalse(false);
 
     expect(2, 2);
-  }
+  }}
 
   public function testIsNull() {
+    for (i in 0...x){
     Assert.isNull(null);
     Assert.isNull(0);
     Assert.isNull(0.0);
@@ -40,9 +46,10 @@ class TestAssert {
     Assert.isNull(true);
     Assert.isNull(false);
     expect(1, 10);
-  }
+  }}
 
   public function testNotNull() {
+    for (i in 0...x){
     Assert.notNull(null);
     Assert.notNull(0);
     Assert.notNull(0.0);
@@ -55,9 +62,10 @@ class TestAssert {
     Assert.notNull(true);
     Assert.notNull(false);
     expect(10, 1);
-  }
+  }}
 
   public function testRaisesSuccess() {
+    for (i in 0...x){
     var counter = 0,
         tests = [
           { exception : ("e" : Dynamic), catches : ([String, Dynamic, null] : Array<Dynamic>) },
@@ -73,9 +81,10 @@ class TestAssert {
       }
     }
     expect(counter, 0);
-  }
+  }}
 
   public function testRaisesFailure() {
+    for (i in 0...x){
     var counter = 0,
         tests = [
           { exception : ("e" : Dynamic), catches : ([Int, Float, TestAssert] : Array<Dynamic>) },
@@ -91,9 +100,10 @@ class TestAssert {
       }
     }
     expect(0, counter);
-  }
+  }}
 
   public function testIs() {
+    for (i in 0...x){
     var values : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(), {},      [1]];
     var types  : Array<Dynamic> = [String, Int, Float, TestAssert,       Dynamic, Array];
     var i = 0;
@@ -104,9 +114,10 @@ class TestAssert {
         Assert.is(value, type);
       }
     expect(expectedsuccess, i-expectedsuccess);
-  }
+  }}
 
   public function testSamePrimitive() {
+    for (i in 0...x){
     Assert.same(null, 1);
     Assert.same(1, 1);
     Assert.same(1, "1");
@@ -120,9 +131,10 @@ class TestAssert {
     Assert.same(new Date(2000, 0, 1, 0, 0, 0), new Date(2000, 0, 1, 0, 0, 0));
 
     expect(5, 6);
-  }
+  }}
 
   public function testSameType() {
+    for (i in 0...x){
     Assert.same(null, {});
     Assert.same(null, null);
     Assert.same({}, null);
@@ -132,9 +144,10 @@ class TestAssert {
     Assert.same(None, null);
 
     expect(1, 6);
-  }
+  }}
 
   public function testSameArray() {
+    for (i in 0...x){
     Assert.same([], []);
     Assert.same([1], ["1"]);
     Assert.same([1,2,3], [1,2,3]);
@@ -145,9 +158,10 @@ class TestAssert {
     Assert.same([1,[1,2]], [1,[]], true);
 
     expect(4, 4);
-  }
+  }}
 
   public function testSameObject() {
+    for (i in 0...x){
     Assert.same({}, {});
     Assert.same({a:1}, {a:"1"});
     Assert.same({a:1,b:"c"}, {a:1,b:"c"});
@@ -158,11 +172,12 @@ class TestAssert {
     Assert.same({a:1,b:{a:1,c:"c"}}, {a:1,b:{}}, true);
 
     expect(4, 4);
-  }
+  }}
 
   public var value : String;
   public var sub : TestAssert;
   public function testSameInstance() {
+    for (i in 0...x){
     var c1 = new TestAssert();
     c1.value = "a";
     var c2 = new TestAssert();
@@ -186,9 +201,10 @@ class TestAssert {
     Assert.same(r1, r3, true);
 
     expect(4, 2);
-  }
+  }}
 
   public function testSameIterable() {
+    for (i in 0...x){
     var list1 = new List<Dynamic>();
     list1.add("a");
     list1.add(1);
@@ -212,9 +228,10 @@ class TestAssert {
     Assert.same(0...3, 0...4);
 
     expect(3, 2);
-  }
+  }}
 
   public function testSameMap() {
+    for (i in 0...x){
     var h1 = new haxe.ds.StringMap();
     h1.set('a', 'b');
     h1.set('c', 'd');
@@ -236,9 +253,10 @@ class TestAssert {
     Assert.same(i1, i2);
 
     expect(2, 2);
-  }
+  }}
 
   public function testSameEnums() {
+    for (i in 0...x){
 
     Assert.same(None, None);
     Assert.same(Some("a"), Some("a"));
@@ -250,9 +268,10 @@ class TestAssert {
     Assert.same(Rec(Rec(Some("a"))), Rec(Rec(None)), false);
 
     expect(4, 4);
-  }
+  }}
 
   public function testEquals() {
+    for (i in 0...x){
     var values    : Array<Dynamic> = ["e", 1, 0.1, {}];
     var expecteds : Array<Dynamic> = ["e", 1, 0.1, {}];
     var i = 0;
@@ -263,9 +282,10 @@ class TestAssert {
         Assert.equals(expected, value);
       }
     expect(expectedsuccess, i-expectedsuccess);
-  }
+  }}
 
   public function testNearEqualsSuccess() {
+    for (i in 0...x){
     var counter = 0,
         tests = [
           { expected : 0.1, tests : [0.1, 0.100000000000000000000000000001, 0.099999999999999999999999999999] },
@@ -282,9 +302,10 @@ class TestAssert {
       }
     }
     expect(counter, 0);
-  }
+  }}
 
   public function testNearEqualsFail() {
+    for (i in 0...x){
     var counter = 0,
         tests = [
           { expected : 0.1, tests : [0.2, 0.10000001, 0.0999998, Math.NaN, Math.POSITIVE_INFINITY, Math.NEGATIVE_INFINITY] },
@@ -300,22 +321,25 @@ class TestAssert {
       }
     }
     expect(0, counter);
-  }
+  }}
 
   public function testPass() {
+    for (i in 0...x){
     Assert.pass();
     expect(1, 0);
-  }
+  }}
 
   public function testFail() {
+    for (i in 0...x){
     Assert.fail();
     expect(0, 1);
-  }
+  }}
 
   public function testWarn() {
+    for (i in 0...x){
     Assert.warn("");
     expect(0, 0, 1);
-  }
+  }}
 
   public function expect(successes : Int, failures : Int, warnings : Int = 0, ?pos : haxe.PosInfos) {
     A.equals(successes, behavior.successes, 'expected ${successes} successes but they are ${behavior.successes}', pos);

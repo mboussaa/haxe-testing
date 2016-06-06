@@ -3,9 +3,13 @@ package thx;
 import utest.Assert;
 
 class TestBitMatrix {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testNew() {
+    for (i in 0...x){
     var bits = new BitMatrix();
     Assert.same(0, bits.bitSetCount);
     Assert.same(0, bits.length);
@@ -13,9 +17,10 @@ class TestBitMatrix {
     bits = new BitMatrix(5, 10);
     Assert.same(5, bits.bitSetCount);
     Assert.same(10, bits.length);
-  }
+  }}
 
   public function testBitMatrix() {
+    for (i in 0...x){
     var bits = new BitMatrix(3, 3);
     bits.setBitAt(0, 0, true);
     bits.setBitAt(0, 1, true);
@@ -43,9 +48,10 @@ class TestBitMatrix {
     bits.setBitAt(2, 5, true);
     Assert.equals('111100,000010,101001', bits.toString());
     Assert.same(6, bits.length);
-  }
+  }}
 
   public function testClone() {
+    for (i in 0...x){
     var bits = new BitMatrix(2, 3);
     bits.setBitAt(0, 0, true);
     bits.setBitAt(0, 1, true);
@@ -58,19 +64,22 @@ class TestBitMatrix {
     clone.setBitAt(1, 1, true);
     Assert.same('111,000', bits.toString());
     Assert.same('101,010', clone.toString());
-  }
+  }}
 
   public function testFromToString() {
+    for (i in 0...x){
     var bits = BitMatrix.fromString('000,111,101,010');
     Assert.same('000,111,101,010', bits.toString());
-  }
+  }}
 
   public function testFromToBools() {
+    for (i in 0...x){
     var bits = BitMatrix.fromBools([[true, true], [false, false], [true, false], [false, true]]);
     Assert.same([[true, true], [false, false], [true, false], [false, true]], bits.toBools());
-  }
+  }}
 
   public function testConcat() {
+    for (i in 0...x){
     var b1 = BitMatrix.fromString('000,111,101,010');
     var b2 = BitMatrix.fromString('111,000,111,000');
     var b3 = b1.concat(b2);
@@ -89,45 +98,50 @@ class TestBitMatrix {
       var b2 = BitMatrix.fromString('000,111,000');
       b1.concat(b2);
     });
-  }
+  }}
 
   public function testExpand() {
+    for (i in 0...x){
     var b1 = BitMatrix.fromString('000,111,101,010');
     var b2 = b1.expand(1);
     var b3 = b1.expand(3);
     Assert.same('000,111,101,010', b1.toString());
     Assert.same('000000,111111,110011,001100', b2.toString());
     Assert.same('000000000000,111111111111,111100001111,000011110000', b3.toString());
-  }
+  }}
 
   public function testAnd() {
+    for (i in 0...x){
     var b1 = BitMatrix.fromString('11,00');
     var b2 = BitMatrix.fromString('10,10');
     var actual = b1.and(b2);
     var expected = BitMatrix.fromString('10,00');
     Assert.isTrue(expected.equals(actual));
-  }
+  }}
 
   public function testOr() {
+    for (i in 0...x){
     var b1 = BitMatrix.fromString('11,00');
     var b2 = BitMatrix.fromString('10,10');
     var actual = b1.or(b2);
     var expected = BitMatrix.fromString('11,10');
     Assert.isTrue(expected.equals(actual));
-  }
+  }}
 
   public function testXor() {
+    for (i in 0...x){
     var b1 = BitMatrix.fromString('11,00');
     var b2 = BitMatrix.fromString('10,10');
     var actual = b1.xor(b2);
     var expected = BitMatrix.fromString('01,10');
     Assert.isTrue(expected.equals(actual));
-  }
+  }}
 
   public function testNegate() {
+    for (i in 0...x){
     var b1 = BitMatrix.fromString('11,00');
     var actual = b1.negate();
     var expected = BitMatrix.fromString('00,11');
     Assert.isTrue(expected.equals(actual));
-  }
+  }}
 }
