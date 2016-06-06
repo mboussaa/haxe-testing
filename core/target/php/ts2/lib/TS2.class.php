@@ -16,7 +16,8 @@ class TS2 {
 			}
 		}
 		haxe_Log::trace("The value of loop_wrapper is " . _hx_string_or_null($w), _hx_anonymous(array("fileName" => "TS2.hx", "lineNumber" => 10, "className" => "TS2", "methodName" => "addTests")));
-		Std::parseInt($w);
+		$x = Std::parseInt($w);
+		$runner->addCase(new thx_fp_TestWriter($x), null, null, null, null);
 	}
 	static function main() {
 		$runner = new utest_Runner();

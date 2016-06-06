@@ -40,11 +40,20 @@ class HXCPP_CLASS_ATTRIBUTES Type_obj : public hx::Object
 		static hx::Class getEnum( ::Dynamic o);
 		static ::Dynamic getEnum_dyn();
 
+		static hx::Class getSuperClass(hx::Class c);
+		static ::Dynamic getSuperClass_dyn();
+
 		static ::String getClassName(hx::Class c);
 		static ::Dynamic getClassName_dyn();
 
 		static ::String getEnumName(hx::Class e);
 		static ::Dynamic getEnumName_dyn();
+
+		static  ::Dynamic createInstance(hx::Class cl,::cpp::VirtualArray args);
+		static ::Dynamic createInstance_dyn();
+
+		static  ::Dynamic createEmptyInstance(hx::Class cl);
+		static ::Dynamic createEmptyInstance_dyn();
 
 		static ::Array< ::String > getInstanceFields(hx::Class c);
 		static ::Dynamic getInstanceFields_dyn();

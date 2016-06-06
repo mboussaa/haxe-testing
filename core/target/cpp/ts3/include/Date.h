@@ -49,6 +49,33 @@ class HXCPP_CLASS_ATTRIBUTES Date_obj : public hx::Object
 		static ::Dynamic fromString_dyn();
 
 		Float mSeconds;
+		Float getTime();
+		::Dynamic getTime_dyn();
+
+		Int getHours();
+		::Dynamic getHours_dyn();
+
+		Int getMinutes();
+		::Dynamic getMinutes_dyn();
+
+		Int getSeconds();
+		::Dynamic getSeconds_dyn();
+
+		Int getFullYear();
+		::Dynamic getFullYear_dyn();
+
+		Int getMonth();
+		::Dynamic getMonth_dyn();
+
+		Int getDate();
+		::Dynamic getDate_dyn();
+
+		Int getDay();
+		::Dynamic getDay_dyn();
+
+		virtual ::String toString();
+		::Dynamic toString_dyn();
+
 };
 
 

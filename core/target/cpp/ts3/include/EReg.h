@@ -18,12 +18,12 @@ class HXCPP_CLASS_ATTRIBUTES EReg_obj : public hx::Object
 		EReg_obj();
 
 	public:
-		void __construct();
+		void __construct(::String r,::String opt);
 		inline void *operator new(size_t inSize, bool inContainer=true,const char *inName="EReg")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
 		inline void *operator new(size_t inSize, int extra)
 			{ return hx::Object::operator new(inSize+extra,true,"EReg"); }
-		static hx::ObjectPtr< EReg_obj > __new();
+		static hx::ObjectPtr< EReg_obj > __new(::String r,::String opt);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~EReg_obj();
@@ -39,8 +39,24 @@ class HXCPP_CLASS_ATTRIBUTES EReg_obj : public hx::Object
 
 		 ::Dynamic r;
 		::String last;
+		Bool global;
 		Bool match(::String s);
 		::Dynamic match_dyn();
+
+		::String matched(Int n);
+		::Dynamic matched_dyn();
+
+		Bool matchSub(::String s,Int pos,hx::Null< Int >  len);
+		::Dynamic matchSub_dyn();
+
+		::Array< ::String > split(::String s);
+		::Dynamic split_dyn();
+
+		::String replace(::String s,::String by);
+		::Dynamic replace_dyn();
+
+		::String map(::String s, ::Dynamic f);
+		::Dynamic map_dyn();
 
 };
 

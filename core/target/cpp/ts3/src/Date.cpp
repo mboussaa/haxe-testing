@@ -37,6 +37,87 @@ Dynamic Date_obj::__Create(hx::DynamicArray inArgs)
 	return _hx_result;
 }
 
+Float Date_obj::getTime(){
+            	HX_STACK_FRAME("Date","getTime",0x0cac7da3,"Date.getTime","/usr/lib/haxe/std/cpp/_std/Date.hx",31,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  31)		return (this->mSeconds * ((Float)1000.0));
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getTime,return )
+
+Int Date_obj::getHours(){
+            	HX_STACK_FRAME("Date","getHours",0x256fe079,"Date.getHours","/usr/lib/haxe/std/cpp/_std/Date.hx",34,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  34)		return ::__hxcpp_get_hours(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getHours,return )
+
+Int Date_obj::getMinutes(){
+            	HX_STACK_FRAME("Date","getMinutes",0xad798749,"Date.getMinutes","/usr/lib/haxe/std/cpp/_std/Date.hx",36,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  36)		return ::__hxcpp_get_minutes(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getMinutes,return )
+
+Int Date_obj::getSeconds(){
+            	HX_STACK_FRAME("Date","getSeconds",0xb428a6a9,"Date.getSeconds","/usr/lib/haxe/std/cpp/_std/Date.hx",38,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  38)		return ::__hxcpp_get_seconds(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getSeconds,return )
+
+Int Date_obj::getFullYear(){
+            	HX_STACK_FRAME("Date","getFullYear",0x72528782,"Date.getFullYear","/usr/lib/haxe/std/cpp/_std/Date.hx",40,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  40)		return ::__hxcpp_get_year(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getFullYear,return )
+
+Int Date_obj::getMonth(){
+            	HX_STACK_FRAME("Date","getMonth",0x066b78ea,"Date.getMonth","/usr/lib/haxe/std/cpp/_std/Date.hx",42,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  42)		return ::__hxcpp_get_month(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getMonth,return )
+
+Int Date_obj::getDate(){
+            	HX_STACK_FRAME("Date","getDate",0x021307c4,"Date.getDate","/usr/lib/haxe/std/cpp/_std/Date.hx",44,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  44)		return ::__hxcpp_get_date(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getDate,return )
+
+Int Date_obj::getDay(){
+            	HX_STACK_FRAME("Date","getDay",0x598d4986,"Date.getDay","/usr/lib/haxe/std/cpp/_std/Date.hx",46,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  46)		return ::__hxcpp_get_day(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,getDay,return )
+
+::String Date_obj::toString(){
+            	HX_STACK_FRAME("Date","toString",0xd2a372cc,"Date.toString","/usr/lib/haxe/std/cpp/_std/Date.hx",48,0x8e401252)
+            	HX_STACK_THIS(this)
+HXLINE(  48)		return ::__hxcpp_to_string(this->mSeconds);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(Date_obj,toString,return )
+
  ::Date Date_obj::now(){
             	HX_STACK_FRAME("Date","now",0x9aa26af6,"Date.now","/usr/lib/haxe/std/cpp/_std/Date.hx",51,0x8e401252)
 HXLINE(  51)		Int _hx_tmp = ::__hxcpp_date_now();
@@ -121,8 +202,25 @@ Date_obj::Date_obj()
 hx::Val Date_obj::__Field(const ::String &inName,hx::PropertyAccess inCallProp)
 {
 	switch(inName.length) {
+	case 6:
+		if (HX_FIELD_EQ(inName,"getDay") ) { return hx::Val( getDay_dyn()); }
+		break;
+	case 7:
+		if (HX_FIELD_EQ(inName,"getTime") ) { return hx::Val( getTime_dyn()); }
+		if (HX_FIELD_EQ(inName,"getDate") ) { return hx::Val( getDate_dyn()); }
+		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"mSeconds") ) { return hx::Val( mSeconds); }
+		if (HX_FIELD_EQ(inName,"getHours") ) { return hx::Val( getHours_dyn()); }
+		if (HX_FIELD_EQ(inName,"getMonth") ) { return hx::Val( getMonth_dyn()); }
+		if (HX_FIELD_EQ(inName,"toString") ) { return hx::Val( toString_dyn()); }
+		break;
+	case 10:
+		if (HX_FIELD_EQ(inName,"getMinutes") ) { return hx::Val( getMinutes_dyn()); }
+		if (HX_FIELD_EQ(inName,"getSeconds") ) { return hx::Val( getSeconds_dyn()); }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"getFullYear") ) { return hx::Val( getFullYear_dyn()); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -170,6 +268,15 @@ static hx::StaticInfo *Date_obj_sStaticStorageInfo = 0;
 
 static ::String Date_obj_sMemberFields[] = {
 	HX_HCSTRING("mSeconds","\x92","\x75","\x59","\x82"),
+	HX_HCSTRING("getTime","\xc3","\x7b","\x7f","\x1f"),
+	HX_HCSTRING("getHours","\x59","\x3e","\x3b","\x8b"),
+	HX_HCSTRING("getMinutes","\x29","\x1d","\x40","\xa3"),
+	HX_HCSTRING("getSeconds","\x89","\x3c","\xef","\xa9"),
+	HX_HCSTRING("getFullYear","\xa2","\x15","\x4f","\x8a"),
+	HX_HCSTRING("getMonth","\xca","\xd6","\x36","\x6c"),
+	HX_HCSTRING("getDate","\xe4","\x05","\xe6","\x14"),
+	HX_HCSTRING("getDay","\x66","\x6f","\x1b","\xa3"),
+	HX_HCSTRING("toString","\xac","\xd0","\x6e","\x38"),
 	::String(null()) };
 
 static void Date_obj_sMarkStatics(HX_MARK_PARAMS) {

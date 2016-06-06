@@ -16,7 +16,7 @@ public class TS2 : global::haxe.lang.HxObject {
 	}
 	
 	
-	public static void __hx_ctor__TS2(global::TS2 __temp_me18) {
+	public static void __hx_ctor__TS2(global::TS2 __temp_me20) {
 	}
 	
 	
@@ -35,7 +35,8 @@ public class TS2 : global::haxe.lang.HxObject {
 			}
 			
 			global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("The value of loop_wrapper is ", w), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"addTests", "TS2", "TS2.hx"}, new int[]{1981972957}, new double[]{((double) (10) )}));
-			global::Std.parseInt(w);
+			int x = (global::Std.parseInt(w)).@value;
+			runner.addCase(new global::thx.fp.TestWriter(((int) (x) )), null, null, null, null);
 		}
 	}
 	

@@ -10,7 +10,11 @@ namespace haxe{
 
 static ::String IMap_obj_sMemberFields[] = {
 	HX_HCSTRING("get","\x96","\x80","\x4e","\x00"),
+	HX_HCSTRING("set","\xa2","\x9b","\x57","\x00"),
+	HX_HCSTRING("exists","\xdc","\x1d","\xe0","\xbf"),
+	HX_HCSTRING("remove","\x44","\x9c","\x88","\x04"),
 	HX_HCSTRING("keys","\xf4","\xe1","\x06","\x47"),
+	HX_HCSTRING("iterator","\xee","\x49","\x9a","\x93"),
 	::String(null()) };
 
 static void IMap_obj_sMarkStatics(HX_MARK_PARAMS) {
