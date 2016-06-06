@@ -36,6 +36,27 @@ class HXCPP_CLASS_ATTRIBUTES StringTools_obj : public hx::Object
 		static Bool startsWith(::String s,::String start);
 		static ::Dynamic startsWith_dyn();
 
+		static Bool endsWith(::String s,::String end);
+		static ::Dynamic endsWith_dyn();
+
+		static Bool isSpace(::String s,Int pos);
+		static ::Dynamic isSpace_dyn();
+
+		static ::String ltrim(::String s);
+		static ::Dynamic ltrim_dyn();
+
+		static ::String rtrim(::String s);
+		static ::Dynamic rtrim_dyn();
+
+		static ::String trim(::String s);
+		static ::Dynamic trim_dyn();
+
+		static ::String lpad(::String s,::String c,Int l);
+		static ::Dynamic lpad_dyn();
+
+		static ::String rpad(::String s,::String c,Int l);
+		static ::Dynamic rpad_dyn();
+
 		static ::String replace(::String s,::String sub,::String by);
 		static ::Dynamic replace_dyn();
 

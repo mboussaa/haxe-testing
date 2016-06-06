@@ -44,6 +44,19 @@ HXLINE(  34)		return hx::IsNull( o ) ? null() : o->__Field(field,hx::paccNever);
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC2(Reflect_obj,field,return )
 
+void Reflect_obj::setField( ::Dynamic o,::String field, ::Dynamic value){
+            	HX_STACK_FRAME("Reflect","setField",0x71684429,"Reflect.setField","/usr/lib/haxe/std/cpp/_std/Reflect.hx",38,0xe2153adf)
+            	HX_STACK_ARG(o,"o")
+            	HX_STACK_ARG(field,"field")
+            	HX_STACK_ARG(value,"value")
+HXLINE(  38)		if (hx::IsNotNull( o )) {
+HXLINE(  39)			o->__SetField(field,value,hx::paccNever);
+            		}
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC3(Reflect_obj,setField,(void))
+
  ::Dynamic Reflect_obj::callMethod( ::Dynamic o, ::Dynamic func,::cpp::VirtualArray args){
             	HX_STACK_FRAME("Reflect","callMethod",0xb49e52d0,"Reflect.callMethod","/usr/lib/haxe/std/cpp/_std/Reflect.hx",51,0xe2153adf)
             	HX_STACK_ARG(o,"o")
@@ -121,6 +134,28 @@ HXLINE(  84)		return ((bool)((bool)((bool)(t == (int)4) || (bool)(t == (int)8)) 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isObject,return )
 
+Bool Reflect_obj::isEnumValue( ::Dynamic v){
+            	HX_STACK_FRAME("Reflect","isEnumValue",0x97884d95,"Reflect.isEnumValue","/usr/lib/haxe/std/cpp/_std/Reflect.hx",89,0xe2153adf)
+            	HX_STACK_ARG(v,"v")
+HXLINE(  89)		return ((bool)hx::IsNotNull( v ) && (bool)hx::IsEq( v->__GetType(),(int)7 ));
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Reflect_obj,isEnumValue,return )
+
+Bool Reflect_obj::deleteField( ::Dynamic o,::String field){
+            	HX_STACK_FRAME("Reflect","deleteField",0x21895ebe,"Reflect.deleteField","/usr/lib/haxe/std/cpp/_std/Reflect.hx",92,0xe2153adf)
+            	HX_STACK_ARG(o,"o")
+            	HX_STACK_ARG(field,"field")
+HXLINE(  93)		if (hx::IsNull( o )) {
+HXLINE(  93)			return false;
+            		}
+HXLINE(  94)		return ::__hxcpp_anon_remove(o,field);
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(Reflect_obj,deleteField,return )
+
 
 Reflect_obj::Reflect_obj()
 {
@@ -140,11 +175,16 @@ bool Reflect_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Pro
 		break;
 	case 8:
 		if (HX_FIELD_EQ(inName,"hasField") ) { outValue = hasField_dyn(); return true; }
+		if (HX_FIELD_EQ(inName,"setField") ) { outValue = setField_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"isObject") ) { outValue = isObject_dyn(); return true; }
 		break;
 	case 10:
 		if (HX_FIELD_EQ(inName,"callMethod") ) { outValue = callMethod_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"isFunction") ) { outValue = isFunction_dyn(); return true; }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"isEnumValue") ) { outValue = isEnumValue_dyn(); return true; }
+		if (HX_FIELD_EQ(inName,"deleteField") ) { outValue = deleteField_dyn(); return true; }
 		break;
 	case 14:
 		if (HX_FIELD_EQ(inName,"compareMethods") ) { outValue = compareMethods_dyn(); return true; }
@@ -173,12 +213,15 @@ hx::Class Reflect_obj::__mClass;
 static ::String Reflect_obj_sStaticFields[] = {
 	HX_HCSTRING("hasField","\x00","\xdf","\xeb","\x8c"),
 	HX_HCSTRING("field","\xba","\x94","\x93","\x00"),
+	HX_HCSTRING("setField","\xb8","\xfd","\xc7","\x0e"),
 	HX_HCSTRING("callMethod","\x1f","\xce","\x8a","\x34"),
 	HX_HCSTRING("fields","\x79","\x8e","\x8e","\x80"),
 	HX_HCSTRING("isFunction","\x22","\xbd","\x01","\x8f"),
 	HX_HCSTRING("compare","\xa5","\x18","\x69","\x83"),
 	HX_HCSTRING("compareMethods","\x4d","\xac","\x7b","\x37"),
 	HX_HCSTRING("isObject","\x49","\x1a","\xa9","\x6d"),
+	HX_HCSTRING("isEnumValue","\x66","\xb7","\x87","\x06"),
+	HX_HCSTRING("deleteField","\x8f","\xc8","\x88","\x90"),
 	::String(null())
 };
 

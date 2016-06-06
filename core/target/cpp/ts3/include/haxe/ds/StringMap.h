@@ -42,6 +42,12 @@ class HXCPP_CLASS_ATTRIBUTES StringMap_obj : public hx::Object
 		void __Mark(HX_MARK_PARAMS);
 		void __Visit(HX_VISIT_PARAMS);
 		void *_hx_getInterface(int inHash);
+		Bool remove_9314b24f( ::Dynamic k);
+
+		Bool exists_9314b24f( ::Dynamic k);
+
+		void set_41d0cb46( ::Dynamic k, ::Dynamic v);
+
 		 ::Dynamic get_dc94b8fa( ::Dynamic k);
 		::String __ToString() const { return HX_HCSTRING("StringMap","\x2b","\x12","\x8c","\x69"); }
 
@@ -55,8 +61,14 @@ class HXCPP_CLASS_ATTRIBUTES StringMap_obj : public hx::Object
 		Bool exists(::String key);
 		::Dynamic exists_dyn();
 
+		Bool remove(::String key);
+		::Dynamic remove_dyn();
+
 		 ::Dynamic keys();
 		::Dynamic keys_dyn();
+
+		 ::Dynamic iterator();
+		::Dynamic iterator_dyn();
 
 
   inline void set(String key, ::null value) { __string_hash_set(h,key,value); }

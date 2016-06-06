@@ -1,4 +1,4 @@
-for (( i=1; i<=50; i++ ))
+for (( i=1; i<=51; i++ ))
 do
 
 haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib utest -lib nanotest -cpp target/cpp/ts"$i"

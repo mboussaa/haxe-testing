@@ -87,7 +87,7 @@ var x : Int;
   public function testMap() {
     for (i in 0...x){
     var input = [4, 5, 6];
-    var actual = thx.Arrays.map(input, function(v) {
+    var actual = thx.Arrays.mapi(input, function(v) {
       return v * 2;
     });
     Assert.same([8, 10, 12], actual);

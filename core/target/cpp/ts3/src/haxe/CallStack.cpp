@@ -34,6 +34,15 @@ Dynamic CallStack_obj::__Create(hx::DynamicArray inArgs)
 	return _hx_result;
 }
 
+::Array< ::Dynamic> CallStack_obj::callStack(){
+            	HX_STACK_FRAME("haxe.CallStack","callStack",0xfa9165be,"haxe.CallStack.callStack","/usr/lib/haxe/std/haxe/CallStack.hx",77,0xab2662dc)
+HXLINE(  89)		HX_VARI( ::Array< ::String >,s) = ::__hxcpp_get_call_stack(true);
+HXLINE(  90)		return ::haxe::CallStack_obj::makeStack(s);
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC0(CallStack_obj,callStack,return )
+
 ::Array< ::Dynamic> CallStack_obj::exceptionStack(){
             	HX_STACK_FRAME("haxe.CallStack","exceptionStack",0xde34d005,"haxe.CallStack.exceptionStack","/usr/lib/haxe/std/haxe/CallStack.hx",152,0xab2662dc)
 HXLINE( 174)		HX_VARI( ::Array< ::String >,s) = ::__hxcpp_get_exception_stack();
@@ -163,6 +172,7 @@ bool CallStack_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::P
 		if (HX_FIELD_EQ(inName,"toString") ) { outValue = toString_dyn(); return true; }
 		break;
 	case 9:
+		if (HX_FIELD_EQ(inName,"callStack") ) { outValue = callStack_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"makeStack") ) { outValue = makeStack_dyn(); return true; }
 		break;
 	case 12:
@@ -193,6 +203,7 @@ static void CallStack_obj_sVisitStatics(HX_VISIT_PARAMS) {
 hx::Class CallStack_obj::__mClass;
 
 static ::String CallStack_obj_sStaticFields[] = {
+	HX_HCSTRING("callStack","\xca","\xc1","\x4a","\x10"),
 	HX_HCSTRING("exceptionStack","\x79","\x48","\x56","\x0b"),
 	HX_HCSTRING("toString","\xac","\xd0","\x6e","\x38"),
 	HX_HCSTRING("itemToString","\xdf","\x1c","\x98","\x1c"),

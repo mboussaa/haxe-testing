@@ -39,6 +39,9 @@ class HXCPP_CLASS_ATTRIBUTES Reflect_obj : public hx::Object
 		static  ::Dynamic field( ::Dynamic o,::String field);
 		static ::Dynamic field_dyn();
 
+		static void setField( ::Dynamic o,::String field, ::Dynamic value);
+		static ::Dynamic setField_dyn();
+
 		static  ::Dynamic callMethod( ::Dynamic o, ::Dynamic func,::cpp::VirtualArray args);
 		static ::Dynamic callMethod_dyn();
 
@@ -56,6 +59,12 @@ class HXCPP_CLASS_ATTRIBUTES Reflect_obj : public hx::Object
 
 		static Bool isObject( ::Dynamic v);
 		static ::Dynamic isObject_dyn();
+
+		static Bool isEnumValue( ::Dynamic v);
+		static ::Dynamic isEnumValue_dyn();
+
+		static Bool deleteField( ::Dynamic o,::String field);
+		static ::Dynamic deleteField_dyn();
 
 };
 

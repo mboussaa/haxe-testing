@@ -75,6 +75,15 @@ HXLINE(  49)		return o->__GetClass();
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getEnum,return )
 
+hx::Class Type_obj::getSuperClass(hx::Class c){
+            	HX_STACK_FRAME("Type","getSuperClass",0xd9ffa85f,"Type.getSuperClass","/usr/lib/haxe/std/cpp/_std/Type.hx",54,0x728dd546)
+            	HX_STACK_ARG(c,"c")
+HXLINE(  54)		return c->GetSuper();
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getSuperClass,return )
+
 ::String Type_obj::getClassName(hx::Class c){
             	HX_STACK_FRAME("Type","getClassName",0x8e66dd41,"Type.getClassName","/usr/lib/haxe/std/cpp/_std/Type.hx",57,0x728dd546)
             	HX_STACK_ARG(c,"c")
@@ -95,6 +104,28 @@ HXLINE(  64)		return ( (::String)(e->__ToString()) );
 
 
 STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,getEnumName,return )
+
+ ::Dynamic Type_obj::createInstance(hx::Class cl,::cpp::VirtualArray args){
+            	HX_STACK_FRAME("Type","createInstance",0xab84f9c5,"Type.createInstance","/usr/lib/haxe/std/cpp/_std/Type.hx",81,0x728dd546)
+            	HX_STACK_ARG(cl,"cl")
+            	HX_STACK_ARG(args,"args")
+HXLINE(  82)		if (hx::IsNotNull( cl )) {
+HXLINE(  83)			return cl->ConstructArgs(args);
+            		}
+HXLINE(  84)		return null();
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC2(Type_obj,createInstance,return )
+
+ ::Dynamic Type_obj::createEmptyInstance(hx::Class cl){
+            	HX_STACK_FRAME("Type","createEmptyInstance",0xcb752312,"Type.createEmptyInstance","/usr/lib/haxe/std/cpp/_std/Type.hx",88,0x728dd546)
+            	HX_STACK_ARG(cl,"cl")
+HXLINE(  88)		return cl->ConstructEmpty();
+            	}
+
+
+STATIC_HX_DEFINE_DYNAMIC_FUNC1(Type_obj,createEmptyInstance,return )
 
 ::Array< ::String > Type_obj::getInstanceFields(hx::Class c){
             	HX_STACK_FRAME("Type","getInstanceFields",0xe970f890,"Type.getInstanceFields","/usr/lib/haxe/std/cpp/_std/Type.hx",102,0x728dd546)
@@ -190,7 +221,11 @@ bool Type_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Proper
 	case 12:
 		if (HX_FIELD_EQ(inName,"getClassName") ) { outValue = getClassName_dyn(); return true; }
 		break;
+	case 13:
+		if (HX_FIELD_EQ(inName,"getSuperClass") ) { outValue = getSuperClass_dyn(); return true; }
+		break;
 	case 14:
+		if (HX_FIELD_EQ(inName,"createInstance") ) { outValue = createInstance_dyn(); return true; }
 		if (HX_FIELD_EQ(inName,"enumParameters") ) { outValue = enumParameters_dyn(); return true; }
 		break;
 	case 15:
@@ -198,6 +233,9 @@ bool Type_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::Proper
 		break;
 	case 17:
 		if (HX_FIELD_EQ(inName,"getInstanceFields") ) { outValue = getInstanceFields_dyn(); return true; }
+		break;
+	case 19:
+		if (HX_FIELD_EQ(inName,"createEmptyInstance") ) { outValue = createEmptyInstance_dyn(); return true; }
 	}
 	return false;
 }
@@ -223,8 +261,11 @@ hx::Class Type_obj::__mClass;
 static ::String Type_obj_sStaticFields[] = {
 	HX_HCSTRING("getClass","\xc2","\x87","\x2f","\xa8"),
 	HX_HCSTRING("getEnum","\xb7","\x1a","\x99","\x15"),
+	HX_HCSTRING("getSuperClass","\xf3","\x04","\x7a","\x04"),
 	HX_HCSTRING("getClassName","\x2d","\x2f","\x94","\xeb"),
 	HX_HCSTRING("getEnumName","\xa2","\xe0","\x5a","\x53"),
+	HX_HCSTRING("createInstance","\xb1","\x9e","\x1b","\xac"),
+	HX_HCSTRING("createEmptyInstance","\xa6","\x26","\x85","\xce"),
 	HX_HCSTRING("getInstanceFields","\x24","\x2f","\x97","\xed"),
 	HX_HCSTRING("typeof","\x51","\xf6","\x36","\x57"),
 	HX_HCSTRING("enumConstructor","\x79","\xa7","\x32","\xc9"),

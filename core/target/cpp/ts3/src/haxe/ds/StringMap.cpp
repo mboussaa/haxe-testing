@@ -34,8 +34,24 @@ Dynamic StringMap_obj::__Create(hx::DynamicArray inArgs)
 
 static ::haxe::IMap_obj _hx_haxe_ds_StringMap__hx_haxe_IMap= {
 	(  ::Dynamic (hx::Object::*)( ::Dynamic))&::haxe::ds::StringMap_obj::get_dc94b8fa,
+	( void (hx::Object::*)( ::Dynamic, ::Dynamic))&::haxe::ds::StringMap_obj::set_41d0cb46,
+	( Bool (hx::Object::*)( ::Dynamic))&::haxe::ds::StringMap_obj::exists_9314b24f,
+	( Bool (hx::Object::*)( ::Dynamic))&::haxe::ds::StringMap_obj::remove_9314b24f,
 	(  ::Dynamic (hx::Object::*)())&::haxe::ds::StringMap_obj::keys,
+	(  ::Dynamic (hx::Object::*)())&::haxe::ds::StringMap_obj::iterator,
 };
+
+Bool StringMap_obj::remove_9314b24f( ::Dynamic k) {
+			return remove(k);
+}
+
+Bool StringMap_obj::exists_9314b24f( ::Dynamic k) {
+			return exists(k);
+}
+
+void StringMap_obj::set_41d0cb46( ::Dynamic k, ::Dynamic v) {
+			set(k,v);
+}
 
  ::Dynamic StringMap_obj::get_dc94b8fa( ::Dynamic k) {
 			return get(k);
@@ -82,6 +98,16 @@ HXLINE(  63)		return ::__string_hash_exists(this->h,key);
 
 HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,exists,return )
 
+Bool StringMap_obj::remove(::String key){
+            	HX_STACK_FRAME("haxe.ds.StringMap","remove",0x18083f9e,"haxe.ds.StringMap.remove","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",67,0x5168f5a8)
+            	HX_STACK_THIS(this)
+            	HX_STACK_ARG(key,"key")
+HXLINE(  67)		return ::__string_hash_remove(this->h,key);
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC1(StringMap_obj,remove,return )
+
  ::Dynamic StringMap_obj::keys(){
             	HX_STACK_FRAME("haxe.ds.StringMap","keys",0x20631ace,"haxe.ds.StringMap.keys","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",70,0x5168f5a8)
             	HX_STACK_THIS(this)
@@ -91,6 +117,16 @@ HXLINE(  72)		return a->iterator();
 
 
 HX_DEFINE_DYNAMIC_FUNC0(StringMap_obj,keys,return )
+
+ ::Dynamic StringMap_obj::iterator(){
+            	HX_STACK_FRAME("haxe.ds.StringMap","iterator",0x40ccf7c8,"haxe.ds.StringMap.iterator","/usr/lib/haxe/std/cpp/_std/haxe/ds/StringMap.hx",75,0x5168f5a8)
+            	HX_STACK_THIS(this)
+HXLINE(  76)		HX_VARI( ::cpp::VirtualArray,a) = ::__string_hash_values(this->h);
+HXLINE(  77)		return a->iterator();
+            	}
+
+
+HX_DEFINE_DYNAMIC_FUNC0(StringMap_obj,iterator,return )
 
 
 StringMap_obj::StringMap_obj()
@@ -124,6 +160,10 @@ hx::Val StringMap_obj::__Field(const ::String &inName,hx::PropertyAccess inCallP
 		break;
 	case 6:
 		if (HX_FIELD_EQ(inName,"exists") ) { return hx::Val( exists_dyn()); }
+		if (HX_FIELD_EQ(inName,"remove") ) { return hx::Val( remove_dyn()); }
+		break;
+	case 8:
+		if (HX_FIELD_EQ(inName,"iterator") ) { return hx::Val( iterator_dyn()); }
 	}
 	return super::__Field(inName,inCallProp);
 }
@@ -156,7 +196,9 @@ static ::String StringMap_obj_sMemberFields[] = {
 	HX_HCSTRING("set","\xa2","\x9b","\x57","\x00"),
 	HX_HCSTRING("get","\x96","\x80","\x4e","\x00"),
 	HX_HCSTRING("exists","\xdc","\x1d","\xe0","\xbf"),
+	HX_HCSTRING("remove","\x44","\x9c","\x88","\x04"),
 	HX_HCSTRING("keys","\xf4","\xe1","\x06","\x47"),
+	HX_HCSTRING("iterator","\xee","\x49","\x9a","\x93"),
 	::String(null()) };
 
 static void StringMap_obj_sMarkStatics(HX_MARK_PARAMS) {

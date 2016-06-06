@@ -24,7 +24,7 @@ public class TS2 extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor__TS2(haxe.root.TS2 __temp_me13)
+	public static void __hx_ctor__TS2(haxe.root.TS2 __temp_me15)
 	{
 	}
 	
@@ -54,18 +54,22 @@ public class TS2 extends haxe.lang.HxObject
 		
 		//line 10 "/shared/core/test/TS2.hx"
 		haxe.Log.trace.__hx_invoke2_o(0.0, ( "The value of loop_wrapper is " + w ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"TS2", "TS2.hx", "addTests"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (10) )) )}));
+		//line 12 "/shared/core/test/TS2.hx"
+		int x = ((int) (haxe.lang.Runtime.toInt(haxe.root.Std.parseInt(w))) );
+		//line 14 "/shared/core/test/TS2.hx"
+		runner.addCase(new thx.fp.TestWriter(((int) (x) )), null, null, null, null);
 	}
 	
 	
 	public static void main()
 	{
-		//line 73 "/shared/core/test/TS2.hx"
-		utest.Runner runner = new utest.Runner();
 		//line 74 "/shared/core/test/TS2.hx"
-		haxe.root.TS2.addTests(runner);
+		utest.Runner runner = new utest.Runner();
 		//line 75 "/shared/core/test/TS2.hx"
-		utest.ui.Report.create(runner, null, null);
+		haxe.root.TS2.addTests(runner);
 		//line 76 "/shared/core/test/TS2.hx"
+		utest.ui.Report.create(runner, null, null);
+		//line 77 "/shared/core/test/TS2.hx"
 		runner.run();
 	}
 	
