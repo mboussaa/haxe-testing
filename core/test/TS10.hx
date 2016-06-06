@@ -1,7 +1,7 @@
 import utest.Runner;
 import utest.ui.Report;
 
-class TS1 {
+class TS10 {
   public static function addTests(runner : Runner) {
 
 var w : String = "";
