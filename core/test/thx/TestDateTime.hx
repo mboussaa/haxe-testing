@@ -88,36 +88,6 @@ var x : Int;
     Assert.equals("2015-07-26T21:40:30-04:00", nyDate.toString());
   }}
 
-  public function testFromString() {
-    for (i in 0...x){
-    var d : DateTime = "2015-07-26T21:40:30-06:00";
-    Assert.isTrue(date == d);
-    var d : DateTime = "2014-01-01",
-        d2 = DateTime.create(2014, 1, 1, Time.zero);
-    Assert.isTrue(d2 == d);
-
-    Assert.equals("-1-07-27T00:00:00+00:00",    ("0-06-07" : DateTime).toString());
-    Assert.equals("-1-06-07T00:00:00+00:00",    ("-1-06-07" : DateTime).toString());
-    Assert.equals("1-06-07T00:00:00+00:00",     ("1-06-07" : DateTime).toString());
-    Assert.equals("-2014-01-01T00:00:00+00:00", ("-2014-01-01" : DateTime).toString());
-  }}
-
-#if !php
-  public function testLocalOffset() {
-    for (i in 0...x){
-    var ref   = DateHelper.localOffset(),
-        delta = DateTime.localOffset();
-    Assert.isTrue(ref == delta, 'expected $ref but got $delta');
-  }}
-#end
-
-  public function testNow() {
-    for (i in 0...x){
-    var ref = DateHelper.now(),
-        date = DateTime.now();
-    Assert.isTrue(date.nearEqualsTo(ref, Time.fromMinutes(10)), 'expected $ref but got $date');
-  }}
-
   public function testSnapNext() {
     for (i in 0...x){
     assertSnapNext("2014-01-01 10:07:00-06:00", "2014-01-01 10:06:10-06:00", Minute);

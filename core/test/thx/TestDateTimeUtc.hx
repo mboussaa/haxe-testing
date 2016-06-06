@@ -31,13 +31,7 @@ var x : Int;
 
     Assert.equals(Sunday, date.dayOfWeek);
   }}
-
-  public function testToString() {
-    for (i in 0...x){
-    Assert.equals('2015-07-26T21:40:30Z', date.toString());
-    Assert.equals('1-01-01T00:00:00Z', DateTimeUtc.fromInt64(0).toString());
-  }}
-
+ 
   public function testOverflowing() {
     for (i in 0...x){
     Assert.equals("2014-12-01T00:00:00Z", DateTimeUtc.create(2014,12,1).toString());
@@ -122,13 +116,6 @@ var x : Int;
               .addMilliseconds(7),
         e = "2018-05-07 04:50:37.007";
     Assert.isTrue(d == "2018-05-07 04:50:37.007", 'expected $e but got $d');
-  }}
-
-  public function testNow() {
-    for (i in 0...x){
-    var ref = DateHelper.nowUtc(),
-        date = DateTimeUtc.now();
-    Assert.isTrue(date.nearEqualsTo(ref, Time.fromMinutes(10)), 'expected $ref but got $date');
   }}
 
   public function testSnapNext() {
