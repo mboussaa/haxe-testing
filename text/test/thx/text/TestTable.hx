@@ -8,7 +8,10 @@ using thx.text.table.Style;
 using thx.text.table.CellValue;
 
 class TestTable {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   var table : Table;
   public function setup() {
@@ -16,6 +19,7 @@ class TestTable {
   }
 
   public function testSpanRight() {
+    for (i in 0...x){
     table.style.type = Body;
     table.style.setAlign(Center);
     table.set(1, 0, 0, SpanRight(2));
@@ -27,9 +31,10 @@ class TestTable {
 ├───┬───┤
 │ 2 │ 3 │
 └───┴───┘", table.toString());
-  }
+  }}
 
   public function testSpanDown() {
+    for (i in 0...x){
     table.style.type = Body;
     table.style.setAlign(Center);
     table.set(1, 0, 0, SpanDown(2));
@@ -41,9 +46,10 @@ class TestTable {
 │   ├───┤
 │   │ 3 │
 └───┴───┘", table.toString());
-  }
+  }}
 
   public function testSpanning() {
+    for (i in 0...x){
     table.style.type = Body;
     table.style.setAlign(Center);
     table.set("0/0", 0, 0);
@@ -61,9 +67,10 @@ class TestTable {
 ├─────┴──┬──┴─────┤
 │  2/0   │  2/2   │
 └────────┴────────┘", table.toString());
-  }
+  }}
 
   public function testFromData() {
+    for (i in 0...x){
     var data : Array<Array<Dynamic>> = [
       ["rank", "country", "US $"],
       [1, "Luxembourg", 113533],
@@ -95,9 +102,10 @@ class TestTable {
 │    9 │ Canada                │  50,436 │
 │   10 │ Netherlands           │  50,355 │
 └──────┴───────────────────────┴─────────┘", table.toString());
-  }
+  }}
 
   public function testFromObjects() {
+    for (i in 0...x){
     var data = [{
         code: "AD",
         latitude: 42.5,
@@ -125,9 +133,10 @@ class TestTable {
 │ AE   │     23.4 │      53.8 │ United Arab Emirates │
 │ AF   │     33.9 │      67.7 │ Afghanistan          │
 └──────┴──────────┴───────────┴──────────────────────┘", table.toString());
-  }
+  }}
 
   public function testPaintBorder() {
+    for (i in 0...x){
     var canvas = new Canvas(3, 3);
     canvas.paintBorder(Body, 0, 0, 3, 3);
     Assert.equals('┌─┐\n│ │\n└─┘', canvas.toString());
@@ -139,9 +148,10 @@ class TestTable {
     canvas = new Canvas(4, 4);
     canvas.paintBorder(Body, 1, 1, 3, 3);
     Assert.equals('    \n ┌─┐\n │ │\n └─┘', canvas.toString());
-  }
+  }}
 
   public function testRender() {
+    for (i in 0...x){
     var renderer = new Renderer();
     table.set(true, 0, 1);
     table.set("Franco", 0, 0);
@@ -157,7 +167,7 @@ class TestTable {
 ┡━━━━━━━━━━━━╇━━━╇━━━━━┩
 │ 11/19/2015 │   │ 200 │
 └────────────┴───┴─────┘", s);
-  }
+  }}
 
   function oneCell(value : CellValue, width : Int) {
     table = new Table();
@@ -167,6 +177,7 @@ class TestTable {
   }
 
   public function testAlign() {
+    for (i in 0...x){
     oneCell(0, 8);
     Assert.equals("
 ┌──────────┐
@@ -187,9 +198,10 @@ class TestTable {
 ┌──────────┐
 │      0.5 │
 └──────────┘", table.toString());
-  }
+  }}
 
   public function testAlignOnSymbol() {
+    for (i in 0...x){
     table.set(0.001, 0, 0);
     table.set(2.0,   0, 1);
     table.set(3333,  0, 2);
@@ -199,9 +211,10 @@ class TestTable {
 ┌───────┬─────┬───────┬──────┐
 │ 0.001 │ 2.0 │ 3,333 │ 12.5 │
 └───────┴─────┴───────┴──────┘", table.toString());
-  }
+  }}
 
   public function testAlignOnSymbolVertical() {
+    for (i in 0...x){
     table.set(0.001, 0, 0);
     table.set(2.0,   1, 0);
     table.set(3333,  2, 0);
@@ -217,16 +230,18 @@ class TestTable {
 ├───────────┤
 │    12.5   │
 └───────────┘", table.toString());
-  }
+  }}
 
   public function testSequence() {
+    for (i in 0...x){
     var last = table.set(true, 0, 1);
     var first = table.set(false, 0, 0);
     Assert.equals(1, last.col.index);
     Assert.equals(0, first.col.index);
-  }
+  }}
 
   public function testStyle() {
+    for (i in 0...x){
     var style = new Style();
     Assert.isNull(style.formatter);
     var dstyle = new DefaultStyle();
@@ -235,16 +250,18 @@ class TestTable {
     Assert.isNull(cstyle.formatter);
     cstyle = new CompositeStyle([style, dstyle]);
     Assert.notNull(cstyle.formatter);
-  }
+  }}
 
   public function testCanvas() {
+    for (i in 0...x){
     var canvas = new thx.text.table.Canvas(3, 2);
     Assert.equals("   \n   ", canvas.toString());
     canvas.expand(4, 3);
     Assert.equals("    \n    \n    ", canvas.toString());
-  }
+  }}
 
   public function testTableSize() {
+    for (i in 0...x){
     Assert.equals(0, table.rows);
     Assert.equals(0, table.cols);
     table.getCol(2);
@@ -254,15 +271,17 @@ class TestTable {
     Assert.equals(0, table.rows);
     table.ensureRow(1);
     Assert.equals(2, table.rows);
-  }
+  }}
 
   public function testCellResizeTable() {
+    for (i in 0...x){
     table.set(1, 3, 2);
     Assert.equals(3, table.cols);
     Assert.equals(4, table.rows);
-  }
+  }}
 
   public function testIdentityOfCellsCreatedFromTable() {
+    for (i in 0...x){
     var cell = table.set(1, 3, 2);
     Assert.isTrue(cell == table.get(3, 2));
 
@@ -275,9 +294,10 @@ class TestTable {
     Assert.isTrue(cell.table == table);
     Assert.isTrue(cell.row.table == table);
     Assert.isTrue(cell.col.table == table);
-  }
+  }}
 
   public function testIdentityOfCellsCreatedFromRow() {
+    for (i in 0...x){
     var row = table.ensureRow(3),
         cell = row.set(1, 2);
     Assert.isTrue(cell == table.get(3, 2));
@@ -291,9 +311,10 @@ class TestTable {
     Assert.isTrue(cell.table == table);
     Assert.isTrue(cell.row.table == table);
     Assert.isTrue(cell.col.table == table);
-  }
+  }}
 
   public function testIdentityOfCellsCreatedFromCol() {
+    for (i in 0...x){
     var col = table.ensureCol(2),
         cell = col.set(1, 3);
     Assert.isTrue(cell == table.get(3, 2));
@@ -307,5 +328,5 @@ class TestTable {
     Assert.isTrue(cell.table == table);
     Assert.isTrue(cell.row.table == table);
     Assert.isTrue(cell.col.table == table);
-  }
+  }}
 }

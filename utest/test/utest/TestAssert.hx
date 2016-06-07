@@ -5,7 +5,10 @@ import utest.Assertation;
 import utest.Runner;
 
 class TestAssert {
-  public function new(){}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   var resultsbypass : List<Assertation>;
   var results : List<Assertation>;
@@ -20,6 +23,7 @@ class TestAssert {
   }
 
   public function testBooleans() {
+    for (i in 0...x){
     bypass();
     Assert.isTrue(true);
     Assert.isTrue(false);
@@ -27,9 +31,10 @@ class TestAssert {
     Assert.isFalse(false);
     restore();
     expect(2, 2);
-  }
+  }}
 
   public function testNullity() {
+    for (i in 0...x){
     bypass();
     Assert.isNull(null);
     Assert.isNull(0);
@@ -44,9 +49,10 @@ class TestAssert {
     Assert.isNull(false);
     restore();
     expect(1, 10);
-  }
+  }}
 
   public function testNoNullity() {
+    for (i in 0...x){
     bypass();
     Assert.notNull(null);
     Assert.notNull(0);
@@ -61,9 +67,10 @@ class TestAssert {
     Assert.notNull(false);
     restore();
     expect(10, 1);
-  }
+  }}
 
   public function testRaises() {
+    for (i in 0...x){
     bypass();
     var errors : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(), {},      [1]];
     var types  : Array<Dynamic> = [String, Int, Float, TestAssert,       Dynamic, Array];
@@ -76,9 +83,10 @@ class TestAssert {
       }
     restore();
     expect(expectedsuccess, i-expectedsuccess);
-  }
+  }}
 
   public function testIs() {
+    for (i in 0...x){
     bypass();
     var values : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(), {},      [1]];
     var types  : Array<Dynamic> = [String, Int, Float, TestAssert,       Dynamic, Array];
@@ -91,9 +99,10 @@ class TestAssert {
       }
     restore();
     expect(expectedsuccess, i-expectedsuccess);
-  }
+  }}
 
   public function testSamePrimitive() {
+    for (i in 0...x){
     bypass();
     Assert.same(null, 1);
     Assert.same(1, 1);
@@ -110,9 +119,10 @@ class TestAssert {
 
     restore();
     expect(5, 6);
-  }
+  }}
 
   public function testSameType() {
+    for (i in 0...x){
     bypass();
     Assert.same(null, {});
     Assert.same(null, null);
@@ -124,9 +134,10 @@ class TestAssert {
 
     restore();
     expect(1, 6);
-  }
+  }}
 
   public function testSameArray() {
+    for (i in 0...x){
     bypass();
     Assert.same([], []);
     Assert.same([1], ["1"]);
@@ -139,9 +150,10 @@ class TestAssert {
 
     restore();
     expect(4, 4);
-  }
+  }}
 
   public function testSameObject() {
+    for (i in 0...x){
     bypass();
     Assert.same({}, {});
     Assert.same({a:1}, {a:"1"});
@@ -154,11 +166,12 @@ class TestAssert {
 
     restore();
     expect(4, 4);
-  }
+  }}
 
   public var value : String;
   public var sub : TestAssert;
   public function testSameInstance() {
+    for (i in 0...x){
     var c1 = new TestAssert();
     c1.value = "a";
     var c2 = new TestAssert();
@@ -184,9 +197,10 @@ class TestAssert {
 
     restore();
     expect(4, 2);
-  }
+  }}
 
   public function testSameIterable() {
+    for (i in 0...x){
     var list1 = new List<Dynamic>();
     list1.add("a");
     list1.add(1);
@@ -212,7 +226,7 @@ class TestAssert {
 
     restore();
     expect(3, 2);
-  }
+  }}
 /*
   TODO Needs fixing
   public function testSameMap() {
@@ -243,6 +257,7 @@ class TestAssert {
   }
 */
   public function testSameEnums() {
+    for (i in 0...x){
     bypass();
 
     Assert.same(None, None);
@@ -263,9 +278,10 @@ class TestAssert {
 #else
     expect(4, 4);
 #end
-  }
+  }}
 
   public function testEquals() {
+    for (i in 0...x){
     bypass();
     var values    : Array<Dynamic> = ["e", 1, 0.1, {}];
     var expecteds : Array<Dynamic> = ["e", 1, 0.1, {}];
@@ -278,9 +294,10 @@ class TestAssert {
       }
     restore();
     expect(expectedsuccess, i-expectedsuccess);
-  }
+  }}
 
   public function testFloatEquals() {
+    for (i in 0...x){
     bypass();
     var values    : Array<Float> = [1, 0.1, 0.000000000000000000000000000011, Math.NaN, Math.NEGATIVE_INFINITY, Math.POSITIVE_INFINITY, Math.PI, 0.11];
     var expecteds : Array<Float> = [1, 0.1, 0.000000000000000000000000000012, Math.NaN, Math.NEGATIVE_INFINITY, Math.POSITIVE_INFINITY, Math.PI, 0.12];
@@ -293,28 +310,31 @@ class TestAssert {
       }
     restore();
     expect(expectedsuccess, i-expectedsuccess);
-  }
+  }}
 
   public function testPass() {
+    for (i in 0...x){
     bypass();
     Assert.pass();
     restore();
     expect(1, 0);
-  }
+  }}
 
   public function testFail() {
+    for (i in 0...x){
     bypass();
     Assert.fail();
     restore();
     expect(0, 1);
-  }
+  }}
 
   public function testWarn() {
+    for (i in 0...x){
     bypass();
     Assert.warn("");
     restore();
     expect(0, 0, 1);
-  }
+  }}
 
   public function expect(esuccesses : Int, efailures : Int, eothers = 0) {
     var successes = 0;

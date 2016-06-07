@@ -10,12 +10,16 @@ class TestNumberFormat {
   static var us : Culture = Embed.culture('en-us');
   static var asIn : Culture = Embed.culture('as-in');
   static var baRu : Culture = Embed.culture('ba-ru');
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testIssue20151201() {
+    for (i in 0...x){
     var s = NumberFormat.printf(5.7, "%.1f%%");
     Assert.equals("5.7%", s);
-  }
+  }}
 
   // public function testIssues() {
   //   Assert.equals("1,081,072,410", 1081072409.99914.number(0));

@@ -1,7 +1,8 @@
+
 import utest.Runner;
 import utest.ui.Report;
 
-class TS8 {
+class TS2 {
   public static function addTests(runner : Runner) {
     //runner.addCase(new thx.color.TestLab());
     //runner.addCase(new thx.color.TestLCh());
@@ -9,15 +10,21 @@ class TS8 {
     //runner.addCase(new thx.color.TestColor());
     //runner.addCase(new thx.color.TestColorParser());
     //runner.addCase(new thx.color.TestConversion());
-    //runner.addCase(new thx.color.TestCmy());
-    runner.addCase(new thx.color.TestCmyk());
- }
+var w : String = "";
+for (arg in Sys.args()){
+w = arg;}
+trace('The value of loop_wrapper is $w');
 
-  public static function main() {
-    var runner = new Runner();
-    addTests(runner);
-    Report.create(runner);
-    runner.run();
-  }
+var x : Int = Std.parseInt(w);
+runner.addCase(new utest.TestDispatcher(x));
 }
 
+  public static function main() {
+
+var runner = new Runner();
+addTests(runner);
+Report.create(runner);
+runner.run();
+
+  }
+}

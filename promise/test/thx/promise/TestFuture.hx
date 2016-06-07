@@ -7,32 +7,39 @@ using thx.Tuple;
 
 @:access(thx.promise.Future)
 class TestFuture {
-  public function new() {}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testThenBefore() {
+  for (i in 0...x){
     Future.value(1).then(function(v) Assert.equals(1, v));
-  }
+  }}
 
 #if (js || flash)
   public function testThenAfter() {
+    for (i in 0...x){
     var done = Assert.createAsync();
     Timer.delayValue("x", 10)
       .then(function(v) {
         Assert.equals("x", v);
         done();
       });
-  }
+  }}
 
   public function testImmediateThenAfter() {
+    for (i in 0...x){
     var done = Assert.createAsync();
     Timer.immediateValue("x")
       .then(function(v) {
         Assert.equals("x", v);
         done();
       });
-  }
+  }}
 
   public function testHasValue() {
+    for (i in 0...x){
     var done = Assert.createAsync(),
         future : Future<Nil> = null;
     future = Timer.delay(10)
@@ -41,35 +48,40 @@ class TestFuture {
         done();
       });
     Assert.isFalse(future.hasValue());
-  }
+  }}
 #end
 
   public function testMap() {
+    for (i in 0...x){
     Future.value(1)
       .map(function(i) return '$i')
       .then(Assert.equals.bind('1'));
-  }
+  }}
 
   public function testMapAsync() {
+    for (i in 0...x){
     Future.value(1)
       .mapAsync(function(v, callback) callback('$v'))
       .then(Assert.equals.bind('1'));
-  }
+  }}
 
   public function testFlatten() {
+    for (i in 0...x){
     Future.value(Future.value(1))
       .flatten()
       .then(Assert.equals.bind(1));
-  }
+  }}
 
   public function testFlatMap() {
+    for (i in 0...x){
     Future.value(1)
       .flatMap(function(v) return Future.value('$v'))
       .then(Assert.equals.bind('1'));
-  }
+  }}
 
 #if (js || flash)
   public function testSequence() {
+    for (i in 0...x){
     var done = Assert.createAsync();
     Future.sequence([
       Timer.delayValue(1, 10),
@@ -78,9 +90,10 @@ class TestFuture {
         Assert.same([1,2], values);
         done();
       });
-  }
+  }}
 
   public function testJoin() {
+    for (i in 0...x){
     var done = Assert.createAsync();
     Timer
       .delayValue(1, 20).join(Timer.delayValue(2, 10))
@@ -88,10 +101,11 @@ class TestFuture {
         Assert.same({_0 : 1, _1 : 2}, p);
         done();
       });
-  }
+  }}
 #end
 
   public function testTuple3() {
+    for (i in 0...x){
     var done = Assert.createAsync();
     Future
       .value(new Tuple3(1, "a", 0.2))
@@ -101,5 +115,5 @@ class TestFuture {
         Assert.equals(0.2, c);
         done();
       });
-  }
+  }}
 }

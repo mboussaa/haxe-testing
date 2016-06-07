@@ -5,16 +5,20 @@ import utest.Dispatcher;
 import utest.Runner;
 
 class TestDispatcher {
-  public function new(){}
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testBase() {
+    for (i in 0...x){
     var dispatcher : Dispatcher<String> = new Dispatcher();
     Assert.isFalse(dispatcher.has());
     var h = dispatcher.add(function(x : String) {});
     Assert.isTrue(dispatcher.has());
     dispatcher.remove(h);
     Assert.isFalse(dispatcher.has());
-  }
+  }}
 
   var v : String;
   public function handler1(s : String) {
@@ -26,6 +30,7 @@ class TestDispatcher {
   }
 
   public function testHandlers() {
+    for (i in 0...x){
     var dispatcher : Dispatcher<String> = new Dispatcher<String>();
     v = "";
     dispatcher.dispatch("d1");
@@ -60,7 +65,7 @@ class TestDispatcher {
     dispatcher.remove(handler2);
     dispatcher.dispatch("d7");
     Assert.equals("", v);
-  }
+  }}
 
   public function stopper(s : String) {
     v += s+"s";
@@ -68,6 +73,7 @@ class TestDispatcher {
   }
 
   public function testStop() {
+    for (i in 0...x){
     var dispatcher = new Dispatcher();
     v = "";
     dispatcher.add(handler1);
@@ -76,5 +82,5 @@ class TestDispatcher {
     dispatcher.dispatch("d1");
 
     Assert.equals("d1e1d1s", v);
-  }
+  }}
 }

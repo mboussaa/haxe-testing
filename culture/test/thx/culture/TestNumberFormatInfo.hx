@@ -4,9 +4,13 @@ import utest.Assert;
 import thx.culture.Pattern;
 
 class TestNumberFormatInfo {
-  public function new() { }
+var x : Int;
+  public function new(i) {
+ this.x = i;
+ }
 
   public function testInvariant() {
+    for (i in 0...x){
     var n = NumberFormatInfo.invariant;
 
     Assert.same([3], n.groupSizesNumber);
@@ -15,5 +19,5 @@ class TestNumberFormatInfo {
     Assert.equals('-', n.signNegative);
     Assert.equals('+', n.signPositive);
     Assert.equals('NaN', n.symbolNaN);
-  }
+  }}
 }
