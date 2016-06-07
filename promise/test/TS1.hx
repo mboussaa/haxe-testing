@@ -1,7 +1,6 @@
-
-
 import utest.Runner;
 import utest.ui.Report;
+import utest.Assert;
 
 class TS1 {
   public static function addTests(runner : Runner) {
