@@ -13,8 +13,8 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_TestStructures(global::test.TestStructures __temp_me61, object posInfos) {
-			global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me61, posInfos);
+		public static void __hx_ctor_test_TestStructures(global::test.TestStructures __temp_me62, object posInfos) {
+			global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me62, posInfos);
 		}
 		
 		

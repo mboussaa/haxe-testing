@@ -32,18 +32,10 @@
    <depend name="include/test/MathTestCase.h"/>
    <depend name="include/test/TestStructures.h"/>
   </file>
-  <file name="src/test/TestStress.cpp" >
-   <depend name="include/haxe/Log.h"/>
-   <depend name="include/hxmath/math/Matrix3x2Default.h"/>
-   <depend name="include/hxmath/math/Matrix3x3Default.h"/>
-   <depend name="include/hxmath/math/Matrix4x4Default.h"/>
-   <depend name="include/hxmath/math/Vector2Default.h"/>
-   <depend name="include/nanotest/NanoTestAssertResult.h"/>
-   <depend name="include/nanotest/NanoTestCase.h"/>
-   <depend name="include/test/MathTestCase.h"/>
-   <depend name="include/test/TestStress.h"/>
-  </file>
   <file name="src/test/TS1.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/haxe/Log.h"/>
    <depend name="include/nanotest/NanoTestCase.h"/>
    <depend name="include/nanotest/NanoTestRunner.h"/>
    <depend name="include/test/MathTestCase.h"/>
@@ -245,6 +237,9 @@
    <depend name="include/haxe/unit/TestRunner.h"/>
    <depend name="include/haxe/unit/TestStatus.h"/>
   </file>
+  <file name="src/haxe/io/Eof.cpp" >
+   <depend name="include/haxe/io/Eof.h"/>
+  </file>
   <file name="src/haxe/Log.cpp" >
    <depend name="include/Std.h"/>
    <depend name="include/haxe/Log.h"/>
@@ -263,6 +258,9 @@
   <file name="src/Type.cpp" >
    <depend name="include/Reflect.h"/>
    <depend name="include/Type.h"/>
+  </file>
+  <file name="src/Sys.cpp" >
+   <depend name="include/Sys.h"/>
   </file>
   <file name="src/StringTools.cpp" >
    <depend name="include/StringTools.h"/>
@@ -334,4 +332,6 @@
 <set name="HAXE_OUTPUT" value="TS1" />
 <include name="${HXCPP}/build-tool/BuildCommon.xml"/>
 <include name="${HXCPP}/src/hx/libs/regexp/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
 </xml>

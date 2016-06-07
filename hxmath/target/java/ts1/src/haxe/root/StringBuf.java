@@ -64,6 +64,13 @@ public class StringBuf extends haxe.lang.HxObject
 	}
 	
 	
+	public void addChar(int c)
+	{
+		//line 55 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+		this.b.append(((char) (c) ));
+	}
+	
+	
 	@Override public java.lang.String toString()
 	{
 		//line 59 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
@@ -158,6 +165,22 @@ public class StringBuf extends haxe.lang.HxObject
 				}
 				
 				
+				case -1149089897:
+				{
+					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+					if (field.equals("addChar")) 
+					{
+						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+						__temp_executeDef1 = false;
+						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+						return ((haxe.lang.Function) (new haxe.lang.Closure(this, "addChar")) );
+					}
+					
+					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+					break;
+				}
+				
+				
 				case 96417:
 				{
 					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
@@ -236,6 +259,22 @@ public class StringBuf extends haxe.lang.HxObject
 				}
 				
 				
+				case -1149089897:
+				{
+					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+					if (field.equals("addChar")) 
+					{
+						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+						__temp_executeDef1 = false;
+						//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+						this.addChar(((int) (haxe.lang.Runtime.toInt(dynargs.__get(0))) ));
+					}
+					
+					//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+					break;
+				}
+				
+				
 			}
 			
 			//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
@@ -244,14 +283,11 @@ public class StringBuf extends haxe.lang.HxObject
 				//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
 				return super.__hx_invokeField(field, dynargs);
 			}
-			else
-			{
-				//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
-				throw null;
-			}
 			
 		}
 		
+		//line 24 "/usr/lib/haxe/std/java/_std/StringBuf.hx"
+		return null;
 	}
 	
 	

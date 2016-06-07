@@ -13,11 +13,11 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_Matrix2x2Default(global::hxmath.math.Matrix2x2Default __temp_me32, double a, double b, double c, double d) {
-			__temp_me32.a = a;
-			__temp_me32.b = b;
-			__temp_me32.c = c;
-			__temp_me32.d = d;
+		public static void __hx_ctor_hxmath_math_Matrix2x2Default(global::hxmath.math.Matrix2x2Default __temp_me34, double a, double b, double c, double d) {
+			__temp_me34.a = a;
+			__temp_me34.b = b;
+			__temp_me34.c = c;
+			__temp_me34.d = d;
 		}
 		
 		

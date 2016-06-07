@@ -18,7 +18,7 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_MathUtil(global::hxmath.math.MathUtil __temp_me28) {
+		public static void __hx_ctor_hxmath_math_MathUtil(global::hxmath.math.MathUtil __temp_me30) {
 		}
 		
 		
@@ -70,11 +70,11 @@ namespace hxmath.math {
 		
 		public static int sign(double x, global::haxe.lang.Null<double> w) {
 			unchecked {
-				double __temp_w27 = ( ( ! (w.hasValue) ) ? (((double) (0) )) : ((w).@value) );
-				if (( global::System.Math.Abs(((double) (x) )) < __temp_w27 )) {
+				double __temp_w29 = ( ( ! (w.hasValue) ) ? (((double) (0) )) : ((w).@value) );
+				if (( global::System.Math.Abs(((double) (x) )) < __temp_w29 )) {
 					return 0;
 				}
-				else if (( x <=  - (__temp_w27)  )) {
+				else if (( x <=  - (__temp_w29)  )) {
 					return -1;
 				}
 				else {

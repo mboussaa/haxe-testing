@@ -18,16 +18,16 @@ public class Frame2Default extends haxe.lang.HxObject implements hxmath.frames.I
 	}
 	
 	
-	public static void __hx_ctor_hxmath_frames_Frame2Default(hxmath.frames.Frame2Default __temp_me14, hxmath.math.Vector2Default offset, java.lang.Object angleDegrees, java.lang.Object isCached)
+	public static void __hx_ctor_hxmath_frames_Frame2Default(hxmath.frames.Frame2Default __temp_me20, hxmath.math.Vector2Default offset, java.lang.Object angleDegrees, java.lang.Object isCached)
 	{
 		//line 35 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.isDirty = true;
+		__temp_me20.isDirty = true;
 		//line 32 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.isCached = true;
+		__temp_me20.isCached = true;
 		//line 45 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		boolean __temp_isCached13 = ( (haxe.lang.Runtime.eq(isCached, null)) ? (true) : (haxe.lang.Runtime.toBool(isCached)) );
+		boolean __temp_isCached19 = ( (haxe.lang.Runtime.eq(isCached, null)) ? (true) : (haxe.lang.Runtime.toBool(isCached)) );
 		//line 45 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		double __temp_angleDegrees12 = ( (haxe.lang.Runtime.eq(angleDegrees, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(angleDegrees)) )) );
+		double __temp_angleDegrees18 = ( (haxe.lang.Runtime.eq(angleDegrees, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(angleDegrees)) )) );
 		//line 46 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
 		hxmath.math.Vector2Default tmp = null;
 		//line 46 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
@@ -45,17 +45,17 @@ public class Frame2Default extends haxe.lang.HxObject implements hxmath.frames.I
 		}
 		
 		//line 46 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.internalOffset = tmp;
+		__temp_me20.internalOffset = tmp;
 		//line 49 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.internalAngleDegrees = __temp_angleDegrees12;
+		__temp_me20.internalAngleDegrees = __temp_angleDegrees18;
 		//line 50 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.isCached = __temp_isCached13;
+		__temp_me20.isCached = __temp_isCached19;
 		//line 51 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.isDirty = true;
+		__temp_me20.isDirty = true;
 		//line 52 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
 		hxmath.math.Matrix3x2Default this2 = new hxmath.math.Matrix3x2Default(1.0, 0.0, 0.0, 1.0, 0.0, 0.0);
 		//line 52 "/shared/hxmath/hxmath/frames/Frame2Default.hx"
-		__temp_me14.internalMatrix = ((hxmath.math.Matrix3x2Default) (this2) );
+		__temp_me20.internalMatrix = ((hxmath.math.Matrix3x2Default) (this2) );
 	}
 	
 	

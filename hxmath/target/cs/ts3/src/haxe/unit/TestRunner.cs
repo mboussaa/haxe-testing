@@ -18,7 +18,7 @@ namespace haxe.unit {
 		}
 		
 		
-		public static void __hx_ctor_haxe_unit_TestRunner(global::haxe.unit.TestRunner __temp_me18) {
+		public static void __hx_ctor_haxe_unit_TestRunner(global::haxe.unit.TestRunner __temp_me20) {
 		}
 		
 		

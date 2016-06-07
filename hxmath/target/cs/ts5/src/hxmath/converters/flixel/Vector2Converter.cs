@@ -13,7 +13,7 @@ namespace hxmath.converters.flixel {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_converters_flixel_Vector2Converter(global::hxmath.converters.flixel.Vector2Converter __temp_me20) {
+		public static void __hx_ctor_hxmath_converters_flixel_Vector2Converter(global::hxmath.converters.flixel.Vector2Converter __temp_me22) {
 		}
 		
 		

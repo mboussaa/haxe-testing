@@ -13,7 +13,7 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_FlxObjectMock(global::test.FlxObjectMock __temp_me57) {
+		public static void __hx_ctor_test_FlxObjectMock(global::test.FlxObjectMock __temp_me59) {
 		}
 		
 		
@@ -303,8 +303,8 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_TestFrames(global::test.TestFrames __temp_me58, object posInfos) {
-			global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me58, posInfos);
+		public static void __hx_ctor_test_TestFrames(global::test.TestFrames __temp_me60, object posInfos) {
+			global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me60, posInfos);
 		}
 		
 		

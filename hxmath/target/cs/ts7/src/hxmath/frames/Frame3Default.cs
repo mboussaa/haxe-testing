@@ -13,16 +13,16 @@ namespace hxmath.frames {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_frames_Frame3Default(global::hxmath.frames.Frame3Default __temp_me24, global::hxmath.math.Vector3Default offset, global::hxmath.math.QuaternionDefault orientation, global::haxe.lang.Null<bool> isCached) {
+		public static void __hx_ctor_hxmath_frames_Frame3Default(global::hxmath.frames.Frame3Default __temp_me26, global::hxmath.math.Vector3Default offset, global::hxmath.math.QuaternionDefault orientation, global::haxe.lang.Null<bool> isCached) {
 			unchecked {
-				__temp_me24.isDirty = true;
-				__temp_me24.isCached = true;
-				bool __temp_isCached23 = ( ( ! (isCached.hasValue) ) ? (true) : ((isCached).@value) );
-				__temp_me24.internalOffset = ( (( offset == null )) ? (((global::hxmath.math.Vector3Default) (new global::hxmath.math.Vector3Default(0.0, 0.0, 0.0)) )) : (offset) );
-				__temp_me24.internalOrientation = ( (( orientation == null )) ? (((global::hxmath.math.QuaternionDefault) (new global::hxmath.math.QuaternionDefault(((double) (1) ), ((double) (0) ), ((double) (0) ), ((double) (0) ))) )) : (orientation) );
-				__temp_me24.isCached = __temp_isCached23;
-				__temp_me24.isDirty = true;
-				__temp_me24.internalMatrix = ((global::hxmath.math.Matrix4x4Default) (new global::hxmath.math.Matrix4x4Default(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0)) );
+				__temp_me26.isDirty = true;
+				__temp_me26.isCached = true;
+				bool __temp_isCached25 = ( ( ! (isCached.hasValue) ) ? (true) : ((isCached).@value) );
+				__temp_me26.internalOffset = ( (( offset == null )) ? (((global::hxmath.math.Vector3Default) (new global::hxmath.math.Vector3Default(0.0, 0.0, 0.0)) )) : (offset) );
+				__temp_me26.internalOrientation = ( (( orientation == null )) ? (((global::hxmath.math.QuaternionDefault) (new global::hxmath.math.QuaternionDefault(((double) (1) ), ((double) (0) ), ((double) (0) ), ((double) (0) ))) )) : (orientation) );
+				__temp_me26.isCached = __temp_isCached25;
+				__temp_me26.isDirty = true;
+				__temp_me26.internalMatrix = ((global::hxmath.math.Matrix4x4Default) (new global::hxmath.math.Matrix4x4Default(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0)) );
 			}
 		}
 		

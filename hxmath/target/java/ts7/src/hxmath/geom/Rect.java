@@ -18,16 +18,16 @@ public class Rect extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_geom_Rect(hxmath.geom.Rect __temp_me20, double x, double y, double width, double height)
+	public static void __hx_ctor_hxmath_geom_Rect(hxmath.geom.Rect __temp_me26, double x, double y, double width, double height)
 	{
 		//line 50 "/shared/hxmath/hxmath/geom/Rect.hx"
-		__temp_me20.x = x;
+		__temp_me26.x = x;
 		//line 51 "/shared/hxmath/hxmath/geom/Rect.hx"
-		__temp_me20.y = y;
+		__temp_me26.y = y;
 		//line 52 "/shared/hxmath/hxmath/geom/Rect.hx"
-		__temp_me20.width = width;
+		__temp_me26.width = width;
 		//line 53 "/shared/hxmath/hxmath/geom/Rect.hx"
-		__temp_me20.height = height;
+		__temp_me26.height = height;
 	}
 	
 	

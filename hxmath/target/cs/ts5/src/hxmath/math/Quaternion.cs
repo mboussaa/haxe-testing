@@ -13,11 +13,11 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_QuaternionDefault(global::hxmath.math.QuaternionDefault __temp_me33, double s, double x, double y, double z) {
-			__temp_me33.s = s;
-			__temp_me33.x = x;
-			__temp_me33.y = y;
-			__temp_me33.z = z;
+		public static void __hx_ctor_hxmath_math_QuaternionDefault(global::hxmath.math.QuaternionDefault __temp_me35, double s, double x, double y, double z) {
+			__temp_me35.s = s;
+			__temp_me35.x = x;
+			__temp_me35.y = y;
+			__temp_me35.z = z;
 		}
 		
 		

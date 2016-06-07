@@ -20,8 +20,8 @@ namespace nanotest {
 		}
 		
 		
-		public static void __hx_ctor_nanotest_NanoTestCase(global::nanotest.NanoTestCase __temp_me38, object posInfos) {
-			__temp_me38.posInfos = posInfos;
+		public static void __hx_ctor_nanotest_NanoTestCase(global::nanotest.NanoTestCase __temp_me40, object posInfos) {
+			__temp_me40.posInfos = posInfos;
 		}
 		
 		

@@ -13,9 +13,9 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_IntVector2Default(global::hxmath.math.IntVector2Default __temp_me26, int x, int y) {
-			__temp_me26.x = x;
-			__temp_me26.y = y;
+		public static void __hx_ctor_hxmath_math_IntVector2Default(global::hxmath.math.IntVector2Default __temp_me28, int x, int y) {
+			__temp_me28.x = x;
+			__temp_me28.y = y;
 		}
 		
 		

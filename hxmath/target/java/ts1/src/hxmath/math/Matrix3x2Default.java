@@ -18,20 +18,20 @@ public class Matrix3x2Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Matrix3x2Default(hxmath.math.Matrix3x2Default __temp_me25, double a, double b, double c, double d, double tx, double ty)
+	public static void __hx_ctor_hxmath_math_Matrix3x2Default(hxmath.math.Matrix3x2Default __temp_me31, double a, double b, double c, double d, double tx, double ty)
 	{
 		//line 38 "/shared/hxmath/hxmath/math/Matrix3x2.hx"
-		__temp_me25.a = a;
+		__temp_me31.a = a;
 		//line 39 "/shared/hxmath/hxmath/math/Matrix3x2.hx"
-		__temp_me25.b = b;
+		__temp_me31.b = b;
 		//line 40 "/shared/hxmath/hxmath/math/Matrix3x2.hx"
-		__temp_me25.c = c;
+		__temp_me31.c = c;
 		//line 41 "/shared/hxmath/hxmath/math/Matrix3x2.hx"
-		__temp_me25.d = d;
+		__temp_me31.d = d;
 		//line 42 "/shared/hxmath/hxmath/math/Matrix3x2.hx"
-		__temp_me25.tx = tx;
+		__temp_me31.tx = tx;
 		//line 43 "/shared/hxmath/hxmath/math/Matrix3x2.hx"
-		__temp_me25.ty = ty;
+		__temp_me31.ty = ty;
 	}
 	
 	

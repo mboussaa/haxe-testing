@@ -13,8 +13,8 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_MathTestCase(global::test.MathTestCase __temp_me54, object posInfos) {
-			global::nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me54, posInfos);
+		public static void __hx_ctor_test_MathTestCase(global::test.MathTestCase __temp_me56, object posInfos) {
+			global::nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me56, posInfos);
 		}
 		
 		
@@ -29,10 +29,10 @@ namespace test {
 		
 		
 		public virtual double randomFloat(global::haxe.lang.Null<double> center, global::haxe.lang.Null<double> width, global::haxe.lang.Null<double> precision) {
-			double __temp_precision42 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
-			double __temp_width41 = ( ( ! (width.hasValue) ) ? (1.0) : ((width).@value) );
-			double __temp_center40 = ( ( ! (center.hasValue) ) ? (0.0) : ((center).@value) );
-			return ( ((int) (global::System.Math.Floor(((double) (( (( ( (( global::Math.rand.NextDouble() - 0.5 )) * __temp_width41 ) + __temp_center40 )) / __temp_precision42 )) ))) ) * __temp_precision42 );
+			double __temp_precision44 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+			double __temp_width43 = ( ( ! (width.hasValue) ) ? (1.0) : ((width).@value) );
+			double __temp_center42 = ( ( ! (center.hasValue) ) ? (0.0) : ((center).@value) );
+			return ( ((int) (global::System.Math.Floor(((double) (( (( ( (( global::Math.rand.NextDouble() - 0.5 )) * __temp_width43 ) + __temp_center42 )) / __temp_precision44 )) ))) ) * __temp_precision44 );
 		}
 		
 		
@@ -60,12 +60,12 @@ namespace test {
 		
 		
 		public virtual void assertApproxEquals(double expected, double actual, global::haxe.lang.Null<double> tolerance, object p) {
-			double __temp_tolerance43 = ( ( ! (tolerance.hasValue) ) ? (1e-6) : ((tolerance).@value) );
-			if (( global::System.Math.Abs(((double) (( expected - actual )) )) < __temp_tolerance43 )) {
+			double __temp_tolerance45 = ( ( ! (tolerance.hasValue) ) ? (1e-6) : ((tolerance).@value) );
+			if (( global::System.Math.Abs(((double) (( expected - actual )) )) < __temp_tolerance45 )) {
 				this.success(p);
 			}
 			else {
-				this.fail(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("expected ", global::haxe.lang.Runtime.toString(expected)), " +-"), global::haxe.lang.Runtime.toString(__temp_tolerance43)), " but was "), global::haxe.lang.Runtime.toString(actual)), p);
+				this.fail(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat(global::haxe.lang.Runtime.concat("expected ", global::haxe.lang.Runtime.toString(expected)), " +-"), global::haxe.lang.Runtime.toString(__temp_tolerance45)), " but was "), global::haxe.lang.Runtime.toString(actual)), p);
 			}
 			
 		}
@@ -73,9 +73,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Vector2Default randomVector2(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision44 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision46 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision44;
+				distribution.precision = __temp_precision46;
 				global::Array<double> rawData = this.randomArray(2, distribution);
 				if (( rawData.length != 2 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -88,9 +88,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Vector3Default randomVector3(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision45 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision47 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision45;
+				distribution.precision = __temp_precision47;
 				global::Array<double> rawData = this.randomArray(3, distribution);
 				if (( rawData.length != 3 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -103,9 +103,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Vector4Default randomVector4(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision46 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision48 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision46;
+				distribution.precision = __temp_precision48;
 				global::Array<double> rawData = this.randomArray(4, distribution);
 				if (( rawData.length != 4 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -118,9 +118,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Matrix2x2Default randomMatrix2x2(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision47 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision49 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision47;
+				distribution.precision = __temp_precision49;
 				global::Array<double> rawData = this.randomArray(4, distribution);
 				if (( rawData.length != 4 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -133,9 +133,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Matrix3x2Default randomMatrix3x2(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision48 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision50 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision48;
+				distribution.precision = __temp_precision50;
 				global::Array<double> rawData = this.randomArray(6, distribution);
 				if (( rawData.length != 6 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -148,9 +148,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Matrix3x3Default randomMatrix3x3(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision49 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision51 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision49;
+				distribution.precision = __temp_precision51;
 				global::Array<double> rawData = this.randomArray(9, distribution);
 				if (( rawData.length != 9 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -163,9 +163,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.Matrix4x4Default randomMatrix4x4(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision50 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision52 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision50;
+				distribution.precision = __temp_precision52;
 				global::Array<double> rawData = this.randomArray(16, distribution);
 				if (( rawData.length != 16 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -178,9 +178,9 @@ namespace test {
 		
 		public virtual global::hxmath.math.QuaternionDefault randomQuaternion(global::haxe.lang.Null<double> precision) {
 			unchecked {
-				double __temp_precision51 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+				double __temp_precision53 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
 				global::test.Distribution distribution = new global::test.Distribution();
-				distribution.precision = __temp_precision51;
+				distribution.precision = __temp_precision53;
 				global::Array<double> rawData = this.randomArray(4, distribution);
 				if (( rawData.length != 4 )) {
 					throw global::haxe.lang.HaxeException.wrap("Invalid rawData.");
@@ -202,15 +202,15 @@ namespace test {
 		
 		
 		public virtual global::hxmath.frames.IFrame2 randomFrame2(global::haxe.lang.Null<double> precision) {
-			double __temp_precision52 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
-			return global::hxmath.frames._Frame2.Frame2_Impl_._new(this.randomVector2(new global::haxe.lang.Null<double>(__temp_precision52, true)), ( this.randomFloat(new global::haxe.lang.Null<double>(0.0, true), new global::haxe.lang.Null<double>(1.0, true), new global::haxe.lang.Null<double>(__temp_precision52, true)) * global::Math.PI ));
+			double __temp_precision54 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+			return global::hxmath.frames._Frame2.Frame2_Impl_._new(this.randomVector2(new global::haxe.lang.Null<double>(__temp_precision54, true)), ( this.randomFloat(new global::haxe.lang.Null<double>(0.0, true), new global::haxe.lang.Null<double>(1.0, true), new global::haxe.lang.Null<double>(__temp_precision54, true)) * global::Math.PI ));
 		}
 		
 		
 		public virtual global::hxmath.frames.IFrame3 randomFrame3(global::haxe.lang.Null<double> precision) {
-			double __temp_precision53 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
-			global::hxmath.math.Vector3Default tmp = this.randomVector3(new global::haxe.lang.Null<double>(__temp_precision53, true));
-			global::hxmath.math.QuaternionDefault self = ((global::hxmath.math.QuaternionDefault) (this.randomQuaternion(new global::haxe.lang.Null<double>(__temp_precision53, true))) );
+			double __temp_precision55 = ( ( ! (precision.hasValue) ) ? (1e-4) : ((precision).@value) );
+			global::hxmath.math.Vector3Default tmp = this.randomVector3(new global::haxe.lang.Null<double>(__temp_precision55, true));
+			global::hxmath.math.QuaternionDefault self = ((global::hxmath.math.QuaternionDefault) (this.randomQuaternion(new global::haxe.lang.Null<double>(__temp_precision55, true))) );
 			double _g = ( 1.0 / global::System.Math.Sqrt(((double) (( ( ( ( self.s * self.s ) + ( self.x * self.x ) ) + ( self.y * self.y ) ) + ( self.z * self.z ) )) )) );
 			global::hxmath.math.QuaternionDefault self1 = ((global::hxmath.math.QuaternionDefault) (new global::hxmath.math.QuaternionDefault(self.s, self.x, self.y, self.z)) );
 			self1.s *= _g;

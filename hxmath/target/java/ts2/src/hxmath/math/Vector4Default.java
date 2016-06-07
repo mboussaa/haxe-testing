@@ -18,16 +18,16 @@ public class Vector4Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Vector4Default(hxmath.math.Vector4Default __temp_me27, double x, double y, double z, double w)
+	public static void __hx_ctor_hxmath_math_Vector4Default(hxmath.math.Vector4Default __temp_me33, double x, double y, double z, double w)
 	{
 		//line 23 "/shared/hxmath/hxmath/math/Vector4.hx"
-		__temp_me27.x = x;
+		__temp_me33.x = x;
 		//line 24 "/shared/hxmath/hxmath/math/Vector4.hx"
-		__temp_me27.y = y;
+		__temp_me33.y = y;
 		//line 25 "/shared/hxmath/hxmath/math/Vector4.hx"
-		__temp_me27.z = z;
+		__temp_me33.z = z;
 		//line 26 "/shared/hxmath/hxmath/math/Vector4.hx"
-		__temp_me27.w = w;
+		__temp_me33.w = w;
 	}
 	
 	

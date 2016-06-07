@@ -13,16 +13,16 @@ namespace hxmath.frames {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_frames_Frame2Default(global::hxmath.frames.Frame2Default __temp_me23, global::hxmath.math.Vector2Default offset, global::haxe.lang.Null<double> angleDegrees, global::haxe.lang.Null<bool> isCached) {
-			__temp_me23.isDirty = true;
-			__temp_me23.isCached = true;
-			bool __temp_isCached22 = ( ( ! (isCached.hasValue) ) ? (true) : ((isCached).@value) );
-			double __temp_angleDegrees21 = ( ( ! (angleDegrees.hasValue) ) ? (0.0) : ((angleDegrees).@value) );
-			__temp_me23.internalOffset = ( (( offset == null )) ? (((global::hxmath.math.Vector2Default) (new global::hxmath.math.Vector2Default(0.0, 0.0)) )) : (offset) );
-			__temp_me23.internalAngleDegrees = __temp_angleDegrees21;
-			__temp_me23.isCached = __temp_isCached22;
-			__temp_me23.isDirty = true;
-			__temp_me23.internalMatrix = ((global::hxmath.math.Matrix3x2Default) (new global::hxmath.math.Matrix3x2Default(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)) );
+		public static void __hx_ctor_hxmath_frames_Frame2Default(global::hxmath.frames.Frame2Default __temp_me25, global::hxmath.math.Vector2Default offset, global::haxe.lang.Null<double> angleDegrees, global::haxe.lang.Null<bool> isCached) {
+			__temp_me25.isDirty = true;
+			__temp_me25.isCached = true;
+			bool __temp_isCached24 = ( ( ! (isCached.hasValue) ) ? (true) : ((isCached).@value) );
+			double __temp_angleDegrees23 = ( ( ! (angleDegrees.hasValue) ) ? (0.0) : ((angleDegrees).@value) );
+			__temp_me25.internalOffset = ( (( offset == null )) ? (((global::hxmath.math.Vector2Default) (new global::hxmath.math.Vector2Default(0.0, 0.0)) )) : (offset) );
+			__temp_me25.internalAngleDegrees = __temp_angleDegrees23;
+			__temp_me25.isCached = __temp_isCached24;
+			__temp_me25.isDirty = true;
+			__temp_me25.internalMatrix = ((global::hxmath.math.Matrix3x2Default) (new global::hxmath.math.Matrix3x2Default(1.0, 0.0, 0.0, 1.0, 0.0, 0.0)) );
 		}
 		
 		

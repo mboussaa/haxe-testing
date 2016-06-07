@@ -81,6 +81,10 @@
 	
     <Compile Include="src\hxmath\math\Matrix3x3.cs"/>
 	
+    <Compile Include="src\Sys.cs"/>
+	
+    <Compile Include="src\haxe\io\Eof.cs"/>
+	
     <Compile Include="src\hxmath\frames\adapters\FlxSpriteFrame2.cs"/>
 	
     <Compile Include="src\hxmath\math\Matrix2x2.cs"/>
@@ -122,8 +126,6 @@
     <Compile Include="src\hxmath\frames\Frame2Default.cs"/>
 	
     <Compile Include="src\EReg.cs"/>
-	
-    <Compile Include="src\test\TestStress.cs"/>
 	
     <Compile Include="src\hxmath\math\Quaternion.cs"/>
 	

@@ -18,7 +18,7 @@ public class Type extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor__Type(haxe.root.Type __temp_me10)
+	public static void __hx_ctor__Type(haxe.root.Type __temp_me12)
 	{
 	}
 	

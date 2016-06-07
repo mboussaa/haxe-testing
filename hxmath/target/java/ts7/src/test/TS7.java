@@ -8,6 +8,7 @@ public class TS7 extends haxe.lang.HxObject
 {
 	public static void main(String[] args)
 	{
+		Sys._args = args;
 		main();
 	}
 	
@@ -18,37 +19,75 @@ public class TS7 extends haxe.lang.HxObject
 	
 	public TS7()
 	{
-		//line 8 "/shared/hxmath/test/TS7.hx"
+		//line 10 "/shared/hxmath/test/TS7.hx"
 		test.TS7.__hx_ctor_test_TS7(this);
 	}
 	
 	
-	public static void __hx_ctor_test_TS7(test.TS7 __temp_me57)
+	public static void __hx_ctor_test_TS7(test.TS7 __temp_me66)
 	{
 	}
 	
 	
 	public static boolean main()
 	{
-		//line 12 "/shared/hxmath/test/TS7.hx"
+		//line 14 "/shared/hxmath/test/TS7.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
-		//line 30 "/shared/hxmath/test/TS7.hx"
-		runner.add(new test.TestGeom(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS7", "TS7.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (30) )) )})) )));
-		//line 40 "/shared/hxmath/test/TS7.hx"
+		//line 16 "/shared/hxmath/test/TS7.hx"
+		java.lang.String w = "";
+		//line 17 "/shared/hxmath/test/TS7.hx"
+		{
+			//line 17 "/shared/hxmath/test/TS7.hx"
+			int _g = 0;
+			//line 17 "/shared/hxmath/test/TS7.hx"
+			haxe.root.Array<java.lang.String> _g1 = haxe.root.Sys.args();
+			//line 17 "/shared/hxmath/test/TS7.hx"
+			while (( _g < _g1.length ))
+			{
+				//line 17 "/shared/hxmath/test/TS7.hx"
+				java.lang.String arg = _g1.__get(_g);
+				//line 17 "/shared/hxmath/test/TS7.hx"
+				 ++ _g;
+				//line 18 "/shared/hxmath/test/TS7.hx"
+				w = arg;
+			}
+			
+		}
+		
+		//line 20 "/shared/hxmath/test/TS7.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, ( "The value of loop_wrapper is " + w ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS7", "TS7.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (20) )) )}));
+		//line 21 "/shared/hxmath/test/TS7.hx"
+		int x = ((int) (haxe.lang.Runtime.toInt(haxe.root.Std.parseInt(w))) );
+		//line 22 "/shared/hxmath/test/TS7.hx"
+		{
+			//line 22 "/shared/hxmath/test/TS7.hx"
+			int _g11 = 0;
+			//line 22 "/shared/hxmath/test/TS7.hx"
+			while (( _g11 < x ))
+			{
+				//line 22 "/shared/hxmath/test/TS7.hx"
+				 ++ _g11;
+				//line 23 "/shared/hxmath/test/TS7.hx"
+				runner.add(new test.TestGeom(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS7", "TS7.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (23) )) )})) )));
+			}
+			
+		}
+		
+		//line 26 "/shared/hxmath/test/TS7.hx"
 		return runner.run();
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 8 "/shared/hxmath/test/TS7.hx"
+		//line 10 "/shared/hxmath/test/TS7.hx"
 		return new test.TS7(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 8 "/shared/hxmath/test/TS7.hx"
+		//line 10 "/shared/hxmath/test/TS7.hx"
 		return new test.TS7();
 	}
 	

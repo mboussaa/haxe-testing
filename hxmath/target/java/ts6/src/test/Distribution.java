@@ -18,14 +18,14 @@ public class Distribution extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_test_Distribution(test.Distribution __temp_me38)
+	public static void __hx_ctor_test_Distribution(test.Distribution __temp_me47)
 	{
 		//line 7 "/shared/hxmath/test/Distribution.hx"
-		__temp_me38.precision = 1e-4;
+		__temp_me47.precision = 1e-4;
 		//line 6 "/shared/hxmath/test/Distribution.hx"
-		__temp_me38.width = 1.0;
+		__temp_me47.width = 1.0;
 		//line 5 "/shared/hxmath/test/Distribution.hx"
-		__temp_me38.center = 0.0;
+		__temp_me47.center = 0.0;
 	}
 	
 	

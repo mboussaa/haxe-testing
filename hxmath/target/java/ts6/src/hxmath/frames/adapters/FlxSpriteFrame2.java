@@ -18,7 +18,7 @@ public class FlxSpriteFrame2 extends haxe.lang.HxObject implements hxmath.frames
 	}
 	
 	
-	public static void __hx_ctor_hxmath_frames_adapters_FlxSpriteFrame2(hxmath.frames.adapters.FlxSpriteFrame2 __temp_me17, java.lang.Object owner)
+	public static void __hx_ctor_hxmath_frames_adapters_FlxSpriteFrame2(hxmath.frames.adapters.FlxSpriteFrame2 __temp_me23, java.lang.Object owner)
 	{
 		//line 24 "/shared/hxmath/hxmath/frames/adapters/FlxSpriteFrame2.hx"
 		{
@@ -27,11 +27,11 @@ public class FlxSpriteFrame2 extends haxe.lang.HxObject implements hxmath.frames
 			//line 24 "/shared/hxmath/hxmath/frames/adapters/FlxSpriteFrame2.hx"
 			this1 = new hxmath.math.Matrix3x2Default(1.0, 0.0, 0.0, 1.0, 0.0, 0.0);
 			//line 24 "/shared/hxmath/hxmath/frames/adapters/FlxSpriteFrame2.hx"
-			__temp_me17.internalMatrix = ((hxmath.math.Matrix3x2Default) (this1) );
+			__temp_me23.internalMatrix = ((hxmath.math.Matrix3x2Default) (this1) );
 		}
 		
 		//line 42 "/shared/hxmath/hxmath/frames/adapters/FlxSpriteFrame2.hx"
-		__temp_me17.owner = owner;
+		__temp_me23.owner = owner;
 	}
 	
 	

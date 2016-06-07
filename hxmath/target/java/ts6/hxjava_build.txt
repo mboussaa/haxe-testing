@@ -59,6 +59,8 @@ M hxmath.math.ShortVector2
 C hxmath.math._ShortVector2.ShortVector2_Impl_
 M java.lang.Error
 M java.util.concurrent.ExecutionException
+M haxe.io.Output
+C haxe.io.Output
 M haxe.macro.Expr
 M java.net.URLEncoder
 M java.nio.LongBuffer
@@ -99,6 +101,8 @@ M java.nio.file.attribute.FileAttribute
 M java.util.AbstractCollection
 M haxe.root.String
 M java.util.AbstractSet
+M java.lang.Process
+M java.lang.ProcessBuilder
 M java.nio.FloatBuffer
 M java.security.cert.CertificateEncodingException
 M java.lang.Number
@@ -126,8 +130,12 @@ M java.net.URISyntaxException
 M java.io.FileDescriptor
 M haxe.io.BytesData
 M haxe.macro.Type
+M haxe.root.Sys
+C haxe.root.Sys
 M java.lang.Class
 M java.security.Timestamp
+M haxe.io.Eof
+C haxe.io.Eof
 M hxmath.frames.adapters.FlxSpriteFrame2
 C hxmath.frames.adapters.FlxSpriteFrame2
 M java.lang.ref.WeakReference
@@ -153,6 +161,9 @@ M java.nio.file.AccessMode
 M haxe.root.StdTypes
 M java.security.InvalidKeyException
 M java.lang.Thread
+M haxe.io.Error
+E haxe.io.Error
+C haxe.io.Error
 M java.internal.Function
 C haxe.lang.Function
 C haxe.lang.VarArgsBase
@@ -180,6 +191,8 @@ M java.lang.Iterable
 M java.net.ContentHandler
 M java.net.Proxy
 M java.util.MissingResourceException
+M haxe.root.StringTools
+C haxe.root.StringTools
 M java.io.PrintWriter
 M test.MathTestCase
 C test.MathTestCase
@@ -199,6 +212,8 @@ M java.security.CodeSigner
 M java.nio.file.attribute.FileTime
 M haxe.root.Reflect
 C haxe.root.Reflect
+M haxe.java.io.NativeOutput
+C haxe.java.io.NativeOutput
 M java.security.NoSuchAlgorithmException
 M java.nio.channels.Channel
 M java.security.NoSuchProviderException
@@ -215,6 +230,7 @@ M java.io.Serializable
 M test.Distribution
 C test.Distribution
 M java.net.SocketAddress
+M java.io.EOFException
 M java.sun.util.locale.BaseLocale
 M haxe.root.Class
 M java.io.SyncFailedException
@@ -225,6 +241,7 @@ C haxe.java.Lib
 M java.lang.SecurityException
 M java.io.Reader
 M haxe.Constraints
+C haxe.IMap
 M java.Boot
 M test.TS6
 C test.TS6
@@ -234,6 +251,8 @@ M java.nio.channels.AsynchronousChannel
 M java.util.regex.Pattern
 M nanotest.NanoTestResult
 M java.util.Date
+M sys.io.Process
+C sys.io.Process
 M haxe.ds.ObjectMap
 M java.nio.ByteBuffer
 M java.nio.file.FileSystem
@@ -249,6 +268,7 @@ M java.lang.RuntimeException
 M java.nio.file.WatchKey
 M java.util.concurrent.TimeUnit
 M haxe.ds.StringMap
+C haxe.ds.StringMap
 M java.lang.Throwable
 M java.lang.NumberFormatException
 M java.nio.channels.CompletionHandler
@@ -263,6 +283,8 @@ M nanotest.NanoTestCase
 C nanotest.NanoTestCase
 C nanotest.NanoTestCase_run_43__Fun
 M java.nio.channels.ScatteringByteChannel
+M haxe.java.io.NativeInput
+C haxe.java.io.NativeInput
 M java.util.ListIterator
 M java.lang.Double
 M java.internal.HxObject
@@ -309,14 +331,13 @@ M java.io.ObjectStreamException
 M java.security.Permission
 M java.net.InterfaceAddress
 M java.StdTypes
-M test.TestStress
-C test.TestStress
 M java.lang.Package
 M java.lang.InstantiationException
 M java.util.ResourceBundle
 M hxmath.math.Quaternion
 C hxmath.math.QuaternionDefault
 C hxmath.math._Quaternion.Quaternion_Impl_
+M java.io.ByteArrayOutputStream
 M hxmath.frames.Frame2
 C hxmath.frames._Frame2.Frame2_Impl_
 M java.types.Char16
@@ -386,6 +407,8 @@ M java.util.regex.Matcher
 M java.lang.ClassFormatError
 M hxmath.frames.Frame3
 C hxmath.frames._Frame3.Frame3_Impl_
+M haxe.io.Input
+C haxe.io.Input
 M hxmath.math.Matrix4x4
 C hxmath.math.Matrix4x4Default
 C hxmath.math._Matrix4x4.Matrix4x4_Impl_

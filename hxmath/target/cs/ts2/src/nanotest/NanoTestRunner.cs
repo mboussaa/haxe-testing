@@ -13,14 +13,14 @@ namespace nanotest {
 		}
 		
 		
-		public static void __hx_ctor_nanotest_NanoTestRunner(global::nanotest.NanoTestRunner __temp_me38, global::haxe.lang.Function printError) {
-			__temp_me38.print = ( (( global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current != null )) ? (global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current) : (global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current = ((global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun) (new global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun()) )) );
-			__temp_me38.cases = new global::Array<object>(new object[]{});
+		public static void __hx_ctor_nanotest_NanoTestRunner(global::nanotest.NanoTestRunner __temp_me40, global::haxe.lang.Function printError) {
+			__temp_me40.print = ( (( global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current != null )) ? (global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current) : (global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current = ((global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun) (new global::nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun()) )) );
+			__temp_me40.cases = new global::Array<object>(new object[]{});
 			if (( printError == null )) {
-				__temp_me38.printError = ((global::haxe.lang.Function) (new global::haxe.lang.Closure(typeof(global::nanotest.NanoTestRunner), "warning", 164354652)) );
+				__temp_me40.printError = ((global::haxe.lang.Function) (new global::haxe.lang.Closure(typeof(global::nanotest.NanoTestRunner), "warning", 164354652)) );
 			}
 			else {
-				__temp_me38.printError = printError;
+				__temp_me40.printError = printError;
 			}
 			
 		}

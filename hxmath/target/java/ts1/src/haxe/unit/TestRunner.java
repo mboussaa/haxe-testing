@@ -24,7 +24,7 @@ public class TestRunner extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_unit_TestRunner(haxe.unit.TestRunner __temp_me14)
+	public static void __hx_ctor_haxe_unit_TestRunner(haxe.unit.TestRunner __temp_me20)
 	{
 	}
 	

@@ -131,6 +131,81 @@ public class Std
 	}
 	
 	
+	public static java.lang.Object parseInt(java.lang.String x)
+	{
+		
+		if (x == null) return null;
+
+		int ret = 0;
+		int base = 10;
+		int i = 0;
+		int len = x.length();
+
+		if (x.startsWith("0") && len > 2)
+		{
+			char c = x.charAt(1);
+			if (c == 'x' || c == 'X')
+			{
+				i = 2;
+				base = 16;
+			}
+		}
+
+		boolean foundAny = i != 0;
+		boolean isNeg = false;
+		for (; i < len; i++)
+		{
+			char c = x.charAt(i);
+			if (!foundAny)
+			{
+				switch(c)
+				{
+					case '-':
+						isNeg = true;
+						continue;
+					case '+':
+					case '\n':
+					case '\t':
+					case '\r':
+					case ' ':
+						if (isNeg) return null;
+						continue;
+				}
+			}
+
+			if (c >= '0' && c <= '9')
+			{
+				if (!foundAny && c == '0')
+				{
+					foundAny = true;
+					continue;
+				}
+				ret *= base; foundAny = true;
+
+				ret += ((int) (c - '0'));
+			} else if (base == 16) {
+				if (c >= 'a' && c <= 'f') {
+					ret *= base; foundAny = true;
+					ret += ((int) (c - 'a')) + 10;
+				} else if (c >= 'A' && c <= 'F') {
+					ret *= base; foundAny = true;
+					ret += ((int) (c - 'A')) + 10;
+				} else {
+					break;
+				}
+			} else {
+				break;
+			}
+		}
+
+		if (foundAny)
+			return isNeg ? -ret : ret;
+		else
+			return null;
+	
+	}
+	
+	
 }
 
 

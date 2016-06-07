@@ -18,7 +18,7 @@ public class FlxObjectMock extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_test_FlxObjectMock(test.FlxObjectMock __temp_me55)
+	public static void __hx_ctor_test_FlxObjectMock(test.FlxObjectMock __temp_me64)
 	{
 	}
 	

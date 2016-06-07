@@ -28,10 +28,10 @@ public class NanoTestCase extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_nanotest_NanoTestCase(nanotest.NanoTestCase __temp_me39, java.lang.Object posInfos)
+	public static void __hx_ctor_nanotest_NanoTestCase(nanotest.NanoTestCase __temp_me47, java.lang.Object posInfos)
 	{
 		//line 30 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
-		__temp_me39.posInfos = posInfos;
+		__temp_me47.posInfos = posInfos;
 	}
 	
 	

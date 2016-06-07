@@ -18,16 +18,16 @@ public class Matrix2x2Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Matrix2x2Default(hxmath.math.Matrix2x2Default __temp_me24, double a, double b, double c, double d)
+	public static void __hx_ctor_hxmath_math_Matrix2x2Default(hxmath.math.Matrix2x2Default __temp_me30, double a, double b, double c, double d)
 	{
 		//line 31 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
-		__temp_me24.a = a;
+		__temp_me30.a = a;
 		//line 32 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
-		__temp_me24.b = b;
+		__temp_me30.b = b;
 		//line 33 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
-		__temp_me24.c = c;
+		__temp_me30.c = c;
 		//line 34 "/shared/hxmath/hxmath/math/Matrix2x2.hx"
-		__temp_me24.d = d;
+		__temp_me30.d = d;
 	}
 	
 	

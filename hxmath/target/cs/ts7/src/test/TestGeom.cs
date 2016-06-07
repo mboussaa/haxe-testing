@@ -13,8 +13,8 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_TestGeom(global::test.TestGeom __temp_me60, object posInfos) {
-			global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me60, posInfos);
+		public static void __hx_ctor_test_TestGeom(global::test.TestGeom __temp_me62, object posInfos) {
+			global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me62, posInfos);
 		}
 		
 		

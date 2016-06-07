@@ -18,40 +18,40 @@ public class Matrix4x4Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Matrix4x4Default(hxmath.math.Matrix4x4Default __temp_me27, double m00, double m10, double m20, double m30, double m01, double m11, double m21, double m31, double m02, double m12, double m22, double m32, double m03, double m13, double m23, double m33)
+	public static void __hx_ctor_hxmath_math_Matrix4x4Default(hxmath.math.Matrix4x4Default __temp_me33, double m00, double m10, double m20, double m30, double m01, double m11, double m21, double m31, double m02, double m12, double m22, double m32, double m03, double m13, double m23, double m33)
 	{
 		//line 58 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m00 = m00;
+		__temp_me33.m00 = m00;
 		//line 59 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m10 = m10;
+		__temp_me33.m10 = m10;
 		//line 60 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m20 = m20;
+		__temp_me33.m20 = m20;
 		//line 61 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m30 = m30;
+		__temp_me33.m30 = m30;
 		//line 63 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m01 = m01;
+		__temp_me33.m01 = m01;
 		//line 64 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m11 = m11;
+		__temp_me33.m11 = m11;
 		//line 65 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m21 = m21;
+		__temp_me33.m21 = m21;
 		//line 66 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m31 = m31;
+		__temp_me33.m31 = m31;
 		//line 68 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m02 = m02;
+		__temp_me33.m02 = m02;
 		//line 69 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m12 = m12;
+		__temp_me33.m12 = m12;
 		//line 70 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m22 = m22;
+		__temp_me33.m22 = m22;
 		//line 71 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m32 = m32;
+		__temp_me33.m32 = m32;
 		//line 73 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m03 = m03;
+		__temp_me33.m03 = m03;
 		//line 74 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m13 = m13;
+		__temp_me33.m13 = m13;
 		//line 75 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m23 = m23;
+		__temp_me33.m23 = m23;
 		//line 76 "/shared/hxmath/hxmath/math/Matrix4x4.hx"
-		__temp_me27.m33 = m33;
+		__temp_me33.m33 = m33;
 	}
 	
 	

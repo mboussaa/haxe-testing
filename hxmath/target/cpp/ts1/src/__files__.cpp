@@ -11,9 +11,11 @@ const char *__hxcpp_all_files[] = {
 "/usr/lib/haxe/std/cpp/_std/EReg.hx",
 "/usr/lib/haxe/std/cpp/_std/Reflect.hx",
 "/usr/lib/haxe/std/cpp/_std/Std.hx",
+"/usr/lib/haxe/std/cpp/_std/Sys.hx",
 "/usr/lib/haxe/std/cpp/_std/Type.hx",
 "/usr/lib/haxe/std/haxe/CallStack.hx",
 "/usr/lib/haxe/std/haxe/Log.hx",
+"/usr/lib/haxe/std/haxe/io/Eof.hx",
 "/usr/lib/haxe/std/haxe/unit/TestCase.hx",
 "/usr/lib/haxe/std/haxe/unit/TestRunner.hx",
 "?",
@@ -38,7 +40,6 @@ const char *__hxcpp_all_files[] = {
 "test/Distribution.hx",
 "test/MathTestCase.hx",
 "test/TS1.hx",
-"test/TestStress.hx",
 "test/TestStructures.hx",
 #endif
  0 };
@@ -52,9 +53,11 @@ const char *__hxcpp_all_files_fullpath[] = {
 "/usr/lib/haxe/std/cpp/_std/EReg.hx",
 "/usr/lib/haxe/std/cpp/_std/Reflect.hx",
 "/usr/lib/haxe/std/cpp/_std/Std.hx",
+"/usr/lib/haxe/std/cpp/_std/Sys.hx",
 "/usr/lib/haxe/std/cpp/_std/Type.hx",
 "/usr/lib/haxe/std/haxe/CallStack.hx",
 "/usr/lib/haxe/std/haxe/Log.hx",
+"/usr/lib/haxe/std/haxe/io/Eof.hx",
 "/usr/lib/haxe/std/haxe/unit/TestCase.hx",
 "/usr/lib/haxe/std/haxe/unit/TestRunner.hx",
 "?",
@@ -79,7 +82,6 @@ const char *__hxcpp_all_files_fullpath[] = {
 "/shared/hxmath/test/Distribution.hx",
 "/shared/hxmath/test/MathTestCase.hx",
 "/shared/hxmath/test/TS1.hx",
-"/shared/hxmath/test/TestStress.hx",
 "/shared/hxmath/test/TestStructures.hx",
 #endif
  0 };
@@ -94,10 +96,12 @@ const char *__hxcpp_all_classes[] = {
 "Reflect",
 "Std",
 "StringTools",
+"Sys",
 "Type",
 "cpp.Lib",
 "haxe.CallStack",
 "haxe.Log",
+"haxe.io.Eof",
 "haxe.unit.TestCase",
 "haxe.unit.TestRunner",
 "haxe.unit.TestStatus",
@@ -131,7 +135,6 @@ const char *__hxcpp_all_classes[] = {
 "test.Distribution",
 "test.MathTestCase",
 "test.TS1",
-"test.TestStress",
 "test.TestStructures",
 #endif
  0 };

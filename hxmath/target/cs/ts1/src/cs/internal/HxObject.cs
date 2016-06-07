@@ -44,7 +44,7 @@ namespace haxe.lang {
 		}
 		
 		
-		public static void __hx_ctor_haxe_lang_HxObject(global::haxe.lang.HxObject __temp_me16) {
+		public static void __hx_ctor_haxe_lang_HxObject(global::haxe.lang.HxObject __temp_me17) {
 		}
 		
 		
@@ -185,21 +185,21 @@ namespace haxe.lang {
 		}
 		
 		
-		public static void __hx_ctor_haxe_lang_DynamicObject(global::haxe.lang.DynamicObject __temp_me18) {
-			__temp_me18.__hx_hashes = new int[]{};
-			__temp_me18.__hx_dynamics = new object[]{};
-			__temp_me18.__hx_hashes_f = new int[]{};
-			__temp_me18.__hx_dynamics_f = new double[]{};
+		public static void __hx_ctor_haxe_lang_DynamicObject(global::haxe.lang.DynamicObject __temp_me19) {
+			__temp_me19.__hx_hashes = new int[]{};
+			__temp_me19.__hx_dynamics = new object[]{};
+			__temp_me19.__hx_hashes_f = new int[]{};
+			__temp_me19.__hx_dynamics_f = new double[]{};
 		}
 		
 		
-		public static void __hx_ctor_haxe_lang_DynamicObject(global::haxe.lang.DynamicObject __temp_me17, int[] __hx_hashes, object[] __hx_dynamics, int[] __hx_hashes_f, double[] __hx_dynamics_f) {
-			__temp_me17.__hx_hashes = __hx_hashes;
-			__temp_me17.__hx_dynamics = __hx_dynamics;
-			__temp_me17.__hx_hashes_f = __hx_hashes_f;
-			__temp_me17.__hx_dynamics_f = __hx_dynamics_f;
-			__temp_me17.__hx_length = __hx_hashes.Length;
-			__temp_me17.__hx_length_f = __hx_hashes_f.Length;
+		public static void __hx_ctor_haxe_lang_DynamicObject(global::haxe.lang.DynamicObject __temp_me18, int[] __hx_hashes, object[] __hx_dynamics, int[] __hx_hashes_f, double[] __hx_dynamics_f) {
+			__temp_me18.__hx_hashes = __hx_hashes;
+			__temp_me18.__hx_dynamics = __hx_dynamics;
+			__temp_me18.__hx_hashes_f = __hx_hashes_f;
+			__temp_me18.__hx_dynamics_f = __hx_dynamics_f;
+			__temp_me18.__hx_length = __hx_hashes.Length;
+			__temp_me18.__hx_length_f = __hx_hashes_f.Length;
 		}
 		
 		

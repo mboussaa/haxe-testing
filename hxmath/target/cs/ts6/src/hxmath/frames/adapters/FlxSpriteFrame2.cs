@@ -13,14 +13,14 @@ namespace hxmath.frames.adapters {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_frames_adapters_FlxSpriteFrame2(global::hxmath.frames.adapters.FlxSpriteFrame2 __temp_me25, object owner) {
+		public static void __hx_ctor_hxmath_frames_adapters_FlxSpriteFrame2(global::hxmath.frames.adapters.FlxSpriteFrame2 __temp_me27, object owner) {
 			{
 				global::hxmath.math.Matrix3x2Default this1 = null;
 				this1 = new global::hxmath.math.Matrix3x2Default(1.0, 0.0, 0.0, 1.0, 0.0, 0.0);
-				__temp_me25.internalMatrix = ((global::hxmath.math.Matrix3x2Default) (this1) );
+				__temp_me27.internalMatrix = ((global::hxmath.math.Matrix3x2Default) (this1) );
 			}
 			
-			__temp_me25.owner = owner;
+			__temp_me27.owner = owner;
 		}
 		
 		

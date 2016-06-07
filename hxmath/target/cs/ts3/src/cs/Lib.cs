@@ -13,7 +13,7 @@ namespace cs {
 		}
 		
 		
-		public static void __hx_ctor_cs_Lib(global::cs.Lib __temp_me11) {
+		public static void __hx_ctor_cs_Lib(global::cs.Lib __temp_me12) {
 		}
 		
 		

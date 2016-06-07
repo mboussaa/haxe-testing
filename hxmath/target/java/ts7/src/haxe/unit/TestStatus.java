@@ -18,7 +18,7 @@ public class TestStatus extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_unit_TestStatus(haxe.unit.TestStatus __temp_me11)
+	public static void __hx_ctor_haxe_unit_TestStatus(haxe.unit.TestStatus __temp_me17)
 	{
 	}
 	

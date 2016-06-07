@@ -18,26 +18,26 @@ public class Matrix3x3Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Matrix3x3Default(hxmath.math.Matrix3x3Default __temp_me23, double m00, double m10, double m20, double m01, double m11, double m21, double m02, double m12, double m22)
+	public static void __hx_ctor_hxmath_math_Matrix3x3Default(hxmath.math.Matrix3x3Default __temp_me29, double m00, double m10, double m20, double m01, double m11, double m21, double m02, double m12, double m22)
 	{
 		//line 41 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m00 = m00;
+		__temp_me29.m00 = m00;
 		//line 42 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m10 = m10;
+		__temp_me29.m10 = m10;
 		//line 43 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m20 = m20;
+		__temp_me29.m20 = m20;
 		//line 45 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m01 = m01;
+		__temp_me29.m01 = m01;
 		//line 46 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m11 = m11;
+		__temp_me29.m11 = m11;
 		//line 47 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m21 = m21;
+		__temp_me29.m21 = m21;
 		//line 49 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m02 = m02;
+		__temp_me29.m02 = m02;
 		//line 50 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m12 = m12;
+		__temp_me29.m12 = m12;
 		//line 51 "/shared/hxmath/hxmath/math/Matrix3x3.hx"
-		__temp_me23.m22 = m22;
+		__temp_me29.m22 = m22;
 	}
 	
 	

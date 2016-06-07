@@ -13,11 +13,11 @@ namespace hxmath.geom {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_geom_Rect(global::hxmath.geom.Rect __temp_me28, double x, double y, double width, double height) {
-			__temp_me28.x = x;
-			__temp_me28.y = y;
-			__temp_me28.width = width;
-			__temp_me28.height = height;
+		public static void __hx_ctor_hxmath_geom_Rect(global::hxmath.geom.Rect __temp_me30, double x, double y, double width, double height) {
+			__temp_me30.x = x;
+			__temp_me30.y = y;
+			__temp_me30.width = width;
+			__temp_me30.height = height;
 		}
 		
 		

@@ -22,10 +22,10 @@ public class TestGeom extends test.MathTestCase
 	}
 	
 	
-	public static void __hx_ctor_test_TestGeom(test.TestGeom __temp_me58, java.lang.Object posInfos)
+	public static void __hx_ctor_test_TestGeom(test.TestGeom __temp_me67, java.lang.Object posInfos)
 	{
 		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
-		test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me58, posInfos);
+		test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me67, posInfos);
 	}
 	
 	

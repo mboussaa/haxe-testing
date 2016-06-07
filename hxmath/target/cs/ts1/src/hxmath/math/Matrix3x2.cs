@@ -13,13 +13,13 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_Matrix3x2Default(global::hxmath.math.Matrix3x2Default __temp_me33, double a, double b, double c, double d, double tx, double ty) {
-			__temp_me33.a = a;
-			__temp_me33.b = b;
-			__temp_me33.c = c;
-			__temp_me33.d = d;
-			__temp_me33.tx = tx;
-			__temp_me33.ty = ty;
+		public static void __hx_ctor_hxmath_math_Matrix3x2Default(global::hxmath.math.Matrix3x2Default __temp_me35, double a, double b, double c, double d, double tx, double ty) {
+			__temp_me35.a = a;
+			__temp_me35.b = b;
+			__temp_me35.c = c;
+			__temp_me35.d = d;
+			__temp_me35.tx = tx;
+			__temp_me35.ty = ty;
 		}
 		
 		

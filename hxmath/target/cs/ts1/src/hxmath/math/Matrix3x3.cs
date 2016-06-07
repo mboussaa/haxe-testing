@@ -13,16 +13,16 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_Matrix3x3Default(global::hxmath.math.Matrix3x3Default __temp_me34, double m00, double m10, double m20, double m01, double m11, double m21, double m02, double m12, double m22) {
-			__temp_me34.m00 = m00;
-			__temp_me34.m10 = m10;
-			__temp_me34.m20 = m20;
-			__temp_me34.m01 = m01;
-			__temp_me34.m11 = m11;
-			__temp_me34.m21 = m21;
-			__temp_me34.m02 = m02;
-			__temp_me34.m12 = m12;
-			__temp_me34.m22 = m22;
+		public static void __hx_ctor_hxmath_math_Matrix3x3Default(global::hxmath.math.Matrix3x3Default __temp_me36, double m00, double m10, double m20, double m01, double m11, double m21, double m02, double m12, double m22) {
+			__temp_me36.m00 = m00;
+			__temp_me36.m10 = m10;
+			__temp_me36.m20 = m20;
+			__temp_me36.m01 = m01;
+			__temp_me36.m11 = m11;
+			__temp_me36.m21 = m21;
+			__temp_me36.m02 = m02;
+			__temp_me36.m12 = m12;
+			__temp_me36.m22 = m22;
 		}
 		
 		

@@ -8,6 +8,7 @@ public class TS3 extends haxe.lang.HxObject
 {
 	public static void main(String[] args)
 	{
+		Sys._args = args;
 		main();
 	}
 	
@@ -18,37 +19,75 @@ public class TS3 extends haxe.lang.HxObject
 	
 	public TS3()
 	{
-		//line 8 "/shared/hxmath/test/TS3.hx"
+		//line 10 "/shared/hxmath/test/TS3.hx"
 		test.TS3.__hx_ctor_test_TS3(this);
 	}
 	
 	
-	public static void __hx_ctor_test_TS3(test.TS3 __temp_me53)
+	public static void __hx_ctor_test_TS3(test.TS3 __temp_me62)
 	{
 	}
 	
 	
 	public static boolean main()
 	{
-		//line 12 "/shared/hxmath/test/TS3.hx"
+		//line 14 "/shared/hxmath/test/TS3.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
-		//line 24 "/shared/hxmath/test/TS3.hx"
-		runner.add(new test.Test3D(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (24) )) )})) )));
-		//line 38 "/shared/hxmath/test/TS3.hx"
+		//line 16 "/shared/hxmath/test/TS3.hx"
+		java.lang.String w = "";
+		//line 17 "/shared/hxmath/test/TS3.hx"
+		{
+			//line 17 "/shared/hxmath/test/TS3.hx"
+			int _g = 0;
+			//line 17 "/shared/hxmath/test/TS3.hx"
+			haxe.root.Array<java.lang.String> _g1 = haxe.root.Sys.args();
+			//line 17 "/shared/hxmath/test/TS3.hx"
+			while (( _g < _g1.length ))
+			{
+				//line 17 "/shared/hxmath/test/TS3.hx"
+				java.lang.String arg = _g1.__get(_g);
+				//line 17 "/shared/hxmath/test/TS3.hx"
+				 ++ _g;
+				//line 18 "/shared/hxmath/test/TS3.hx"
+				w = arg;
+			}
+			
+		}
+		
+		//line 20 "/shared/hxmath/test/TS3.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, ( "The value of loop_wrapper is " + w ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (20) )) )}));
+		//line 21 "/shared/hxmath/test/TS3.hx"
+		int x = ((int) (haxe.lang.Runtime.toInt(haxe.root.Std.parseInt(w))) );
+		//line 22 "/shared/hxmath/test/TS3.hx"
+		{
+			//line 22 "/shared/hxmath/test/TS3.hx"
+			int _g11 = 0;
+			//line 22 "/shared/hxmath/test/TS3.hx"
+			while (( _g11 < x ))
+			{
+				//line 22 "/shared/hxmath/test/TS3.hx"
+				 ++ _g11;
+				//line 23 "/shared/hxmath/test/TS3.hx"
+				runner.add(new test.Test3D(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS3", "TS3.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (23) )) )})) )));
+			}
+			
+		}
+		
+		//line 26 "/shared/hxmath/test/TS3.hx"
 		return runner.run();
 	}
 	
 	
 	public static java.lang.Object __hx_createEmpty()
 	{
-		//line 8 "/shared/hxmath/test/TS3.hx"
+		//line 10 "/shared/hxmath/test/TS3.hx"
 		return new test.TS3(haxe.lang.EmptyObject.EMPTY);
 	}
 	
 	
 	public static java.lang.Object __hx_create(haxe.root.Array arr)
 	{
-		//line 8 "/shared/hxmath/test/TS3.hx"
+		//line 10 "/shared/hxmath/test/TS3.hx"
 		return new test.TS3();
 	}
 	

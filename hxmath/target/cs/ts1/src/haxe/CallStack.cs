@@ -63,7 +63,7 @@ namespace haxe {
 		}
 		
 		
-		public static void __hx_ctor_haxe_CallStack(global::haxe.CallStack __temp_me19) {
+		public static void __hx_ctor_haxe_CallStack(global::haxe.CallStack __temp_me20) {
 		}
 		
 		

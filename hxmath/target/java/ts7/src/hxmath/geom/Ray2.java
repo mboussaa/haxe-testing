@@ -18,12 +18,12 @@ public class Ray2 extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_geom_Ray2(hxmath.geom.Ray2 __temp_me19, hxmath.math.Vector2Default origin, hxmath.math.Vector2Default normal)
+	public static void __hx_ctor_hxmath_geom_Ray2(hxmath.geom.Ray2 __temp_me25, hxmath.math.Vector2Default origin, hxmath.math.Vector2Default normal)
 	{
 		//line 23 "/shared/hxmath/hxmath/geom/Ray2.hx"
-		__temp_me19.origin = origin;
+		__temp_me25.origin = origin;
 		//line 24 "/shared/hxmath/hxmath/geom/Ray2.hx"
-		__temp_me19.normal = normal;
+		__temp_me25.normal = normal;
 	}
 	
 	
@@ -75,7 +75,7 @@ public class Ray2 extends haxe.lang.HxObject
 	public double intersectPoint(hxmath.math.Vector2Default point, java.lang.Object tolerance)
 	{
 		//line 46 "/shared/hxmath/hxmath/geom/Ray2.hx"
-		double __temp_tolerance17 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (1e-6) : (((double) (haxe.lang.Runtime.toDouble(tolerance)) )) );
+		double __temp_tolerance23 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (1e-6) : (((double) (haxe.lang.Runtime.toDouble(tolerance)) )) );
 		//line 48 "/shared/hxmath/hxmath/geom/Ray2.hx"
 		hxmath.math.Vector2Default self = ((hxmath.math.Vector2Default) (this.normal) );
 		//line 48 "/shared/hxmath/hxmath/geom/Ray2.hx"
@@ -101,7 +101,7 @@ public class Ray2 extends haxe.lang.HxObject
 		//line 51 "/shared/hxmath/hxmath/geom/Ray2.hx"
 		double d = ( ( self2.x * self1.x ) + ( self2.y * self1.y ) );
 		//line 52 "/shared/hxmath/hxmath/geom/Ray2.hx"
-		if (( d < __temp_tolerance17 )) 
+		if (( d < __temp_tolerance23 )) 
 		{
 			//line 55 "/shared/hxmath/hxmath/geom/Ray2.hx"
 			hxmath.math.Vector2Default b1 = this.origin;
@@ -134,7 +134,7 @@ public class Ray2 extends haxe.lang.HxObject
 	public final int getClosestPoint(haxe.root.Array<hxmath.math.Vector2Default> points, java.lang.Object tolerance)
 	{
 		//line 74 "/shared/hxmath/hxmath/geom/Ray2.hx"
-		double __temp_tolerance18 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (1e-6) : (((double) (haxe.lang.Runtime.toDouble(tolerance)) )) );
+		double __temp_tolerance24 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (1e-6) : (((double) (haxe.lang.Runtime.toDouble(tolerance)) )) );
 		//line 75 "/shared/hxmath/hxmath/geom/Ray2.hx"
 		double closestHit = java.lang.Double.NEGATIVE_INFINITY;
 		//line 76 "/shared/hxmath/hxmath/geom/Ray2.hx"
@@ -163,7 +163,7 @@ public class Ray2 extends haxe.lang.HxObject
 				//line 79 "/shared/hxmath/hxmath/geom/Ray2.hx"
 				int i = _g1++;
 				//line 81 "/shared/hxmath/hxmath/geom/Ray2.hx"
-				double t = this.intersectPoint(points.__get(i), __temp_tolerance18);
+				double t = this.intersectPoint(points.__get(i), __temp_tolerance24);
 				//line 82 "/shared/hxmath/hxmath/geom/Ray2.hx"
 				if (( ( t > 0.0 ) && (( ( hitIndex == -1 ) || ( ( t < closestHit ) && ( t >= 0.0 ) ) )) )) 
 				{

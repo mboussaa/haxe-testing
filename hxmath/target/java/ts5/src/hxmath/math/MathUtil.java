@@ -24,7 +24,7 @@ public class MathUtil extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_MathUtil(hxmath.math.MathUtil __temp_me20)
+	public static void __hx_ctor_hxmath_math_MathUtil(hxmath.math.MathUtil __temp_me26)
 	{
 	}
 	
@@ -104,9 +104,9 @@ public class MathUtil extends haxe.lang.HxObject
 	public static int sign(double x, java.lang.Object w)
 	{
 		//line 77 "/shared/hxmath/hxmath/math/MathUtil.hx"
-		double __temp_w19 = ( (haxe.lang.Runtime.eq(w, null)) ? (((double) (0) )) : (((double) (haxe.lang.Runtime.toDouble(w)) )) );
+		double __temp_w25 = ( (haxe.lang.Runtime.eq(w, null)) ? (((double) (0) )) : (((double) (haxe.lang.Runtime.toDouble(w)) )) );
 		//line 77 "/shared/hxmath/hxmath/math/MathUtil.hx"
-		if (( java.lang.Math.abs(x) < __temp_w19 )) 
+		if (( java.lang.Math.abs(x) < __temp_w25 )) 
 		{
 			//line 79 "/shared/hxmath/hxmath/math/MathUtil.hx"
 			return 0;
@@ -114,7 +114,7 @@ public class MathUtil extends haxe.lang.HxObject
 		else
 		{
 			//line 83 "/shared/hxmath/hxmath/math/MathUtil.hx"
-			if (( x <=  - (__temp_w19)  )) 
+			if (( x <=  - (__temp_w25)  )) 
 			{
 				//line 83 "/shared/hxmath/hxmath/math/MathUtil.hx"
 				return -1;

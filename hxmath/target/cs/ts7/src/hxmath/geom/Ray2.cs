@@ -13,9 +13,9 @@ namespace hxmath.geom {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_geom_Ray2(global::hxmath.geom.Ray2 __temp_me27, global::hxmath.math.Vector2Default origin, global::hxmath.math.Vector2Default normal) {
-			__temp_me27.origin = origin;
-			__temp_me27.normal = normal;
+		public static void __hx_ctor_hxmath_geom_Ray2(global::hxmath.geom.Ray2 __temp_me29, global::hxmath.math.Vector2Default origin, global::hxmath.math.Vector2Default normal) {
+			__temp_me29.origin = origin;
+			__temp_me29.normal = normal;
 		}
 		
 		
@@ -49,7 +49,7 @@ namespace hxmath.geom {
 		
 		
 		public virtual double intersectPoint(global::hxmath.math.Vector2Default point, global::haxe.lang.Null<double> tolerance) {
-			double __temp_tolerance25 = ( ( ! (tolerance.hasValue) ) ? (1e-6) : ((tolerance).@value) );
+			double __temp_tolerance27 = ( ( ! (tolerance.hasValue) ) ? (1e-6) : ((tolerance).@value) );
 			global::hxmath.math.Vector2Default self = ((global::hxmath.math.Vector2Default) (this.normal) );
 			global::hxmath.math.Vector2Default self1 = ((global::hxmath.math.Vector2Default) (new global::hxmath.math.Vector2Default(self.x, self.y)) );
 			double newX =  - (self1.y) ;
@@ -59,7 +59,7 @@ namespace hxmath.geom {
 			global::hxmath.math.Vector2Default self2 = ((global::hxmath.math.Vector2Default) (new global::hxmath.math.Vector2Default(point.x, point.y)) );
 			self2.x -= b.x;
 			self2.y -= b.y;
-			if (( ( ( self2.x * self1.x ) + ( self2.y * self1.y ) ) < __temp_tolerance25 )) {
+			if (( ( ( self2.x * self1.x ) + ( self2.y * self1.y ) ) < __temp_tolerance27 )) {
 				global::hxmath.math.Vector2Default b1 = this.origin;
 				global::hxmath.math.Vector2Default self3 = ((global::hxmath.math.Vector2Default) (new global::hxmath.math.Vector2Default(point.x, point.y)) );
 				self3.x -= b1.x;
@@ -78,7 +78,7 @@ namespace hxmath.geom {
 		
 		public int getClosestPoint(global::Array<object> points, global::haxe.lang.Null<double> tolerance) {
 			unchecked {
-				double __temp_tolerance26 = ( ( ! (tolerance.hasValue) ) ? (1e-6) : ((tolerance).@value) );
+				double __temp_tolerance28 = ( ( ! (tolerance.hasValue) ) ? (1e-6) : ((tolerance).@value) );
 				double closestHit = global::Math.NEGATIVE_INFINITY;
 				int hitIndex = -1;
 				global::hxmath.math.Vector2Default self = ((global::hxmath.math.Vector2Default) (this.normal) );
@@ -91,7 +91,7 @@ namespace hxmath.geom {
 					int _g = points.length;
 					while (( _g1 < _g )) {
 						int i = _g1++;
-						double t = this.intersectPoint(((global::hxmath.math.Vector2Default) (points[i]) ), new global::haxe.lang.Null<double>(__temp_tolerance26, true));
+						double t = this.intersectPoint(((global::hxmath.math.Vector2Default) (points[i]) ), new global::haxe.lang.Null<double>(__temp_tolerance28, true));
 						if (( ( t > 0.0 ) && (( ( hitIndex == -1 ) || ( ( t < closestHit ) && ( t >= 0.0 ) ) )) )) {
 							hitIndex = i;
 							closestHit = t;

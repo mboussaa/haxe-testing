@@ -5,7 +5,26 @@ class test_TS7 {
 	public function __construct(){}
 	static function main() {
 		$runner = new nanotest_NanoTestRunner(null);
-		$runner->add(new test_TestGeom(_hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 30, "className" => "test.TS7", "methodName" => "main"))));
+		$w = "";
+		{
+			$_g = 0;
+			$_g1 = Sys::args();
+			while($_g < $_g1->length) {
+				$arg = $_g1[$_g];
+				++$_g;
+				$w = $arg;
+				unset($arg);
+			}
+		}
+		haxe_Log::trace("The value of loop_wrapper is " . _hx_string_or_null($w), _hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 20, "className" => "test.TS7", "methodName" => "main")));
+		$x = Std::parseInt($w);
+		{
+			$_g11 = 0;
+			while($_g11 < $x) {
+				++$_g11;
+				$runner->add(new test_TestGeom(_hx_anonymous(array("fileName" => "TS7.hx", "lineNumber" => 23, "className" => "test.TS7", "methodName" => "main"))));
+			}
+		}
 		return $runner->run();
 	}
 	function __toString() { return 'test.TS7'; }

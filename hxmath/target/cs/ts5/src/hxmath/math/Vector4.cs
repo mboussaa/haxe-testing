@@ -13,11 +13,11 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_Vector4Default(global::hxmath.math.Vector4Default __temp_me36, double x, double y, double z, double w) {
-			__temp_me36.x = x;
-			__temp_me36.y = y;
-			__temp_me36.z = z;
-			__temp_me36.w = w;
+		public static void __hx_ctor_hxmath_math_Vector4Default(global::hxmath.math.Vector4Default __temp_me38, double x, double y, double z, double w) {
+			__temp_me38.x = x;
+			__temp_me38.y = y;
+			__temp_me38.z = z;
+			__temp_me38.w = w;
 		}
 		
 		

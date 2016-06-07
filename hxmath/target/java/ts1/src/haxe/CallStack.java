@@ -18,7 +18,7 @@ public class CallStack extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_CallStack(haxe.CallStack __temp_me11)
+	public static void __hx_ctor_haxe_CallStack(haxe.CallStack __temp_me13)
 	{
 	}
 	

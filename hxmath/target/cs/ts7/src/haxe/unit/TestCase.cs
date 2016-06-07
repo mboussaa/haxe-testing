@@ -13,7 +13,7 @@ namespace haxe.unit {
 		}
 		
 		
-		public static void __hx_ctor_haxe_unit_TestCase(global::haxe.unit.TestCase __temp_me17) {
+		public static void __hx_ctor_haxe_unit_TestCase(global::haxe.unit.TestCase __temp_me19) {
 		}
 		
 		

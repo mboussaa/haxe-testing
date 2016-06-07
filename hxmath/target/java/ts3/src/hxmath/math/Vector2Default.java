@@ -18,12 +18,12 @@ public class Vector2Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Vector2Default(hxmath.math.Vector2Default __temp_me25, double x, double y)
+	public static void __hx_ctor_hxmath_math_Vector2Default(hxmath.math.Vector2Default __temp_me31, double x, double y)
 	{
 		//line 19 "/shared/hxmath/hxmath/math/Vector2.hx"
-		__temp_me25.x = x;
+		__temp_me31.x = x;
 		//line 20 "/shared/hxmath/hxmath/math/Vector2.hx"
-		__temp_me25.y = y;
+		__temp_me31.y = y;
 	}
 	
 	

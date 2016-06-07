@@ -18,22 +18,22 @@ public class NanoTestRunner extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_nanotest_NanoTestRunner(nanotest.NanoTestRunner __temp_me36, haxe.lang.Function printError)
+	public static void __hx_ctor_nanotest_NanoTestRunner(nanotest.NanoTestRunner __temp_me44, haxe.lang.Function printError)
 	{
 		//line 110 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
-		__temp_me36.print = ( (( nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current != null )) ? (nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current) : (nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current = ((nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun) (new nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun()) )) );
+		__temp_me44.print = ( (( nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current != null )) ? (nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current) : (nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun.__hx_current = ((nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun) (new nanotest.NanoTestRunner___hx_ctor_nanotest_NanoTestRunner_110__Fun()) )) );
 		//line 116 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
-		__temp_me36.cases = new haxe.root.Array<nanotest.NanoTestCase>(new nanotest.NanoTestCase[]{});
+		__temp_me44.cases = new haxe.root.Array<nanotest.NanoTestCase>(new nanotest.NanoTestCase[]{});
 		//line 118 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
 		if (( printError == null )) 
 		{
 			//line 119 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
-			__temp_me36.printError = ((haxe.lang.Function) (new haxe.lang.Closure(nanotest.NanoTestRunner.class, "warning")) );
+			__temp_me44.printError = ((haxe.lang.Function) (new haxe.lang.Closure(nanotest.NanoTestRunner.class, "warning")) );
 		}
 		else
 		{
 			//line 121 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestRunner.hx"
-			__temp_me36.printError = printError;
+			__temp_me44.printError = printError;
 		}
 		
 	}

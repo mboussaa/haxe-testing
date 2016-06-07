@@ -18,7 +18,7 @@ public class TestCase extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_haxe_unit_TestCase(haxe.unit.TestCase __temp_me13)
+	public static void __hx_ctor_haxe_unit_TestCase(haxe.unit.TestCase __temp_me19)
 	{
 	}
 	

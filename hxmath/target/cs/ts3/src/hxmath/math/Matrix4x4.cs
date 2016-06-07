@@ -13,23 +13,23 @@ namespace hxmath.math {
 		}
 		
 		
-		public static void __hx_ctor_hxmath_math_Matrix4x4Default(global::hxmath.math.Matrix4x4Default __temp_me31, double m00, double m10, double m20, double m30, double m01, double m11, double m21, double m31, double m02, double m12, double m22, double m32, double m03, double m13, double m23, double m33) {
-			__temp_me31.m00 = m00;
-			__temp_me31.m10 = m10;
-			__temp_me31.m20 = m20;
-			__temp_me31.m30 = m30;
-			__temp_me31.m01 = m01;
-			__temp_me31.m11 = m11;
-			__temp_me31.m21 = m21;
-			__temp_me31.m31 = m31;
-			__temp_me31.m02 = m02;
-			__temp_me31.m12 = m12;
-			__temp_me31.m22 = m22;
-			__temp_me31.m32 = m32;
-			__temp_me31.m03 = m03;
-			__temp_me31.m13 = m13;
-			__temp_me31.m23 = m23;
-			__temp_me31.m33 = m33;
+		public static void __hx_ctor_hxmath_math_Matrix4x4Default(global::hxmath.math.Matrix4x4Default __temp_me33, double m00, double m10, double m20, double m30, double m01, double m11, double m21, double m31, double m02, double m12, double m22, double m32, double m03, double m13, double m23, double m33) {
+			__temp_me33.m00 = m00;
+			__temp_me33.m10 = m10;
+			__temp_me33.m20 = m20;
+			__temp_me33.m30 = m30;
+			__temp_me33.m01 = m01;
+			__temp_me33.m11 = m11;
+			__temp_me33.m21 = m21;
+			__temp_me33.m31 = m31;
+			__temp_me33.m02 = m02;
+			__temp_me33.m12 = m12;
+			__temp_me33.m22 = m22;
+			__temp_me33.m32 = m32;
+			__temp_me33.m03 = m03;
+			__temp_me33.m13 = m13;
+			__temp_me33.m23 = m23;
+			__temp_me33.m33 = m33;
 		}
 		
 		

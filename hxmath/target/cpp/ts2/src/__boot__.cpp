@@ -49,9 +49,6 @@
 #ifndef INCLUDED_haxe_Log
 #include <haxe/Log.h>
 #endif
-#ifndef INCLUDED_test_TestStress
-#include <test/TestStress.h>
-#endif
 #ifndef INCLUDED_test_Test2D
 #include <test/Test2D.h>
 #endif
@@ -121,6 +118,9 @@
 #ifndef INCLUDED_haxe_unit_TestCase
 #include <haxe/unit/TestCase.h>
 #endif
+#ifndef INCLUDED_haxe_io_Eof
+#include <haxe/io/Eof.h>
+#endif
 #ifndef INCLUDED_haxe_CallStack
 #include <haxe/CallStack.h>
 #endif
@@ -129,6 +129,9 @@
 #endif
 #ifndef INCLUDED_Type
 #include <Type.h>
+#endif
+#ifndef INCLUDED_Sys
+#include <Sys.h>
 #endif
 #ifndef INCLUDED_StringTools
 #include <StringTools.h>
@@ -165,7 +168,6 @@ hx::RegisterResources( hx::GetResources() );
 ::hxmath::math::_IntVector2::IntVector2_Impl__obj::__register();
 ::haxe::unit::TestRunner_obj::__register();
 ::haxe::Log_obj::__register();
-::test::TestStress_obj::__register();
 ::test::Test2D_obj::__register();
 ::test::TS2_obj::__register();
 ::test::MathTestCase_obj::__register();
@@ -189,9 +191,11 @@ hx::RegisterResources( hx::GetResources() );
 ::hxmath::frames::_Frame2::Frame2_Impl__obj::__register();
 ::haxe::unit::TestStatus_obj::__register();
 ::haxe::unit::TestCase_obj::__register();
+::haxe::io::Eof_obj::__register();
 ::haxe::CallStack_obj::__register();
 ::cpp::Lib_obj::__register();
 ::Type_obj::__register();
+::Sys_obj::__register();
 ::StringTools_obj::__register();
 ::Std_obj::__register();
 ::Reflect_obj::__register();

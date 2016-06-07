@@ -18,14 +18,14 @@ public class Vector3Default extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_Vector3Default(hxmath.math.Vector3Default __temp_me30, double x, double y, double z)
+	public static void __hx_ctor_hxmath_math_Vector3Default(hxmath.math.Vector3Default __temp_me36, double x, double y, double z)
 	{
 		//line 21 "/shared/hxmath/hxmath/math/Vector3.hx"
-		__temp_me30.x = x;
+		__temp_me36.x = x;
 		//line 22 "/shared/hxmath/hxmath/math/Vector3.hx"
-		__temp_me30.y = y;
+		__temp_me36.y = y;
 		//line 23 "/shared/hxmath/hxmath/math/Vector3.hx"
-		__temp_me30.z = z;
+		__temp_me36.z = z;
 	}
 	
 	

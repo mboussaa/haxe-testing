@@ -8,6 +8,7 @@ public class TS1 extends haxe.lang.HxObject
 {
 	public static void main(String[] args)
 	{
+		Sys._args = args;
 		main();
 	}
 	
@@ -23,7 +24,7 @@ public class TS1 extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_test_TS1(test.TS1 __temp_me57)
+	public static void __hx_ctor_test_TS1(test.TS1 __temp_me66)
 	{
 	}
 	
@@ -32,9 +33,47 @@ public class TS1 extends haxe.lang.HxObject
 	{
 		//line 13 "/shared/hxmath/test/TS1.hx"
 		nanotest.NanoTestRunner runner = new nanotest.NanoTestRunner(((haxe.lang.Function) (null) ));
+		//line 15 "/shared/hxmath/test/TS1.hx"
+		java.lang.String w = "";
+		//line 16 "/shared/hxmath/test/TS1.hx"
+		{
+			//line 16 "/shared/hxmath/test/TS1.hx"
+			int _g = 0;
+			//line 16 "/shared/hxmath/test/TS1.hx"
+			haxe.root.Array<java.lang.String> _g1 = haxe.root.Sys.args();
+			//line 16 "/shared/hxmath/test/TS1.hx"
+			while (( _g < _g1.length ))
+			{
+				//line 16 "/shared/hxmath/test/TS1.hx"
+				java.lang.String arg = _g1.__get(_g);
+				//line 16 "/shared/hxmath/test/TS1.hx"
+				 ++ _g;
+				//line 17 "/shared/hxmath/test/TS1.hx"
+				w = arg;
+			}
+			
+		}
+		
+		//line 19 "/shared/hxmath/test/TS1.hx"
+		haxe.Log.trace.__hx_invoke2_o(0.0, ( "The value of loop_wrapper is " + w ), 0.0, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS1", "TS1.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (19) )) )}));
+		//line 20 "/shared/hxmath/test/TS1.hx"
+		int x = ((int) (haxe.lang.Runtime.toInt(haxe.root.Std.parseInt(w))) );
 		//line 21 "/shared/hxmath/test/TS1.hx"
-		runner.add(new test.TestStructures(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS1", "TS1.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (21) )) )})) )));
-		//line 38 "/shared/hxmath/test/TS1.hx"
+		{
+			//line 21 "/shared/hxmath/test/TS1.hx"
+			int _g11 = 0;
+			//line 21 "/shared/hxmath/test/TS1.hx"
+			while (( _g11 < x ))
+			{
+				//line 21 "/shared/hxmath/test/TS1.hx"
+				 ++ _g11;
+				//line 22 "/shared/hxmath/test/TS1.hx"
+				runner.add(new test.TestStructures(((java.lang.Object) (new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TS1", "TS1.hx", "main"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (22) )) )})) )));
+			}
+			
+		}
+		
+		//line 25 "/shared/hxmath/test/TS1.hx"
 		return runner.run();
 	}
 	

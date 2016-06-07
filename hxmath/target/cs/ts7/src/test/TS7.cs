@@ -17,14 +17,36 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_TS7(global::test.TS7 __temp_me59) {
+		public static void __hx_ctor_test_TS7(global::test.TS7 __temp_me61) {
 		}
 		
 		
 		public static bool main() {
 			unchecked {
 				global::nanotest.NanoTestRunner runner = new global::nanotest.NanoTestRunner(((global::haxe.lang.Function) (null) ));
-				runner.@add(new global::test.TestGeom(((object) (new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "test.TS7", "TS7.hx"}, new int[]{1981972957}, new double[]{((double) (30) )})) )));
+				string w = "";
+				{
+					int _g = 0;
+					global::Array<object> _g1 = global::Sys.args();
+					while (( _g < _g1.length )) {
+						string arg = global::haxe.lang.Runtime.toString(_g1[_g]);
+						 ++ _g;
+						w = arg;
+					}
+					
+				}
+				
+				global::haxe.Log.trace.__hx_invoke2_o(default(double), global::haxe.lang.Runtime.concat("The value of loop_wrapper is ", w), default(double), new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "test.TS7", "TS7.hx"}, new int[]{1981972957}, new double[]{((double) (20) )}));
+				int x = (global::Std.parseInt(w)).@value;
+				{
+					int _g11 = 0;
+					while (( _g11 < x )) {
+						 ++ _g11;
+						runner.@add(new global::test.TestGeom(((object) (new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"main", "test.TS7", "TS7.hx"}, new int[]{1981972957}, new double[]{((double) (23) )})) )));
+					}
+					
+				}
+				
 				return runner.run();
 			}
 		}

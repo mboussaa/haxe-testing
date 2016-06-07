@@ -13,9 +13,9 @@ namespace nanotest {
 		}
 		
 		
-		public static void __hx_ctor_nanotest_NanoTestAssertResult(global::nanotest.NanoTestAssertResult __temp_me37, object _result, int position) {
-			__temp_me37.result = _result;
-			__temp_me37.position = position;
+		public static void __hx_ctor_nanotest_NanoTestAssertResult(global::nanotest.NanoTestAssertResult __temp_me39, object _result, int position) {
+			__temp_me39.result = _result;
+			__temp_me39.position = position;
 		}
 		
 		

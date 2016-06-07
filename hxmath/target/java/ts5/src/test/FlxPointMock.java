@@ -18,20 +18,20 @@ public class FlxPointMock extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_test_FlxPointMock(test.FlxPointMock __temp_me57, java.lang.Object X, java.lang.Object Y)
+	public static void __hx_ctor_test_FlxPointMock(test.FlxPointMock __temp_me66, java.lang.Object X, java.lang.Object Y)
 	{
 		//line 12 "/shared/hxmath/test/TestConverters.hx"
-		__temp_me57.y = 0.0;
+		__temp_me66.y = 0.0;
 		//line 11 "/shared/hxmath/test/TestConverters.hx"
-		__temp_me57.x = 0.0;
+		__temp_me66.x = 0.0;
 		//line 15 "/shared/hxmath/test/TestConverters.hx"
-		double __temp_Y56 = ( (haxe.lang.Runtime.eq(Y, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(Y)) )) );
+		double __temp_Y65 = ( (haxe.lang.Runtime.eq(Y, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(Y)) )) );
 		//line 15 "/shared/hxmath/test/TestConverters.hx"
-		double __temp_X55 = ( (haxe.lang.Runtime.eq(X, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(X)) )) );
+		double __temp_X64 = ( (haxe.lang.Runtime.eq(X, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(X)) )) );
 		//line 16 "/shared/hxmath/test/TestConverters.hx"
-		__temp_me57.set_x(__temp_X55);
+		__temp_me66.set_x(__temp_X64);
 		//line 17 "/shared/hxmath/test/TestConverters.hx"
-		__temp_me57.set_y(__temp_Y56);
+		__temp_me66.set_y(__temp_Y65);
 	}
 	
 	

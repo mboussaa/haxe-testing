@@ -22,10 +22,10 @@ public class TestFrames extends test.MathTestCase
 	}
 	
 	
-	public static void __hx_ctor_test_TestFrames(test.TestFrames __temp_me56, java.lang.Object posInfos)
+	public static void __hx_ctor_test_TestFrames(test.TestFrames __temp_me65, java.lang.Object posInfos)
 	{
 		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
-		test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me56, posInfos);
+		test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me65, posInfos);
 	}
 	
 	

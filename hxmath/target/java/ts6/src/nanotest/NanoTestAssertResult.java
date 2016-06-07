@@ -18,12 +18,12 @@ public class NanoTestAssertResult extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_nanotest_NanoTestAssertResult(nanotest.NanoTestAssertResult __temp_me35, java.lang.Object _result, int position)
+	public static void __hx_ctor_nanotest_NanoTestAssertResult(nanotest.NanoTestAssertResult __temp_me43, java.lang.Object _result, int position)
 	{
 		//line 13 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
-		__temp_me35.result = _result;
+		__temp_me43.result = _result;
 		//line 14 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestAssertResult.hx"
-		__temp_me35.position = position;
+		__temp_me43.position = position;
 	}
 	
 	

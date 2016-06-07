@@ -22,10 +22,10 @@ public class MathTestCase extends nanotest.NanoTestCase
 	}
 	
 	
-	public static void __hx_ctor_test_MathTestCase(test.MathTestCase __temp_me53, java.lang.Object posInfos)
+	public static void __hx_ctor_test_MathTestCase(test.MathTestCase __temp_me62, java.lang.Object posInfos)
 	{
 		//line 29 "/usr/lib/haxe/lib/nanotest/1,0,0/nanotest/NanoTestCase.hx"
-		nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me53, posInfos);
+		nanotest.NanoTestCase.__hx_ctor_nanotest_NanoTestCase(__temp_me62, posInfos);
 	}
 	
 	
@@ -46,15 +46,15 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public double randomFloat(java.lang.Object center, java.lang.Object width, java.lang.Object precision)
 	{
 		//line 24 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision41 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision50 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 24 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_width40 = ( (haxe.lang.Runtime.eq(width, null)) ? (1.0) : (((double) (haxe.lang.Runtime.toDouble(width)) )) );
+		double __temp_width49 = ( (haxe.lang.Runtime.eq(width, null)) ? (1.0) : (((double) (haxe.lang.Runtime.toDouble(width)) )) );
 		//line 24 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_center39 = ( (haxe.lang.Runtime.eq(center, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(center)) )) );
+		double __temp_center48 = ( (haxe.lang.Runtime.eq(center, null)) ? (0.0) : (((double) (haxe.lang.Runtime.toDouble(center)) )) );
 		//line 26 "/shared/hxmath/test/MathTestCase.hx"
-		double x = ( ( (( java.lang.Math.random() - 0.5 )) * __temp_width40 ) + __temp_center39 );
+		double x = ( ( (( java.lang.Math.random() - 0.5 )) * __temp_width49 ) + __temp_center48 );
 		//line 29 "/shared/hxmath/test/MathTestCase.hx"
-		return ( ((int) (java.lang.Math.floor(( x / __temp_precision41 ))) ) * __temp_precision41 );
+		return ( ((int) (java.lang.Math.floor(( x / __temp_precision50 ))) ) * __temp_precision50 );
 	}
 	
 	
@@ -94,9 +94,9 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public void assertApproxEquals(double expected, double actual, java.lang.Object tolerance, java.lang.Object p)
 	{
 		//line 52 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_tolerance42 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (1e-6) : (((double) (haxe.lang.Runtime.toDouble(tolerance)) )) );
+		double __temp_tolerance51 = ( (haxe.lang.Runtime.eq(tolerance, null)) ? (1e-6) : (((double) (haxe.lang.Runtime.toDouble(tolerance)) )) );
 		//line 52 "/shared/hxmath/test/MathTestCase.hx"
-		if (( java.lang.Math.abs(( expected - actual )) < __temp_tolerance42 )) 
+		if (( java.lang.Math.abs(( expected - actual )) < __temp_tolerance51 )) 
 		{
 			//line 54 "/shared/hxmath/test/MathTestCase.hx"
 			this.success(p);
@@ -104,7 +104,7 @@ public class MathTestCase extends nanotest.NanoTestCase
 		else
 		{
 			//line 58 "/shared/hxmath/test/MathTestCase.hx"
-			this.fail(( ( ( ( ( "expected " + haxe.lang.Runtime.toString(expected) ) + " +-" ) + haxe.lang.Runtime.toString(__temp_tolerance42) ) + " but was " ) + haxe.lang.Runtime.toString(actual) ), p);
+			this.fail(( ( ( ( ( "expected " + haxe.lang.Runtime.toString(expected) ) + " +-" ) + haxe.lang.Runtime.toString(__temp_tolerance51) ) + " but was " ) + haxe.lang.Runtime.toString(actual) ), p);
 		}
 		
 	}
@@ -113,11 +113,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Vector2Default randomVector2(java.lang.Object precision)
 	{
 		//line 63 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision43 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision52 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 64 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 65 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision43;
+		distribution.precision = __temp_precision52;
 		//line 66 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(2, distribution);
 		//line 66 "/shared/hxmath/test/MathTestCase.hx"
@@ -137,11 +137,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Vector3Default randomVector3(java.lang.Object precision)
 	{
 		//line 70 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision44 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision53 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 71 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 72 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision44;
+		distribution.precision = __temp_precision53;
 		//line 73 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(3, distribution);
 		//line 73 "/shared/hxmath/test/MathTestCase.hx"
@@ -161,11 +161,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Vector4Default randomVector4(java.lang.Object precision)
 	{
 		//line 77 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision45 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision54 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 78 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 79 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision45;
+		distribution.precision = __temp_precision54;
 		//line 80 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(4, distribution);
 		//line 80 "/shared/hxmath/test/MathTestCase.hx"
@@ -185,11 +185,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Matrix2x2Default randomMatrix2x2(java.lang.Object precision)
 	{
 		//line 84 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision46 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision55 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 85 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 86 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision46;
+		distribution.precision = __temp_precision55;
 		//line 87 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(4, distribution);
 		//line 87 "/shared/hxmath/test/MathTestCase.hx"
@@ -209,11 +209,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Matrix3x2Default randomMatrix3x2(java.lang.Object precision)
 	{
 		//line 91 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision47 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision56 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 92 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 93 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision47;
+		distribution.precision = __temp_precision56;
 		//line 94 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(6, distribution);
 		//line 94 "/shared/hxmath/test/MathTestCase.hx"
@@ -233,11 +233,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Matrix3x3Default randomMatrix3x3(java.lang.Object precision)
 	{
 		//line 98 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision48 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision57 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 99 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 100 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision48;
+		distribution.precision = __temp_precision57;
 		//line 101 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(9, distribution);
 		//line 101 "/shared/hxmath/test/MathTestCase.hx"
@@ -257,11 +257,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.Matrix4x4Default randomMatrix4x4(java.lang.Object precision)
 	{
 		//line 105 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision49 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision58 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 106 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 107 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision49;
+		distribution.precision = __temp_precision58;
 		//line 108 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(16, distribution);
 		//line 108 "/shared/hxmath/test/MathTestCase.hx"
@@ -281,11 +281,11 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.math.QuaternionDefault randomQuaternion(java.lang.Object precision)
 	{
 		//line 112 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision50 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision59 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 113 "/shared/hxmath/test/MathTestCase.hx"
 		test.Distribution distribution = new test.Distribution();
 		//line 114 "/shared/hxmath/test/MathTestCase.hx"
-		distribution.precision = __temp_precision50;
+		distribution.precision = __temp_precision59;
 		//line 115 "/shared/hxmath/test/MathTestCase.hx"
 		haxe.root.Array<java.lang.Object> rawData = this.randomArray(4, distribution);
 		//line 115 "/shared/hxmath/test/MathTestCase.hx"
@@ -319,20 +319,20 @@ public class MathTestCase extends nanotest.NanoTestCase
 	public hxmath.frames.IFrame2 randomFrame2(java.lang.Object precision)
 	{
 		//line 130 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision51 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision60 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 130 "/shared/hxmath/test/MathTestCase.hx"
-		return hxmath.frames._Frame2.Frame2_Impl_._new(this.randomVector2(__temp_precision51), ( this.randomFloat(0.0, 1.0, __temp_precision51) * java.lang.Math.PI ));
+		return hxmath.frames._Frame2.Frame2_Impl_._new(this.randomVector2(__temp_precision60), ( this.randomFloat(0.0, 1.0, __temp_precision60) * java.lang.Math.PI ));
 	}
 	
 	
 	public hxmath.frames.IFrame3 randomFrame3(java.lang.Object precision)
 	{
 		//line 135 "/shared/hxmath/test/MathTestCase.hx"
-		double __temp_precision52 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
+		double __temp_precision61 = ( (haxe.lang.Runtime.eq(precision, null)) ? (1e-4) : (((double) (haxe.lang.Runtime.toDouble(precision)) )) );
 		//line 135 "/shared/hxmath/test/MathTestCase.hx"
-		hxmath.math.Vector3Default tmp = this.randomVector3(__temp_precision52);
+		hxmath.math.Vector3Default tmp = this.randomVector3(__temp_precision61);
 		//line 135 "/shared/hxmath/test/MathTestCase.hx"
-		hxmath.math.QuaternionDefault self = ((hxmath.math.QuaternionDefault) (this.randomQuaternion(__temp_precision52)) );
+		hxmath.math.QuaternionDefault self = ((hxmath.math.QuaternionDefault) (this.randomQuaternion(__temp_precision61)) );
 		//line 135 "/shared/hxmath/test/MathTestCase.hx"
 		double _g = ( 1.0 / java.lang.Math.sqrt(( ( ( ( self.s * self.s ) + ( self.x * self.x ) ) + ( self.y * self.y ) ) + ( self.z * self.z ) )) );
 		//line 135 "/shared/hxmath/test/MathTestCase.hx"

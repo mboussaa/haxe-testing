@@ -13,13 +13,13 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_FlxPointMock(global::test.FlxPointMock __temp_me59, global::haxe.lang.Null<double> X, global::haxe.lang.Null<double> Y) {
-			__temp_me59.y = 0.0;
-			__temp_me59.x = 0.0;
-			double __temp_Y58 = ( ( ! (Y.hasValue) ) ? (0.0) : ((Y).@value) );
-			double __temp_X57 = ( ( ! (X.hasValue) ) ? (0.0) : ((X).@value) );
-			__temp_me59.set_x(__temp_X57);
-			__temp_me59.set_y(__temp_Y58);
+		public static void __hx_ctor_test_FlxPointMock(global::test.FlxPointMock __temp_me61, global::haxe.lang.Null<double> X, global::haxe.lang.Null<double> Y) {
+			__temp_me61.y = 0.0;
+			__temp_me61.x = 0.0;
+			double __temp_Y60 = ( ( ! (Y.hasValue) ) ? (0.0) : ((Y).@value) );
+			double __temp_X59 = ( ( ! (X.hasValue) ) ? (0.0) : ((X).@value) );
+			__temp_me61.set_x(__temp_X59);
+			__temp_me61.set_y(__temp_Y60);
 		}
 		
 		
@@ -273,9 +273,9 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_TestConverters(global::test.TestConverters __temp_me60) {
+		public static void __hx_ctor_test_TestConverters(global::test.TestConverters __temp_me62) {
 			unchecked {
-				global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me60, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "test.TestConverters", "TestConverters.hx"}, new int[]{1981972957}, new double[]{((double) (44) )}));
+				global::test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me62, new global::haxe.lang.DynamicObject(new int[]{302979532, 1547539107, 1648581351}, new object[]{"new", "test.TestConverters", "TestConverters.hx"}, new int[]{1981972957}, new double[]{((double) (44) )}));
 			}
 		}
 		

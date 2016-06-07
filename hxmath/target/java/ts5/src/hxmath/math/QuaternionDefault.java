@@ -18,16 +18,16 @@ public class QuaternionDefault extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_math_QuaternionDefault(hxmath.math.QuaternionDefault __temp_me25, double s, double x, double y, double z)
+	public static void __hx_ctor_hxmath_math_QuaternionDefault(hxmath.math.QuaternionDefault __temp_me31, double s, double x, double y, double z)
 	{
 		//line 23 "/shared/hxmath/hxmath/math/Quaternion.hx"
-		__temp_me25.s = s;
+		__temp_me31.s = s;
 		//line 24 "/shared/hxmath/hxmath/math/Quaternion.hx"
-		__temp_me25.x = x;
+		__temp_me31.x = x;
 		//line 25 "/shared/hxmath/hxmath/math/Quaternion.hx"
-		__temp_me25.y = y;
+		__temp_me31.y = y;
 		//line 26 "/shared/hxmath/hxmath/math/Quaternion.hx"
-		__temp_me25.z = z;
+		__temp_me31.z = z;
 	}
 	
 	

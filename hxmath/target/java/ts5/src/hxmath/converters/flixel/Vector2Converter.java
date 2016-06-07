@@ -18,7 +18,7 @@ public class Vector2Converter extends haxe.lang.HxObject
 	}
 	
 	
-	public static void __hx_ctor_hxmath_converters_flixel_Vector2Converter(hxmath.converters.flixel.Vector2Converter __temp_me12)
+	public static void __hx_ctor_hxmath_converters_flixel_Vector2Converter(hxmath.converters.flixel.Vector2Converter __temp_me18)
 	{
 	}
 	

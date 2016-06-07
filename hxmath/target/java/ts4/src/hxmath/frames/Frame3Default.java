@@ -18,14 +18,14 @@ public class Frame3Default extends haxe.lang.HxObject implements hxmath.frames.I
 	}
 	
 	
-	public static void __hx_ctor_hxmath_frames_Frame3Default(hxmath.frames.Frame3Default __temp_me16, hxmath.math.Vector3Default offset, hxmath.math.QuaternionDefault orientation, java.lang.Object isCached)
+	public static void __hx_ctor_hxmath_frames_Frame3Default(hxmath.frames.Frame3Default __temp_me22, hxmath.math.Vector3Default offset, hxmath.math.QuaternionDefault orientation, java.lang.Object isCached)
 	{
 		//line 36 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.isDirty = true;
+		__temp_me22.isDirty = true;
 		//line 33 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.isCached = true;
+		__temp_me22.isCached = true;
 		//line 46 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		boolean __temp_isCached15 = ( (haxe.lang.Runtime.eq(isCached, null)) ? (true) : (haxe.lang.Runtime.toBool(isCached)) );
+		boolean __temp_isCached21 = ( (haxe.lang.Runtime.eq(isCached, null)) ? (true) : (haxe.lang.Runtime.toBool(isCached)) );
 		//line 47 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 		hxmath.math.Vector3Default tmp = null;
 		//line 47 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
@@ -43,7 +43,7 @@ public class Frame3Default extends haxe.lang.HxObject implements hxmath.frames.I
 		}
 		
 		//line 47 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.internalOffset = tmp;
+		__temp_me22.internalOffset = tmp;
 		//line 50 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 		hxmath.math.QuaternionDefault tmp1 = null;
 		//line 50 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
@@ -61,15 +61,15 @@ public class Frame3Default extends haxe.lang.HxObject implements hxmath.frames.I
 		}
 		
 		//line 50 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.internalOrientation = tmp1;
+		__temp_me22.internalOrientation = tmp1;
 		//line 53 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.isCached = __temp_isCached15;
+		__temp_me22.isCached = __temp_isCached21;
 		//line 54 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.isDirty = true;
+		__temp_me22.isDirty = true;
 		//line 55 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
 		hxmath.math.Matrix4x4Default this3 = new hxmath.math.Matrix4x4Default(1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0);
 		//line 55 "/shared/hxmath/hxmath/frames/Frame3Default.hx"
-		__temp_me16.internalMatrix = ((hxmath.math.Matrix4x4Default) (this3) );
+		__temp_me22.internalMatrix = ((hxmath.math.Matrix4x4Default) (this3) );
 	}
 	
 	

@@ -13,10 +13,10 @@ namespace test {
 		}
 		
 		
-		public static void __hx_ctor_test_Distribution(global::test.Distribution __temp_me43) {
-			__temp_me43.precision = 1e-4;
-			__temp_me43.width = 1.0;
-			__temp_me43.center = 0.0;
+		public static void __hx_ctor_test_Distribution(global::test.Distribution __temp_me45) {
+			__temp_me45.precision = 1e-4;
+			__temp_me45.width = 1.0;
+			__temp_me45.center = 0.0;
 		}
 		
 		

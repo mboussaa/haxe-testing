@@ -19,5 +19,25 @@ class Std {
 		}
 		return $i;
 	}
+	static function parseInt($x) {
+		$tmp = !is_numeric($x);
+		if($tmp) {
+			$matches = null;
+			preg_match("/^-?\\d+/", $x, $matches);
+			$tmp1 = count($matches);
+			if($tmp1 === 0) {
+				return null;
+			} else {
+				return intval($matches[0]);
+			}
+		} else {
+			$tmp2 = strtolower(_hx_substr($x, 0, 2));
+			if($tmp2 === "0x") {
+				return (int) hexdec(substr($x, 2));
+			} else {
+				return intval($x);
+			}
+		}
+	}
 	function __toString() { return 'Std'; }
 }

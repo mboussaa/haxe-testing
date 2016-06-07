@@ -22,10 +22,10 @@ public class TestConverters extends test.MathTestCase
 	}
 	
 	
-	public static void __hx_ctor_test_TestConverters(test.TestConverters __temp_me58)
+	public static void __hx_ctor_test_TestConverters(test.TestConverters __temp_me67)
 	{
 		//line 44 "/shared/hxmath/test/TestConverters.hx"
-		test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me58, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TestConverters", "TestConverters.hx", "new"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (44) )) )}));
+		test.MathTestCase.__hx_ctor_test_MathTestCase(__temp_me67, new haxe.lang.DynamicObject(new java.lang.String[]{"className", "fileName", "methodName"}, new java.lang.Object[]{"test.TestConverters", "TestConverters.hx", "new"}, new java.lang.String[]{"lineNumber"}, new double[]{((double) (((double) (44) )) )}));
 	}
 	
 	
