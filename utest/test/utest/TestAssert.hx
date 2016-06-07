@@ -72,7 +72,7 @@ var x : Int;
   public function testRaises() {
     for (i in 0...x){
     bypass();
-    var errors : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(), {},      [1]];
+    var errors : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(x), {},      [1]];
     var types  : Array<Dynamic> = [String, Int, Float, TestAssert,       Dynamic, Array];
     var i = 0;
     var expectedsuccess = 12;
@@ -88,7 +88,7 @@ var x : Int;
   public function testIs() {
     for (i in 0...x){
     bypass();
-    var values : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(), {},      [1]];
+    var values : Array<Dynamic> = ["e",    1,   0.1,   new TestAssert(x), {},      [1]];
     var types  : Array<Dynamic> = [String, Int, Float, TestAssert,       Dynamic, Array];
     var i = 0;
     var expectedsuccess = 12;
@@ -172,17 +172,17 @@ var x : Int;
   public var sub : TestAssert;
   public function testSameInstance() {
     for (i in 0...x){
-    var c1 = new TestAssert();
+    var c1 = new TestAssert(x);
     c1.value = "a";
-    var c2 = new TestAssert();
+    var c2 = new TestAssert(x);
     c2.value = "a";
-    var c3 = new TestAssert();
+    var c3 = new TestAssert(x);
 
-    var r1 = new TestAssert();
+    var r1 = new TestAssert(x);
     r1.sub = c1;
-    var r2 = new TestAssert();
+    var r2 = new TestAssert(x);
     r2.sub = c2;
-    var r3 = new TestAssert();
+    var r3 = new TestAssert(x);
     r3.sub = c3;
 
 

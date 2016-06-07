@@ -7,8 +7,7 @@ haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib thx.format -lib thx.cul
 haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib thx.format -lib thx.culture -lib utest -java target/java/ts"$i"
 haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib thx.format -lib thx.culture -lib utest -cs target/cs/ts"$i"
 haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib thx.format -lib thx.culture -lib utest -php target/php/ts"$i"
-haxe -cp src -cp test -main TS"$i".hx -lib thx.core -lib thx.format -lib thx.culture -lib utest -js target/js/ts"$i"/ts"$i".js
-
+haxe -cp src -cp test -main TS"$i".hx -lib hxnodejs -lib thx.core -lib thx.format -lib thx.culture -lib utest -js target/js/ts"$i"/ts"$i".js
 done
 
 

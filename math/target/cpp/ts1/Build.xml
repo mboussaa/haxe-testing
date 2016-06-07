@@ -1,0 +1,342 @@
+<xml>
+<set name="HXCPP_API_LEVEL" value="330" />
+<files id="haxe">
+<compilerflag value="-Iinclude"/>
+  <file name="src/utest/ui/text/PrintReport.cpp" >
+   <depend name="include/StringTools.h"/>
+   <depend name="include/cpp/Lib.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/utest/Runner.h"/>
+   <depend name="include/utest/ui/common/IReport.h"/>
+   <depend name="include/utest/ui/text/PlainTextReport.h"/>
+   <depend name="include/utest/ui/text/PrintReport.h"/>
+  </file>
+  <file name="src/utest/ui/text/PlainTextReport.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/utest/Dispatcher.h"/>
+   <depend name="include/utest/Runner.h"/>
+   <depend name="include/utest/ui/common/ClassResult.h"/>
+   <depend name="include/utest/ui/common/FixtureResult.h"/>
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+   <depend name="include/utest/ui/common/IReport.h"/>
+   <depend name="include/utest/ui/common/PackageResult.h"/>
+   <depend name="include/utest/ui/common/ReportTools.h"/>
+   <depend name="include/utest/ui/common/ResultAggregator.h"/>
+   <depend name="include/utest/ui/common/ResultStats.h"/>
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+   <depend name="include/utest/ui/text/PlainTextReport.h"/>
+  </file>
+  <file name="src/utest/ui/common/ResultStats.cpp" >
+   <depend name="include/utest/Dispatcher.h"/>
+   <depend name="include/utest/ui/common/ResultStats.h"/>
+  </file>
+  <file name="src/utest/ui/common/ResultAggregator.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/utest/Dispatcher.h"/>
+   <depend name="include/utest/Notifier.h"/>
+   <depend name="include/utest/Runner.h"/>
+   <depend name="include/utest/TestResult.h"/>
+   <depend name="include/utest/ui/common/ClassResult.h"/>
+   <depend name="include/utest/ui/common/FixtureResult.h"/>
+   <depend name="include/utest/ui/common/PackageResult.h"/>
+   <depend name="include/utest/ui/common/ResultAggregator.h"/>
+  </file>
+  <file name="src/utest/ui/common/ReportTools.cpp" >
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+   <depend name="include/utest/ui/common/IReport.h"/>
+   <depend name="include/utest/ui/common/ReportTools.h"/>
+   <depend name="include/utest/ui/common/ResultStats.h"/>
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+  </file>
+  <file name="src/utest/ui/common/PackageResult.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/utest/TestResult.h"/>
+   <depend name="include/utest/ui/common/ClassResult.h"/>
+   <depend name="include/utest/ui/common/FixtureResult.h"/>
+   <depend name="include/utest/ui/common/PackageResult.h"/>
+   <depend name="include/utest/ui/common/ResultStats.h"/>
+  </file>
+  <file name="src/utest/ui/common/IReport.cpp" >
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+   <depend name="include/utest/ui/common/IReport.h"/>
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+  </file>
+  <file name="src/utest/ui/common/SuccessResultsDisplayMode.cpp" >
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+  </file>
+  <file name="src/utest/ui/common/HeaderDisplayMode.cpp" >
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+  </file>
+  <file name="src/utest/ui/common/FixtureResult.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/utest/ui/common/FixtureResult.h"/>
+   <depend name="include/utest/ui/common/ResultStats.h"/>
+  </file>
+  <file name="src/utest/ui/common/ClassResult.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/utest/ui/common/ClassResult.h"/>
+   <depend name="include/utest/ui/common/FixtureResult.h"/>
+   <depend name="include/utest/ui/common/ResultStats.h"/>
+  </file>
+  <file name="src/utest/ui/Report.cpp" >
+   <depend name="include/utest/Runner.h"/>
+   <depend name="include/utest/ui/Report.h"/>
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+   <depend name="include/utest/ui/common/IReport.h"/>
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+   <depend name="include/utest/ui/text/PlainTextReport.h"/>
+   <depend name="include/utest/ui/text/PrintReport.h"/>
+  </file>
+  <file name="src/utest/TestResult.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/_List/ListNode.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/utest/TestFixture.h"/>
+   <depend name="include/utest/TestHandler.h"/>
+   <depend name="include/utest/TestResult.h"/>
+  </file>
+  <file name="src/utest/TestHandler.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/haxe/Timer.h"/>
+   <depend name="include/utest/Assert.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/utest/Dispatcher.h"/>
+   <depend name="include/utest/TestFixture.h"/>
+   <depend name="include/utest/TestHandler.h"/>
+  </file>
+  <file name="src/utest/TestFixture.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/utest/TestFixture.h"/>
+  </file>
+  <file name="src/utest/Runner.cpp" >
+   <depend name="include/EReg.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/utest/Dispatcher.h"/>
+   <depend name="include/utest/Runner.h"/>
+   <depend name="include/utest/TestFixture.h"/>
+   <depend name="include/utest/TestHandler.h"/>
+   <depend name="include/utest/TestResult.h"/>
+  </file>
+  <file name="src/utest/Notifier.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/utest/Notifier.h"/>
+   <depend name="include/utest/_Dispatcher/EventException.h"/>
+  </file>
+  <file name="src/utest/Dispatcher.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/utest/Dispatcher.h"/>
+   <depend name="include/utest/_Dispatcher/EventException.h"/>
+  </file>
+  <file name="src/utest/_Dispatcher/EventException.cpp" >
+   <depend name="include/utest/_Dispatcher/EventException.h"/>
+  </file>
+  <file name="src/utest/Assertation.cpp" >
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/utest/Assertation.h"/>
+  </file>
+  <file name="src/utest/Assert.cpp" >
+   <depend name="include/Date.h"/>
+   <depend name="include/EReg.h"/>
+   <depend name="include/Lambda.h"/>
+   <depend name="include/List.h"/>
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/StringTools.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/io/Bytes.h"/>
+   <depend name="include/utest/Assert.h"/>
+   <depend name="include/utest/Assertation.h"/>
+  </file>
+  <file name="src/thx/math/random/TestNativeRandom.cpp" >
+   <depend name="include/thx/math/random/NativeRandom.h"/>
+   <depend name="include/thx/math/random/TestNativeRandom.h"/>
+   <depend name="include/utest/Assert.h"/>
+  </file>
+  <file name="src/thx/math/random/NativeRandom.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/thx/math/random/NativeRandom.h"/>
+  </file>
+  <file name="src/haxe/io/Eof.cpp" >
+   <depend name="include/haxe/io/Eof.h"/>
+  </file>
+  <file name="src/haxe/io/Bytes.cpp" >
+   <depend name="include/haxe/io/Bytes.h"/>
+  </file>
+  <file name="src/haxe/ds/StringMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+  </file>
+  <file name="src/haxe/Timer.cpp" >
+   <depend name="include/haxe/Timer.h"/>
+  </file>
+  <file name="src/haxe/MainLoop.cpp" >
+   <depend name="include/haxe/MainEvent.h"/>
+   <depend name="include/haxe/MainLoop.h"/>
+   <depend name="include/haxe/Timer.h"/>
+  </file>
+  <file name="src/haxe/MainEvent.cpp" >
+   <depend name="include/haxe/MainEvent.h"/>
+  </file>
+  <file name="src/haxe/Log.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/haxe/Log.h"/>
+  </file>
+  <file name="src/haxe/EntryPoint.cpp" >
+   <depend name="include/cpp/vm/Lock.h"/>
+   <depend name="include/cpp/vm/Mutex.h"/>
+   <depend name="include/haxe/EntryPoint.h"/>
+   <depend name="include/haxe/MainEvent.h"/>
+   <depend name="include/haxe/MainLoop.h"/>
+  </file>
+  <file name="src/haxe/IMap.cpp" >
+   <depend name="include/haxe/IMap.h"/>
+  </file>
+  <file name="src/haxe/CallStack.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+   <depend name="include/haxe/CallStack.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+  </file>
+  <file name="src/haxe/StackItem.cpp" >
+   <depend name="include/haxe/StackItem.h"/>
+  </file>
+  <file name="src/cpp/vm/Thread.cpp" >
+   <depend name="include/cpp/vm/Thread.h"/>
+  </file>
+  <file name="src/cpp/vm/Mutex.cpp" >
+   <depend name="include/cpp/vm/Mutex.h"/>
+  </file>
+  <file name="src/cpp/vm/Lock.cpp" >
+   <depend name="include/cpp/vm/Lock.h"/>
+  </file>
+  <file name="src/cpp/Lib.cpp" >
+   <depend name="include/cpp/Lib.h"/>
+  </file>
+  <file name="src/Type.cpp" >
+   <depend name="include/Reflect.h"/>
+   <depend name="include/Type.h"/>
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/ValueType.cpp" >
+   <depend name="include/ValueType.h"/>
+  </file>
+  <file name="src/TS1.cpp" >
+   <depend name="include/EReg.h"/>
+   <depend name="include/Std.h"/>
+   <depend name="include/Sys.h"/>
+   <depend name="include/TS1.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/thx/math/random/TestNativeRandom.h"/>
+   <depend name="include/utest/Runner.h"/>
+   <depend name="include/utest/ui/Report.h"/>
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+   <depend name="include/utest/ui/common/IReport.h"/>
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+  </file>
+  <file name="src/Sys.cpp" >
+   <depend name="include/Sys.h"/>
+  </file>
+  <file name="src/StringTools.cpp" >
+   <depend name="include/StringTools.h"/>
+  </file>
+  <file name="src/StringBuf.cpp" >
+   <depend name="include/Std.h"/>
+   <depend name="include/StringBuf.h"/>
+  </file>
+  <file name="src/Std.cpp" >
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/Reflect.cpp" >
+   <depend name="include/Reflect.h"/>
+  </file>
+  <file name="src/_List/ListIterator.cpp" >
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/_List/ListNode.cpp" >
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/List.cpp" >
+   <depend name="include/List.h"/>
+   <depend name="include/_List/ListIterator.h"/>
+   <depend name="include/_List/ListNode.h"/>
+  </file>
+  <file name="src/Lambda.cpp" >
+   <depend name="include/Lambda.h"/>
+  </file>
+  <file name="src/EReg.cpp" >
+   <depend name="include/EReg.h"/>
+  </file>
+  <file name="src/Date.cpp" >
+   <depend name="include/Date.h"/>
+   <depend name="include/Std.h"/>
+  </file>
+  <file name="src/__boot__.cpp" >
+   <depend name="include/utest/ui/common/SuccessResultsDisplayMode.h"/>
+   <depend name="include/utest/ui/common/HeaderDisplayMode.h"/>
+   <depend name="include/utest/_Dispatcher/EventException.h"/>
+   <depend name="include/utest/Assertation.h"/>
+   <depend name="include/haxe/StackItem.h"/>
+   <depend name="include/ValueType.h"/>
+   <depend name="include/utest/TestHandler.h"/>
+   <depend name="include/utest/Assert.h"/>
+   <depend name="include/haxe/MainLoop.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/EntryPoint.h"/>
+  </file>
+  <file name="src/__files__.cpp" >
+  </file>
+  <file name="src/__resources__.cpp" >
+  </file>
+</files>
+<files id="__lib__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__lib__.cpp" >
+   <depend name="include/TS1.h"/>
+   <depend name="include/haxe/EntryPoint.h"/>
+  </file>
+</files>
+<files id="__main__">
+<compilerflag value="-Iinclude"/>
+  <file name="src/__main__.cpp" >
+   <depend name="include/TS1.h"/>
+   <depend name="include/haxe/EntryPoint.h"/>
+  </file>
+</files>
+<files id="__resources__">
+</files>
+<files id="__externs__">
+</files>
+<set name="HAXE_OUTPUT" value="TS1" />
+<include name="${HXCPP}/build-tool/BuildCommon.xml"/>
+<include name="${HXCPP}/src/hx/libs/regexp/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+<include name="${HXCPP}/src/hx/libs/std/Build.xml"/>
+</xml>

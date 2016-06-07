@@ -12,7 +12,7 @@ w = arg;}
 trace('The value of loop_wrapper is $w');
 
 var x : Int = Std.parseInt(w);
-runner.addCase(new thx.culture.TestNumberFormatInfo()(x));
+runner.addCase(new thx.culture.TestNumberFormatInfo(x));
 }
 
   public static function main() {

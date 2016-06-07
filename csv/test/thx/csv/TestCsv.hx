@@ -1,4 +1,4 @@
-package thx.color;
+package thx.csv;
 
 import utest.Assert;
 
