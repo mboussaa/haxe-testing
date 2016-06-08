@@ -948,10 +948,7 @@ thx_speedTest_TestVector.prototype = {
 			var vec = new Array(10000000);
 			var _g3 = 0;
 			var _g2 = vec.length;
-			while(_g3 < _g2) {
-				var i1 = _g3++;
-				vec[i1] = i1;
-			}
+			while(_g3 < _g2) vec[_g3++] = 0;
 		}
 	}
 	,__class__: thx_speedTest_TestVector

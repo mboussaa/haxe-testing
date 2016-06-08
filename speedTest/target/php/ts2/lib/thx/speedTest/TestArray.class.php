@@ -16,9 +16,8 @@ class thx_speedTest_TestArray {
 			{
 				$_g2 = 0;
 				while($_g2 < 10000000) {
-					$i = $_g2++;
-					$a[1] = $i;
-					unset($i);
+					++$_g2;
+					$a[1] = 0;
 				}
 				unset($_g2);
 			}

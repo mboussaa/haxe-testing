@@ -12,7 +12,7 @@ var x : Int;
     for (i in 0...x){
     var a = [];
     for (i in 0...10000000)    
-    a[1] = i;
+    a[1] = 0;
   }
 }
 }

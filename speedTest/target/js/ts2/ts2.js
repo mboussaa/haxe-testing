@@ -947,7 +947,10 @@ thx_speedTest_TestArray.prototype = {
 			++_g1;
 			var a = [];
 			var _g2 = 0;
-			while(_g2 < 10000000) a[1] = _g2++;
+			while(_g2 < 10000000) {
+				++_g2;
+				a[1] = 0;
+			}
 		}
 	}
 	,__class__: thx_speedTest_TestArray

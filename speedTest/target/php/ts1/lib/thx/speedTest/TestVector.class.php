@@ -20,7 +20,7 @@ class thx_speedTest_TestVector {
 				$_g2 = $vec->length;
 				while($_g3 < $_g2) {
 					$i = $_g3++;
-					$vec[$i] = $i;
+					$vec[$i] = 0;
 					unset($i);
 				}
 				unset($_g3,$_g2);

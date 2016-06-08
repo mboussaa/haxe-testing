@@ -46,7 +46,7 @@ HXLINE(  14)				HX_VARI( Int,_g3) = (int)0;
 HXDLIN(  14)				HX_VARI( Int,_g2) = vec->length;
 HXDLIN(  14)				while((_g3 < _g2)){
 HXLINE(  14)					HX_VARI( Int,i) = _g3++;
-HXLINE(  15)					vec->__unsafe_set(i,i);
+HXLINE(  15)					vec->__unsafe_set(i,(int)0);
             				}
             			}
             		}

@@ -12,7 +12,7 @@ var x : Int;
     for (i in 0...x){
     var vec = new haxe.ds.Vector(10000000);
     for (i in 0...vec.length) {
-      vec[i] = i;
+      vec[i] = 0;
     }
   }
 }

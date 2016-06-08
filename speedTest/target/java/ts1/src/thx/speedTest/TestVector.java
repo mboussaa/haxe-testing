@@ -68,7 +68,7 @@ public class TestVector extends haxe.lang.HxObject
 					//line 14 "/shared/speedTest/test/thx/speedTest/TestVector.hx"
 					int i = _g3++;
 					//line 15 "/shared/speedTest/test/thx/speedTest/TestVector.hx"
-					((int[]) (vec) )[i] = i;
+					((int[]) (vec) )[i] = 0;
 				}
 				
 			}

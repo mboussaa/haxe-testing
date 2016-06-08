@@ -62,9 +62,9 @@ public class TestArray extends haxe.lang.HxObject
 				while (( _g2 < 10000000 ))
 				{
 					//line 14 "/shared/speedTest/test/thx/speedTest/TestArray.hx"
-					int i = _g2++;
+					 ++ _g2;
 					//line 15 "/shared/speedTest/test/thx/speedTest/TestArray.hx"
-					a.__set(1, i);
+					a.__set(1, 0);
 				}
 				
 			}

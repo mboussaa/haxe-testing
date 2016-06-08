@@ -42,8 +42,8 @@ HXLINE(  13)			HX_VARI( ::Array< Int >,a) = ::Array_obj< Int >::__new(0);
 HXLINE(  14)			{
 HXLINE(  14)				HX_VARI( Int,_g2) = (int)0;
 HXDLIN(  14)				while((_g2 < (int)10000000)){
-HXLINE(  14)					HX_VARI( Int,i) = _g2++;
-HXLINE(  15)					a[(int)1] = i;
+HXLINE(  14)					++_g2;
+HXLINE(  15)					a[(int)1] = (int)0;
             				}
             			}
             		}

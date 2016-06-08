@@ -40,7 +40,8 @@ namespace thx.speedTest {
 					{
 						int _g2 = 0;
 						while (( _g2 < 10000000 )) {
-							a[1] = _g2++;
+							 ++ _g2;
+							a[1] = 0;
 						}
 						
 					}

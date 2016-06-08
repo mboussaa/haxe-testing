@@ -1,4 +1,4 @@
-for (( i=1; i<=2; i++ ))
+for (( i=1; i<=3; i++ ))
 do
 
 haxe -cp src -cp test -main TS"$i".hx -lib utest -cpp target/cpp/ts"$i"

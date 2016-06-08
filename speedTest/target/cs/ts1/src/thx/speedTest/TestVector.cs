@@ -41,8 +41,7 @@ namespace thx.speedTest {
 						int _g3 = 0;
 						int _g2 = ( ((int[]) (vec) ) as global::System.Array ).Length;
 						while (( _g3 < _g2 )) {
-							int i = _g3++;
-							((int[]) (vec) )[i] = i;
+							((int[]) (vec) )[_g3++] = 0;
 						}
 						
 					}
