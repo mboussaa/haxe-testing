@@ -1690,7 +1690,7 @@ thx_Arrays.applyIndexes = function(array,indexes,incrementDuplicates) {
 		incrementDuplicates = false;
 	}
 	if(indexes.length != array.length) {
-		throw new thx_Error("`Arrays.applyIndexes` can only be applied to two arrays with the same length",null,{ fileName : "Arrays.hx", lineNumber : 53, className : "thx.Arrays", methodName : "applyIndexes"});
+		throw new thx_Error("`Arrays.applyIndexes` can only be applied to two arrays with the same length",null,{ fileName : "Arrays.hx", lineNumber : 54, className : "thx.Arrays", methodName : "applyIndexes"});
 	}
 	var result = [];
 	if(incrementDuplicates) {
@@ -1738,8 +1738,9 @@ thx_Arrays.getOption = function(array,i) {
 	}
 };
 thx_Arrays.each = function(arr,effect) {
-	var tmp = HxOverrides.iter(arr);
-	while(tmp.hasNext()) effect(tmp.next());
+	var _g1 = 0;
+	var _g = arr.length;
+	while(_g1 < _g) effect(arr[_g1++]);
 };
 thx_Arrays.eachi = function(arr,effect) {
 	var _g1 = 0;
@@ -1750,15 +1751,17 @@ thx_Arrays.eachi = function(arr,effect) {
 	}
 };
 thx_Arrays.all = function(arr,predicate) {
-	var tmp = HxOverrides.iter(arr);
-	while(tmp.hasNext()) if(!predicate(tmp.next())) {
+	var _g1 = 0;
+	var _g = arr.length;
+	while(_g1 < _g) if(!predicate(arr[_g1++])) {
 		return false;
 	}
 	return true;
 };
 thx_Arrays.any = function(arr,predicate) {
-	var tmp = HxOverrides.iter(arr);
-	while(tmp.hasNext()) if(predicate(tmp.next())) {
+	var _g1 = 0;
+	var _g = arr.length;
+	while(_g1 < _g) if(predicate(arr[_g1++])) {
 		return true;
 	}
 	return false;
@@ -2067,7 +2070,7 @@ thx_Arrays.spanByIndex = function(arr,spanKey) {
 		var i = _g1++;
 		var k = spanKey(i);
 		if(k == null) {
-			throw new thx_Error("spanKey function returned null for index " + i,null,{ fileName : "Arrays.hx", lineNumber : 567, className : "thx.Arrays", methodName : "spanByIndex"});
+			throw new thx_Error("spanKey function returned null for index " + i,null,{ fileName : "Arrays.hx", lineNumber : 569, className : "thx.Arrays", methodName : "spanByIndex"});
 		}
 		if(cur == k) {
 			acc[j].push(arr[i]);
@@ -2116,8 +2119,22 @@ thx_Arrays.isEmpty = function(array) {
 thx_Arrays.last = function(array) {
 	return array[array.length - 1];
 };
+thx_Arrays.map = function(array,callback) {
+	var r = [];
+	var _g1 = 0;
+	var _g = array.length;
+	while(_g1 < _g) r.push(callback(array[_g1++]));
+	return r;
+};
 thx_Arrays.mapi = function(array,callback) {
-	return array.map(callback);
+	var r = [];
+	var _g1 = 0;
+	var _g = array.length;
+	while(_g1 < _g) {
+		var i = _g1++;
+		r.push(callback(array[i],i));
+	}
+	return r;
 };
 thx_Arrays.mapRight = function(array,callback) {
 	var i = array.length;
@@ -2144,9 +2161,14 @@ thx_Arrays.rank = function(array,compare,incrementDuplicates) {
 	if(incrementDuplicates == null) {
 		incrementDuplicates = true;
 	}
-	var arr = array.map(function(v,i) {
-		return { _0 : v, _1 : i};
-	});
+	var r = [];
+	var _g1 = 0;
+	var _g = array.length;
+	while(_g1 < _g) {
+		var i = _g1++;
+		r.push({ _0 : array[i], _1 : i});
+	}
+	var arr = r;
 	arr.sort(function(a,b) {
 		return compare(a._0,b._0);
 	});
@@ -3787,6 +3809,102 @@ thx_Bools.option = function(cond,a) {
 		return haxe_ds_Option.None;
 	}
 };
+var thx__$Ord_Ord_$Impl_$ = {};
+thx__$Ord_Ord_$Impl_$.__name__ = ["thx","_Ord","Ord_Impl_"];
+thx__$Ord_Ord_$Impl_$.order = function(this1,a0,a1) {
+	return this1(a0,a1);
+};
+thx__$Ord_Ord_$Impl_$.max = function(this1,a0,a1) {
+	switch(this1(a0,a1)[1]) {
+	case 1:
+		return a0;
+	case 0:case 2:
+		return a1;
+	}
+};
+thx__$Ord_Ord_$Impl_$.min = function(this1,a0,a1) {
+	switch(this1(a0,a1)[1]) {
+	case 1:
+		return a1;
+	case 0:case 2:
+		return a0;
+	}
+};
+thx__$Ord_Ord_$Impl_$.equal = function(this1,a0,a1) {
+	return this1(a0,a1) == thx_OrderingImpl.EQ;
+};
+thx__$Ord_Ord_$Impl_$.contramap = function(this1,f) {
+	return function(b0,b1) {
+		return this1(f(b0),f(b1));
+	};
+};
+thx__$Ord_Ord_$Impl_$.inverse = function(this1) {
+	return function(a0,a1) {
+		return this1(a1,a0);
+	};
+};
+thx__$Ord_Ord_$Impl_$.intComparison = function(this1,a0,a1) {
+	switch(this1(a0,a1)[1]) {
+	case 0:
+		return -1;
+	case 1:
+		return 1;
+	case 2:
+		return 0;
+	}
+};
+thx__$Ord_Ord_$Impl_$.fromIntComparison = function(f) {
+	return function(a,b) {
+		return thx__$Ord_Ordering_$Impl_$.fromInt(f(a,b));
+	};
+};
+thx__$Ord_Ord_$Impl_$.forComparable = function() {
+	return function(a,b) {
+		return thx__$Ord_Ordering_$Impl_$.fromInt(a.compareTo(b));
+	};
+};
+thx__$Ord_Ord_$Impl_$.forComparableOrd = function() {
+	return function(a,b) {
+		return a.compareTo(b);
+	};
+};
+var thx__$Ord_Ordering_$Impl_$ = {};
+thx__$Ord_Ordering_$Impl_$.__name__ = ["thx","_Ord","Ordering_Impl_"];
+thx__$Ord_Ordering_$Impl_$.fromInt = function(value) {
+	if(value < 0) {
+		return thx_OrderingImpl.LT;
+	} else if(value > 0) {
+		return thx_OrderingImpl.GT;
+	} else {
+		return thx_OrderingImpl.EQ;
+	}
+};
+thx__$Ord_Ordering_$Impl_$.fromFloat = function(value) {
+	if(value < 0) {
+		return thx_OrderingImpl.LT;
+	} else if(value > 0) {
+		return thx_OrderingImpl.GT;
+	} else {
+		return thx_OrderingImpl.EQ;
+	}
+};
+thx__$Ord_Ordering_$Impl_$.toInt = function(this1) {
+	switch(this1[1]) {
+	case 0:
+		return -1;
+	case 1:
+		return 1;
+	case 2:
+		return 0;
+	}
+};
+var thx_OrderingImpl = { __ename__ : ["thx","OrderingImpl"], __constructs__ : ["LT","GT","EQ"] };
+thx_OrderingImpl.LT = ["LT",0];
+thx_OrderingImpl.LT.__enum__ = thx_OrderingImpl;
+thx_OrderingImpl.GT = ["GT",1];
+thx_OrderingImpl.GT.__enum__ = thx_OrderingImpl;
+thx_OrderingImpl.EQ = ["EQ",2];
+thx_OrderingImpl.EQ.__enum__ = thx_OrderingImpl;
 var thx_Dates = function() { };
 thx_Dates.__name__ = ["thx","Dates"];
 thx_Dates.compare = function(a,b) {
@@ -4684,102 +4802,6 @@ thx_Error.prototype = $extend(Error.prototype,{
 	}
 	,__class__: thx_Error
 });
-var thx__$Ord_Ord_$Impl_$ = {};
-thx__$Ord_Ord_$Impl_$.__name__ = ["thx","_Ord","Ord_Impl_"];
-thx__$Ord_Ord_$Impl_$.order = function(this1,a0,a1) {
-	return this1(a0,a1);
-};
-thx__$Ord_Ord_$Impl_$.max = function(this1,a0,a1) {
-	switch(this1(a0,a1)[1]) {
-	case 1:
-		return a0;
-	case 0:case 2:
-		return a1;
-	}
-};
-thx__$Ord_Ord_$Impl_$.min = function(this1,a0,a1) {
-	switch(this1(a0,a1)[1]) {
-	case 1:
-		return a1;
-	case 0:case 2:
-		return a0;
-	}
-};
-thx__$Ord_Ord_$Impl_$.equal = function(this1,a0,a1) {
-	return this1(a0,a1) == thx_OrderingImpl.EQ;
-};
-thx__$Ord_Ord_$Impl_$.contramap = function(this1,f) {
-	return function(b0,b1) {
-		return this1(f(b0),f(b1));
-	};
-};
-thx__$Ord_Ord_$Impl_$.inverse = function(this1) {
-	return function(a0,a1) {
-		return this1(a1,a0);
-	};
-};
-thx__$Ord_Ord_$Impl_$.intComparison = function(this1,a0,a1) {
-	switch(this1(a0,a1)[1]) {
-	case 0:
-		return -1;
-	case 1:
-		return 1;
-	case 2:
-		return 0;
-	}
-};
-thx__$Ord_Ord_$Impl_$.fromIntComparison = function(f) {
-	return function(a,b) {
-		return thx__$Ord_Ordering_$Impl_$.fromInt(f(a,b));
-	};
-};
-thx__$Ord_Ord_$Impl_$.forComparable = function() {
-	return function(a,b) {
-		return thx__$Ord_Ordering_$Impl_$.fromInt(a.compareTo(b));
-	};
-};
-thx__$Ord_Ord_$Impl_$.forComparableOrd = function() {
-	return function(a,b) {
-		return a.compareTo(b);
-	};
-};
-var thx__$Ord_Ordering_$Impl_$ = {};
-thx__$Ord_Ordering_$Impl_$.__name__ = ["thx","_Ord","Ordering_Impl_"];
-thx__$Ord_Ordering_$Impl_$.fromInt = function(value) {
-	if(value < 0) {
-		return thx_OrderingImpl.LT;
-	} else if(value > 0) {
-		return thx_OrderingImpl.GT;
-	} else {
-		return thx_OrderingImpl.EQ;
-	}
-};
-thx__$Ord_Ordering_$Impl_$.fromFloat = function(value) {
-	if(value < 0) {
-		return thx_OrderingImpl.LT;
-	} else if(value > 0) {
-		return thx_OrderingImpl.GT;
-	} else {
-		return thx_OrderingImpl.EQ;
-	}
-};
-thx__$Ord_Ordering_$Impl_$.toInt = function(this1) {
-	switch(this1[1]) {
-	case 0:
-		return -1;
-	case 1:
-		return 1;
-	case 2:
-		return 0;
-	}
-};
-var thx_OrderingImpl = { __ename__ : ["thx","OrderingImpl"], __constructs__ : ["LT","GT","EQ"] };
-thx_OrderingImpl.LT = ["LT",0];
-thx_OrderingImpl.LT.__enum__ = thx_OrderingImpl;
-thx_OrderingImpl.GT = ["GT",1];
-thx_OrderingImpl.GT.__enum__ = thx_OrderingImpl;
-thx_OrderingImpl.EQ = ["EQ",2];
-thx_OrderingImpl.EQ.__enum__ = thx_OrderingImpl;
 var thx_Floats = function() { };
 thx_Floats.__name__ = ["thx","Floats"];
 thx_Floats.angleDifference = function(a,b,turn) {
@@ -6304,6 +6326,11 @@ thx_Maps.values = function(map) {
 		return map.get(key);
 	});
 };
+thx_Maps.foldLeftWithKeys = function(map,f,acc) {
+	return thx_Iterators.reduce(map.keys(),function(acc1,k) {
+		return f(acc1,k,map.get(k));
+	},acc);
+};
 thx_Maps.getOption = function(map,key) {
 	var value = map.get(key);
 	if(null == value) {
@@ -6394,12 +6421,12 @@ thx__$Nel_Nel_$Impl_$.flatMap = function(this1,f) {
 		return thx__$Nel_Nel_$Impl_$.append(f(this1[2]),thx__$Nel_Nel_$Impl_$.flatMap(this1[3],f));
 	}
 };
-thx__$Nel_Nel_$Impl_$.fold = function(this1,s) {
+thx__$Nel_Nel_$Impl_$.fold = function(this1,f) {
 	switch(this1[1]) {
 	case 0:
 		return this1[2];
 	case 1:
-		return (thx__$Semigroup_Semigroup_$Impl_$.get_append(s))(this1[2],thx__$Nel_Nel_$Impl_$.fold(this1[3],s));
+		return f(this1[2],thx__$Nel_Nel_$Impl_$.fold(this1[3],f));
 	}
 };
 thx__$Nel_Nel_$Impl_$.append = function(this1,nel) {
@@ -7797,6 +7824,7 @@ thx_TestBigInt.__name__ = ["thx","TestBigInt"];
 thx_TestBigInt.prototype = {
 	x: null
 	,testIssue82: function() {
+		haxe_Timer.stamp();
 		var _g1 = 0;
 		var _g = this.x;
 		while(_g1 < _g) {
@@ -7804,12 +7832,12 @@ thx_TestBigInt.prototype = {
 			var s = thx_bigint_Bigs.fromInt(101);
 			var b = new thx_bigint_Big(thx_bigint_Bigs.smallToArray(thx_bigint_Bigs.parseBase("100",10).toInt()),false);
 			var r = s.subtract(b);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),s.subtract(b)),"expected " + s.toString() + " - " + b.toString() + " to be equal 1 but it is " + r.toString(),{ fileName : "TestBigInt.hx", lineNumber : 19, className : "thx.TestBigInt", methodName : "testIssue82"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),s.subtract(b)),"expected " + s.toString() + " - " + b.toString() + " to be equal 1 but it is " + r.toString(),{ fileName : "TestBigInt.hx", lineNumber : 21, className : "thx.TestBigInt", methodName : "testIssue82"});
 			var s1 = thx_bigint_Bigs.fromInt(101);
 			var b1 = thx_bigint_Bigs.fromInt(10);
 			b1 = b1.pow(thx_bigint_Bigs.fromInt(2));
 			var r1 = s1.subtract(b1);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),s1.subtract(b1)),"expected " + s1.toString() + " - " + b1.toString() + " to be equal 1 but it is " + r1.toString(),{ fileName : "TestBigInt.hx", lineNumber : 25, className : "thx.TestBigInt", methodName : "testIssue82"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),s1.subtract(b1)),"expected " + s1.toString() + " - " + b1.toString() + " to be equal 1 but it is " + r1.toString(),{ fileName : "TestBigInt.hx", lineNumber : 27, className : "thx.TestBigInt", methodName : "testIssue82"});
 		}
 	}
 	,testFromInt64: function() {
@@ -7824,7 +7852,7 @@ thx_TestBigInt.prototype = {
 				++_g2;
 				var r = thx_bigint_Bigs.fromInt64(value);
 				var i = thx_bigint_Bigs.toInt64(r);
-				utest_Assert.isTrue(i.high == value.high && i.low == value.low,"Int64 parsed as " + r.toString() + " and converted to " + haxe__$Int64_Int64_$Impl_$.toString(i) + " but expected " + haxe__$Int64_Int64_$Impl_$.toString(value),{ fileName : "TestBigInt.hx", lineNumber : 34, className : "thx.TestBigInt", methodName : "testFromInt64"});
+				utest_Assert.isTrue(i.high == value.high && i.low == value.low,"Int64 parsed as " + r.toString() + " and converted to " + haxe__$Int64_Int64_$Impl_$.toString(i) + " but expected " + haxe__$Int64_Int64_$Impl_$.toString(value),{ fileName : "TestBigInt.hx", lineNumber : 38, className : "thx.TestBigInt", methodName : "testFromInt64"});
 			}
 		}
 	}
@@ -7833,11 +7861,11 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.lcm(thx_bigint_Bigs.fromInt(21),thx_bigint_Bigs.fromInt(6)),thx_bigint_Bigs.fromInt(42)),null,{ fileName : "TestBigInt.hx", lineNumber : 40, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(42),thx_bigint_Bigs.fromInt(56)),thx_bigint_Bigs.fromInt(14)),null,{ fileName : "TestBigInt.hx", lineNumber : 41, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(56)),thx_bigint_Bigs.fromInt(56)),null,{ fileName : "TestBigInt.hx", lineNumber : 42, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(42),thx_bigint_Bigs.fromInt(0)),thx_bigint_Bigs.fromInt(42)),null,{ fileName : "TestBigInt.hx", lineNumber : 43, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(17),thx_bigint_Bigs.fromInt(103)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 44, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.lcm(thx_bigint_Bigs.fromInt(21),thx_bigint_Bigs.fromInt(6)),thx_bigint_Bigs.fromInt(42)),null,{ fileName : "TestBigInt.hx", lineNumber : 44, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(42),thx_bigint_Bigs.fromInt(56)),thx_bigint_Bigs.fromInt(14)),null,{ fileName : "TestBigInt.hx", lineNumber : 45, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(56)),thx_bigint_Bigs.fromInt(56)),null,{ fileName : "TestBigInt.hx", lineNumber : 46, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(42),thx_bigint_Bigs.fromInt(0)),thx_bigint_Bigs.fromInt(42)),null,{ fileName : "TestBigInt.hx", lineNumber : 47, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx__$BigInt_BigInt_$Impl_$.gcd(thx_bigint_Bigs.fromInt(17),thx_bigint_Bigs.fromInt(103)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 48, className : "thx.TestBigInt", methodName : "testLcmAndGcd"});
 		}
 	}
 	,testIncrements: function() {
@@ -7845,7 +7873,7 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.zero.isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 49, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.zero.isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 53, className : "thx.TestBigInt", methodName : "testIncrements"});
 			var a = thx__$BigInt_BigInt_$Impl_$.zero;
 			a = a.add(thx_bigint_Small.one);
 			var b = a;
@@ -7857,12 +7885,12 @@ thx_TestBigInt.prototype = {
 			var v1 = a;
 			a = a.subtract(thx_bigint_Small.one);
 			var e = v1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.zero.isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 55, className : "thx.TestBigInt", methodName : "testIncrements"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 56, className : "thx.TestBigInt", methodName : "testIncrements"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(c,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 57, className : "thx.TestBigInt", methodName : "testIncrements"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(d,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 58, className : "thx.TestBigInt", methodName : "testIncrements"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(e,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 59, className : "thx.TestBigInt", methodName : "testIncrements"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a,thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 60, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.zero.isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 59, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 60, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(c,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 61, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(d,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 62, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(e,thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 63, className : "thx.TestBigInt", methodName : "testIncrements"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a,thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 64, className : "thx.TestBigInt", methodName : "testIncrements"});
 		}
 	}
 	,testCanHandleLargeNumbers: function() {
@@ -7883,10 +7911,10 @@ thx_TestBigInt.prototype = {
 				};
 			})(factorial);
 			var factorial2 = factorial[0];
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(factorial2(thx_bigint_Bigs.fromInt(10)),tenFactorial),null,{ fileName : "TestBigInt.hx", lineNumber : 75, className : "thx.TestBigInt", methodName : "testCanHandleLargeNumbers"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(factorial2(thx_bigint_Bigs.fromInt(100)),hundredFactorial),null,{ fileName : "TestBigInt.hx", lineNumber : 76, className : "thx.TestBigInt", methodName : "testCanHandleLargeNumbers"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(factorial2(thx_bigint_Bigs.fromInt(10)),tenFactorial),null,{ fileName : "TestBigInt.hx", lineNumber : 79, className : "thx.TestBigInt", methodName : "testCanHandleLargeNumbers"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(factorial2(thx_bigint_Bigs.fromInt(100)),hundredFactorial),null,{ fileName : "TestBigInt.hx", lineNumber : 80, className : "thx.TestBigInt", methodName : "testCanHandleLargeNumbers"});
 			var pow = thx_bigint_Bigs.fromInt(3).pow(thx_bigint_Bigs.fromInt(10000));
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(pow,threeToTenThousand),"expected " + thx_bigint_Bigs.fromInt(3).toString() + ".pow(10000) == " + threeToTenThousand.toString() + " but got " + pow.toString(),{ fileName : "TestBigInt.hx", lineNumber : 81, className : "thx.TestBigInt", methodName : "testCanHandleLargeNumbers"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(pow,threeToTenThousand),"expected " + thx_bigint_Bigs.fromInt(3).toString() + ".pow(10000) == " + threeToTenThousand.toString() + " but got " + pow.toString(),{ fileName : "TestBigInt.hx", lineNumber : 85, className : "thx.TestBigInt", methodName : "testCanHandleLargeNumbers"});
 		}
 	}
 	,testIsImmutable: function() {
@@ -7896,9 +7924,9 @@ thx_TestBigInt.prototype = {
 			++_g1;
 			var n = thx_bigint_Bigs.fromInt(14930352);
 			n.add(thx_bigint_Bigs.fromInt(9227465));
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n,thx_bigint_Bigs.fromInt(14930352)),null,{ fileName : "TestBigInt.hx", lineNumber : 92, className : "thx.TestBigInt", methodName : "testIsImmutable"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n,thx_bigint_Bigs.fromInt(14930352)),null,{ fileName : "TestBigInt.hx", lineNumber : 96, className : "thx.TestBigInt", methodName : "testIsImmutable"});
 			n.subtract(thx_bigint_Bigs.fromInt(123456));
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n,thx_bigint_Bigs.fromInt(14930352)),null,{ fileName : "TestBigInt.hx", lineNumber : 94, className : "thx.TestBigInt", methodName : "testIsImmutable"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n,thx_bigint_Bigs.fromInt(14930352)),null,{ fileName : "TestBigInt.hx", lineNumber : 98, className : "thx.TestBigInt", methodName : "testIsImmutable"});
 		}
 	}
 	,testInts: function() {
@@ -7912,9 +7940,9 @@ thx_TestBigInt.prototype = {
 				var test = tests[_g2];
 				++_g2;
 				var out = thx_bigint_Bigs.fromInt(test);
-				utest_Assert.equals(test,out.toInt(),"expected " + test + " but got " + out.toInt(),{ fileName : "TestBigInt.hx", lineNumber : 106, className : "thx.TestBigInt", methodName : "testInts"});
+				utest_Assert.equals(test,out.toInt(),"expected " + test + " but got " + out.toInt(),{ fileName : "TestBigInt.hx", lineNumber : 110, className : "thx.TestBigInt", methodName : "testInts"});
 				var out1 = thx_bigint_Bigs.fromInt(-test);
-				utest_Assert.equals(-test,out1.toInt(),"expected " + -test + " but got " + out1.toInt(),{ fileName : "TestBigInt.hx", lineNumber : 109, className : "thx.TestBigInt", methodName : "testInts"});
+				utest_Assert.equals(-test,out1.toInt(),"expected " + -test + " but got " + out1.toInt(),{ fileName : "TestBigInt.hx", lineNumber : 113, className : "thx.TestBigInt", methodName : "testInts"});
 			}
 		}
 	}
@@ -7929,9 +7957,9 @@ thx_TestBigInt.prototype = {
 				var test = tests[_g2];
 				++_g2;
 				var out = thx_bigint_Bigs.fromFloat(test);
-				utest_Assert.floatEquals(thx_Floats.roundTo(test,0),out.toFloat(),null,"expected " + thx_Floats.roundTo(test,0) + " but got " + out.toFloat(),{ fileName : "TestBigInt.hx", lineNumber : 119, className : "thx.TestBigInt", methodName : "testFloats"});
+				utest_Assert.floatEquals(thx_Floats.roundTo(test,0),out.toFloat(),null,"expected " + thx_Floats.roundTo(test,0) + " but got " + out.toFloat(),{ fileName : "TestBigInt.hx", lineNumber : 123, className : "thx.TestBigInt", methodName : "testFloats"});
 				var out1 = thx_bigint_Bigs.fromFloat(-test);
-				utest_Assert.floatEquals(thx_Floats.roundTo(-test,0),out1.toFloat(),null,"expected " + thx_Floats.roundTo(-test,0) + " but got " + out1.toFloat(),{ fileName : "TestBigInt.hx", lineNumber : 122, className : "thx.TestBigInt", methodName : "testFloats"});
+				utest_Assert.floatEquals(thx_Floats.roundTo(-test,0),out1.toFloat(),null,"expected " + thx_Floats.roundTo(-test,0) + " but got " + out1.toFloat(),{ fileName : "TestBigInt.hx", lineNumber : 126, className : "thx.TestBigInt", methodName : "testFloats"});
 			}
 		}
 	}
@@ -7946,12 +7974,12 @@ thx_TestBigInt.prototype = {
 				var test = tests[_g2];
 				++_g2;
 				var out = thx_bigint_Bigs.parseBase(test,10);
-				utest_Assert.equals(test,out.toString(),"expected " + test + " but got " + out.toString(),{ fileName : "TestBigInt.hx", lineNumber : 135, className : "thx.TestBigInt", methodName : "testStrings"});
+				utest_Assert.equals(test,out.toString(),"expected " + test + " but got " + out.toString(),{ fileName : "TestBigInt.hx", lineNumber : 139, className : "thx.TestBigInt", methodName : "testStrings"});
 				if(test == "0") {
 					continue;
 				}
 				var out1 = thx_bigint_Bigs.parseBase("-" + test,10);
-				utest_Assert.equals("-" + test,out1.toString(),"expected -" + test + " but got " + out1.toString(),{ fileName : "TestBigInt.hx", lineNumber : 141, className : "thx.TestBigInt", methodName : "testStrings"});
+				utest_Assert.equals("-" + test,out1.toString(),"expected -" + test + " but got " + out1.toString(),{ fileName : "TestBigInt.hx", lineNumber : 145, className : "thx.TestBigInt", methodName : "testStrings"});
 			}
 		}
 	}
@@ -7960,30 +7988,30 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 147, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 148, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 149, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 150, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 151, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 153, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 154, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 155, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 156, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 157, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 158, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 160, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 161, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 162, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 163, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 164, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 166, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 167, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 168, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 169, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(2),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 170, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(2),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 171, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 172, className : "thx.TestBigInt", methodName : "testEquals"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.parseBase("-0",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 174, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 151, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 152, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 153, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 154, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 155, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 157, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 158, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 159, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 160, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 161, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567890",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 162, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 164, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 165, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 166, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 167, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 168, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 170, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 171, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12345678901234567890",10),thx_bigint_Bigs.parseBase("12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 172, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 173, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(2),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 174, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(2),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 175, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-12345678901234567890",10),thx_bigint_Bigs.parseBase("-12345678901234567891",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 176, className : "thx.TestBigInt", methodName : "testEquals"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0),thx_bigint_Bigs.parseBase("-0",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 178, className : "thx.TestBigInt", methodName : "testEquals"});
 		}
 	}
 	,testIgnoreLeadingZeros: function() {
@@ -7991,9 +8019,9 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("0000000000",10),thx_bigint_Bigs.parseBase("0",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 179, className : "thx.TestBigInt", methodName : "testIgnoreLeadingZeros"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("000000000000023",10),thx_bigint_Bigs.fromInt(23)),null,{ fileName : "TestBigInt.hx", lineNumber : 180, className : "thx.TestBigInt", methodName : "testIgnoreLeadingZeros"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0000000000000000000000123",10),thx_bigint_Bigs.fromInt(-123)),"expected " + thx_bigint_Bigs.parseBase("-0000000000000000000000123",10).toString() + " == " + thx_bigint_Bigs.fromInt(-123).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 181, className : "thx.TestBigInt", methodName : "testIgnoreLeadingZeros"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("0000000000",10),thx_bigint_Bigs.parseBase("0",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 183, className : "thx.TestBigInt", methodName : "testIgnoreLeadingZeros"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("000000000000023",10),thx_bigint_Bigs.fromInt(23)),null,{ fileName : "TestBigInt.hx", lineNumber : 184, className : "thx.TestBigInt", methodName : "testIgnoreLeadingZeros"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0000000000000000000000123",10),thx_bigint_Bigs.fromInt(-123)),"expected " + thx_bigint_Bigs.parseBase("-0000000000000000000000123",10).toString() + " == " + thx_bigint_Bigs.fromInt(-123).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 185, className : "thx.TestBigInt", methodName : "testIgnoreLeadingZeros"});
 		}
 	}
 	,testNumbersShouldBeTheSameWhenConstructedDifferently: function() {
@@ -8001,11 +8029,11 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12e5",10),thx_bigint_Bigs.fromFloat(12e5)),"expected " + thx_bigint_Bigs.parseBase("12e5",10).toString() + " == " + thx_bigint_Bigs.fromFloat(12e5).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 186, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromFloat(12e5),thx_bigint_Bigs.parseBase("1200000",10)),"expected " + thx_bigint_Bigs.fromFloat(12e5).toString() + " == " + thx_bigint_Bigs.parseBase("1200000",10).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 187, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1",10),thx_bigint_Bigs.fromInt(1)),"expected " + thx_bigint_Bigs.parseBase("1",10).toString() + " == " + thx_bigint_Bigs.fromInt(1).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 188, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(12345),thx_bigint_Bigs.parseBase("12345",10)),"expected " + thx_bigint_Bigs.fromInt(12345).toString() + " == " + thx_bigint_Bigs.parseBase("12345",10).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 189, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9876543210",10),thx_bigint_Bigs.fromFloat(9876543210.0)),"expected " + thx_bigint_Bigs.parseBase("9876543210",10).toString() + " == " + thx_bigint_Bigs.fromFloat(9876543210.0).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 190, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12e5",10),thx_bigint_Bigs.fromFloat(12e5)),"expected " + thx_bigint_Bigs.parseBase("12e5",10).toString() + " == " + thx_bigint_Bigs.fromFloat(12e5).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 190, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromFloat(12e5),thx_bigint_Bigs.parseBase("1200000",10)),"expected " + thx_bigint_Bigs.fromFloat(12e5).toString() + " == " + thx_bigint_Bigs.parseBase("1200000",10).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 191, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1",10),thx_bigint_Bigs.fromInt(1)),"expected " + thx_bigint_Bigs.parseBase("1",10).toString() + " == " + thx_bigint_Bigs.fromInt(1).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 192, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(12345),thx_bigint_Bigs.parseBase("12345",10)),"expected " + thx_bigint_Bigs.fromInt(12345).toString() + " == " + thx_bigint_Bigs.parseBase("12345",10).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 193, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9876543210",10),thx_bigint_Bigs.fromFloat(9876543210.0)),"expected " + thx_bigint_Bigs.parseBase("9876543210",10).toString() + " == " + thx_bigint_Bigs.fromFloat(9876543210.0).toString() + " to be true",{ fileName : "TestBigInt.hx", lineNumber : 194, className : "thx.TestBigInt", methodName : "testNumbersShouldBeTheSameWhenConstructedDifferently"});
 		}
 	}
 	,testFibonacci: function() {
@@ -8021,7 +8049,7 @@ thx_TestBigInt.prototype = {
 				var i = _g2++;
 				number = number.add(last);
 				last = number.subtract(last);
-				utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(number,fibs[i]),null,{ fileName : "TestBigInt.hx", lineNumber : 202, className : "thx.TestBigInt", methodName : "testFibonacci"});
+				utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(number,fibs[i]),null,{ fileName : "TestBigInt.hx", lineNumber : 206, className : "thx.TestBigInt", methodName : "testFibonacci"});
 			}
 		}
 	}
@@ -8030,12 +8058,12 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740991",10).add(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.parseBase("9007199254740992",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 208, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("999999999999999999999000000000000000000000",10).add(thx_bigint_Bigs.parseBase("1000000000000000000000",10)),thx_bigint_Bigs.parseBase("1e42",10)),"expected " + thx_bigint_Bigs.parseBase("999999999999999999999000000000000000000000",10).toString() + " + " + thx_bigint_Bigs.parseBase("1000000000000000000000",10).toString() + " == " + thx_bigint_Bigs.parseBase("1e42",10).toString() + " but is " + thx_bigint_Bigs.parseBase("999999999999999999999000000000000000000000",10).add(thx_bigint_Bigs.parseBase("1000000000000000000000",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 209, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1e20",10).add(thx_bigint_Bigs.parseBase("9007199254740972",10)),thx_bigint_Bigs.parseBase("100009007199254740972",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 212, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740983",10).add(thx_bigint_Bigs.parseBase("-9999999999999998",10)),thx_bigint_Bigs.parseBase("-19007199254740981",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 213, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("100000000000000000000000000000000000",10).subtract(thx_bigint_Bigs.parseBase("999999999999999999",10)),thx_bigint_Bigs.parseBase("99999999999999999000000000000000001",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 214, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("50000005000000",10).multiply(thx_bigint_Bigs.parseBase("10000001",10)),thx_bigint_Bigs.parseBase("500000100000005000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 216, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740991",10).add(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.parseBase("9007199254740992",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 212, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("999999999999999999999000000000000000000000",10).add(thx_bigint_Bigs.parseBase("1000000000000000000000",10)),thx_bigint_Bigs.parseBase("1e42",10)),"expected " + thx_bigint_Bigs.parseBase("999999999999999999999000000000000000000000",10).toString() + " + " + thx_bigint_Bigs.parseBase("1000000000000000000000",10).toString() + " == " + thx_bigint_Bigs.parseBase("1e42",10).toString() + " but is " + thx_bigint_Bigs.parseBase("999999999999999999999000000000000000000000",10).add(thx_bigint_Bigs.parseBase("1000000000000000000000",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 213, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1e20",10).add(thx_bigint_Bigs.parseBase("9007199254740972",10)),thx_bigint_Bigs.parseBase("100009007199254740972",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 216, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740983",10).add(thx_bigint_Bigs.parseBase("-9999999999999998",10)),thx_bigint_Bigs.parseBase("-19007199254740981",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 217, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("100000000000000000000000000000000000",10).subtract(thx_bigint_Bigs.parseBase("999999999999999999",10)),thx_bigint_Bigs.parseBase("99999999999999999000000000000000001",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 218, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("50000005000000",10).multiply(thx_bigint_Bigs.parseBase("10000001",10)),thx_bigint_Bigs.parseBase("500000100000005000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 220, className : "thx.TestBigInt", methodName : "testCarriesOverCorrectly"});
 		}
 	}
 	,testMisc: function() {
@@ -8043,17 +8071,17 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10",10).add(thx_bigint_Bigs.fromInt(10)),thx_bigint_Bigs.parseBase("20",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 221, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-10000000000000000",10).add(thx_bigint_Bigs.parseBase("0",10)),thx_bigint_Bigs.parseBase("-10000000000000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 222, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("0",10).add(thx_bigint_Bigs.parseBase("10000000000000000",10)),thx_bigint_Bigs.parseBase("10000000000000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 223, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(9999999).add(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(10000000)),"expected " + thx_bigint_Bigs.fromInt(9999999).toString() + " + " + thx_bigint_Bigs.fromInt(1).toString() + " == " + thx_bigint_Bigs.fromInt(10000000).toString() + " but got " + thx_bigint_Bigs.fromInt(9999999).add(thx_bigint_Bigs.fromInt(1)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 224, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(10000000).subtract(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(9999999)),null,{ fileName : "TestBigInt.hx", lineNumber : 225, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1000000000000000000000000000000000001",10).add(thx_bigint_Bigs.parseBase("1000000000000000000000000000000000000",10)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 226, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("100000000000000000002222222222222222222",10).subtract(thx_bigint_Bigs.parseBase("100000000000000000001111111111111111111",10)),thx_bigint_Bigs.parseBase("1111111111111111111",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 227, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1",10).add(thx_bigint_Bigs.parseBase("0",10)),thx_bigint_Bigs.parseBase("1",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 228, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10",10).add(thx_bigint_Bigs.parseBase("10000000000000000",10)),thx_bigint_Bigs.parseBase("10000000000000010",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 229, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10000000000000000",10).add(thx_bigint_Bigs.parseBase("10",10)),thx_bigint_Bigs.parseBase("10000000000000010",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 230, className : "thx.TestBigInt", methodName : "testMisc"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10000000000000000",10).add(thx_bigint_Bigs.parseBase("10000000000000000",10)),thx_bigint_Bigs.parseBase("20000000000000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 231, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10",10).add(thx_bigint_Bigs.fromInt(10)),thx_bigint_Bigs.parseBase("20",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 225, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-10000000000000000",10).add(thx_bigint_Bigs.parseBase("0",10)),thx_bigint_Bigs.parseBase("-10000000000000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 226, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("0",10).add(thx_bigint_Bigs.parseBase("10000000000000000",10)),thx_bigint_Bigs.parseBase("10000000000000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 227, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(9999999).add(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(10000000)),"expected " + thx_bigint_Bigs.fromInt(9999999).toString() + " + " + thx_bigint_Bigs.fromInt(1).toString() + " == " + thx_bigint_Bigs.fromInt(10000000).toString() + " but got " + thx_bigint_Bigs.fromInt(9999999).add(thx_bigint_Bigs.fromInt(1)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 228, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(10000000).subtract(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(9999999)),null,{ fileName : "TestBigInt.hx", lineNumber : 229, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1000000000000000000000000000000000001",10).add(thx_bigint_Bigs.parseBase("1000000000000000000000000000000000000",10)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 230, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("100000000000000000002222222222222222222",10).subtract(thx_bigint_Bigs.parseBase("100000000000000000001111111111111111111",10)),thx_bigint_Bigs.parseBase("1111111111111111111",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 231, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1",10).add(thx_bigint_Bigs.parseBase("0",10)),thx_bigint_Bigs.parseBase("1",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 232, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10",10).add(thx_bigint_Bigs.parseBase("10000000000000000",10)),thx_bigint_Bigs.parseBase("10000000000000010",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 233, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10000000000000000",10).add(thx_bigint_Bigs.parseBase("10",10)),thx_bigint_Bigs.parseBase("10000000000000010",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 234, className : "thx.TestBigInt", methodName : "testMisc"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10000000000000000",10).add(thx_bigint_Bigs.parseBase("10000000000000000",10)),thx_bigint_Bigs.parseBase("20000000000000000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 235, className : "thx.TestBigInt", methodName : "testMisc"});
 		}
 	}
 	,testMultiplyHandlesSignsCorectly: function() {
@@ -8061,23 +8089,23 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(100).multiply(thx_bigint_Bigs.fromInt(100)),thx_bigint_Bigs.fromInt(10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 236, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(100).multiply(thx_bigint_Bigs.fromInt(-100)),thx_bigint_Bigs.fromInt(-10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 237, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-100).multiply(thx_bigint_Bigs.fromInt(100)),thx_bigint_Bigs.fromInt(-10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 238, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-100).multiply(thx_bigint_Bigs.fromInt(-100)),thx_bigint_Bigs.fromInt(10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 239, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(13579).multiply(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),"expected " + thx_bigint_Bigs.fromInt(13579).toString() + " * " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).toString() + " == " + thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10).toString() + " but got " + thx_bigint_Bigs.fromInt(13579).multiply(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 241, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(13579).multiply(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 246, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-13579).multiply(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 247, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-13579).multiply(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 248, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(13579)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),"expected " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).toString() + " * 13579 == " + thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10).toString() + " but got " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(13579)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 249, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(-13579)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 253, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(13579)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 254, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(-13579)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 255, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 256, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("132435465768798",10)),thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 257, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)),thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),"expected " + thx_bigint_Bigs.parseBase("1234567890987654321",10).toString() + " * " + thx_bigint_Bigs.parseBase("-132435465768798",10).toString() + " == " + thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).toString() + " but got " + thx_bigint_Bigs.parseBase("1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 258, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("132435465768798",10)),thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),"expected " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).toString() + " * " + thx_bigint_Bigs.parseBase("132435465768798",10).toString() + " == " + thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).toString() + " but got " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("132435465768798",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 259, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)),thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),"expected " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).toString() + " * " + thx_bigint_Bigs.parseBase("-132435465768798",10).toString() + " == " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).toString() + " but got " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 260, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(100).multiply(thx_bigint_Bigs.fromInt(100)),thx_bigint_Bigs.fromInt(10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 240, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(100).multiply(thx_bigint_Bigs.fromInt(-100)),thx_bigint_Bigs.fromInt(-10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 241, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-100).multiply(thx_bigint_Bigs.fromInt(100)),thx_bigint_Bigs.fromInt(-10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 242, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-100).multiply(thx_bigint_Bigs.fromInt(-100)),thx_bigint_Bigs.fromInt(10000)),null,{ fileName : "TestBigInt.hx", lineNumber : 243, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(13579).multiply(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),"expected " + thx_bigint_Bigs.fromInt(13579).toString() + " * " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).toString() + " == " + thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10).toString() + " but got " + thx_bigint_Bigs.fromInt(13579).multiply(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 245, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(13579).multiply(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 250, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-13579).multiply(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 251, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-13579).multiply(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 252, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(13579)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),"expected " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).toString() + " * 13579 == " + thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10).toString() + " but got " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(13579)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 253, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(-13579)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 257, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(13579)),thx_bigint_Bigs.parseBase("-2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 258, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(-13579)),thx_bigint_Bigs.parseBase("2220174289812686626814279831230549482",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 259, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).multiply(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 260, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("132435465768798",10)),thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 261, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)),thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),"expected " + thx_bigint_Bigs.parseBase("1234567890987654321",10).toString() + " * " + thx_bigint_Bigs.parseBase("-132435465768798",10).toString() + " == " + thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).toString() + " but got " + thx_bigint_Bigs.parseBase("1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 262, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("132435465768798",10)),thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10)),"expected " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).toString() + " * " + thx_bigint_Bigs.parseBase("132435465768798",10).toString() + " == " + thx_bigint_Bigs.parseBase("-163500573666152634716420931676158",10).toString() + " but got " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("132435465768798",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 263, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)),thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10)),"expected " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).toString() + " * " + thx_bigint_Bigs.parseBase("-132435465768798",10).toString() + " == " + thx_bigint_Bigs.parseBase("163500573666152634716420931676158",10).toString() + " but got " + thx_bigint_Bigs.parseBase("-1234567890987654321",10).multiply(thx_bigint_Bigs.parseBase("-132435465768798",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 264, className : "thx.TestBigInt", methodName : "testMultiplyHandlesSignsCorectly"});
 		}
 	}
 	,testDivisionBy1IsTheIdentity: function() {
@@ -8085,13 +8113,13 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 265, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 266, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).divide(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 267, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(153).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(153)),null,{ fileName : "TestBigInt.hx", lineNumber : 268, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-153).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(-153)),null,{ fileName : "TestBigInt.hx", lineNumber : 269, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9844190321790980841789",10).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.parseBase("9844190321790980841789",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 270, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9844190321790980841789",10).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.parseBase("-9844190321790980841789",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 271, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 269, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 270, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).divide(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 271, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(153).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(153)),null,{ fileName : "TestBigInt.hx", lineNumber : 272, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-153).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(-153)),null,{ fileName : "TestBigInt.hx", lineNumber : 273, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9844190321790980841789",10).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.parseBase("9844190321790980841789",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 274, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9844190321790980841789",10).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.parseBase("-9844190321790980841789",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 275, className : "thx.TestBigInt", methodName : "testDivisionBy1IsTheIdentity"});
 		}
 	}
 	,testDivisionBySelfIs1: function() {
@@ -8099,10 +8127,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(5).divide(thx_bigint_Bigs.fromInt(5)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 276, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-5).divide(thx_bigint_Bigs.fromInt(-5)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 277, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("20194965098495006574",10).divide(thx_bigint_Bigs.parseBase("20194965098495006574",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 278, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-20194965098495006574",10).divide(thx_bigint_Bigs.parseBase("-20194965098495006574",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 279, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(5).divide(thx_bigint_Bigs.fromInt(5)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 280, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-5).divide(thx_bigint_Bigs.fromInt(-5)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 281, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("20194965098495006574",10).divide(thx_bigint_Bigs.parseBase("20194965098495006574",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 282, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-20194965098495006574",10).divide(thx_bigint_Bigs.parseBase("-20194965098495006574",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 283, className : "thx.TestBigInt", methodName : "testDivisionBySelfIs1"});
 		}
 	}
 	,testDivisionOf0Equals0: function() {
@@ -8110,10 +8138,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 284, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 285, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.parseBase("1234567890987654321",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 286, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.parseBase("-1234567890987654321",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 287, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 288, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 289, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.parseBase("1234567890987654321",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 290, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.parseBase("-1234567890987654321",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 291, className : "thx.TestBigInt", methodName : "testDivisionOf0Equals0"});
 		}
 	}
 	,testModulo0ThrowsError: function() {
@@ -8123,22 +8151,22 @@ thx_TestBigInt.prototype = {
 			++_g1;
 			utest_Assert.raises(function() {
 				thx_bigint_Bigs.fromInt(0).modulo(thx_bigint_Bigs.fromInt(0));
-			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 292, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
-			utest_Assert.raises(function() {
-				thx_bigint_Bigs.fromInt(0).modulo(thx_bigint_Bigs.fromInt(0));
-			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 293, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
-			utest_Assert.raises(function() {
-				thx_bigint_Bigs.fromInt(5).modulo(thx_bigint_Bigs.fromInt(0));
-			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 294, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
-			utest_Assert.raises(function() {
-				thx_bigint_Bigs.fromInt(-5).modulo(thx_bigint_Bigs.fromInt(0));
-			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 295, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
-			utest_Assert.raises(function() {
-				thx_bigint_Bigs.parseBase("9549841598749874951041",10).modulo(thx_bigint_Bigs.fromInt(0));
 			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 296, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
 			utest_Assert.raises(function() {
-				thx_bigint_Bigs.parseBase("-20964918940987496110974948",10).modulo(thx_bigint_Bigs.fromInt(0));
+				thx_bigint_Bigs.fromInt(0).modulo(thx_bigint_Bigs.fromInt(0));
 			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 297, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
+			utest_Assert.raises(function() {
+				thx_bigint_Bigs.fromInt(5).modulo(thx_bigint_Bigs.fromInt(0));
+			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 298, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
+			utest_Assert.raises(function() {
+				thx_bigint_Bigs.fromInt(-5).modulo(thx_bigint_Bigs.fromInt(0));
+			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 299, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
+			utest_Assert.raises(function() {
+				thx_bigint_Bigs.parseBase("9549841598749874951041",10).modulo(thx_bigint_Bigs.fromInt(0));
+			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 300, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
+			utest_Assert.raises(function() {
+				thx_bigint_Bigs.parseBase("-20964918940987496110974948",10).modulo(thx_bigint_Bigs.fromInt(0));
+			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 301, className : "thx.TestBigInt", methodName : "testModulo0ThrowsError"});
 		}
 	}
 	,testModuloHandlesSignsCorrectly: function() {
@@ -8146,15 +8174,15 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(124234233).modulo(thx_bigint_Bigs.fromInt(2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 302, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(124234233).modulo(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 303, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-124234233).modulo(thx_bigint_Bigs.fromInt(2)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 304, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-124234233).modulo(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 305, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(2).modulo(thx_bigint_Bigs.fromInt(-1243233)),thx_bigint_Bigs.fromInt(2)),"excpected " + thx_bigint_Bigs.fromInt(2).toString() + " % " + thx_bigint_Bigs.fromInt(-1243233).toString() + " == 2 but got " + thx_bigint_Bigs.fromInt(2).modulo(thx_bigint_Bigs.fromInt(-1243233)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 306, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-2).modulo(thx_bigint_Bigs.fromInt(-1243233)),thx_bigint_Bigs.fromInt(-2)),"excpected " + thx_bigint_Bigs.fromInt(-2).toString() + " % " + thx_bigint_Bigs.fromInt(-1243233).toString() + " == -2 but got " + thx_bigint_Bigs.fromInt(-2).modulo(thx_bigint_Bigs.fromInt(-1243233)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 307, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("786456456335437356436",10).modulo(thx_bigint_Bigs.parseBase("-5423424653",10)),thx_bigint_Bigs.parseBase("2663036842",10)),"expected " + thx_bigint_Bigs.parseBase("786456456335437356436",10).toString() + " % " + thx_bigint_Bigs.parseBase("-5423424653",10).toString() + " == " + thx_bigint_Bigs.parseBase("2663036842",10).toString() + " but got " + thx_bigint_Bigs.parseBase("786456456335437356436",10).modulo(thx_bigint_Bigs.parseBase("-5423424653",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 308, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("93453764643534523",10).modulo(thx_bigint_Bigs.fromInt(-2342)),thx_bigint_Bigs.fromInt(1119)),null,{ fileName : "TestBigInt.hx", lineNumber : 309, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-32542543).modulo(thx_bigint_Bigs.fromInt(100000000)),thx_bigint_Bigs.fromInt(-32542543)),null,{ fileName : "TestBigInt.hx", lineNumber : 310, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(124234233).modulo(thx_bigint_Bigs.fromInt(2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 306, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(124234233).modulo(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 307, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-124234233).modulo(thx_bigint_Bigs.fromInt(2)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 308, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-124234233).modulo(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 309, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(2).modulo(thx_bigint_Bigs.fromInt(-1243233)),thx_bigint_Bigs.fromInt(2)),"excpected " + thx_bigint_Bigs.fromInt(2).toString() + " % " + thx_bigint_Bigs.fromInt(-1243233).toString() + " == 2 but got " + thx_bigint_Bigs.fromInt(2).modulo(thx_bigint_Bigs.fromInt(-1243233)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 310, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-2).modulo(thx_bigint_Bigs.fromInt(-1243233)),thx_bigint_Bigs.fromInt(-2)),"excpected " + thx_bigint_Bigs.fromInt(-2).toString() + " % " + thx_bigint_Bigs.fromInt(-1243233).toString() + " == -2 but got " + thx_bigint_Bigs.fromInt(-2).modulo(thx_bigint_Bigs.fromInt(-1243233)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 311, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("786456456335437356436",10).modulo(thx_bigint_Bigs.parseBase("-5423424653",10)),thx_bigint_Bigs.parseBase("2663036842",10)),"expected " + thx_bigint_Bigs.parseBase("786456456335437356436",10).toString() + " % " + thx_bigint_Bigs.parseBase("-5423424653",10).toString() + " == " + thx_bigint_Bigs.parseBase("2663036842",10).toString() + " but got " + thx_bigint_Bigs.parseBase("786456456335437356436",10).modulo(thx_bigint_Bigs.parseBase("-5423424653",10)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 312, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("93453764643534523",10).modulo(thx_bigint_Bigs.fromInt(-2342)),thx_bigint_Bigs.fromInt(1119)),null,{ fileName : "TestBigInt.hx", lineNumber : 313, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-32542543).modulo(thx_bigint_Bigs.fromInt(100000000)),thx_bigint_Bigs.fromInt(-32542543)),null,{ fileName : "TestBigInt.hx", lineNumber : 314, className : "thx.TestBigInt", methodName : "testModuloHandlesSignsCorrectly"});
 		}
 	}
 	,testPrevNext: function() {
@@ -8162,34 +8190,34 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(546).prev(),thx_bigint_Bigs.fromInt(545)),"expected " + thx_bigint_Bigs.fromInt(546).toString() + ".prev() == 545 but got " + thx_bigint_Bigs.fromInt(546).prev().toString(),{ fileName : "TestBigInt.hx", lineNumber : 315, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).prev(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 316, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).prev(),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 317, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).prev(),thx_bigint_Bigs.fromInt(-2)),"expected " + thx_bigint_Bigs.fromInt(-1).toString() + ".prev() == -2 but got " + thx_bigint_Bigs.fromInt(-1).prev().toString(),{ fileName : "TestBigInt.hx", lineNumber : 318, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1987).prev(),thx_bigint_Bigs.fromInt(-1988)),null,{ fileName : "TestBigInt.hx", lineNumber : 319, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(546).next(),thx_bigint_Bigs.fromInt(547)),null,{ fileName : "TestBigInt.hx", lineNumber : 321, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).next(),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 322, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).next(),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 323, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).next(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 324, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1987).next(),thx_bigint_Bigs.fromInt(-1986)),null,{ fileName : "TestBigInt.hx", lineNumber : 325, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(546).prev(),thx_bigint_Bigs.fromInt(545)),"expected " + thx_bigint_Bigs.fromInt(546).toString() + ".prev() == 545 but got " + thx_bigint_Bigs.fromInt(546).prev().toString(),{ fileName : "TestBigInt.hx", lineNumber : 319, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).prev(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 320, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).prev(),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 321, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).prev(),thx_bigint_Bigs.fromInt(-2)),"expected " + thx_bigint_Bigs.fromInt(-1).toString() + ".prev() == -2 but got " + thx_bigint_Bigs.fromInt(-1).prev().toString(),{ fileName : "TestBigInt.hx", lineNumber : 322, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1987).prev(),thx_bigint_Bigs.fromInt(-1988)),null,{ fileName : "TestBigInt.hx", lineNumber : 323, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(546).next(),thx_bigint_Bigs.fromInt(547)),null,{ fileName : "TestBigInt.hx", lineNumber : 325, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).next(),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 326, className : "thx.TestBigInt", methodName : "testPrevNext"});
 			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).next(),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 327, className : "thx.TestBigInt", methodName : "testPrevNext"});
 			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).next(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 328, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(34).next(),thx_bigint_Bigs.fromInt(35)),null,{ fileName : "TestBigInt.hx", lineNumber : 329, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992",10).next(),thx_bigint_Bigs.parseBase("9007199254740993",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 330, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740992",10).next(),thx_bigint_Bigs.parseBase("-9007199254740991",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 331, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992999",10).next(),thx_bigint_Bigs.parseBase("9007199254740993000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 332, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740991",10).next(),thx_bigint_Bigs.parseBase("9007199254740992",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 333, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).prev(),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 335, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).prev(),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 336, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(34).prev(),thx_bigint_Bigs.fromInt(33)),null,{ fileName : "TestBigInt.hx", lineNumber : 337, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992",10).prev(),thx_bigint_Bigs.parseBase("9007199254740991",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 338, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740992",10).prev(),thx_bigint_Bigs.parseBase("-9007199254740993",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 339, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992999",10).prev(),thx_bigint_Bigs.parseBase("9007199254740992998",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 340, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740991",10).prev(),thx_bigint_Bigs.parseBase("-9007199254740992",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 341, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("109874981950949849811049",10).prev(),thx_bigint_Bigs.parseBase("109874981950949849811048",10)),"expected " + thx_bigint_Bigs.parseBase("109874981950949849811049",10).prev().toString() + " == " + thx_bigint_Bigs.parseBase("109874981950949849811048",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 343, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("109874981950949849811049",10).next(),thx_bigint_Bigs.parseBase("109874981950949849811050",10)),"expected " + thx_bigint_Bigs.parseBase("109874981950949849811049",10).next().toString() + " == " + thx_bigint_Bigs.parseBase("109874981950949849811050",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 344, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-109874981950949849811049",10).prev(),thx_bigint_Bigs.parseBase("-109874981950949849811050",10)),"expected " + thx_bigint_Bigs.parseBase("-109874981950949849811049",10).prev().toString() + " == " + thx_bigint_Bigs.parseBase("-109874981950949849811050",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 345, className : "thx.TestBigInt", methodName : "testPrevNext"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-109874981950949849811049",10).next(),thx_bigint_Bigs.parseBase("-109874981950949849811048",10)),"expected " + thx_bigint_Bigs.parseBase("-109874981950949849811049",10).next().toString() + " == " + thx_bigint_Bigs.parseBase("-109874981950949849811048",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 346, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1987).next(),thx_bigint_Bigs.fromInt(-1986)),null,{ fileName : "TestBigInt.hx", lineNumber : 329, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).next(),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 331, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).next(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 332, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(34).next(),thx_bigint_Bigs.fromInt(35)),null,{ fileName : "TestBigInt.hx", lineNumber : 333, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992",10).next(),thx_bigint_Bigs.parseBase("9007199254740993",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 334, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740992",10).next(),thx_bigint_Bigs.parseBase("-9007199254740991",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 335, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992999",10).next(),thx_bigint_Bigs.parseBase("9007199254740993000",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 336, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740991",10).next(),thx_bigint_Bigs.parseBase("9007199254740992",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 337, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).prev(),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 339, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).prev(),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 340, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(34).prev(),thx_bigint_Bigs.fromInt(33)),null,{ fileName : "TestBigInt.hx", lineNumber : 341, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992",10).prev(),thx_bigint_Bigs.parseBase("9007199254740991",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 342, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740992",10).prev(),thx_bigint_Bigs.parseBase("-9007199254740993",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 343, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9007199254740992999",10).prev(),thx_bigint_Bigs.parseBase("9007199254740992998",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 344, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-9007199254740991",10).prev(),thx_bigint_Bigs.parseBase("-9007199254740992",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 345, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("109874981950949849811049",10).prev(),thx_bigint_Bigs.parseBase("109874981950949849811048",10)),"expected " + thx_bigint_Bigs.parseBase("109874981950949849811049",10).prev().toString() + " == " + thx_bigint_Bigs.parseBase("109874981950949849811048",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 347, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("109874981950949849811049",10).next(),thx_bigint_Bigs.parseBase("109874981950949849811050",10)),"expected " + thx_bigint_Bigs.parseBase("109874981950949849811049",10).next().toString() + " == " + thx_bigint_Bigs.parseBase("109874981950949849811050",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 348, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-109874981950949849811049",10).prev(),thx_bigint_Bigs.parseBase("-109874981950949849811050",10)),"expected " + thx_bigint_Bigs.parseBase("-109874981950949849811049",10).prev().toString() + " == " + thx_bigint_Bigs.parseBase("-109874981950949849811050",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 349, className : "thx.TestBigInt", methodName : "testPrevNext"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-109874981950949849811049",10).next(),thx_bigint_Bigs.parseBase("-109874981950949849811048",10)),"expected " + thx_bigint_Bigs.parseBase("-109874981950949849811049",10).next().toString() + " == " + thx_bigint_Bigs.parseBase("-109874981950949849811048",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 350, className : "thx.TestBigInt", methodName : "testPrevNext"});
 		}
 	}
 	,testPrevNextCarriesOverCorrectly: function() {
@@ -8197,8 +8225,8 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(9999999).next(),thx_bigint_Bigs.fromInt(10000000)),null,{ fileName : "TestBigInt.hx", lineNumber : 351, className : "thx.TestBigInt", methodName : "testPrevNextCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(10000000).prev(),thx_bigint_Bigs.fromInt(9999999)),null,{ fileName : "TestBigInt.hx", lineNumber : 352, className : "thx.TestBigInt", methodName : "testPrevNextCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(9999999).next(),thx_bigint_Bigs.fromInt(10000000)),null,{ fileName : "TestBigInt.hx", lineNumber : 355, className : "thx.TestBigInt", methodName : "testPrevNextCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(10000000).prev(),thx_bigint_Bigs.fromInt(9999999)),null,{ fileName : "TestBigInt.hx", lineNumber : 356, className : "thx.TestBigInt", methodName : "testPrevNextCarriesOverCorrectly"});
 		}
 	}
 	,testAbs: function() {
@@ -8206,12 +8234,12 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).abs(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 357, className : "thx.TestBigInt", methodName : "testAbs"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0",10).abs(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 358, className : "thx.TestBigInt", methodName : "testAbs"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(54).abs(),thx_bigint_Bigs.fromInt(54)),null,{ fileName : "TestBigInt.hx", lineNumber : 359, className : "thx.TestBigInt", methodName : "testAbs"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-54).abs(),thx_bigint_Bigs.fromInt(54)),null,{ fileName : "TestBigInt.hx", lineNumber : 360, className : "thx.TestBigInt", methodName : "testAbs"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("13412564654613034984065434",10).abs(),thx_bigint_Bigs.parseBase("13412564654613034984065434",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 361, className : "thx.TestBigInt", methodName : "testAbs"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-13412564654613034984065434",10).abs(),thx_bigint_Bigs.parseBase("13412564654613034984065434",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 362, className : "thx.TestBigInt", methodName : "testAbs"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).abs(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 361, className : "thx.TestBigInt", methodName : "testAbs"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0",10).abs(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 362, className : "thx.TestBigInt", methodName : "testAbs"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(54).abs(),thx_bigint_Bigs.fromInt(54)),null,{ fileName : "TestBigInt.hx", lineNumber : 363, className : "thx.TestBigInt", methodName : "testAbs"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-54).abs(),thx_bigint_Bigs.fromInt(54)),null,{ fileName : "TestBigInt.hx", lineNumber : 364, className : "thx.TestBigInt", methodName : "testAbs"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("13412564654613034984065434",10).abs(),thx_bigint_Bigs.parseBase("13412564654613034984065434",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 365, className : "thx.TestBigInt", methodName : "testAbs"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-13412564654613034984065434",10).abs(),thx_bigint_Bigs.parseBase("13412564654613034984065434",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 366, className : "thx.TestBigInt", methodName : "testAbs"});
 		}
 	}
 	,testIsPositiveAndIsNegative: function() {
@@ -8219,10 +8247,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 367, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 368, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 369, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 370, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 371, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 372, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 373, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 374, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegative"});
 		}
 	}
 	,testIsPositiveAndIsNegativeWorkForSmallNumbers: function() {
@@ -8230,10 +8258,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(1).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 375, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(543).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 376, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-1).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 377, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-765).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 378, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(1).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 379, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(543).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 380, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-1).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 381, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-765).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 382, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForSmallNumbers"});
 		}
 	}
 	,testIsPositiveAndIsNegativeWorkForBigNumbers: function() {
@@ -8241,10 +8269,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("651987498619879841",10).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 383, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("0054984980098460",10).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 384, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-1961987984109078496",10).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 385, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-98800984196109540984",10).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 386, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("651987498619879841",10).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 387, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("0054984980098460",10).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 388, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-1961987984109078496",10).compareTo(thx__$BigInt_BigInt_$Impl_$.zero) > 0,null,{ fileName : "TestBigInt.hx", lineNumber : 389, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-98800984196109540984",10).sign,null,{ fileName : "TestBigInt.hx", lineNumber : 390, className : "thx.TestBigInt", methodName : "testIsPositiveAndIsNegativeWorkForBigNumbers"});
 		}
 	}
 	,testIsUnit: function() {
@@ -8252,13 +8280,13 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.one.isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 391, className : "thx.TestBigInt", methodName : "testIsUnit"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.negativeOne.isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 392, className : "thx.TestBigInt", methodName : "testIsUnit"});
-			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.zero.isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 393, className : "thx.TestBigInt", methodName : "testIsUnit"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(5).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 394, className : "thx.TestBigInt", methodName : "testIsUnit"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-5).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 395, className : "thx.TestBigInt", methodName : "testIsUnit"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("654609649089416160",10).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 396, className : "thx.TestBigInt", methodName : "testIsUnit"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-98410980984981094",10).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 397, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.one.isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 395, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.negativeOne.isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 396, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isFalse(thx__$BigInt_BigInt_$Impl_$.zero.isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 397, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(5).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 398, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-5).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 399, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("654609649089416160",10).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 400, className : "thx.TestBigInt", methodName : "testIsUnit"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-98410980984981094",10).isUnit(),null,{ fileName : "TestBigInt.hx", lineNumber : 401, className : "thx.TestBigInt", methodName : "testIsUnit"});
 		}
 	}
 	,testIsZero: function() {
@@ -8266,14 +8294,14 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.zero.isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 402, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(0).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 403, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-0",10).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 404, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(15).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 405, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-15).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 406, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("63213098189462109840",10).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 407, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-64343745644564564563",10).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 408, className : "thx.TestBigInt", methodName : "testIsZero"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(0).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 409, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.zero.isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 406, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(0).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 407, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-0",10).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 408, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(15).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 409, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-15).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 410, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("63213098189462109840",10).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 411, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-64343745644564564563",10).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 412, className : "thx.TestBigInt", methodName : "testIsZero"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(0).isZero(),null,{ fileName : "TestBigInt.hx", lineNumber : 413, className : "thx.TestBigInt", methodName : "testIsZero"});
 		}
 	}
 	,testSquare: function() {
@@ -8281,10 +8309,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).square(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 414, className : "thx.TestBigInt", methodName : "testSquare"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(16).square(),thx_bigint_Bigs.fromInt(256)),null,{ fileName : "TestBigInt.hx", lineNumber : 415, className : "thx.TestBigInt", methodName : "testSquare"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-16).square(),thx_bigint_Bigs.fromInt(256)),null,{ fileName : "TestBigInt.hx", lineNumber : 416, className : "thx.TestBigInt", methodName : "testSquare"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("65536",10).square(),thx_bigint_Bigs.parseBase("4294967296",10)),"expected " + thx_bigint_Bigs.parseBase("65536",10).square().toString() + " == 4294967296",{ fileName : "TestBigInt.hx", lineNumber : 417, className : "thx.TestBigInt", methodName : "testSquare"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).square(),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 418, className : "thx.TestBigInt", methodName : "testSquare"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(16).square(),thx_bigint_Bigs.fromInt(256)),null,{ fileName : "TestBigInt.hx", lineNumber : 419, className : "thx.TestBigInt", methodName : "testSquare"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-16).square(),thx_bigint_Bigs.fromInt(256)),null,{ fileName : "TestBigInt.hx", lineNumber : 420, className : "thx.TestBigInt", methodName : "testSquare"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("65536",10).square(),thx_bigint_Bigs.parseBase("4294967296",10)),"expected " + thx_bigint_Bigs.parseBase("65536",10).square().toString() + " == 4294967296",{ fileName : "TestBigInt.hx", lineNumber : 421, className : "thx.TestBigInt", methodName : "testSquare"});
 		}
 	}
 	,testPowerToNegativeNumbersIs0: function() {
@@ -8292,14 +8320,14 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.fromInt(-298)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 422, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(543).pow(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 423, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("323434643534523",10).pow(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 424, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-54302).pow(thx_bigint_Bigs.parseBase("-543624724341214223562",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 425, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-20199605604968",10).pow(thx_bigint_Bigs.fromInt(-99)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 426, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).pow(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 428, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 429, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 430, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.fromInt(-298)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 426, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(543).pow(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 427, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("323434643534523",10).pow(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 428, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-54302).pow(thx_bigint_Bigs.parseBase("-543624724341214223562",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 429, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-20199605604968",10).pow(thx_bigint_Bigs.fromInt(-99)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 430, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).pow(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 432, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(-1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 433, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(-2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 434, className : "thx.TestBigInt", methodName : "testPowerToNegativeNumbersIs0"});
 		}
 	}
 	,testPowerHandlesSignsCorrectly: function() {
@@ -8307,17 +8335,17 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(2).pow(thx_bigint_Bigs.fromInt(3)),thx_bigint_Bigs.fromInt(8)),null,{ fileName : "TestBigInt.hx", lineNumber : 435, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-2).pow(thx_bigint_Bigs.fromInt(3)),thx_bigint_Bigs.fromInt(-8)),"expected " + thx_bigint_Bigs.fromInt(-2).pow(thx_bigint_Bigs.fromInt(3)).toString() + " == -8",{ fileName : "TestBigInt.hx", lineNumber : 436, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)),thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10)),"expected " + thx_bigint_Bigs.parseBase("1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)).toString() + " == " + thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 437, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)),thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10)),"expected " + thx_bigint_Bigs.parseBase("-1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)).toString() + " == " + thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 438, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-154654987",10).pow(thx_bigint_Bigs.fromInt(3)),thx_bigint_Bigs.parseBase("-3699063497752861435082803",10)),"expected " + thx_bigint_Bigs.parseBase("-154654987",10).pow(thx_bigint_Bigs.fromInt(3)).toString() + " == " + thx_bigint_Bigs.parseBase("-3699063497752861435082803",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 439, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).pow(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 441, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 442, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 443, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).pow(thx_bigint_Bigs.parseBase("1e100",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 445, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.parseBase("1e100",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 446, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.parseBase("1e100",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 447, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(2).pow(thx_bigint_Bigs.fromInt(3)),thx_bigint_Bigs.fromInt(8)),null,{ fileName : "TestBigInt.hx", lineNumber : 439, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-2).pow(thx_bigint_Bigs.fromInt(3)),thx_bigint_Bigs.fromInt(-8)),"expected " + thx_bigint_Bigs.fromInt(-2).pow(thx_bigint_Bigs.fromInt(3)).toString() + " == -8",{ fileName : "TestBigInt.hx", lineNumber : 440, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)),thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10)),"expected " + thx_bigint_Bigs.parseBase("1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)).toString() + " == " + thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 441, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)),thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10)),"expected " + thx_bigint_Bigs.parseBase("-1036350201654",10).pow(thx_bigint_Bigs.fromInt(4)).toString() + " == " + thx_bigint_Bigs.parseBase("1153522698998527286707879497611725813209153232656",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 442, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-154654987",10).pow(thx_bigint_Bigs.fromInt(3)),thx_bigint_Bigs.parseBase("-3699063497752861435082803",10)),"expected " + thx_bigint_Bigs.parseBase("-154654987",10).pow(thx_bigint_Bigs.fromInt(3)).toString() + " == " + thx_bigint_Bigs.parseBase("-3699063497752861435082803",10).toString(),{ fileName : "TestBigInt.hx", lineNumber : 443, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).pow(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 445, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(1)),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 446, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.fromInt(2)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 447, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1).pow(thx_bigint_Bigs.parseBase("1e100",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 449, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-1).pow(thx_bigint_Bigs.parseBase("1e100",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 450, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.parseBase("1e100",10)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 451, className : "thx.TestBigInt", methodName : "testPowerHandlesSignsCorrectly"});
 		}
 	}
 	,testPower: function() {
@@ -8326,7 +8354,7 @@ thx_TestBigInt.prototype = {
 		while(_g1 < _g) {
 			++_g1;
 			thx_bigint_Bigs.parseBase("102340001040000",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10000000000",10),thx_bigint_Bigs.fromInt(10).pow(thx_bigint_Bigs.fromInt(10))),null,{ fileName : "TestBigInt.hx", lineNumber : 453, className : "thx.TestBigInt", methodName : "testPower"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10000000000",10),thx_bigint_Bigs.fromInt(10).pow(thx_bigint_Bigs.fromInt(10))),null,{ fileName : "TestBigInt.hx", lineNumber : 457, className : "thx.TestBigInt", methodName : "testPower"});
 		}
 	}
 	,testPowerOf0to0is1: function() {
@@ -8334,10 +8362,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.fromInt(0)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 458, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.parseBase("-0",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 459, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0",10).pow(thx_bigint_Bigs.fromInt(0)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 460, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0",10).pow(thx_bigint_Bigs.parseBase("-0",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 461, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.fromInt(0)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 462, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(0).pow(thx_bigint_Bigs.parseBase("-0",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 463, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0",10).pow(thx_bigint_Bigs.fromInt(0)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 464, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-0",10).pow(thx_bigint_Bigs.parseBase("-0",10)),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 465, className : "thx.TestBigInt", methodName : "testPowerOf0to0is1"});
 		}
 	}
 	,testPowerCarriesOverCorrectly: function() {
@@ -8345,10 +8373,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("16",10).pow(thx_bigint_Bigs.parseBase("13",10)),thx_bigint_Bigs.parseBase("4503599627370496",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 466, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("123456789123456789",10).pow(thx_bigint_Bigs.fromInt(10)),thx_bigint_Bigs.parseBase("822526267372365207989468699031914332476569003445489153619518989325083908083922133639704420166045905346960117046949453426283086050487204639652635846010822673782217799736601",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 467, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("2",10).pow(thx_bigint_Bigs.fromInt(63)),thx_bigint_Bigs.parseBase("9223372036854775808",10)),"expected 2.pow(63) == " + thx_bigint_Bigs.parseBase("9223372036854775808",10).toString() + " but got " + thx_bigint_Bigs.parseBase("2",10).pow(thx_bigint_Bigs.fromInt(63)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 468, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(100).pow(thx_bigint_Bigs.fromInt(56)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 469, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("16",10).pow(thx_bigint_Bigs.parseBase("13",10)),thx_bigint_Bigs.parseBase("4503599627370496",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 470, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("123456789123456789",10).pow(thx_bigint_Bigs.fromInt(10)),thx_bigint_Bigs.parseBase("822526267372365207989468699031914332476569003445489153619518989325083908083922133639704420166045905346960117046949453426283086050487204639652635846010822673782217799736601",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 471, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("2",10).pow(thx_bigint_Bigs.fromInt(63)),thx_bigint_Bigs.parseBase("9223372036854775808",10)),"expected 2.pow(63) == " + thx_bigint_Bigs.parseBase("9223372036854775808",10).toString() + " but got " + thx_bigint_Bigs.parseBase("2",10).pow(thx_bigint_Bigs.fromInt(63)).toString(),{ fileName : "TestBigInt.hx", lineNumber : 472, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.notEquals(thx_bigint_Bigs.fromInt(100).pow(thx_bigint_Bigs.fromInt(56)),thx_bigint_Bigs.fromInt(0)),null,{ fileName : "TestBigInt.hx", lineNumber : 473, className : "thx.TestBigInt", methodName : "testPowerCarriesOverCorrectly"});
 		}
 	}
 	,testDivision: function() {
@@ -8358,16 +8386,16 @@ thx_TestBigInt.prototype = {
 			++_g1;
 			utest_Assert.raises(function() {
 				thx_bigint_Bigs.fromInt(1).divide(thx_bigint_Bigs.fromInt(0));
-			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 474, className : "thx.TestBigInt", methodName : "testDivision"});
+			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 478, className : "thx.TestBigInt", methodName : "testDivision"});
 			utest_Assert.raises(function() {
 				thx_bigint_Bigs.fromInt(0).divide(thx_bigint_Bigs.fromInt(0));
-			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 477, className : "thx.TestBigInt", methodName : "testDivision"});
+			},thx_Error,null,null,{ fileName : "TestBigInt.hx", lineNumber : 481, className : "thx.TestBigInt", methodName : "testDivision"});
 			var tests = [{ num : thx_bigint_Bigs.fromInt(10), div : thx_bigint_Bigs.fromInt(2), res : thx_bigint_Bigs.fromInt(5)},{ num : thx_bigint_Bigs.parseBase("102340001040000",10), div : thx_bigint_Bigs.parseBase("10000000000",10), res : thx_bigint_Bigs.fromInt(10234)},{ num : thx_bigint_Bigs.parseBase("1000000000000000000",10), div : thx_bigint_Bigs.fromInt(50), res : thx_bigint_Bigs.parseBase("20000000000000000",10)}];
 			var _g2 = 0;
 			while(_g2 < tests.length) {
 				var test = tests[_g2];
 				++_g2;
-				utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(test.num.divide(test.div),test.res),"expected " + test.num.toString() + " / " + test.div.toString() + " == " + test.res.toString() + " and it was " + test.num.divide(test.div).toString(),{ fileName : "TestBigInt.hx", lineNumber : 487, className : "thx.TestBigInt", methodName : "testDivision"});
+				utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(test.num.divide(test.div),test.res),"expected " + test.num.toString() + " / " + test.div.toString() + " == " + test.res.toString() + " and it was " + test.num.divide(test.div).toString(),{ fileName : "TestBigInt.hx", lineNumber : 491, className : "thx.TestBigInt", methodName : "testDivision"});
 			}
 		}
 	}
@@ -8382,48 +8410,48 @@ thx_TestBigInt.prototype = {
 			var s;
 			m = thx_bigint_Bigs.fromInt(123);
 			n = thx_bigint_Bigs.fromInt(0);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 500, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.add(m),m),null,{ fileName : "TestBigInt.hx", lineNumber : 501, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.subtract(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 503, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(m),m.negate()),null,{ fileName : "TestBigInt.hx", lineNumber : 504, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 504, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.add(m),m),null,{ fileName : "TestBigInt.hx", lineNumber : 505, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.subtract(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 507, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(m),m.negate()),null,{ fileName : "TestBigInt.hx", lineNumber : 508, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.fromInt(123);
 			n = thx_bigint_Bigs.fromInt(343);
 			s = thx_bigint_Bigs.fromInt(466);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),null,{ fileName : "TestBigInt.hx", lineNumber : 508, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.add(m),s),null,{ fileName : "TestBigInt.hx", lineNumber : 509, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 511, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(s),m.negate()),null,{ fileName : "TestBigInt.hx", lineNumber : 512, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),null,{ fileName : "TestBigInt.hx", lineNumber : 512, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.add(m),s),null,{ fileName : "TestBigInt.hx", lineNumber : 513, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 515, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(s),m.negate()),null,{ fileName : "TestBigInt.hx", lineNumber : 516, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.fromInt(-234356);
 			n = thx_bigint_Bigs.fromInt(355321);
 			o = thx_bigint_Bigs.fromInt(234);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n).add(o),m.add(n.add(o))),null,{ fileName : "TestBigInt.hx", lineNumber : 516, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.subtract(n).add(o),m.subtract(n.subtract(o))),null,{ fileName : "TestBigInt.hx", lineNumber : 518, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n).add(o),m.add(n.add(o))),null,{ fileName : "TestBigInt.hx", lineNumber : 520, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.subtract(n).add(o),m.subtract(n.subtract(o))),null,{ fileName : "TestBigInt.hx", lineNumber : 522, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.fromInt(1);
 			n = thx_bigint_Bigs.fromInt(-9999);
 			s = thx_bigint_Bigs.fromInt(-9998);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),null,{ fileName : "TestBigInt.hx", lineNumber : 521, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 523, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),null,{ fileName : "TestBigInt.hx", lineNumber : 525, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),null,{ fileName : "TestBigInt.hx", lineNumber : 527, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.parseBase("11111111111111111111110111111111111111111111111111",10);
 			n = m;
 			s = thx_bigint_Bigs.parseBase("22222222222222222222220222222222222222222222222222",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),"expected " + m.toString() + " + " + n.toString() + " == " + s.toString() + " but is " + m.add(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 528, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(m.subtract(n).isZero(),"expected " + m.toString() + "-" + n.toString() + "==0 but is " + m.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 530, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.subtract(n),thx_bigint_Bigs.fromInt(0)),"expected " + m.toString() + " - " + n.toString() + "==0 but is " + m.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 531, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),"expected " + s.toString() + " - " + n.toString() + " == " + m.toString() + " but is " + s.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 532, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),"expected " + m.toString() + " + " + n.toString() + " == " + s.toString() + " but is " + m.add(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 532, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(m.subtract(n).isZero(),"expected " + m.toString() + "-" + n.toString() + "==0 but is " + m.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 534, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.subtract(n),thx_bigint_Bigs.fromInt(0)),"expected " + m.toString() + " - " + n.toString() + "==0 but is " + m.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 535, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),"expected " + s.toString() + " - " + n.toString() + " == " + m.toString() + " but is " + s.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 536, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.parseBase("99499494949383948405",10);
 			n = thx_bigint_Bigs.parseBase("-472435789789045237084578078029457809342597808204538970",10);
 			s = thx_bigint_Bigs.parseBase("-472435789789045237084578078029457709843102858820590565",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),"expected " + m.toString() + " + " + n.toString() + " == " + s.toString() + " but got " + m.add(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 538, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),"expected " + s.toString() + " - " + n.toString() + " == " + m.toString() + " but got " + s.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 540, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),"expected " + m.toString() + " + " + n.toString() + " == " + s.toString() + " but got " + m.add(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 542, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),"expected " + s.toString() + " - " + n.toString() + " == " + m.toString() + " but got " + s.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 544, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.parseBase("-1",10);
 			n = thx_bigint_Bigs.parseBase("100000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",10);
 			s = thx_bigint_Bigs.parseBase("99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),"expected " + m.toString() + " + " + n.toString() + " == " + s.toString() + " but got " + m.add(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 545, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),"expected " + s.toString() + " - " + n.toString() + " == " + m.toString() + " but got " + s.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 546, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(n),s),"expected " + m.toString() + " + " + n.toString() + " == " + s.toString() + " but got " + m.add(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 549, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(s.subtract(n),m),"expected " + s.toString() + " - " + n.toString() + " == " + m.toString() + " but got " + s.subtract(n).toString(),{ fileName : "TestBigInt.hx", lineNumber : 550, className : "thx.TestBigInt", methodName : "testAddition"});
 			m = thx_bigint_Bigs.parseBase("1",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(s),n),"expected " + m.toString() + " + " + s.toString() + " == " + n.toString() + " but got " + m.add(s).toString(),{ fileName : "TestBigInt.hx", lineNumber : 549, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(s),m),"expected " + n.toString() + " - " + s.toString() + " == " + m.toString() + " but got " + n.subtract(s).toString(),{ fileName : "TestBigInt.hx", lineNumber : 550, className : "thx.TestBigInt", methodName : "testAddition"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(m),s),"expected " + n.toString() + " - " + m.toString() + " == " + s.toString() + " but got " + n.subtract(m).toString(),{ fileName : "TestBigInt.hx", lineNumber : 551, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.add(s),n),"expected " + m.toString() + " + " + s.toString() + " == " + n.toString() + " but got " + m.add(s).toString(),{ fileName : "TestBigInt.hx", lineNumber : 553, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(s),m),"expected " + n.toString() + " - " + s.toString() + " == " + m.toString() + " but got " + n.subtract(s).toString(),{ fileName : "TestBigInt.hx", lineNumber : 554, className : "thx.TestBigInt", methodName : "testAddition"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.subtract(m),s),"expected " + n.toString() + " - " + m.toString() + " == " + s.toString() + " but got " + n.subtract(m).toString(),{ fileName : "TestBigInt.hx", lineNumber : 555, className : "thx.TestBigInt", methodName : "testAddition"});
 		}
 	}
 	,testMultiplication: function() {
@@ -8436,29 +8464,29 @@ thx_TestBigInt.prototype = {
 			var m;
 			a = thx_bigint_Bigs.fromInt(12347);
 			b = thx_bigint_Bigs.fromInt(0);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),b),null,{ fileName : "TestBigInt.hx", lineNumber : 561, className : "thx.TestBigInt", methodName : "testMultiplication"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b.multiply(a),b),null,{ fileName : "TestBigInt.hx", lineNumber : 562, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),b),null,{ fileName : "TestBigInt.hx", lineNumber : 565, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b.multiply(a),b),null,{ fileName : "TestBigInt.hx", lineNumber : 566, className : "thx.TestBigInt", methodName : "testMultiplication"});
 			a = thx_bigint_Bigs.fromInt(-99999);
 			b = thx_bigint_Bigs.fromInt(1);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),a),null,{ fileName : "TestBigInt.hx", lineNumber : 565, className : "thx.TestBigInt", methodName : "testMultiplication"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b.multiply(a),a),null,{ fileName : "TestBigInt.hx", lineNumber : 566, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),a),null,{ fileName : "TestBigInt.hx", lineNumber : 569, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b.multiply(a),a),null,{ fileName : "TestBigInt.hx", lineNumber : 570, className : "thx.TestBigInt", methodName : "testMultiplication"});
 			a = thx_bigint_Bigs.fromInt(1235);
 			b = thx_bigint_Bigs.fromInt(44);
 			m = thx_bigint_Bigs.fromInt(54340);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),null,{ fileName : "TestBigInt.hx", lineNumber : 569, className : "thx.TestBigInt", methodName : "testMultiplication"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b.multiply(a),m),null,{ fileName : "TestBigInt.hx", lineNumber : 570, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),null,{ fileName : "TestBigInt.hx", lineNumber : 573, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(b.multiply(a),m),null,{ fileName : "TestBigInt.hx", lineNumber : 574, className : "thx.TestBigInt", methodName : "testMultiplication"});
 			a = thx_bigint_Bigs.fromInt(-11);
 			b = thx_bigint_Bigs.fromInt(-9);
 			m = thx_bigint_Bigs.fromInt(99);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),null,{ fileName : "TestBigInt.hx", lineNumber : 573, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),null,{ fileName : "TestBigInt.hx", lineNumber : 577, className : "thx.TestBigInt", methodName : "testMultiplication"});
 			a = thx_bigint_Bigs.fromInt(55);
 			b = thx_bigint_Bigs.fromInt(200395);
 			m = thx_bigint_Bigs.fromInt(11021725);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),null,{ fileName : "TestBigInt.hx", lineNumber : 576, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),null,{ fileName : "TestBigInt.hx", lineNumber : 580, className : "thx.TestBigInt", methodName : "testMultiplication"});
 			a = thx_bigint_Bigs.parseBase("111111111111111111111111111111111111111",10);
 			b = thx_bigint_Bigs.parseBase("-333333333333333333333",10);
 			m = thx_bigint_Bigs.parseBase("-37037037037037037036999999999999999999962962962962962962963",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),"expected " + a.toString() + " * " + b.toString() + " == " + m.toString() + " but got " + a.multiply(b).toString(),{ fileName : "TestBigInt.hx", lineNumber : 582, className : "thx.TestBigInt", methodName : "testMultiplication"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(a.multiply(b),m),"expected " + a.toString() + " * " + b.toString() + " == " + m.toString() + " but got " + a.multiply(b).toString(),{ fileName : "TestBigInt.hx", lineNumber : 586, className : "thx.TestBigInt", methodName : "testMultiplication"});
 		}
 	}
 	,testComparison: function() {
@@ -8468,41 +8496,41 @@ thx_TestBigInt.prototype = {
 			++_g1;
 			var a = thx_bigint_Bigs.fromInt(1);
 			var b = thx_bigint_Bigs.fromInt(2);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.less(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 589, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 590, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,a),null,{ fileName : "TestBigInt.hx", lineNumber : 591, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greater(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 593, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 594, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 595, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 596, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(-1,a.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 598, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(1,b.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 599, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(0,b.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 600, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.less(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 593, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 594, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,a),null,{ fileName : "TestBigInt.hx", lineNumber : 595, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greater(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 597, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 598, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 599, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 600, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(-1,a.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 602, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(1,b.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 603, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(0,b.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 604, className : "thx.TestBigInt", methodName : "testComparison"});
 			a = thx_bigint_Bigs.parseBase("-333333333333333333333",10);
 			b = thx_bigint_Bigs.parseBase("111111111111111111111111111111111111111",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.less(a,b),"expected " + a.toString() + " < " + b.toString() + " == true but it is " + Std.string(thx__$BigInt_BigInt_$Impl_$.less(a,b)),{ fileName : "TestBigInt.hx", lineNumber : 605, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b),"expected " + a.toString() + " <= " + b.toString() + " == true but it is " + Std.string(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b)),{ fileName : "TestBigInt.hx", lineNumber : 606, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,a),null,{ fileName : "TestBigInt.hx", lineNumber : 607, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greater(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 609, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 610, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 611, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 612, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(-1,a.compareTo(b),"expected " + a.toString() + ".compareTo(" + b.toString() + ") t0 be -1 but it is " + a.compareTo(b),{ fileName : "TestBigInt.hx", lineNumber : 614, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(1,b.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 615, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(0,b.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 616, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.less(a,b),"expected " + a.toString() + " < " + b.toString() + " == true but it is " + Std.string(thx__$BigInt_BigInt_$Impl_$.less(a,b)),{ fileName : "TestBigInt.hx", lineNumber : 609, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b),"expected " + a.toString() + " <= " + b.toString() + " == true but it is " + Std.string(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b)),{ fileName : "TestBigInt.hx", lineNumber : 610, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,a),null,{ fileName : "TestBigInt.hx", lineNumber : 611, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greater(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 613, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 614, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 615, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 616, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(-1,a.compareTo(b),"expected " + a.toString() + ".compareTo(" + b.toString() + ") t0 be -1 but it is " + a.compareTo(b),{ fileName : "TestBigInt.hx", lineNumber : 618, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(1,b.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 619, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(0,b.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 620, className : "thx.TestBigInt", methodName : "testComparison"});
 			a = thx_bigint_Bigs.parseBase("-37037037037037037036999999999999999999962962962962962962963",10);
 			b = thx_bigint_Bigs.parseBase("-333333333333333333333",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.less(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 621, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 622, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,a),null,{ fileName : "TestBigInt.hx", lineNumber : 623, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greater(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 625, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 626, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 627, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 628, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(-1,a.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 630, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(1,b.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 631, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(0,a.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 632, className : "thx.TestBigInt", methodName : "testComparison"});
-			utest_Assert.equals(0,b.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 633, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.less(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 625, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,b),null,{ fileName : "TestBigInt.hx", lineNumber : 626, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(a,a),null,{ fileName : "TestBigInt.hx", lineNumber : 627, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greater(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 629, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,a),null,{ fileName : "TestBigInt.hx", lineNumber : 630, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.greaterEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 631, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.lessEquals(b,b),null,{ fileName : "TestBigInt.hx", lineNumber : 632, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(-1,a.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 634, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(1,b.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 635, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(0,a.compareTo(a),null,{ fileName : "TestBigInt.hx", lineNumber : 636, className : "thx.TestBigInt", methodName : "testComparison"});
+			utest_Assert.equals(0,b.compareTo(b),null,{ fileName : "TestBigInt.hx", lineNumber : 637, className : "thx.TestBigInt", methodName : "testComparison"});
 		}
 	}
 	,testNegation: function() {
@@ -8512,17 +8540,17 @@ thx_TestBigInt.prototype = {
 			++_g1;
 			var m;
 			var n = thx_bigint_Bigs.fromInt(0);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate(),n),"expected " + n.negate().toString() + " == " + n.toString(),{ fileName : "TestBigInt.hx", lineNumber : 643, className : "thx.TestBigInt", methodName : "testNegation"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate(),n),"expected " + n.negate().toString() + " == " + n.toString(),{ fileName : "TestBigInt.hx", lineNumber : 647, className : "thx.TestBigInt", methodName : "testNegation"});
 			n = thx_bigint_Bigs.fromInt(1);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate(),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 646, className : "thx.TestBigInt", methodName : "testNegation"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate().negate(),n),null,{ fileName : "TestBigInt.hx", lineNumber : 647, className : "thx.TestBigInt", methodName : "testNegation"});
-			n = thx_bigint_Bigs.fromInt(-1234);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate(),thx_bigint_Bigs.fromInt(1234)),null,{ fileName : "TestBigInt.hx", lineNumber : 650, className : "thx.TestBigInt", methodName : "testNegation"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate(),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 650, className : "thx.TestBigInt", methodName : "testNegation"});
 			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate().negate(),n),null,{ fileName : "TestBigInt.hx", lineNumber : 651, className : "thx.TestBigInt", methodName : "testNegation"});
+			n = thx_bigint_Bigs.fromInt(-1234);
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate(),thx_bigint_Bigs.fromInt(1234)),null,{ fileName : "TestBigInt.hx", lineNumber : 654, className : "thx.TestBigInt", methodName : "testNegation"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(n.negate().negate(),n),null,{ fileName : "TestBigInt.hx", lineNumber : 655, className : "thx.TestBigInt", methodName : "testNegation"});
 			m = thx_bigint_Bigs.parseBase("192395858359234934684359234",10);
 			n = thx_bigint_Bigs.parseBase("-192395858359234934684359234",10);
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.negate(),n),null,{ fileName : "TestBigInt.hx", lineNumber : 655, className : "thx.TestBigInt", methodName : "testNegation"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m,n.negate()),null,{ fileName : "TestBigInt.hx", lineNumber : 656, className : "thx.TestBigInt", methodName : "testNegation"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m.negate(),n),null,{ fileName : "TestBigInt.hx", lineNumber : 659, className : "thx.TestBigInt", methodName : "testNegation"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(m,n.negate()),null,{ fileName : "TestBigInt.hx", lineNumber : 660, className : "thx.TestBigInt", methodName : "testNegation"});
 		}
 	}
 	,testBigIntParsesNumbersCorrectly: function() {
@@ -8530,15 +8558,15 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10",2),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 661, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("FF",16),thx_bigint_Bigs.fromInt(255)),null,{ fileName : "TestBigInt.hx", lineNumber : 662, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("111100001111",2),thx_bigint_Bigs.fromInt(3855)),"expected " + thx_bigint_Bigs.parseBase("111100001111",2).toString() + " == " + thx_bigint_Bigs.fromInt(3855).toString(),{ fileName : "TestBigInt.hx", lineNumber : 663, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1",16),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 665, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("306057512216440636035370461297268629388588804173576999416776741259476533176716867465515291422477573349939147888701726368864263907759003154226842927906974559841225476930271954604008012215776252176854255965356903506788725264321896264299365204576448830388909753943489625436053225980776521270822437639449120128678675368305712293681943649956460498166450227716500185176546469340112226034729724066333258583506870150169794168850353752137554910289126407157154830282284937952636580145235233156936482233436799254594095276820608062232812387383880817049600000000000000000000000000000000000000000000000000000000000000000000000000306057512216440636035370461297268629388588804173576999416776741259476533176716867465515291422477573349939147888701726368864263907759003154226842927906974559841225476930271954604008012215776252176854255965356903506788725264321896264299365204576448830388909753943489625436053225980776521270822437639449120128678675368305712293681943649956460498166450227716500185176546469340112226034729724066333258583506870150169794168850353752137554910289126407157154830282284937952636580145235233156936482233436799254594095276820608062232812387383880817049600000000000000000000000000000000000000000000000000000000000000000000000000306057512216440636035370461297268629388588804173576999416776741259476533176716867465515291422477573349939147888701726368864263907759003154226842927906974559841225476930271954604008012215776252176854255965356903506788725264321896264299365204576448830388909753943489625436053225980776521270822437639449120128678675368305712293681943649956460498166450227716500185176546469340112226034729724066333258583506870150169794168850353752137554910289126407157154830282284937952636580145235233156936482233436799254594095276820608062232812387383880817049600000000000000000000000000000000000000000000000000000000000000000000000000",10),thx_bigint_Bigs.parseBase("9822997e35bb99bcf103a64299aa92b8446ab93879fba53349f1626f3c8f78a4ee1d8d9e7562538f8e374fdf64c8eff7481c63cde5ca9821abfb3df6fb3e2489d2f85d34cf347f3e89191a19cc6b6b8072a976a8f1bcf68d20f18a1c0efb023252ba2d0961428a5c282d2645f3f7fa160f7f84aca88e40a74066c4a787bed7d0082f7e45b1ffee532715f56bd5f8168eaf7eaae112ed1316371f047692631e70e6b85b290ef063845b364dad7e10b9deb9fcfb708f83b7c3c6b82ce16eb0034c030b332a58d637a7b547fd0527051d7de9e5004db2ea2bd75f5c5a280a1a9b93c3c83373b6dcf1b65c01197096e97d13076b6613bc2ebf47c91fbe1aefeea966134bfbbf5f850320f0f0c2d88888bd82d118a6aaf8df2b092cf5456eff7e209feb476bf3c01d6d2e7ca0b9f40d83b107b4def92f2927cf0a1bb6190c67a4da91478709262ed1f1ecb77fbaf1197ac238c246a63a697f51e8d539f850e790137e7fce5f764896fdfb4fc3787520608f0400e72aeea5737c36304c6887ec1a174564ecec63a57b1e0946dc311dd3aea7bfae197ff9c7fcbf17c97d9db303d231702ef502dde1b53896196dc2e5d30b2b6ec58fc3744f4de08109eb99aa9f22ffe2f12f3953f516f91d35a8852aff4a19e250410fbd8dbcdae99f92f88e2f94341fc1ecdff32733d194c0541f708a72c5b4c03e5515e1086d0903addca0e172968ff1dee87bbd4fee679e2ee5a52975807ae7212cc2a33e0821e2d9b44eaa7dc29536a94c6597eda41bdd1e5e618e7b388b53d38ef9542523bce888738db46c6706c3ee82cbc3655408071e9e422a44d309e3cfd31ec2135ee0cba32b0c6721c8bee4d076543b71c35a06087a007c14e51d1f0c4d0aa9aa0751dfd3776d2357a010e6b147aca40c7b669291e6defbf5ca77505c960f14b330e6c90dc2539431329ef78a1e9f26b2ead7d28a622e6b586bcee22bd0a495442c6a1235588988252cbd4d36975560fb8e7e5c8cf06f29aeb68659c5cb4cf8d011375b00000000000000000000000000000000000000000000000000000000000000000000000000",16)),null,{ fileName : "TestBigInt.hx", lineNumber : 666, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9223372036854775808",10),thx_bigint_Bigs.parseBase("1000000000000000000000000000000000000000000000000000000000000000",2)),null,{ fileName : "TestBigInt.hx", lineNumber : 667, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("324AFCCC342342333CCD239998881232324AFCCC342342333CCD239998881232",16),thx_bigint_Bigs.parseBase("22748133857356174891035811692236022265357659892433333914058690475216129757746",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 668, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("234345345345",10),thx_bigint_Bigs.parseBase("3690123141",16)),null,{ fileName : "TestBigInt.hx", lineNumber : 669, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-10",16),thx_bigint_Bigs.parseBase("-16",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 670, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("10",2),thx_bigint_Bigs.fromInt(2)),null,{ fileName : "TestBigInt.hx", lineNumber : 665, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("FF",16),thx_bigint_Bigs.fromInt(255)),null,{ fileName : "TestBigInt.hx", lineNumber : 666, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("111100001111",2),thx_bigint_Bigs.fromInt(3855)),"expected " + thx_bigint_Bigs.parseBase("111100001111",2).toString() + " == " + thx_bigint_Bigs.fromInt(3855).toString(),{ fileName : "TestBigInt.hx", lineNumber : 667, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1",16),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 669, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("306057512216440636035370461297268629388588804173576999416776741259476533176716867465515291422477573349939147888701726368864263907759003154226842927906974559841225476930271954604008012215776252176854255965356903506788725264321896264299365204576448830388909753943489625436053225980776521270822437639449120128678675368305712293681943649956460498166450227716500185176546469340112226034729724066333258583506870150169794168850353752137554910289126407157154830282284937952636580145235233156936482233436799254594095276820608062232812387383880817049600000000000000000000000000000000000000000000000000000000000000000000000000306057512216440636035370461297268629388588804173576999416776741259476533176716867465515291422477573349939147888701726368864263907759003154226842927906974559841225476930271954604008012215776252176854255965356903506788725264321896264299365204576448830388909753943489625436053225980776521270822437639449120128678675368305712293681943649956460498166450227716500185176546469340112226034729724066333258583506870150169794168850353752137554910289126407157154830282284937952636580145235233156936482233436799254594095276820608062232812387383880817049600000000000000000000000000000000000000000000000000000000000000000000000000306057512216440636035370461297268629388588804173576999416776741259476533176716867465515291422477573349939147888701726368864263907759003154226842927906974559841225476930271954604008012215776252176854255965356903506788725264321896264299365204576448830388909753943489625436053225980776521270822437639449120128678675368305712293681943649956460498166450227716500185176546469340112226034729724066333258583506870150169794168850353752137554910289126407157154830282284937952636580145235233156936482233436799254594095276820608062232812387383880817049600000000000000000000000000000000000000000000000000000000000000000000000000",10),thx_bigint_Bigs.parseBase("9822997e35bb99bcf103a64299aa92b8446ab93879fba53349f1626f3c8f78a4ee1d8d9e7562538f8e374fdf64c8eff7481c63cde5ca9821abfb3df6fb3e2489d2f85d34cf347f3e89191a19cc6b6b8072a976a8f1bcf68d20f18a1c0efb023252ba2d0961428a5c282d2645f3f7fa160f7f84aca88e40a74066c4a787bed7d0082f7e45b1ffee532715f56bd5f8168eaf7eaae112ed1316371f047692631e70e6b85b290ef063845b364dad7e10b9deb9fcfb708f83b7c3c6b82ce16eb0034c030b332a58d637a7b547fd0527051d7de9e5004db2ea2bd75f5c5a280a1a9b93c3c83373b6dcf1b65c01197096e97d13076b6613bc2ebf47c91fbe1aefeea966134bfbbf5f850320f0f0c2d88888bd82d118a6aaf8df2b092cf5456eff7e209feb476bf3c01d6d2e7ca0b9f40d83b107b4def92f2927cf0a1bb6190c67a4da91478709262ed1f1ecb77fbaf1197ac238c246a63a697f51e8d539f850e790137e7fce5f764896fdfb4fc3787520608f0400e72aeea5737c36304c6887ec1a174564ecec63a57b1e0946dc311dd3aea7bfae197ff9c7fcbf17c97d9db303d231702ef502dde1b53896196dc2e5d30b2b6ec58fc3744f4de08109eb99aa9f22ffe2f12f3953f516f91d35a8852aff4a19e250410fbd8dbcdae99f92f88e2f94341fc1ecdff32733d194c0541f708a72c5b4c03e5515e1086d0903addca0e172968ff1dee87bbd4fee679e2ee5a52975807ae7212cc2a33e0821e2d9b44eaa7dc29536a94c6597eda41bdd1e5e618e7b388b53d38ef9542523bce888738db46c6706c3ee82cbc3655408071e9e422a44d309e3cfd31ec2135ee0cba32b0c6721c8bee4d076543b71c35a06087a007c14e51d1f0c4d0aa9aa0751dfd3776d2357a010e6b147aca40c7b669291e6defbf5ca77505c960f14b330e6c90dc2539431329ef78a1e9f26b2ead7d28a622e6b586bcee22bd0a495442c6a1235588988252cbd4d36975560fb8e7e5c8cf06f29aeb68659c5cb4cf8d011375b00000000000000000000000000000000000000000000000000000000000000000000000000",16)),null,{ fileName : "TestBigInt.hx", lineNumber : 670, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("9223372036854775808",10),thx_bigint_Bigs.parseBase("1000000000000000000000000000000000000000000000000000000000000000",2)),null,{ fileName : "TestBigInt.hx", lineNumber : 671, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("324AFCCC342342333CCD239998881232324AFCCC342342333CCD239998881232",16),thx_bigint_Bigs.parseBase("22748133857356174891035811692236022265357659892433333914058690475216129757746",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 672, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("234345345345",10),thx_bigint_Bigs.parseBase("3690123141",16)),null,{ fileName : "TestBigInt.hx", lineNumber : 673, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-10",16),thx_bigint_Bigs.parseBase("-16",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 674, className : "thx.TestBigInt", methodName : "testBigIntParsesNumbersCorrectly"});
 		}
 	}
 	,testBigIntOutputsNumbersCorrectly: function() {
@@ -8546,10 +8574,10 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("366900685503779409298642816707647664013657589336",10).toStringWithBase(16) == "4044654fce69424a651af2825b37124c25094658",null,{ fileName : "TestBigInt.hx", lineNumber : 675, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("111111111111111111111111111111111111111111111111111111",2).toStringWithBase(2) == "111111111111111111111111111111111111111111111111111111",null,{ fileName : "TestBigInt.hx", lineNumber : 676, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("secretmessage000",36).toStringWithBase(36) == "secretmessage000",null,{ fileName : "TestBigInt.hx", lineNumber : 677, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-256).toStringWithBase(16) == "-100",null,{ fileName : "TestBigInt.hx", lineNumber : 678, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("366900685503779409298642816707647664013657589336",10).toStringWithBase(16) == "4044654fce69424a651af2825b37124c25094658",null,{ fileName : "TestBigInt.hx", lineNumber : 679, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("111111111111111111111111111111111111111111111111111111",2).toStringWithBase(2) == "111111111111111111111111111111111111111111111111111111",null,{ fileName : "TestBigInt.hx", lineNumber : 680, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("secretmessage000",36).toStringWithBase(36) == "secretmessage000",null,{ fileName : "TestBigInt.hx", lineNumber : 681, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-256).toStringWithBase(16) == "-100",null,{ fileName : "TestBigInt.hx", lineNumber : 682, className : "thx.TestBigInt", methodName : "testBigIntOutputsNumbersCorrectly"});
 		}
 	}
 	,testShiftingLeftAndRight: function() {
@@ -8557,14 +8585,14 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-5).shiftRight(2),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 683, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(5).shiftRight(-2),thx_bigint_Bigs.fromInt(20)),"expected " + thx_bigint_Bigs.fromInt(5).shiftRight(-2).toString() + " == 20",{ fileName : "TestBigInt.hx", lineNumber : 684, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(5).shiftLeft(-2),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 685, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1024).shiftLeft(100),thx_bigint_Bigs.parseBase("1298074214633706907132624082305024",10)),"expected " + thx_bigint_Bigs.fromInt(1024).toString() + ".shiftLeft(100) == " + thx_bigint_Bigs.parseBase("1298074214633706907132624082305024",10).toString() + " but got " + thx_bigint_Bigs.fromInt(1024).shiftLeft(100).toString(),{ fileName : "TestBigInt.hx", lineNumber : 686, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("2596148429267413814265248164610049",10).shiftRight(100),thx_bigint_Bigs.fromInt(2048)),null,{ fileName : "TestBigInt.hx", lineNumber : 687, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("8589934592",10).shiftRight(-50),thx_bigint_Bigs.parseBase("9671406556917033397649408",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 688, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("38685626227668133590597632",10).shiftLeft(-50),thx_bigint_Bigs.parseBase("34359738368",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 689, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1",10).shiftRight(25),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 690, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(-5).shiftRight(2),thx_bigint_Bigs.fromInt(-2)),null,{ fileName : "TestBigInt.hx", lineNumber : 687, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(5).shiftRight(-2),thx_bigint_Bigs.fromInt(20)),"expected " + thx_bigint_Bigs.fromInt(5).shiftRight(-2).toString() + " == 20",{ fileName : "TestBigInt.hx", lineNumber : 688, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(5).shiftLeft(-2),thx_bigint_Bigs.fromInt(1)),null,{ fileName : "TestBigInt.hx", lineNumber : 689, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.fromInt(1024).shiftLeft(100),thx_bigint_Bigs.parseBase("1298074214633706907132624082305024",10)),"expected " + thx_bigint_Bigs.fromInt(1024).toString() + ".shiftLeft(100) == " + thx_bigint_Bigs.parseBase("1298074214633706907132624082305024",10).toString() + " but got " + thx_bigint_Bigs.fromInt(1024).shiftLeft(100).toString(),{ fileName : "TestBigInt.hx", lineNumber : 690, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("2596148429267413814265248164610049",10).shiftRight(100),thx_bigint_Bigs.fromInt(2048)),null,{ fileName : "TestBigInt.hx", lineNumber : 691, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("8589934592",10).shiftRight(-50),thx_bigint_Bigs.parseBase("9671406556917033397649408",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 692, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("38685626227668133590597632",10).shiftLeft(-50),thx_bigint_Bigs.parseBase("34359738368",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 693, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-1",10).shiftRight(25),thx_bigint_Bigs.fromInt(-1)),null,{ fileName : "TestBigInt.hx", lineNumber : 694, className : "thx.TestBigInt", methodName : "testShiftingLeftAndRight"});
 		}
 	}
 	,testBitwiseOperations: function() {
@@ -8572,17 +8600,17 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("435783453",10).and(thx_bigint_Bigs.parseBase("902345074",10)),thx_bigint_Bigs.parseBase("298352912",10)),"expected " + thx_bigint_Bigs.parseBase("435783453",10).and(thx_bigint_Bigs.parseBase("902345074",10)).toString() + " to be 298352912",{ fileName : "TestBigInt.hx", lineNumber : 695, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("435783453",10).or(thx_bigint_Bigs.parseBase("902345074",10)),thx_bigint_Bigs.parseBase("1039775615",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 696, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("435783453",10).xor(thx_bigint_Bigs.parseBase("902345074",10)),thx_bigint_Bigs.parseBase("741422703",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 697, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("94981987261387596",10).not(),thx_bigint_Bigs.parseBase("-94981987261387597",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 698, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-6931047708307681506",10).xor(thx_bigint_Bigs.parseBase("25214903917",10)),thx_bigint_Bigs.parseBase("-6931047723896018573",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 699, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-6931047723896018573",10).and(thx_bigint_Bigs.parseBase("281474976710655",10)),thx_bigint_Bigs.parseBase("273577603885427",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 700, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-65",10).xor(thx_bigint_Bigs.parseBase("-42",10)),thx_bigint_Bigs.parseBase("105",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 701, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("6",10).and(thx_bigint_Bigs.parseBase("-3",10)),thx_bigint_Bigs.parseBase("4",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 702, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("0",10).not(),thx_bigint_Bigs.parseBase("-1",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 703, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("13",10).or(thx_bigint_Bigs.fromInt(-8)),thx_bigint_Bigs.parseBase("-3",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 704, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
-			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12",10).xor(thx_bigint_Bigs.fromInt(-5)),thx_bigint_Bigs.parseBase("-9",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 705, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("435783453",10).and(thx_bigint_Bigs.parseBase("902345074",10)),thx_bigint_Bigs.parseBase("298352912",10)),"expected " + thx_bigint_Bigs.parseBase("435783453",10).and(thx_bigint_Bigs.parseBase("902345074",10)).toString() + " to be 298352912",{ fileName : "TestBigInt.hx", lineNumber : 699, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("435783453",10).or(thx_bigint_Bigs.parseBase("902345074",10)),thx_bigint_Bigs.parseBase("1039775615",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 700, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("435783453",10).xor(thx_bigint_Bigs.parseBase("902345074",10)),thx_bigint_Bigs.parseBase("741422703",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 701, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("94981987261387596",10).not(),thx_bigint_Bigs.parseBase("-94981987261387597",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 702, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-6931047708307681506",10).xor(thx_bigint_Bigs.parseBase("25214903917",10)),thx_bigint_Bigs.parseBase("-6931047723896018573",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 703, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-6931047723896018573",10).and(thx_bigint_Bigs.parseBase("281474976710655",10)),thx_bigint_Bigs.parseBase("273577603885427",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 704, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("-65",10).xor(thx_bigint_Bigs.parseBase("-42",10)),thx_bigint_Bigs.parseBase("105",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 705, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("6",10).and(thx_bigint_Bigs.parseBase("-3",10)),thx_bigint_Bigs.parseBase("4",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 706, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("0",10).not(),thx_bigint_Bigs.parseBase("-1",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 707, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("13",10).or(thx_bigint_Bigs.fromInt(-8)),thx_bigint_Bigs.parseBase("-3",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 708, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
+			utest_Assert.isTrue(thx__$BigInt_BigInt_$Impl_$.equals(thx_bigint_Bigs.parseBase("12",10).xor(thx_bigint_Bigs.fromInt(-5)),thx_bigint_Bigs.parseBase("-9",10)),null,{ fileName : "TestBigInt.hx", lineNumber : 709, className : "thx.TestBigInt", methodName : "testBitwiseOperations"});
 		}
 	}
 	,testIsEvenAndIsOdd: function() {
@@ -8590,24 +8618,24 @@ thx_TestBigInt.prototype = {
 		var _g = this.x;
 		while(_g1 < _g) {
 			++_g1;
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(0).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 710, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 711, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(654).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 713, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(654).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 714, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(653).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 716, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(653).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 717, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-984).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 719, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-984).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 720, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-987).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 722, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-987).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 723, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("9888651888888888",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 725, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("9888651888888888",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 726, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("1026377777777777",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 728, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("1026377777777777",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 729, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-9888651888888888",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 731, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-9888651888888888",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 732, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-1026377777777777",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 734, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
-			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-1026377777777777",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 735, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(0).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 714, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(0).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 715, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(654).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 717, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(654).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 718, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(653).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 720, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(653).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 721, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-984).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 723, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-984).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 724, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.fromInt(-987).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 726, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.fromInt(-987).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 727, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("9888651888888888",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 729, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("9888651888888888",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 730, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("1026377777777777",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 732, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("1026377777777777",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 733, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-9888651888888888",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 735, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-9888651888888888",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 736, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isTrue(thx_bigint_Bigs.parseBase("-1026377777777777",10).isOdd(),null,{ fileName : "TestBigInt.hx", lineNumber : 738, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
+			utest_Assert.isFalse(thx_bigint_Bigs.parseBase("-1026377777777777",10).isEven(),null,{ fileName : "TestBigInt.hx", lineNumber : 739, className : "thx.TestBigInt", methodName : "testIsEvenAndIsOdd"});
 		}
 	}
 	,__class__: thx_TestBigInt
@@ -9706,7 +9734,7 @@ thx_bigint_Bigs.canAdd = function(a,b) {
 	return thx_bigint_Bigs.isPrecise(v);
 };
 thx_bigint_Bigs.smallToArray = function(n) {
-	thx_Assert.isTrue(n >= 0,"Bigs.smallToArray should always be non-negative: " + n,{ fileName : "Bigs.hx", lineNumber : 57, className : "thx.bigint.Bigs", methodName : "smallToArray"});
+	thx_Assert.isTrue(n >= 0,"Bigs.smallToArray should always be non-negative: " + n,{ fileName : "Bigs.hx", lineNumber : 56, className : "thx.bigint.Bigs", methodName : "smallToArray"});
 	if(n < 10000000) {
 		return [n];
 	}
@@ -10011,7 +10039,7 @@ thx_bigint_Bigs.toInt64 = function(value) {
 };
 thx_bigint_Bigs.fromFloat = function(value) {
 	if(isNaN(value) || !isFinite(value)) {
-		throw new thx_Error("Conversion to BigInt failed. Number is NaN or Infinite",null,{ fileName : "Bigs.hx", lineNumber : 305, className : "thx.bigint.Bigs", methodName : "fromFloat"});
+		throw new thx_Error("Conversion to BigInt failed. Number is NaN or Infinite",null,{ fileName : "Bigs.hx", lineNumber : 317, className : "thx.bigint.Bigs", methodName : "fromFloat"});
 	}
 	var noFractions = value - value % 1;
 	var result = thx_bigint_Small.zero;
@@ -10211,7 +10239,7 @@ thx_bigint_Bigs.parseBase = function(text,base) {
 	var bigBase = new thx_bigint_Small(base);
 	var isNegative = text.substring(0,1) == "-";
 	if(2 > base || base > 36) {
-		throw new thx_Error("base (" + base + ") must be a number between 2 ad 36",null,{ fileName : "Bigs.hx", lineNumber : 475, className : "thx.bigint.Bigs", methodName : "parseBase"});
+		throw new thx_Error("base (" + base + ") must be a number between 2 ad 36",null,{ fileName : "Bigs.hx", lineNumber : 487, className : "thx.bigint.Bigs", methodName : "parseBase"});
 	}
 	if(isNegative) {
 		text = text.substring(1);
@@ -10252,7 +10280,7 @@ thx_bigint_Bigs.parseBase = function(text,base) {
 		} else if(97 <= charCode && charCode <= 122) {
 			digits.push(new thx_bigint_Small(charCode - 87));
 		} else {
-			throw new thx_Error("" + text + " is not a valid string",null,{ fileName : "Bigs.hx", lineNumber : 509, className : "thx.bigint.Bigs", methodName : "parseBase"});
+			throw new thx_Error("" + text + " is not a valid string",null,{ fileName : "Bigs.hx", lineNumber : 521, className : "thx.bigint.Bigs", methodName : "parseBase"});
 		}
 	}
 	digits.reverse();
@@ -12528,6 +12556,7 @@ thx__$BigInt_BigInt_$Impl_$.zero = thx_bigint_Small.zero;
 thx__$BigInt_BigInt_$Impl_$.one = thx_bigint_Small.one;
 thx__$BigInt_BigInt_$Impl_$.two = thx_bigint_Small.two;
 thx__$BigInt_BigInt_$Impl_$.negativeOne = thx_bigint_Small.negativeOne;
+thx_Dates.order = thx__$Ord_Ord_$Impl_$.fromIntComparison(thx_Dates.compare);
 thx_Floats.TOLERANCE = 10e-5;
 thx_Floats.EPSILON = 1e-9;
 thx_Floats.pattern_parse = new EReg("^(\\+|-)?\\d+(\\.\\d+)?(e-?\\d+)?$","");

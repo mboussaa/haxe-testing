@@ -12,7 +12,9 @@ var x : Int;
  }
 
   public function testIssue82() {
-    for (i in 0...x){
+
+   var time:Float = haxe.Timer.stamp();
+   for (i in 0...x){
     var s : BigInt = 101;
     var b : BigInt = new thx.bigint.Big(thx.bigint.Bigs.smallToArray(BigInt.fromString("100")), false);
     var r = s - b;
@@ -23,7 +25,9 @@ var x : Int;
     b = b.pow(2);
     var r = s - b;
     Assert.isTrue(1 == s - b, 'expected $s - $b to be equal 1 but it is $r');
-  }}
+  }
+
+}
 
   public function testFromInt64() {
     for (i in 0...x){

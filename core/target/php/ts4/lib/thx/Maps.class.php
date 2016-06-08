@@ -34,6 +34,10 @@ class thx_Maps {
 		$tmp = $map->keys();
 		return thx_Iterators::map($tmp, array(new _hx_lambda(array(&$map), "thx_Maps_2"), 'execute'));
 	}
+	static function foldLeftWithKeys($map, $f, $acc) {
+		$tmp = $map->keys();
+		return thx_Iterators::reduce($tmp, array(new _hx_lambda(array(&$f, &$map), "thx_Maps_3"), 'execute'), $acc);
+	}
 	static function getOption($map, $key) {
 		$value = $map->get($key);
 		if(null === $value) {
@@ -44,7 +48,7 @@ class thx_Maps {
 	}
 	static function toObject($map) {
 		$tmp = thx_Maps::tuples($map);
-		return thx_Arrays::reduce($tmp, array(new _hx_lambda(array(), "thx_Maps_3"), 'execute'), _hx_anonymous(array()));
+		return thx_Arrays::reduce($tmp, array(new _hx_lambda(array(), "thx_Maps_4"), 'execute'), _hx_anonymous(array()));
 	}
 	static function getAlt($map, $key, $alt) {
 		$v = $map->get($key);
@@ -58,11 +62,11 @@ class thx_Maps {
 		return Std::is($v, _hx_qtype("haxe.IMap"));
 	}
 	static function string($m) {
-		$tmp = thx_Maps::tuples($m)->map(array(new _hx_lambda(array(), "thx_Maps_4"), 'execute'))->join(", ");
+		$tmp = thx_Maps::tuples($m)->map(array(new _hx_lambda(array(), "thx_Maps_5"), 'execute'))->join(", ");
 		return "[" . _hx_string_or_null($tmp) . "]";
 	}
 	static function merge($dest, $sources) {
-		return thx_Arrays::reduce($sources, array(new _hx_lambda(array(), "thx_Maps_5"), 'execute'), $dest);
+		return thx_Arrays::reduce($sources, array(new _hx_lambda(array(), "thx_Maps_6"), 'execute'), $dest);
 	}
 	function __toString() { return 'thx.Maps'; }
 }
@@ -86,13 +90,18 @@ function thx_Maps_2(&$map, $key) {
 		return $map->get($key);
 	}
 }
-function thx_Maps_3($o, $t) {
+function thx_Maps_3(&$f, &$map, $acc1, $k) {
+	{
+		return call_user_func_array($f, array($acc1, $k, $map->get($k)));
+	}
+}
+function thx_Maps_4($o, $t) {
 	{
 		$o->{$t->_0} = $t->_1;
 		return $o;
 	}
 }
-function thx_Maps_4($t) {
+function thx_Maps_5($t) {
 	{
 		$tmp1 = thx_Dynamics::string($t->_0);
 		$tmp2 = _hx_string_or_null($tmp1) . " => ";
@@ -100,13 +109,13 @@ function thx_Maps_4($t) {
 		return _hx_string_or_null($tmp2) . _hx_string_or_null($tmp3);
 	}
 }
-function thx_Maps_5($result, $source) {
+function thx_Maps_6($result, $source) {
 	{
 		$tmp = $source->keys();
-		return thx_Iterators::reduce($tmp, array(new _hx_lambda(array(&$source), "thx_Maps_6"), 'execute'), $result);
+		return thx_Iterators::reduce($tmp, array(new _hx_lambda(array(&$source), "thx_Maps_7"), 'execute'), $result);
 	}
 }
-function thx_Maps_6(&$source, $result1, $key) {
+function thx_Maps_7(&$source, $result1, $key) {
 	{
 		$tmp1 = $source->get($key);
 		$result1->set($key, $tmp1);

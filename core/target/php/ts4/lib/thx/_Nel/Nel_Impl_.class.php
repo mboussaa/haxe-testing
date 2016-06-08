@@ -62,7 +62,7 @@ class thx__Nel_Nel_Impl_ {
 		}break;
 		}
 	}
-	static function fold($this1, $s) {
+	static function fold($this1, $f) {
 		$tmp = $this1->index;
 		switch($tmp) {
 		case 0:{
@@ -71,9 +71,8 @@ class thx__Nel_Nel_Impl_ {
 		case 1:{
 			$xs = _hx_deref($this1)->params[1];
 			$x = _hx_deref($this1)->params[0];
-			$tmp1 = thx__Semigroup_Semigroup_Impl_::get_append($s);
-			$tmp2 = thx__Nel_Nel_Impl_::fold($xs, $s);
-			return call_user_func_array($tmp1, array($x, $tmp2));
+			$tmp1 = thx__Nel_Nel_Impl_::fold($xs, $f);
+			return call_user_func_array($f, array($x, $tmp1));
 		}break;
 		}
 	}

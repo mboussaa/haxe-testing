@@ -19,7 +19,7 @@ class thx_Arrays {
 		}
 		$tmp = $indexes->length !== $array->length;
 		if($tmp) {
-			throw new HException(new thx_Error("`Arrays.applyIndexes` can only be applied to two arrays with the same length", null, _hx_anonymous(array("fileName" => "Arrays.hx", "lineNumber" => 53, "className" => "thx.Arrays", "methodName" => "applyIndexes"))));
+			throw new HException(new thx_Error("`Arrays.applyIndexes` can only be applied to two arrays with the same length", null, _hx_anonymous(array("fileName" => "Arrays.hx", "lineNumber" => 54, "className" => "thx.Arrays", "methodName" => "applyIndexes"))));
 		}
 		$result = (new _hx_array(array()));
 		if($incrementDuplicates) {
@@ -83,15 +83,12 @@ class thx_Arrays {
 		}
 	}
 	static function each($arr, $effect) {
-		$tmp = $arr->iterator();
-		while(true) {
-			$tmp1 = !$tmp->hasNext();
-			if($tmp1) {
-				break;
-			}
-			$element = $tmp->next();
-			call_user_func_array($effect, array($element));
-			unset($tmp1,$element);
+		$_g1 = 0;
+		$_g = $arr->length;
+		while($_g1 < $_g) {
+			$i = $_g1++;
+			call_user_func_array($effect, array($arr[$i]));
+			unset($i);
 		}
 	}
 	static function eachi($arr, $effect) {
@@ -105,36 +102,30 @@ class thx_Arrays {
 	}
 	static function all($arr, $predicate) {
 		{
-			$tmp = $arr->iterator();
-			while(true) {
-				$tmp1 = !$tmp->hasNext();
-				if($tmp1) {
-					break;
-				}
-				$element = $tmp->next();
-				$tmp2 = !call_user_func_array($predicate, array($element));
-				if($tmp2) {
+			$_g1 = 0;
+			$_g = $arr->length;
+			while($_g1 < $_g) {
+				$i = $_g1++;
+				$tmp = !call_user_func_array($predicate, array($arr[$i]));
+				if($tmp) {
 					return false;
 				}
-				unset($tmp2,$tmp1,$element);
+				unset($tmp,$i);
 			}
 		}
 		return true;
 	}
 	static function any($arr, $predicate) {
 		{
-			$tmp = $arr->iterator();
-			while(true) {
-				$tmp1 = !$tmp->hasNext();
-				if($tmp1) {
-					break;
-				}
-				$element = $tmp->next();
-				$tmp2 = call_user_func_array($predicate, array($element));
-				if($tmp2) {
+			$_g1 = 0;
+			$_g = $arr->length;
+			while($_g1 < $_g) {
+				$i = $_g1++;
+				$tmp = call_user_func_array($predicate, array($arr[$i]));
+				if($tmp) {
 					return true;
 				}
-				unset($tmp2,$tmp1,$element);
+				unset($tmp,$i);
 			}
 		}
 		return false;
@@ -581,7 +572,7 @@ class thx_Arrays {
 				$i = $_g1++;
 				$k = call_user_func_array($spanKey, array($i));
 				if($k === null) {
-					throw new HException(new thx_Error("spanKey function returned null for index " . _hx_string_rec($i, ""), null, _hx_anonymous(array("fileName" => "Arrays.hx", "lineNumber" => 567, "className" => "thx.Arrays", "methodName" => "spanByIndex"))));
+					throw new HException(new thx_Error("spanKey function returned null for index " . _hx_string_rec($i, ""), null, _hx_anonymous(array("fileName" => "Arrays.hx", "lineNumber" => 569, "className" => "thx.Arrays", "methodName" => "spanByIndex"))));
 				}
 				if((is_object($_t = $cur) && ($_t instanceof Enum) ? $_t == $k : _hx_equal($_t, $k))) {
 					_hx_array_get($acc, $j)->push($arr[$i]);
@@ -636,6 +627,20 @@ class thx_Arrays {
 	}
 	static function last($array) {
 		return $array[$array->length - 1];
+	}
+	static function map($array, $callback) {
+		$r = (new _hx_array(array()));
+		{
+			$_g1 = 0;
+			$_g = $array->length;
+			while($_g1 < $_g) {
+				$i = $_g1++;
+				$tmp = call_user_func_array($callback, array($array[$i]));
+				$r->push($tmp);
+				unset($tmp,$i);
+			}
+		}
+		return $r;
 	}
 	static function mapi($array, $callback) {
 		$r = (new _hx_array(array()));

@@ -446,5 +446,8 @@ class thx_Dates {
 			}
 		}
 	}
+	static function order() { $args = func_get_args(); return call_user_func_array(self::$order, $args); }
+	static $order;
 	function __toString() { return 'thx.Dates'; }
 }
+thx_Dates::$order = thx__Ord_Ord_Impl_::fromIntComparison((isset(thx_Dates::$compare) ? thx_Dates::$compare: array("thx_Dates", "compare")));

@@ -1,5 +1,4 @@
 package thx.bigint;
-
 using thx.Strings;
 
 class Bigs {
@@ -22,7 +21,7 @@ class Bigs {
   public static var bigHighestPower2(default, null) : BigIntImpl = new Small(highestPower2);
 
   public static function isPrecise(value : Int)
-    return -MAX_INT < value && value < MAX_INT;
+  return -MAX_INT < value && value < MAX_INT;
 
   public static function canMultiply(a : Int, b : Int) {
     if(a == 0 || b == 0) return true;
@@ -85,16 +84,29 @@ class Bigs {
   }
 
   public static function createArray(length : Int) : Array<Int> {
-    var x = #if js untyped __js__("new Array")(length) #else [] #end;
+
+var x = #if js untyped __js__("new Array")(length)
+#elseif php
+untyped __php__("new _hx_array(array_fill(0, $length, 0))")
+#else [] #end;
+
+    #if !php
     for(i in 0...length)
       x[i] = 0;
+    #end
     return x;
   }
 
   public static function createFloatArray(length : Int) : Array<Float> {
-    var x = #if js untyped __js__("new Array")(length) #else [] #end;
+var x = #if js untyped __js__("new Array")(length)
+#elseif php
+untyped __php__("new _hx_array(array_fill(0, $length, 0))")
+#else [] #end;
+
+    #if !php
     for(i in 0...length)
       x[i] = 0.0;
+    #end
     return x;
   }
 
