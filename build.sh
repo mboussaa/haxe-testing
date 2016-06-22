@@ -49,7 +49,7 @@ echo "**************************************************************************
 TIMEFORMAT='%3R'
 sleep 5s;
 echo "running !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!:::::::::::::::::::::::::::::::::::::::::: '$j' '$ts' '$i' ${!tab}";
-time(docker run -w /shared -it --rm -v /shared:/shared --name=haxe_"$j"_"$ts"_"$i" mboussaa/haxe /bin/bash -c "./run.sh '$j' '$ts' '$i' 100") 2>> /shared/stats/statistics/time_"$ts"_"$j".csv
+time(docker run -w /shared -it --rm -v /shared:/shared --name=haxe_"$j"_"$ts"_"$i" mboussaa/haxe /bin/bash -c "./run.sh '$j' '$ts' '$i' 1") 2>> /shared/stats/statistics/time_"$ts"_"$j".csv
 #time(docker run -w /shared -it --rm -v /shared:/shared --name=haxe_"$j"_"$ts"_"$i" mboussaa/haxe /bin/bash -c "./run.sh '$j' '$ts' '$i' ${!tab}") 2>> /shared/stats/statistics/time_"$ts"_"$j".csv
 done
 done

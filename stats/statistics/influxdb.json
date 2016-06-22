@@ -1,17 +1,1 @@
-[
-    {
-        "name": "stats",
-        "columns": [
-            "time",
-            "max",
-            "container_name"
-        ],
-        "points": [
-            [
-                0,
-                708608,
-                "haxe_php_promise_3"
-            ]
-        ]
-    }
-]
+[]
