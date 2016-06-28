@@ -10039,7 +10039,7 @@ thx_bigint_Bigs.toInt64 = function(value) {
 };
 thx_bigint_Bigs.fromFloat = function(value) {
 	if(isNaN(value) || !isFinite(value)) {
-		throw new thx_Error("Conversion to BigInt failed. Number is NaN or Infinite",null,{ fileName : "Bigs.hx", lineNumber : 317, className : "thx.bigint.Bigs", methodName : "fromFloat"});
+		throw new thx_Error("Conversion to BigInt failed. Number is NaN or Infinite",null,{ fileName : "Bigs.hx", lineNumber : 325, className : "thx.bigint.Bigs", methodName : "fromFloat"});
 	}
 	var noFractions = value - value % 1;
 	var result = thx_bigint_Small.zero;
@@ -10239,7 +10239,7 @@ thx_bigint_Bigs.parseBase = function(text,base) {
 	var bigBase = new thx_bigint_Small(base);
 	var isNegative = text.substring(0,1) == "-";
 	if(2 > base || base > 36) {
-		throw new thx_Error("base (" + base + ") must be a number between 2 ad 36",null,{ fileName : "Bigs.hx", lineNumber : 487, className : "thx.bigint.Bigs", methodName : "parseBase"});
+		throw new thx_Error("base (" + base + ") must be a number between 2 ad 36",null,{ fileName : "Bigs.hx", lineNumber : 495, className : "thx.bigint.Bigs", methodName : "parseBase"});
 	}
 	if(isNegative) {
 		text = text.substring(1);
@@ -10280,7 +10280,7 @@ thx_bigint_Bigs.parseBase = function(text,base) {
 		} else if(97 <= charCode && charCode <= 122) {
 			digits.push(new thx_bigint_Small(charCode - 87));
 		} else {
-			throw new thx_Error("" + text + " is not a valid string",null,{ fileName : "Bigs.hx", lineNumber : 521, className : "thx.bigint.Bigs", methodName : "parseBase"});
+			throw new thx_Error("" + text + " is not a valid string",null,{ fileName : "Bigs.hx", lineNumber : 529, className : "thx.bigint.Bigs", methodName : "parseBase"});
 		}
 	}
 	digits.reverse();

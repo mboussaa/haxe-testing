@@ -84,30 +84,38 @@ class Bigs {
   }
 
   public static function createArray(length : Int) : Array<Int> {
-
-var x = #if js untyped __js__("new Array")(length)
-#elseif php
-untyped __php__("new _hx_array(array_fill(0, $length, 0))")
-#else [] #end;
-
-    #if !php
+    var x = #if js untyped __js__("new Array")(length) #else [] #end;
     for(i in 0...length)
       x[i] = 0;
-    #end
     return x;
+//#var x = #if js untyped __js__("new Array")(length)
+//##elseif php
+//#untyped __php__("new _hx_array(array_fill(0, $length, 0))")
+//##else [] #end;
+
+//#    #if !php
+//#    for(i in 0...length)
+//#      x[i] = 0;
+//#    #end
+//#    return x;
   }
 
   public static function createFloatArray(length : Int) : Array<Float> {
-var x = #if js untyped __js__("new Array")(length)
-#elseif php
-untyped __php__("new _hx_array(array_fill(0, $length, 0))")
-#else [] #end;
-
-    #if !php
+    var x = #if js untyped __js__("new Array")(length) #else [] #end;
     for(i in 0...length)
       x[i] = 0.0;
-    #end
     return x;
+
+//#var x = #if js untyped __js__("new Array")(length)
+//##elseif php
+//#untyped __php__("new _hx_array(array_fill(0, $length, 0))")
+//##else [] #end;
+
+//#    #if !php
+//#    for(i in 0...length)
+//#      x[i] = 0.0;
+//#    #end
+//#    return x;
   }
 
   public static function add(a : Array<Int>, b : Array<Int>) : Array<Int> { // assumes a and b are arrays with a.length >= b.length

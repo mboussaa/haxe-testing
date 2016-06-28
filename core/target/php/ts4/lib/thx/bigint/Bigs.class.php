@@ -138,11 +138,27 @@ class thx_bigint_Bigs {
 		}
 	}
 	static function createArray($length) {
-		$x = new _hx_array(array_fill(0, $length, 0));
+		$x = (new _hx_array(array()));
+		{
+			$_g1 = 0;
+			while($_g1 < $length) {
+				$i = $_g1++;
+				$x[$i] = 0;
+				unset($i);
+			}
+		}
 		return $x;
 	}
 	static function createFloatArray($length) {
-		$x = new _hx_array(array_fill(0, $length, 0));
+		$x = (new _hx_array(array()));
+		{
+			$_g1 = 0;
+			while($_g1 < $length) {
+				$i = $_g1++;
+				$x[$i] = 0.0;
+				unset($i);
+			}
+		}
 		return $x;
 	}
 	static function add($a, $b) {
@@ -474,7 +490,7 @@ class thx_bigint_Bigs {
 			$tmp = true;
 		}
 		if($tmp) {
-			throw new HException(new thx_Error("Conversion to BigInt failed. Number is NaN or Infinite", null, _hx_anonymous(array("fileName" => "Bigs.hx", "lineNumber" => 317, "className" => "thx.bigint.Bigs", "methodName" => "fromFloat"))));
+			throw new HException(new thx_Error("Conversion to BigInt failed. Number is NaN or Infinite", null, _hx_anonymous(array("fileName" => "Bigs.hx", "lineNumber" => 325, "className" => "thx.bigint.Bigs", "methodName" => "fromFloat"))));
 		}
 		$noFractions = $value - _hx_mod($value, 1);
 		$result = thx_bigint_Small::$zero;
@@ -722,7 +738,7 @@ class thx_bigint_Bigs {
 			$tmp1 = true;
 		}
 		if($tmp1) {
-			throw new HException(new thx_Error("base (" . _hx_string_rec($base, "") . ") must be a number between 2 ad 36", null, _hx_anonymous(array("fileName" => "Bigs.hx", "lineNumber" => 487, "className" => "thx.bigint.Bigs", "methodName" => "parseBase"))));
+			throw new HException(new thx_Error("base (" . _hx_string_rec($base, "") . ") must be a number between 2 ad 36", null, _hx_anonymous(array("fileName" => "Bigs.hx", "lineNumber" => 495, "className" => "thx.bigint.Bigs", "methodName" => "parseBase"))));
 		}
 		if($isNegative) {
 			$text = _hx_substring($text, 1, null);
@@ -798,7 +814,7 @@ class thx_bigint_Bigs {
 					if($tmp14) {
 						$digits->push(new thx_bigint_Small($charCode - 87));
 					} else {
-						throw new HException(new thx_Error("" . _hx_string_or_null($text) . " is not a valid string", null, _hx_anonymous(array("fileName" => "Bigs.hx", "lineNumber" => 521, "className" => "thx.bigint.Bigs", "methodName" => "parseBase"))));
+						throw new HException(new thx_Error("" . _hx_string_or_null($text) . " is not a valid string", null, _hx_anonymous(array("fileName" => "Bigs.hx", "lineNumber" => 529, "className" => "thx.bigint.Bigs", "methodName" => "parseBase"))));
 					}
 					unset($tmp14);
 				}
